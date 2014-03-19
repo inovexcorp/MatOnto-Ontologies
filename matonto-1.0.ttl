@@ -1,0 +1,950 @@
+@prefix : <http://aibn.uq.edu.au/cmm/MatOnto.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix cif: <http://aibn.uq.edu.au/cmm/cif.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix SUMO: <http://www.ontologyportal.org/SUMO.owl#> .
+@prefix owl2: <http://www.w3.org/2006/12/owl2#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix EXPOApr19: <http://www.hozo.jp/owl/EXPOApr19.owl#> .
+@prefix DOLCE-Lite: <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#> .
+@prefix Mpeg7-2001: <http://rhizomik.net/ontologies/2005/03/Mpeg7-2001.owl#> .
+@prefix ontolingua: <http://ksl.stanford.edu/htw/dme/thermal-kb-tour/ontolingua.owl#> .
+@prefix ontology-07: <http://ontoware.org/swrc/swrc/SWRCOWL/swrc_updated_v0.7.1.owl#> .
+@prefix JACS_complete: <http://www.hesa.ac.uk/dox/jacs/JACS_complete.owl#> .
+@base <http://aibn.uq.edu.au/cmm/MatOnto.owl> .
+
+<http://aibn.uq.edu.au/cmm/MatOnto.owl> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#associatedWith
+
+:associatedWith rdf:type owl:ObjectProperty ;
+                
+                rdfs:domain ontolingua:standard_dimension ;
+                
+                rdfs:range ontolingua:standard_unit .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#carriedOutBy
+
+:carriedOutBy rdf:type owl:ObjectProperty ;
+              
+              rdfs:range ontology-07:organization ;
+              
+              rdfs:domain ontology-07:project .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#categorisedInto
+
+:categorisedInto rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:range :family ;
+                 
+                 rdfs:domain :material .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#composed_of
+
+:composed_of rdf:type owl:ObjectProperty ;
+             
+             rdfs:domain EXPOApr19:scientific_activity ;
+             
+             rdfs:range EXPOApr19:scientific_experiment .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#es_follows
+
+:es_follows rdf:type owl:ObjectProperty ;
+            
+            rdfs:domain :experimental_step ;
+            
+            rdfs:range :experimental_step ;
+            
+            rdfs:subPropertyOf :follows .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#follows
+
+:follows rdf:type owl:ObjectProperty .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasASequenceOf
+
+:hasASequenceOf rdf:type owl:ObjectProperty ;
+                
+                rdfs:range :experimental_step ;
+                
+                rdfs:domain EXPOApr19:execution_of_experiment .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasElement
+
+:hasElement rdf:type owl:ObjectProperty ;
+            
+            rdfs:domain :chemical_composition ;
+            
+            rdfs:range :chemical_element .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasEquipment
+
+:hasEquipment rdf:type owl:ObjectProperty ;
+              
+              rdfs:domain :experimental_step ;
+              
+              rdfs:range EXPOApr19:experimental_equipment .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasExperiment
+
+:hasExperiment rdf:type owl:ObjectProperty ;
+               
+               rdfs:domain ontology-07:project ;
+               
+               rdfs:range EXPOApr19:scientific_experiment .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasFormula
+
+:hasFormula rdf:type owl:ObjectProperty ;
+            
+            rdfs:domain :chemical_composition ;
+            
+            rdfs:range :structured_formula .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasInvestigator
+
+:hasInvestigator rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:range :investigator ;
+                 
+                 rdfs:domain EXPOApr19:scientific_activity .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasMaterialPropety
+
+:hasMaterialPropety rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:subPropertyOf :hasProperty ;
+                    
+                    rdfs:domain :material ;
+                    
+                    rdfs:range :material_property .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasMeasurementData
+
+:hasMeasurementData rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:domain :material ;
+                    
+                    rdfs:range :measurement_data .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasOperator
+
+:hasOperator rdf:type owl:ObjectProperty ;
+             
+             rdfs:domain :experimental_step ;
+             
+             rdfs:range :operator .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasPart
+
+:hasPart rdf:type owl:ObjectProperty ;
+         
+         rdfs:range :process ;
+         
+         rdfs:domain EXPOApr19:scientific_experiment .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasProcess
+
+:hasProcess rdf:type owl:ObjectProperty ;
+            
+            rdfs:domain :material ;
+            
+            rdfs:range :process .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasProperty
+
+:hasProperty rdf:type owl:ObjectProperty .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasSetting
+
+:hasSetting rdf:type owl:ObjectProperty ;
+            
+            rdfs:range :setting_parameter ;
+            
+            rdfs:domain EXPOApr19:experimental_equipment .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasTime
+
+:hasTime rdf:type owl:ObjectProperty ;
+         
+         rdfs:domain EXPOApr19:scientific_activity ;
+         
+         rdfs:range time:temporal_entity .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasType
+
+:hasType rdf:type owl:ObjectProperty ;
+         
+         rdfs:domain :data ;
+         
+         rdfs:range :data_type .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hasUnit
+
+:hasUnit rdf:type owl:ObjectProperty ;
+         
+         rdfs:range ontolingua:standard_unit ;
+         
+         rdfs:domain SUMO:number .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#inputTo
+
+:inputTo rdf:type owl:ObjectProperty ;
+         
+         rdfs:domain :activity_input ;
+         
+         rdfs:range :experimental_step ,
+                    EXPOApr19:scientific_activity .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#investigates
+
+:investigates rdf:type owl:ObjectProperty ;
+              
+              rdfs:range :material ;
+              
+              rdfs:domain JACS_complete:materials_science .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#outputs
+
+:outputs rdf:type owl:ObjectProperty ;
+         
+         rdfs:range :activitiy_output ;
+         
+         rdfs:domain :experimental_step ,
+                     EXPOApr19:scientific_activity .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#sa_follows
+
+:sa_follows rdf:type owl:ObjectProperty ;
+            
+            rdfs:subPropertyOf :follows ;
+            
+            rdfs:range EXPOApr19:scientific_activity ;
+            
+            rdfs:domain EXPOApr19:scientific_activity .
+
+
+
+###  http://aibn.uq.edu.au/cmm/cif.owl#hasRadius
+
+cif:hasRadius rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#acoustical
+
+:acoustical rdf:type owl:Class ;
+            
+            rdfs:subClassOf :material_property .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#activitiy_output
+
+:activitiy_output rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf DOLCE-Lite:endurant .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#activity_input
+
+:activity_input rdf:type owl:Class ;
+                
+                rdfs:subClassOf DOLCE-Lite:endurant .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#amorphous
+
+:amorphous rdf:type owl:Class ;
+           
+           rdfs:subClassOf :structure .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#biological
+
+:biological rdf:type owl:Class ;
+            
+            rdfs:subClassOf :material_property .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#ceramic
+
+:ceramic rdf:type owl:Class ;
+         
+         rdfs:subClassOf :family .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#characterization_data
+
+:characterization_data rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :measurement_data .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#chemical
+
+:chemical rdf:type owl:Class ;
+          
+          rdfs:subClassOf :material_property .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#chemical_composition
+
+:chemical_composition rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :characterization_data .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#chemical_element
+
+:chemical_element rdf:type owl:Class ;
+                  
+                  owl:equivalentClass cif:ion ;
+                  
+                  rdfs:subClassOf DOLCE-Lite:non-physical_object .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#data
+
+:data rdf:type owl:Class ;
+      
+      rdfs:subClassOf DOLCE-Lite:non-physical_object .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#data_stream
+
+:data_stream rdf:type owl:Class ;
+             
+             rdfs:subClassOf :data_type .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#data_type
+
+:data_type rdf:type owl:Class ;
+           
+           rdfs:subClassOf DOLCE-Lite:non-physical_object .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#elastomer
+
+:elastomer rdf:type owl:Class ;
+           
+           rdfs:subClassOf :family .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#electrical
+
+:electrical rdf:type owl:Class ;
+            
+            rdfs:subClassOf :material_property .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#experimental_step
+
+:experimental_step rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf DOLCE-Lite:accomplishment .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#family
+
+:family rdf:type owl:Class ;
+        
+        rdfs:subClassOf DOLCE-Lite:non-physical_object .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#glass
+
+:glass rdf:type owl:Class ;
+       
+       rdfs:subClassOf :family .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#hybrid
+
+:hybrid rdf:type owl:Class ;
+        
+        rdfs:subClassOf :family .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#investigator
+
+:investigator rdf:type owl:Class ;
+              
+              rdfs:subClassOf ontology-07:academic_staff .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#magnetic
+
+:magnetic rdf:type owl:Class ;
+          
+          rdfs:subClassOf :material_property .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#manufacturing
+
+:manufacturing rdf:type owl:Class ;
+               
+               rdfs:subClassOf :process .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#material
+
+:material rdf:type owl:Class ;
+          
+          rdfs:subClassOf DOLCE-Lite:physical_object .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#material_property
+
+:material_property rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :property .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#material_property_data
+
+:material_property_data rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :measurement_data .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#measurement
+
+:measurement rdf:type owl:Class ;
+             
+             rdfs:subClassOf :process .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#measurement_data
+
+:measurement_data rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :data .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#mechanical
+
+:mechanical rdf:type owl:Class ;
+            
+            rdfs:subClassOf :material_property .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#metal
+
+:metal rdf:type owl:Class ;
+       
+       rdfs:subClassOf :family .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#modelling_data_and_simulation_data
+
+:modelling_data_and_simulation_data rdf:type owl:Class ;
+                                    
+                                    rdfs:subClassOf :measurement_data .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#operator
+
+:operator rdf:type owl:Class ;
+          
+          rdfs:subClassOf ontology-07:employee .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#optical
+
+:optical rdf:type owl:Class ;
+         
+         rdfs:subClassOf :material_property .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#performance_data
+
+:performance_data rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :measurement_data .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#polymer
+
+:polymer rdf:type owl:Class ;
+         
+         rdfs:subClassOf :family .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#process
+
+:process rdf:type owl:Class ;
+         
+         rdfs:subClassOf DOLCE-Lite:accomplishment .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#property
+
+:property rdf:type owl:Class ;
+          
+          rdfs:subClassOf DOLCE-Lite:non-physical_object .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#radiological
+
+:radiological rdf:type owl:Class ;
+              
+              rdfs:subClassOf :material_property .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#setting_parameter
+
+:setting_parameter rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :data .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#stative
+
+:stative rdf:type owl:Class ;
+         
+         rdfs:subClassOf DOLCE-Lite:event .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#structure
+
+:structure rdf:type owl:Class ;
+           
+           rdfs:subClassOf :stative .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#structured_formula
+
+:structured_formula rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf DOLCE-Lite:non-physical_object .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#texture
+
+:texture rdf:type owl:Class ;
+         
+         rdfs:subClassOf :data_type .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#thermal
+
+:thermal rdf:type owl:Class ;
+         
+         rdfs:subClassOf :material_property .
+
+
+
+###  http://aibn.uq.edu.au/cmm/cif.owl#atom_site_property
+
+cif:atom_site_property rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :property .
+
+
+
+###  http://aibn.uq.edu.au/cmm/cif.owl#crystal_system
+
+cif:crystal_system rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :stative .
+
+
+
+###  http://aibn.uq.edu.au/cmm/cif.owl#crystalline
+
+cif:crystalline rdf:type owl:Class ;
+                
+                rdfs:subClassOf :structure .
+
+
+
+###  http://aibn.uq.edu.au/cmm/cif.owl#crystallographic_property
+
+cif:crystallographic_property rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :property .
+
+
+
+###  http://aibn.uq.edu.au/cmm/cif.owl#ion
+
+cif:ion rdf:type owl:Class ;
+        
+        rdfs:subClassOf DOLCE-Lite:physical_object .
+
+
+
+###  http://aibn.uq.edu.au/cmm/cif.owl#ionic_parameter
+
+cif:ionic_parameter rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :data .
+
+
+
+###  http://aibn.uq.edu.au/cmm/cif.owl#ionic_radius
+
+cif:ionic_radius rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :data .
+
+
+
+###  http://ksl.stanford.edu/htw/dme/thermal-kb-tour/ontolingua.owl#standard_dimension
+
+ontolingua:standard_dimension rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf DOLCE-Lite:quality .
+
+
+
+###  http://ksl.stanford.edu/htw/dme/thermal-kb-tour/ontolingua.owl#standard_unit
+
+ontolingua:standard_unit rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf DOLCE-Lite:abstract .
+
+
+
+###  http://rhizomik.net/ontologies/2005/03/Mpeg7-2001.owl#audio
+
+Mpeg7-2001:audio rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :data_type .
+
+
+
+###  http://rhizomik.net/ontologies/2005/03/Mpeg7-2001.owl#image
+
+Mpeg7-2001:image rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :data_type .
+
+
+
+###  http://rhizomik.net/ontologies/2005/03/Mpeg7-2001.owl#video
+
+Mpeg7-2001:video rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :data_type .
+
+
+
+###  http://swrc.ontoware.org/ontology-07.owl#academic_staff
+
+ontology-07:academic_staff rdf:type owl:Class .
+
+
+
+###  http://swrc.ontoware.org/ontology-07.owl#employee
+
+ontology-07:employee rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf DOLCE-Lite:social_agent .
+
+
+
+###  http://swrc.ontoware.org/ontology-07.owl#organization
+
+ontology-07:organization rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf DOLCE-Lite:society .
+
+
+
+###  http://swrc.ontoware.org/ontology-07.owl#project
+
+ontology-07:project rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf DOLCE-Lite:accomplishment .
+
+
+
+###  http://swrc.ontoware.org/ontology-07.owl#publication
+
+ontology-07:publication rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf DOLCE-Lite:endurant .
+
+
+
+###  http://swrc.ontoware.org/ontology-07.owl#student
+
+ontology-07:student rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf DOLCE-Lite:social_agent .
+
+
+
+###  http://www.hesa.ac.uk/dox/jacs/JACS_complete.owl#academic_discipline
+
+JACS_complete:academic_discipline rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf DOLCE-Lite:non-physical_object .
+
+
+
+###  http://www.hesa.ac.uk/dox/jacs/JACS_complete.owl#materials_science
+
+JACS_complete:materials_science rdf:type owl:Class .
+
+
+
+###  http://www.hozo.jp/owl/EXPOApr19.owl#execution_of_experiment
+
+EXPOApr19:execution_of_experiment rdf:type owl:Class .
+
+
+
+###  http://www.hozo.jp/owl/EXPOApr19.owl#experimental_equipment
+
+EXPOApr19:experimental_equipment rdf:type owl:Class ;
+                                 
+                                 rdfs:subClassOf DOLCE-Lite:physical_object .
+
+
+
+###  http://www.hozo.jp/owl/EXPOApr19.owl#scientific_activity
+
+EXPOApr19:scientific_activity rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf DOLCE-Lite:accomplishment .
+
+
+
+###  http://www.hozo.jp/owl/EXPOApr19.owl#scientific_experiment
+
+EXPOApr19:scientific_experiment rdf:type owl:Class ;
+                                
+                                rdfs:subClassOf DOLCE-Lite:accomplishment .
+
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract
+
+DOLCE-Lite:abstract rdf:type owl:Class .
+
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#accomplishment
+
+DOLCE-Lite:accomplishment rdf:type owl:Class .
+
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant
+
+DOLCE-Lite:endurant rdf:type owl:Class .
+
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#event
+
+DOLCE-Lite:event rdf:type owl:Class .
+
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#non-physical_object
+
+DOLCE-Lite:non-physical_object rdf:type owl:Class .
+
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical_object
+
+DOLCE-Lite:physical_object rdf:type owl:Class .
+
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#quality
+
+DOLCE-Lite:quality rdf:type owl:Class .
+
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#social_agent
+
+DOLCE-Lite:social_agent rdf:type owl:Class .
+
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#society
+
+DOLCE-Lite:society rdf:type owl:Class .
+
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#temporal_quality
+
+DOLCE-Lite:temporal_quality rdf:type owl:Class .
+
+
+
+###  http://www.ontologyportal.org/translations/SUMO.owl#number
+
+SUMO:number rdf:type owl:Class ;
+            
+            rdfs:subClassOf :data_type .
+
+
+
+###  http://www.w3.org/2006/time.owl#temporal_entity
+
+time:temporal_entity rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf DOLCE-Lite:temporal_quality .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#ionic_radii.ION
+
+:ionic_radii.ION rdf:type cif:ion ,
+                          owl:NamedIndividual ;
+                 
+                 cif:hasRadius :ionic_radii.IONIC_RADIUS ;
+                 
+                 owl:sameAs :p_record.EL_SYMBOL .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#ionic_radii.IONIC_RADIUS
+
+:ionic_radii.IONIC_RADIUS rdf:type cif:ionic_radius ,
+                                   owl:NamedIndividual .
+
+
+
+###  http://aibn.uq.edu.au/cmm/MatOnto.owl#p_record.EL_SYMBOL
+
+:p_record.EL_SYMBOL rdf:type :chemical_element ,
+                             owl:NamedIndividual .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
