@@ -1,18 +1,18 @@
-@prefix : <http://matonto.org/ontologies/> .
+@prefix : <http://matonto.org/ontologies/thermodynamics#> .
 @prefix dl: <http://ontology.dumontierlab.com/> .
-@prefix mat: <http://matonto.org/ontologies/> .
+@prefix mat: <http://matonto.org/ontologies/matonto#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://matonto.org/ontologies/thermodynamics> .
+@base <http://matonto.org/ontologies/thermodynamics#> .
 
-<http://matonto.org/ontologies/thermodynamics> rdf:type owl:Ontology ;
-                                               
-                                               owl:imports :matonto ;
-                                               
-                                               owl:versionIRI <http://matonto.org/ontologies/thermodynamics> .
+<http://matonto.org/ontologies/thermodynamics#> rdf:type owl:Ontology ;
+                                                
+                                                owl:imports <http://matonto.org/ontologies/matonto> ;
+                                                
+                                                owl:versionIRI <http://matonto.org/ontologies/thermodynamics/1.0> .
 
 
 #################################################################
@@ -22,136 +22,136 @@
 #################################################################
 
 
-###  http://matonto.org/ontologies/thermodynamicsClosedThermodynamicSystem
+###  http://matonto.org/ontologies/thermodynamics#ClosedThermodynamicSystem
 
-:thermodynamicsClosedThermodynamicSystem rdf:type owl:Class ;
-                                         
-                                         rdfs:label "closed thermodynamic system" ;
-                                         
-                                         rdfs:subClassOf :thermodynamicsThermodynamicSystem ;
-                                         
-                                         rdfs:comment "a thermodynamic system in which no mass can be transferred in or out of the system boundaries" .
-
-
-
-###  http://matonto.org/ontologies/thermodynamicsEnthalpy
-
-:thermodynamicsEnthalpy rdf:type owl:Class ;
-                        
-                        rdfs:label "enthalpy" ,
-                                   "A measure of the number of specific ways in which a thermodynamic system may be arranged" ;
-                        
-                        rdfs:subClassOf dl:MeasuredProperty ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty dl:hasUnit ;
-                                          owl:someValuesFrom :thermodynamicsEnthalpyUnit
-                                        ] ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty dl:hasUnit ;
-                                          owl:allValuesFrom :thermodynamicsEnthalpyUnit
-                                        ] .
+:ClosedThermodynamicSystem rdf:type owl:Class ;
+                           
+                           rdfs:label "closed thermodynamic system" ;
+                           
+                           rdfs:subClassOf :ThermodynamicSystem ;
+                           
+                           rdfs:comment "a thermodynamic system in which no mass can be transferred in or out of the system boundaries" .
 
 
 
-###  http://matonto.org/ontologies/thermodynamicsEnthalpyUnit
+###  http://matonto.org/ontologies/thermodynamics#Enthalpy
 
-:thermodynamicsEnthalpyUnit rdf:type owl:Class ;
-                            
-                            rdfs:label "enthalpy unit" ,
-                                       "a standard measurement unit for enthalpy" ;
-                            
-                            rdfs:subClassOf dl:Unit ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty dl:derivesFrom ;
-                                              owl:someValuesFrom dl:EnergyUnit
-                                            ] .
-
-
-
-###  http://matonto.org/ontologies/thermodynamicsGibbsFreeEnergy
-
-:thermodynamicsGibbsFreeEnergy rdf:type owl:Class ;
-                               
-                               rdfs:label "a measure of the process-initiating work obtainable from a thermodynamic system at a constant temperature and pressure." ,
-                                          "Gibbs free energy" ;
-                               
-                               rdfs:subClassOf dl:Energy ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty dl:hasUnit ;
-                                                 owl:allValuesFrom dl:EnergyUnit
-                                               ] ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty dl:hasUnit ;
-                                                 owl:someValuesFrom dl:EnergyUnit
-                                               ] .
+:Enthalpy rdf:type owl:Class ;
+          
+          rdfs:label "A measure of the number of specific ways in which a thermodynamic system may be arranged" ,
+                     "enthalpy" ;
+          
+          rdfs:subClassOf dl:MeasuredProperty ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty dl:hasUnit ;
+                            owl:allValuesFrom :EnthalpyUnit
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty dl:hasUnit ;
+                            owl:someValuesFrom :EnthalpyUnit
+                          ] .
 
 
 
-###  http://matonto.org/ontologies/thermodynamicsHelmholtzFreeEnergy
+###  http://matonto.org/ontologies/thermodynamics#EnthalpyUnit
 
-:thermodynamicsHelmholtzFreeEnergy rdf:type owl:Class ;
-                                   
-                                   rdfs:label "Helmholtz free energy" ;
-                                   
-                                   rdfs:subClassOf dl:Energy ,
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty dl:hasUnit ;
-                                                     owl:someValuesFrom dl:EnergyUnit
-                                                   ] ,
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty dl:hasUnit ;
-                                                     owl:allValuesFrom dl:EnergyUnit
-                                                   ] ;
-                                   
-                                   rdfs:comment "the workobtainable from a closed thermodynamic system at a constant temperature" .
+:EnthalpyUnit rdf:type owl:Class ;
+              
+              rdfs:label "enthalpy unit" ,
+                         "a standard measurement unit for enthalpy" ;
+              
+              rdfs:subClassOf dl:Unit ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty dl:derivesFrom ;
+                                owl:someValuesFrom dl:EnergyUnit
+                              ] .
 
 
 
-###  http://matonto.org/ontologies/thermodynamicsInternalEnergy
+###  http://matonto.org/ontologies/thermodynamics#GibbsFreeEnergy
 
-:thermodynamicsInternalEnergy rdf:type owl:Class ;
-                              
-                              rdfs:label "internal energy" ;
-                              
-                              rdfs:subClassOf dl:Energy ;
-                              
-                              rdfs:comment "energy contained by a thermodynamic system" .
-
-
-
-###  http://matonto.org/ontologies/thermodynamicsIsolatedThermodynamicSystem
-
-:thermodynamicsIsolatedThermodynamicSystem rdf:type owl:Class ;
-                                           
-                                           rdfs:label "isolated thermodynamic system" ;
-                                           
-                                           rdfs:subClassOf :thermodynamicsThermodynamicSystem ;
-                                           
-                                           rdfs:comment "a thermodynamic system that does not interact with its surroundings in any way" .
+:GibbsFreeEnergy rdf:type owl:Class ;
+                 
+                 rdfs:label "Gibbs free energy" ,
+                            "a measure of the process-initiating work obtainable from a thermodynamic system at a constant temperature and pressure." ;
+                 
+                 rdfs:subClassOf dl:Energy ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dl:hasUnit ;
+                                   owl:allValuesFrom dl:EnergyUnit
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dl:hasUnit ;
+                                   owl:someValuesFrom dl:EnergyUnit
+                                 ] .
 
 
 
-###  http://matonto.org/ontologies/thermodynamicsOpenThermodynamicSystem
+###  http://matonto.org/ontologies/thermodynamics#HelmholtzFreeEnergy
 
-:thermodynamicsOpenThermodynamicSystem rdf:type owl:Class ;
-                                       
-                                       rdfs:label "open thermodynamic system" ;
-                                       
-                                       rdfs:subClassOf :thermodynamicsThermodynamicSystem ;
-                                       
-                                       rdfs:comment "a thermodynamic system in which matter may flow in and out of some segments of the system boundaries" .
+:HelmholtzFreeEnergy rdf:type owl:Class ;
+                     
+                     rdfs:label "Helmholtz free energy" ;
+                     
+                     rdfs:subClassOf dl:Energy ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty dl:hasUnit ;
+                                       owl:allValuesFrom dl:EnergyUnit
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty dl:hasUnit ;
+                                       owl:someValuesFrom dl:EnergyUnit
+                                     ] ;
+                     
+                     rdfs:comment "the workobtainable from a closed thermodynamic system at a constant temperature" .
 
 
 
-###  http://matonto.org/ontologies/thermodynamicsThermodynamicSystem
+###  http://matonto.org/ontologies/thermodynamics#InternalEnergy
 
-:thermodynamicsThermodynamicSystem rdf:type owl:Class ;
-                                   
-                                   rdfs:label "thermodynamic system" ;
-                                   
-                                   rdfs:subClassOf <http://www.ifomis.org/bfo/1.0/snap#ThreeDimensionalRegion> ;
-                                   
-                                   rdfs:comment "a macroscopic region defined by boundaries that determine processes which are allowed to affect the interior of the region" .
+:InternalEnergy rdf:type owl:Class ;
+                
+                rdfs:label "internal energy" ;
+                
+                rdfs:subClassOf dl:Energy ;
+                
+                rdfs:comment "energy contained by a thermodynamic system" .
+
+
+
+###  http://matonto.org/ontologies/thermodynamics#IsolatedThermodynamicSystem
+
+:IsolatedThermodynamicSystem rdf:type owl:Class ;
+                             
+                             rdfs:label "isolated thermodynamic system" ;
+                             
+                             rdfs:subClassOf :ThermodynamicSystem ;
+                             
+                             rdfs:comment "a thermodynamic system that does not interact with its surroundings in any way" .
+
+
+
+###  http://matonto.org/ontologies/thermodynamics#OpenThermodynamicSystem
+
+:OpenThermodynamicSystem rdf:type owl:Class ;
+                         
+                         rdfs:label "open thermodynamic system" ;
+                         
+                         rdfs:subClassOf :ThermodynamicSystem ;
+                         
+                         rdfs:comment "a thermodynamic system in which matter may flow in and out of some segments of the system boundaries" .
+
+
+
+###  http://matonto.org/ontologies/thermodynamics#ThermodynamicSystem
+
+:ThermodynamicSystem rdf:type owl:Class ;
+                     
+                     rdfs:label "thermodynamic system" ;
+                     
+                     rdfs:subClassOf <http://www.ifomis.org/bfo/1.0/snap#ThreeDimensionalRegion> ;
+                     
+                     rdfs:comment "a macroscopic region defined by boundaries that determine processes which are allowed to affect the interior of the region" .
 
 
 
