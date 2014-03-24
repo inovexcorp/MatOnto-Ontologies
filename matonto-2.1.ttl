@@ -53,6 +53,27 @@
 
 #################################################################
 #
+#    Individuals
+#
+#################################################################
+
+
+###  http://ontology.dumontierlab.com/unit_gram
+
+dl:unit_gram rdfs:label "gram" ;
+             
+             rdfs:comment "The gram is a metric system unit of mass." ;
+             
+             :symbol "g" ;
+             
+             dl:derivesInto dl:unit_kilogram .
+
+
+
+
+
+#################################################################
+#
 #    Annotations
 #
 #################################################################
