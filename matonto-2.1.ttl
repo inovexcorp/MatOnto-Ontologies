@@ -32,6 +32,27 @@
 
 #################################################################
 #
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://matonto.org/ontologies/matonto#symbol
+
+:symbol rdf:type owl:AnnotationProperty ;
+        
+        rdfs:label "SI Unit Symbol" ;
+        
+        rdfs:comment "The official SI symbol for a unit. For example, kg is the symbol for kilogram." ;
+        
+        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> .
+
+
+
+
+
+#################################################################
+#
 #    Annotations
 #
 #################################################################
