@@ -7,7 +7,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://inovexirad.com/ontologies/2014/03/phaseCharacterization> .
 
-<http://inovexirad.com/ontologies/2014/03/phaseCharacterization> rdf:type owl:Ontology .
+<http://matonto.org/ontologies/2014/03/phaseCharacterization> rdf:type owl:Ontology .
 
 
 #################################################################
@@ -22,6 +22,8 @@
 :hasChemicalComposition rdf:type owl:DatatypeProperty ,
                                  owl:FunctionalProperty ;
                         
+                        rdfs:label "Has Chemical Composition"@en ;
+                        
                         rdfs:domain :Phase .
 
 
@@ -30,6 +32,8 @@
 
 :hasDensity rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
+            
+            rdfs:label "Has Density"@en ;
             
             rdfs:domain :Phase .
 
@@ -40,6 +44,8 @@
 :hasIndexOfRefraction rdf:type owl:DatatypeProperty ,
                                owl:FunctionalProperty ;
                       
+                      rdfs:label "Has Index of Refraction"@en ;
+                      
                       rdfs:domain :Phase .
 
 
@@ -49,6 +55,8 @@
 :hasMagnetization rdf:type owl:DatatypeProperty ,
                            owl:FunctionalProperty ;
                   
+                  rdfs:label "Has Magnetization"@en ;
+                  
                   rdfs:domain :Phase .
 
 
@@ -57,6 +65,8 @@
 
 :hasState rdf:type owl:DatatypeProperty ,
                    owl:FunctionalProperty ;
+          
+          rdfs:label "Has State"@en ;
           
           rdfs:domain :Phase .
 
@@ -75,6 +85,8 @@
 
 :CrystalStructure rdf:type owl:Class ;
                   
+                  rdfs:label "Crystal Structure"@en ;
+                  
                   rdfs:subClassOf :Solid .
 
 
@@ -82,6 +94,8 @@
 ###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#DegenerateGas
 
 :DegenerateGas rdf:type owl:Class ;
+               
+               rdfs:label "Degenerate Gas"@en ;
                
                rdfs:subClassOf :Phase .
 
@@ -91,6 +105,8 @@
 
 :Gas rdf:type owl:Class ;
      
+     rdfs:label "Gas"@en ;
+     
      rdfs:subClassOf :Phase .
 
 
@@ -99,19 +115,25 @@
 
 :Liquid rdf:type owl:Class ;
         
+        rdfs:label "Liquid"@en ;
+        
         rdfs:subClassOf :Phase .
 
 
 
 ###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#Phase
 
-:Phase rdf:type owl:Class .
+:Phase rdf:type owl:Class ;
+       
+       rdfs:label "Phase"@en .
 
 
 
 ###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#Plasma
 
 :Plasma rdf:type owl:Class ;
+        
+        rdfs:label "Plasma"@en ;
         
         rdfs:subClassOf :Phase .
 
@@ -121,6 +143,8 @@
 
 :Solid rdf:type owl:Class ;
        
+       rdfs:label "Solid"@en ;
+       
        rdfs:subClassOf :Phase .
 
 
@@ -128,6 +152,8 @@
 ###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#SupercriticalFluid
 
 :SupercriticalFluid rdf:type owl:Class ;
+                    
+                    rdfs:label "Supercritical Fluid"@en ;
                     
                     rdfs:subClassOf :Phase .
 
