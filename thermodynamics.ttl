@@ -58,14 +58,15 @@
 
 :EnthalpyUnit rdf:type owl:Class ;
               
-              rdfs:label "enthalpy unit" ,
-                         "a standard measurement unit for enthalpy" ;
+              rdfs:label "enthalpy unit" ;
               
               rdfs:subClassOf dl:Unit ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:derivesFrom ;
                                 owl:someValuesFrom dl:EnergyUnit
-                              ] .
+                              ] ;
+              
+              rdfs:comment "a standard measurement unit for enthalpy" .
 
 
 
@@ -73,8 +74,7 @@
 
 :GibbsFreeEnergy rdf:type owl:Class ;
                  
-                 rdfs:label "Gibbs free energy" ,
-                            "a measure of the process-initiating work obtainable from a thermodynamic system at a constant temperature and pressure." ;
+                 rdfs:label "Gibbs free energy" ;
                  
                  rdfs:subClassOf dl:Energy ,
                                  [ rdf:type owl:Restriction ;
@@ -84,7 +84,9 @@
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
                                    owl:someValuesFrom dl:EnergyUnit
-                                 ] .
+                                 ] ;
+                 
+                 rdfs:comment "a measure of the process-initiating work obtainable from a thermodynamic system at a constant temperature and pressure." .
 
 
 
