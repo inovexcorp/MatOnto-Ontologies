@@ -5,6 +5,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @base <http://matonto.org/ontologies/matonto> .
 
 <http://matonto.org/ontologies/matonto> rdf:type owl:Ontology ;
@@ -27,7 +28,8 @@
                                                     dl:periodic-table-complex ,
                                                     dl:property-complex ,
                                                     dl:unit-complex ,
-                                                    dl:unit-individuals .
+                                                    dl:unit-individuals ,
+                                                    <http://www.w3.org/2004/02/skos/core> .
 
 
 #################################################################
@@ -35,6 +37,16 @@
 #    Annotation properties
 #
 #################################################################
+
+
+###  http://matonto.org/ontologies/matonto#commonSymbol
+
+:commonSymbol rdf:type owl:AnnotationProperty ;
+              
+              rdfs:label "common symbol" ;
+              
+              rdfs:comment "A traditional or common symbol used to identify a quality in literature or mathematical functions.  For example, G is the common symbol for Newton's gravitational constant, as well as for the modulus of rigidity in materials science." .
+
 
 
 ###  http://matonto.org/ontologies/matonto#symbol
