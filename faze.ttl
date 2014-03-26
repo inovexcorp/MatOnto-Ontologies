@@ -9,6 +9,7 @@
 
 <http://matonto.org/ontologies/2014/03/phaseCharacterization> rdf:type owl:Ontology .
 
+# Uses http://www.metallurgy.nist.gov/phase/solder/solder.html as sample data for guide
 
 #################################################################
 #
