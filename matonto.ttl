@@ -53,6 +53,143 @@
 
 #################################################################
 #
+#    Classes
+#
+#################################################################
+
+
+###  http://matonto.org/ontologies/matonto#Ceramics
+
+:Ceramics rdf:type owl:Class ;
+          
+          rdfs:label "ceramics" ;
+          
+          rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Composites
+
+:Composites rdf:type owl:Class ;
+            
+            rdfs:label "composites" ;
+            
+            rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Elastomers
+
+:Elastomers rdf:type owl:Class ;
+            
+            rdfs:label "elastomers" ;
+            
+            rdfs:subClassOf :Polymers ;
+            
+            rdfs:comment "A rubber-like (viscoelastic) polymer. Generally, has a low Young's modulus and high failure strain." .
+
+
+
+###  http://matonto.org/ontologies/matonto#Glasses
+
+:Glasses rdf:type owl:Class ;
+         
+         rdfs:label "glasses" ;
+         
+         rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Material
+
+:Material rdf:type owl:Class ;
+          
+          rdfs:label "material" ;
+          
+          rdfs:subClassOf dl:ChemicalSubstance ;
+          
+          rdfs:comment "A chemical substance that is studied in materials science." .
+
+
+
+###  http://matonto.org/ontologies/matonto#MaterialCategory
+
+:MaterialCategory rdf:type owl:Class ;
+                  
+                  rdfs:label "material category" ;
+                  
+                  rdfs:subClassOf :MaterialQuality ;
+                  
+                  rdfs:comment "A category used to classify different materials." .
+
+
+
+###  http://matonto.org/ontologies/matonto#MaterialQuality
+
+:MaterialQuality rdf:type owl:Class ;
+                 
+                 rdfs:label "material quality" ;
+                 
+                 rdfs:subClassOf dl:ChemicalQuality ;
+                 
+                 rdfs:comment "Qualities of chemical substances that are studied in materials science." .
+
+
+
+###  http://matonto.org/ontologies/matonto#Metals
+
+:Metals rdf:type owl:Class ;
+        
+        rdfs:label "metals" ;
+        
+        rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Nanomaterials
+
+:Nanomaterials rdf:type owl:Class ;
+               
+               rdfs:label "nanomaterials" ;
+               
+               rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Plastics
+
+:Plastics rdf:type owl:Class ;
+          
+          rdfs:label "plastics" ;
+          
+          rdfs:subClassOf :Polymers .
+
+
+
+###  http://matonto.org/ontologies/matonto#Polymers
+
+:Polymers rdf:type owl:Class ;
+          
+          rdfs:label "polymers" ;
+          
+          rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Refractory
+
+:Refractory rdf:type owl:Class ;
+            
+            rdfs:label "refactory" ;
+            
+            rdfs:subClassOf :MaterialCategory .
+
+
+
+
+
+#################################################################
+#
 #    Individuals
 #
 #################################################################
