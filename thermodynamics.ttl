@@ -38,18 +38,19 @@
 
 :Enthalpy rdf:type owl:Class ;
           
-          rdfs:label "A measure of the number of specific ways in which a thermodynamic system may be arranged" ,
-                     "enthalpy" ;
+          rdfs:label "enthalpy" ;
           
           rdfs:subClassOf dl:MeasuredProperty ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:allValuesFrom :EnthalpyUnit
+                            owl:someValuesFrom :EnthalpyUnit
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:someValuesFrom :EnthalpyUnit
-                          ] .
+                            owl:allValuesFrom :EnthalpyUnit
+                          ] ;
+          
+          rdfs:comment "A measure of the total energy of a thermodynamic system." .
 
 
 
