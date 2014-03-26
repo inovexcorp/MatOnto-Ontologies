@@ -1,0 +1,237 @@
+@prefix : <http://matonto.org/ontologies/matonto#> .
+@prefix dl: <http://ontology.dumontierlab.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://matonto.org/ontologies/matonto> .
+
+<http://matonto.org/ontologies/matonto> rdf:type owl:Ontology ;
+                                        
+                                        owl:versionInfo "2.1" ;
+                                        
+                                        owl:versionIRI <http://matonto.org/ontologies/matonto/2.1> ;
+                                        
+                                        owl:imports dl:annotation ,
+                                                    dl:atom-complex-atomic-number ,
+                                                    dl:atom-complex-disjoint ,
+                                                    dl:bfo ,
+                                                    dl:bro ,
+                                                    dl:chemistry-complex ,
+                                                    dl:molecule-complex ,
+                                                    dl:molecule-individuals ,
+                                                    dl:nulo ,
+                                                    dl:organic-compound-complex ,
+                                                    dl:organic-functional-group-complex ,
+                                                    dl:periodic-table-complex ,
+                                                    dl:property-complex ,
+                                                    dl:unit-complex ,
+                                                    dl:unit-individuals ,
+                                                    <http://www.w3.org/2004/02/skos/core> .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://matonto.org/ontologies/matonto#commonSymbol
+
+:commonSymbol rdf:type owl:AnnotationProperty ;
+              
+              rdfs:label "common symbol" ;
+              
+              rdfs:comment "A traditional or common symbol used to identify a quality in literature or mathematical functions.  For example, G is the common symbol for Newton's gravitational constant, as well as for the modulus of rigidity in materials science." .
+
+
+
+###  http://matonto.org/ontologies/matonto#symbol
+
+:symbol rdf:type owl:AnnotationProperty ;
+        
+        rdfs:label "SI Unit Symbol" ;
+        
+        rdfs:comment "The official SI symbol for a unit. For example, kg is the symbol for kilogram." ;
+        
+        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://matonto.org/ontologies/matonto#Ceramics
+
+:Ceramics rdf:type owl:Class ;
+          
+          rdfs:label "ceramics" ;
+          
+          rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Composites
+
+:Composites rdf:type owl:Class ;
+            
+            rdfs:label "composites" ;
+            
+            rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Elastomers
+
+:Elastomers rdf:type owl:Class ;
+            
+            rdfs:label "elastomers" ;
+            
+            rdfs:subClassOf :Polymers ;
+            
+            rdfs:comment "A rubber-like (viscoelastic) polymer. Generally, has a low Young's modulus and high failure strain." .
+
+
+
+###  http://matonto.org/ontologies/matonto#Glasses
+
+:Glasses rdf:type owl:Class ;
+         
+         rdfs:label "glasses" ;
+         
+         rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Material
+
+:Material rdf:type owl:Class ;
+          
+          rdfs:label "material" ;
+          
+          rdfs:subClassOf dl:ChemicalSubstance ;
+          
+          rdfs:comment "A chemical substance that is studied in materials science." .
+
+
+
+###  http://matonto.org/ontologies/matonto#MaterialCategory
+
+:MaterialCategory rdf:type owl:Class ;
+                  
+                  rdfs:label "material category" ;
+                  
+                  rdfs:subClassOf :MaterialQuality ;
+                  
+                  rdfs:comment "A category used to classify different materials." .
+
+
+
+###  http://matonto.org/ontologies/matonto#MaterialQuality
+
+:MaterialQuality rdf:type owl:Class ;
+                 
+                 rdfs:label "material quality" ;
+                 
+                 rdfs:subClassOf dl:ChemicalQuality ;
+                 
+                 rdfs:comment "Qualities of chemical substances that are studied in materials science." .
+
+
+
+###  http://matonto.org/ontologies/matonto#Metals
+
+:Metals rdf:type owl:Class ;
+        
+        rdfs:label "metals" ;
+        
+        rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Nanomaterials
+
+:Nanomaterials rdf:type owl:Class ;
+               
+               rdfs:label "nanomaterials" ;
+               
+               rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Plastics
+
+:Plastics rdf:type owl:Class ;
+          
+          rdfs:label "plastics" ;
+          
+          rdfs:subClassOf :Polymers .
+
+
+
+###  http://matonto.org/ontologies/matonto#Polymers
+
+:Polymers rdf:type owl:Class ;
+          
+          rdfs:label "polymers" ;
+          
+          rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Refractory
+
+:Refractory rdf:type owl:Class ;
+            
+            rdfs:label "refactory" ;
+            
+            rdfs:subClassOf :MaterialCategory .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://ontology.dumontierlab.com/unit_gram
+
+dl:unit_gram rdfs:label "gram" ;
+             
+             rdfs:comment "The gram is a metric system unit of mass." ;
+             
+             :symbol "g" ;
+             
+             dl:derivesInto dl:unit_kilogram .
+
+
+
+
+
+#################################################################
+#
+#    Annotations
+#
+#################################################################
+
+
+dl:Element rdfs:label "element"^^xsd:string .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+

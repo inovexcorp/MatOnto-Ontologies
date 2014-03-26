@@ -21,6 +21,107 @@
 
 #################################################################
 #
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://ontology.dumontierlab.com/derivesFrom
+
+dl:derivesFrom rdf:type owl:AnnotationProperty .
+
+
+
+###  http://ontology.dumontierlab.com/isScaledBy
+
+dl:isScaledBy rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://matonto.org/ontologies/thermomechanics#BulkModulus
+
+:BulkModulus rdf:type owl:Class ;
+             
+             rdfs:label "bulk modulus" ;
+             
+             rdfs:subClassOf :ElasticModulus ;
+             
+             mat:commonSymbol "K" ;
+             
+             rdfs:comment "The bulk modulus describes volumetric elasticity, or the tendency of an object to deform in all directions when uniformly loaded in all directions; it is defined as volumetric stress over volumetric strain, and is the inverse of compressibility. The bulk modulus is an extension of Young's modulus to three dimensions." .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#ElasticModulus
+
+:ElasticModulus rdf:type owl:Class ;
+                
+                rdfs:label "elastic modulus" ;
+                
+                rdfs:subClassOf dl:MeasuredProperty ;
+                
+                <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of elasticity" ;
+                
+                rdfs:comment "An elastic modulus, or modulus of elasticity, is the mathematical description of an object or substance's tendency to be deformed elastically (i.e., non-permanently) when a force is applied to it. The elastic modulus of an object is defined as the slope of its stress–strain curve in the elastic deformation region." .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#ShearModulus
+
+:ShearModulus rdf:type owl:Class ;
+              
+              rdfs:label "shear modulus" ;
+              
+              rdfs:subClassOf :ElasticModulus ;
+              
+              rdfs:comment "The shear modulus describes an object's tendency to shear (the deformation of shape at constant volume) when acted upon by opposing forces; it is defined as shear stress over shear strain. The shear modulus is part of the derivation of viscosity." ;
+              
+              mat:commonSymbol "G" ;
+              
+              <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of rigidity" .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#WeibullModulus
+
+:WeibullModulus rdf:type owl:Class ;
+                
+                rdfs:label "weibull modulus" ;
+                
+                rdfs:subClassOf dl:MeasuredProperty ;
+                
+                rdfs:comment "The Weibull modulus is a dimensionless parameter of the Weibull distribution which is used to describe variability in measured material strength of brittle materials." .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#YoungsModulus
+
+:YoungsModulus rdf:type owl:Class ;
+               
+               rdfs:label "youngs modulus" ;
+               
+               rdfs:subClassOf :ElasticModulus ;
+               
+               <http://www.w3.org/2004/02/skos/core#altLabel> "Young's modulus" ,
+                                                              "tensile modulus" ;
+               
+               rdfs:comment "Young's modulus is a measure of the stiffness of an elastic isotropic material and is a quantity used to characterize materials. It is defined as the ratio of the stress along an axis over the strain along that axis in the range of stress in which Hooke's law holds." .
+
+
+
+
+
+#################################################################
+#
 #    Individuals
 #
 #################################################################
