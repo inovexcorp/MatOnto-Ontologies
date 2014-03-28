@@ -1,75 +1,112 @@
-@prefix : <http://inovexirad.com/ontologies/2014/03/phaseCharacterization#> .
+@prefix : <http://matonto.org/ontologies/2014/03/phaseCharacterization#> .
+@prefix dl: <http://ontology.dumontierlab.com/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix faze: <http://inovexirad.com/ontologies/2014/03/phaseCharacterization> .
+@prefix faze: <http://matonto.org/ontologies/2014/03/phaseCharacterization> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://inovexirad.com/ontologies/2014/03/phaseCharacterization> .
+@base <http://matonto.org/ontologies/2014/03/phaseCharacterization> .
 
-<http://matonto.org/ontologies/2014/03/phaseCharacterization> rdf:type owl:Ontology .
+<http://matonto.org/ontologies/2014/03/phaseCharacterization> rdf:type owl:Ontology ;
+                                                              
+                                                              owl:versionInfo "0.3" ;
+                                                              
+                                                              owl:imports <http://matonto.org/ontologies/matonto> ;
+                                                              
+                                                              owl:versionIRI <http://matonto.org/ontologies/2014/03/phaseCharacterization/0.3> .
 
-# Uses http://www.metallurgy.nist.gov/phase/solder/solder.html as sample data for guide
 
 #################################################################
 #
-#    Data properties
+#    Object Properties
 #
 #################################################################
 
 
-###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#hasChemicalComposition
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasElement
 
-:hasChemicalComposition rdf:type owl:DatatypeProperty ,
-                                 owl:FunctionalProperty ;
-                        
-                        rdfs:label "Has Chemical Composition"@en ;
-                        
-                        rdfs:domain :Phase .
-
-
-
-###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#hasDensity
-
-:hasDensity rdf:type owl:DatatypeProperty ,
-                     owl:FunctionalProperty ;
+:hasElement rdf:type owl:ObjectProperty ;
             
-            rdfs:label "Has Density"@en ;
+            rdfs:label "Has Element"@en ;
             
-            rdfs:domain :Phase .
+            rdfs:comment "A structure has one or many chemical elements"@en ;
+            
+            rdfs:range :Element ;
+            
+            rdfs:domain :Structure .
 
 
 
-###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#hasIndexOfRefraction
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasNickname
 
-:hasIndexOfRefraction rdf:type owl:DatatypeProperty ,
-                               owl:FunctionalProperty ;
-                      
-                      rdfs:label "Has Index of Refraction"@en ;
-                      
-                      rdfs:domain :Phase .
-
-
-
-###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#hasMagnetization
-
-:hasMagnetization rdf:type owl:DatatypeProperty ,
-                           owl:FunctionalProperty ;
-                  
-                  rdfs:label "Has Magnetization"@en ;
-                  
-                  rdfs:domain :Phase .
+:hasNickname rdf:type owl:FunctionalProperty ,
+                      owl:ObjectProperty ;
+             
+             rdfs:label "Has Nickname"@en ;
+             
+             rdfs:comment "A structure has one nickname"@en ;
+             
+             rdfs:domain :Structure ;
+             
+             rdfs:range :StructureNickname .
 
 
 
-###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#hasState
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasPhaseEquilibrium
 
-:hasState rdf:type owl:DatatypeProperty ,
-                   owl:FunctionalProperty ;
-          
-          rdfs:label "Has State"@en ;
-          
-          rdfs:domain :Phase .
+:hasPhaseEquilibrium rdf:type owl:ObjectProperty ;
+                     
+                     rdfs:label "Has Phase Equilibrium"@en ;
+                     
+                     rdfs:comment "A system may have one or many phase equilibriums"@en ;
+                     
+                     rdfs:range :PhaseEquilibrium ;
+                     
+                     rdfs:domain :System .
+
+
+
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasPressure
+
+:hasPressure rdf:type owl:ObjectProperty ;
+             
+             rdfs:label "Has Pressure"@en ;
+             
+             rdfs:comment "A phase equilibrium occurs at a specific pressure"@en ;
+             
+             rdfs:domain :PhaseEquilibrium ;
+             
+             rdfs:range dl:Pressure .
+
+
+
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasStructure
+
+:hasStructure rdf:type owl:ObjectProperty ;
+              
+              rdfs:label "Has Structure"@en ;
+              
+              rdfs:comment "A phase equilibrium has at least two chemical structures"@en ;
+              
+              rdfs:range :Structure ;
+              
+              rdfs:domain :System .
+
+
+
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasTemperature
+
+:hasTemperature rdf:type owl:FunctionalProperty ,
+                         owl:ObjectProperty ;
+                
+                rdfs:label "Has Temperature"@en ;
+                
+                rdfs:comment "A phase equilibrium has a specific temperature"@en ;
+                
+                rdfs:domain :PhaseEquilibrium ;
+                
+                rdfs:range dl:Temperature .
 
 
 
@@ -82,81 +119,53 @@
 #################################################################
 
 
-###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#CrystalStructure
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#Element
 
-:CrystalStructure rdf:type owl:Class ;
+:Element rdf:type owl:Class ;
+         
+         rdfs:label "Element"@en ;
+         
+         rdfs:comment "A chemical element"@en .
+
+
+
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#PhaseEquilibrium
+
+:PhaseEquilibrium rdf:type owl:Class ;
                   
-                  rdfs:label "Crystal Structure"@en ;
+                  rdfs:label "Phase Equilibrium"@en ;
                   
-                  rdfs:subClassOf :Solid .
+                  rdfs:comment "The conditions at which two phases can be at equilibrium"@en .
 
 
 
-###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#DegenerateGas
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#Structure
 
-:DegenerateGas rdf:type owl:Class ;
-               
-               rdfs:label "Degenerate Gas"@en ;
-               
-               rdfs:subClassOf :Phase .
-
-
-
-###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#Gas
-
-:Gas rdf:type owl:Class ;
-     
-     rdfs:label "Gas"@en ;
-     
-     rdfs:subClassOf :Phase .
+:Structure rdf:type owl:Class ;
+           
+           rdfs:label "Structure"@en ;
+           
+           rdfs:comment "A physical structure of a chemical element"@en .
 
 
 
-###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#Liquid
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#StructureNickname
 
-:Liquid rdf:type owl:Class ;
+:StructureNickname rdf:type owl:Class ;
+                   
+                   rdfs:label "Structure Nickname"@en ;
+                   
+                   rdfs:comment "The nickname of a structure"@en .
+
+
+
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#System
+
+:System rdf:type owl:Class ;
         
-        rdfs:label "Liquid"@en ;
+        rdfs:label "System"@en ;
         
-        rdfs:subClassOf :Phase .
-
-
-
-###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#Phase
-
-:Phase rdf:type owl:Class ;
-       
-       rdfs:label "Phase"@en .
-
-
-
-###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#Plasma
-
-:Plasma rdf:type owl:Class ;
-        
-        rdfs:label "Plasma"@en ;
-        
-        rdfs:subClassOf :Phase .
-
-
-
-###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#Solid
-
-:Solid rdf:type owl:Class ;
-       
-       rdfs:label "Solid"@en ;
-       
-       rdfs:subClassOf :Phase .
-
-
-
-###  http://inovexirad.com/ontologies/2014/03/phaseCharacterization#SupercriticalFluid
-
-:SupercriticalFluid rdf:type owl:Class ;
-                    
-                    rdfs:label "Supercritical Fluid"@en ;
-                    
-                    rdfs:subClassOf :Phase .
+        rdfs:comment "A system is comprised of one or several chemically-independent components."@en .
 
 
 
