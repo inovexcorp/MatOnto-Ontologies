@@ -46,9 +46,9 @@
                      
                      rdfs:comment "A system may have one or many phase equilibriums"@en ;
                      
-                     rdfs:range :PhaseEquilibrium ;
+                     rdfs:domain :Alloy ;
                      
-                     rdfs:domain :System .
+                     rdfs:range :PhaseEquilibrium .
 
 
 
@@ -74,9 +74,7 @@
               
               rdfs:comment "A phase equilibrium has at least two chemical structures"@en ;
               
-              rdfs:range :Structure ;
-              
-              rdfs:domain :System .
+              rdfs:range :Structure .
 
 
 
@@ -104,13 +102,13 @@
 #################################################################
 
 
-###  http://matonto.org/ontologies/2014/03/phaseCharacterization#Element
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#Alloy
 
-:Element rdf:type owl:Class ;
-         
-         rdfs:label "Element"@en ;
-         
-         rdfs:comment "A chemical element"@en .
+:Alloy rdf:type owl:Class ;
+       
+       rdfs:label "Alloy"@en ;
+       
+       rdfs:subClassOf dl:Solution .
 
 
 
@@ -131,16 +129,6 @@
            rdfs:label "Structure"@en ;
            
            rdfs:comment "A physical structure of a chemical element"@en .
-
-
-
-###  http://matonto.org/ontologies/2014/03/phaseCharacterization#System
-
-:System rdf:type owl:Class ;
-        
-        rdfs:label "System"@en ;
-        
-        rdfs:comment "A system is comprised of one or several chemically-independent components."@en .
 
 
 
