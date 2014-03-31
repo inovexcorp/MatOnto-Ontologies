@@ -32,24 +32,9 @@
             
             rdfs:comment "A structure has one or many chemical elements"@en ;
             
-            rdfs:range :Element ;
+            rdfs:domain :Structure ;
             
-            rdfs:domain :Structure .
-
-
-
-###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasNickname
-
-:hasNickname rdf:type owl:FunctionalProperty ,
-                      owl:ObjectProperty ;
-             
-             rdfs:label "Has Nickname"@en ;
-             
-             rdfs:comment "A structure has one nickname"@en ;
-             
-             rdfs:domain :Structure ;
-             
-             rdfs:range :StructureNickname .
+            rdfs:range dl:Element .
 
 
 
@@ -146,16 +131,6 @@
            rdfs:label "Structure"@en ;
            
            rdfs:comment "A physical structure of a chemical element"@en .
-
-
-
-###  http://matonto.org/ontologies/2014/03/phaseCharacterization#StructureNickname
-
-:StructureNickname rdf:type owl:Class ;
-                   
-                   rdfs:label "Structure Nickname"@en ;
-                   
-                   rdfs:comment "The nickname of a structure"@en .
 
 
 
