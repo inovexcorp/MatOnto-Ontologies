@@ -32,8 +32,6 @@
             
             rdfs:comment "A structure has one or many chemical elements"@en ;
             
-            rdfs:domain :Structure ;
-            
             rdfs:range dl:Element .
 
 
@@ -45,14 +43,12 @@
                      rdfs:label "Has Phase Equilibrium"@en ;
                      
                      rdfs:comment "A system may have one or many phase equilibriums"@en ;
-                   
-                     ## What else can have a Phase Equilibrium?
-					 
-                     rdfs:domain :Alloy ;
-				
-                     rdfs:domain dl:Compound ;
                      
-                     rdfs:range :PhaseEquilibrium .
+                     rdfs:domain :Alloy ;
+                     
+                     rdfs:range :PhaseEquilibrium ;
+                     
+                     rdfs:domain dl:Compound .
 
 
 
@@ -78,7 +74,7 @@
               
               rdfs:comment "A phase equilibrium has at least two chemical structures"@en ;
               
-              rdfs:range :Structure .
+              rdfs:domain :PhaseEquilibrium .
 
 
 
@@ -122,17 +118,9 @@
                   
                   rdfs:label "Phase Equilibrium"@en ;
                   
+                  rdfs:subClassOf dl:MeasuredProperty ;
+                  
                   rdfs:comment "The conditions at which two phases can be at equilibrium"@en .
-
-
-
-###  http://matonto.org/ontologies/2014/03/phaseCharacterization#Structure
-
-:Structure rdf:type owl:Class ;
-           
-           rdfs:label "Structure"@en ;
-           
-           rdfs:comment "A physical structure of a chemical element"@en .
 
 
 
