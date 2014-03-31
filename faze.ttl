@@ -45,8 +45,12 @@
                      rdfs:label "Has Phase Equilibrium"@en ;
                      
                      rdfs:comment "A system may have one or many phase equilibriums"@en ;
-                     
+                   
+                     ## What else can have a Phase Equilibrium?
+					 
                      rdfs:domain :Alloy ;
+				
+                     rdfs:domain dl:Compound ;
                      
                      rdfs:range :PhaseEquilibrium .
 
