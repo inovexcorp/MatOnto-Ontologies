@@ -30,9 +30,27 @@
             
             rdfs:label "Has Element"@en ;
             
-            rdfs:comment "A structure has one or many chemical elements"@en ;
+            rdfs:comment "A chemical phase has one or many chemical elements"@en ;
+            
+            rdfs:domain dl:ChemicalPhase ;
             
             rdfs:range dl:Element .
+
+
+
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasPhase
+
+:hasPhase rdf:type owl:ObjectProperty ;
+          
+          rdfs:label "Has Phase"@en ;
+          
+          rdfs:comment "A phase equilibrium has at least two chemical phases"@en ;
+          
+          rdfs:domain :PhaseEquilibrium ;
+          
+          rdfs:range dl:ChemicalPhase ;
+          
+          rdfs:subPropertyOf owl:topObjectProperty .
 
 
 
@@ -63,18 +81,6 @@
              rdfs:domain :PhaseEquilibrium ;
              
              rdfs:range dl:Pressure .
-
-
-
-###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasStructure
-
-:hasStructure rdf:type owl:ObjectProperty ;
-              
-              rdfs:label "Has Structure"@en ;
-              
-              rdfs:comment "A phase equilibrium has at least two chemical structures"@en ;
-              
-              rdfs:domain :PhaseEquilibrium .
 
 
 
