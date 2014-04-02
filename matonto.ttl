@@ -104,6 +104,20 @@
 
 
 
+###  http://matonto.org/ontologies/matonto#ExtensiveProperty
+
+:ExtensiveProperty rdf:type owl:Class ;
+                   
+                   rdfs:label "extensive property" ;
+                   
+                   rdfs:subClassOf dl:MeasuredProperty ;
+                   
+                   owl:disjointWith :IntensiveProperty ;
+                   
+                   rdfs:comment "An extensive property is a physical quantity that is the sum of the properties of separate noninteracting subsystems that compose the entire system. The value of such an additive property is proportional to the size of the system it describes, or to the quantity of matter in the system" .
+
+
+
 ###  http://matonto.org/ontologies/matonto#Glasses
 
 :Glasses rdf:type owl:Class ;
@@ -111,6 +125,20 @@
          rdfs:label "glasses" ;
          
          rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#IntensiveProperty
+
+:IntensiveProperty rdf:type owl:Class ;
+                   
+                   rdfs:label "intensive property" ;
+                   
+                   rdfs:subClassOf dl:MeasuredProperty ;
+                   
+                   skos:altLabel "bulk property" ;
+                   
+                   rdfs:comment "An intensive property is a physical property of a system that does not depend on the system size or the amount of material in the system." .
 
 
 
@@ -197,6 +225,7 @@
             rdfs:label "refactory" ;
             
             rdfs:subClassOf :MaterialCategory .
+
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
