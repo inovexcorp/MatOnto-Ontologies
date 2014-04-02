@@ -10,9 +10,13 @@
 
 <http://matonto.org/ontologies/thermodynamics#> rdf:type owl:Ontology ;
                                                 
+                                                rdfs:label "thermodynamics" ;
+                                                
+                                                owl:versionInfo "0.1" ;
+                                                
                                                 owl:imports <http://matonto.org/ontologies/matonto> ;
                                                 
-                                                owl:versionIRI <http://matonto.org/ontologies/thermodynamics/1.0> .
+                                                owl:versionIRI <http://matonto.org/ontologies/thermodynamics/0.1> .
 
 
 #################################################################
@@ -79,11 +83,11 @@
                  rdfs:subClassOf dl:Energy ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:EnergyUnit
+                                   owl:someValuesFrom dl:EnergyUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:EnergyUnit
+                                   owl:allValuesFrom dl:EnergyUnit
                                  ] ;
                  
                  rdfs:comment "a measure of the process-initiating work obtainable from a thermodynamic system at a constant temperature and pressure." .
