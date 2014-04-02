@@ -94,6 +94,30 @@
 
 
 
+###  http://matonto.org/ontologies/thermodynamics#HeatCapacity
+
+:HeatCapacity rdf:type owl:Class ;
+              
+              rdfs:label "heat capacity" ;
+              
+              rdfs:subClassOf mat:ExtensiveProperty ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty dl:hasUnit ;
+                                owl:allValuesFrom dl:EntropyUnit
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty dl:hasUnit ;
+                                owl:someValuesFrom dl:EntropyUnit
+                              ] ;
+              
+              <http://www.w3.org/2004/02/skos/core#altLabel> "thermal capacity" ;
+              
+              rdfs:comment "Heat capacity is the measurable physical quantity of heat energy required to change the temperature of an object by a given amount." ;
+              
+              mat:commonSymbol "C" .
+
+
+
 ###  http://matonto.org/ontologies/thermodynamics#HelmholtzFreeEnergy
 
 :HelmholtzFreeEnergy rdf:type owl:Class ;
@@ -150,6 +174,28 @@
 
 
 
+###  http://matonto.org/ontologies/thermodynamics#SpecificHeat
+
+:SpecificHeat rdf:type owl:Class ;
+              
+              rdfs:label "specific heat" ;
+              
+              rdfs:subClassOf mat:IntensiveProperty ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty dl:hasUnit ;
+                                owl:someValuesFrom dl:SpecificEntropyUnit
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty dl:hasUnit ;
+                                owl:allValuesFrom dl:SpecificEntropyUnit
+                              ] ;
+              
+              <http://www.w3.org/2004/02/skos/core#altLabel> "specific heat capacity" ;
+              
+              rdfs:comment "Specific heat is the heat capacity per unit mass of a material." .
+
+
+
 ###  http://matonto.org/ontologies/thermodynamics#ThermodynamicSystem
 
 :ThermodynamicSystem rdf:type owl:Class ;
@@ -159,6 +205,19 @@
                      rdfs:subClassOf <http://www.ifomis.org/bfo/1.0/snap#ThreeDimensionalRegion> ;
                      
                      rdfs:comment "a macroscopic region defined by boundaries that determine processes which are allowed to affect the interior of the region" .
+
+
+
+
+
+#################################################################
+#
+#    Annotations
+#
+#################################################################
+
+
+dl:SpecificEnergyUnit mat:commonSymbol "J/Kg" .
 
 
 
