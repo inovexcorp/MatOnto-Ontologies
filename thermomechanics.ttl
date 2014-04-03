@@ -67,11 +67,80 @@ dl:isScaledBy rdf:type owl:AnnotationProperty .
                 
                 rdfs:label "elastic modulus" ;
                 
-                rdfs:subClassOf dl:MeasuredProperty ;
+                rdfs:subClassOf dl:MeasuredProperty ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dl:hasUnit ;
+                                  owl:someValuesFrom dl:PressureUnit
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dl:hasUnit ;
+                                  owl:allValuesFrom dl:PressureUnit
+                                ] ;
+                
+                mat:commonSymbol "E" ;
                 
                 <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of elasticity" ;
                 
                 rdfs:comment "An elastic modulus, or modulus of elasticity, is the mathematical description of an object or substance's tendency to be deformed elastically (i.e., non-permanently) when a force is applied to it. The elastic modulus of an object is defined as the slope of its stress–strain curve in the elastic deformation region." .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#FlexuralModulus
+
+:FlexuralModulus rdf:type owl:Class ;
+                 
+                 rdfs:label "flexural modulus" ;
+                 
+                 rdfs:subClassOf mat:IntensiveProperty ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dl:hasUnit ;
+                                   owl:allValuesFrom dl:PressureUnit
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dl:hasUnit ;
+                                   owl:someValuesFrom dl:PressureUnit
+                                 ] ;
+                 
+                 rdfs:comment "In mechanics, the flexural modulus or bending modulus is the ratio of stress to strain in flexural deformation, or the tendency for a material to bend. It is determined from the slope of a stress-strain curve produced by a flexural test, and uses units of force per area." ;
+                 
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "bending modulus" ;
+                 
+                 mat:commonSymbol "E" .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#FlexuralStrength
+
+:FlexuralStrength rdf:type owl:Class ;
+                  
+                  rdfs:label "flexural strength" ;
+                  
+                  rdfs:subClassOf dl:MeasuredProperty ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty dl:hasUnit ;
+                                    owl:allValuesFrom dl:PressureUnit
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty dl:hasUnit ;
+                                    owl:someValuesFrom dl:PressureUnit
+                                  ] ;
+                  
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of rupture" ,
+                                                                 "bend strength" ;
+                  
+                  rdfs:comment "Flexural strength is a mechanical parameter for brittle material, is defined as a material's ability to resist deformation under load." .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#FractureToughness
+
+:FractureToughness rdf:type owl:Class ;
+                   
+                   rdfs:label "fracture toughness" ;
+                   
+                   rdfs:subClassOf dl:MeasuredProperty ;
+                   
+                   mat:commonSymbol "K" .
 
 
 
@@ -88,6 +157,50 @@ dl:isScaledBy rdf:type owl:AnnotationProperty .
               mat:commonSymbol "G" ;
               
               <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of rigidity" .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#Stress
+
+:Stress rdf:type owl:Class ;
+        
+        rdfs:subClassOf dl:MeasuredProperty ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty dl:hasUnit ;
+                          owl:allValuesFrom dl:PressureUnit
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty dl:hasUnit ;
+                          owl:someValuesFrom dl:PressureUnit
+                        ] ;
+        
+        rdfs:comment "In continuum mechanics, stress is a physical quantity that expresses the internal forces that neighbouring particles of a continuous material exert on each other." .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#UltimateTensileStrength
+
+:UltimateTensileStrength rdf:type owl:Class ;
+                         
+                         rdfs:label "ultimate tensile strength" ;
+                         
+                         rdfs:subClassOf dl:MeasuredProperty ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty dl:hasUnit ;
+                                           owl:allValuesFrom dl:PressureUnit
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty dl:hasUnit ;
+                                           owl:someValuesFrom dl:PressureUnit
+                                         ] ;
+                         
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "TS" ,
+                                                                        "ultimate strength" ,
+                                                                        "UTS" ;
+                         
+                         rdfs:comment "Ultimate tensile strength is the maximum stress that a material can withstand while being stretched or pulled before failing or breaking." ;
+                         
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "tensile strength" .
 
 
 
@@ -114,7 +227,9 @@ dl:isScaledBy rdf:type owl:AnnotationProperty .
                <http://www.w3.org/2004/02/skos/core#altLabel> "Young's modulus" ,
                                                               "tensile modulus" ;
                
-               rdfs:comment "Young's modulus is a measure of the stiffness of an elastic isotropic material and is a quantity used to characterize materials. It is defined as the ratio of the stress along an axis over the strain along that axis in the range of stress in which Hooke's law holds." .
+               rdfs:comment "Young's modulus is a measure of the stiffness of an elastic isotropic material and is a quantity used to characterize materials. It is defined as the ratio of the stress along an axis over the strain along that axis in the range of stress in which Hooke's law holds." ;
+               
+               mat:commonSymbol "E" .
 
 
 
@@ -129,13 +244,14 @@ dl:isScaledBy rdf:type owl:AnnotationProperty .
 
 ###  http://matonto.org/ontologies/thermomechanics#unit_gigapascal
 
-:unit_gigapascal rdf:type owl:NamedIndividual ;
+:unit_gigapascal rdf:type dl:PressureUnit ,
+                          owl:NamedIndividual ;
                  
                  rdfs:label "gigapascal" ;
                  
-                 mat:symbol "GPa" ;
+                 dl:isRaisedToPowerOf "1.0E9"^^xsd:double ;
                  
-                 dl:isScaledBy "1000000000.00" ;
+                 mat:symbol "GPa" ;
                  
                  dl:derivesFrom dl:unit_pascal .
 
@@ -143,13 +259,14 @@ dl:isScaledBy rdf:type owl:AnnotationProperty .
 
 ###  http://matonto.org/ontologies/thermomechanics#unit_hectopascal
 
-:unit_hectopascal rdf:type owl:NamedIndividual ;
+:unit_hectopascal rdf:type dl:PressureUnit ,
+                           owl:NamedIndividual ;
                   
                   rdfs:label "hectopascal" ;
                   
-                  mat:symbol "hPa" ;
+                  dl:isRaisedToPowerOf "100.0"^^xsd:double ;
                   
-                  dl:isScaledBy "100.00" ;
+                  mat:symbol "hPa" ;
                   
                   dl:derivesFrom dl:unit_pascal .
 
@@ -157,11 +274,12 @@ dl:isScaledBy rdf:type owl:AnnotationProperty .
 
 ###  http://matonto.org/ontologies/thermomechanics#unit_kilopascal
 
-:unit_kilopascal rdf:type owl:NamedIndividual ;
+:unit_kilopascal rdf:type dl:PressureUnit ,
+                          owl:NamedIndividual ;
                  
                  rdfs:label "kilopascal" ;
                  
-                 dl:isScaledBy "1000.00" ;
+                 dl:isRaisedToPowerOf "1000.0"^^xsd:double ;
                  
                  mat:symbol "kPa" ;
                  
@@ -171,15 +289,43 @@ dl:isScaledBy rdf:type owl:AnnotationProperty .
 
 ###  http://matonto.org/ontologies/thermomechanics#unit_megapascal
 
-:unit_megapascal rdf:type owl:NamedIndividual ;
+:unit_megapascal rdf:type dl:PressureUnit ,
+                          owl:NamedIndividual ;
                  
                  rdfs:label "megapascal" ;
                  
+                 dl:isRaisedToPowerOf "1000000.0"^^xsd:double ;
+                 
                  mat:symbol "MPa" ;
                  
-                 dl:isScaledBy "1000000.00" ;
-                 
                  dl:derivesFrom dl:unit_pascal .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#unit_meter_sqrt
+
+:unit_meter_sqrt rdf:type dl:Unit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "root meter" ;
+                 
+                 dl:isRaisedToPowerOf "0.5"^^xsd:double ;
+                 
+                 dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#unit_pascal_1_meter_sqrt
+
+:unit_pascal_1_meter_sqrt rdf:type dl:Unit ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "pascal root meter" ;
+                          
+                          rdfs:comment "Pa*m1/2 are the units for fracture toughness" ;
+                          
+                          dl:derivesFrom :unit_meter_sqrt ,
+                                         dl:unit_pascal .
 
 
 
