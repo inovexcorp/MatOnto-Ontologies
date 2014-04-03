@@ -21,27 +21,6 @@
 
 #################################################################
 #
-#    Annotation properties
-#
-#################################################################
-
-
-###  http://ontology.dumontierlab.com/derivesFrom
-
-dl:derivesFrom rdf:type owl:AnnotationProperty .
-
-
-
-###  http://ontology.dumontierlab.com/isScaledBy
-
-dl:isScaledBy rdf:type owl:AnnotationProperty .
-
-
-
-
-
-#################################################################
-#
 #    Classes
 #
 #################################################################
