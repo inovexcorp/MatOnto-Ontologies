@@ -49,11 +49,11 @@
                 rdfs:subClassOf dl:MeasuredProperty ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:PressureUnit
+                                  owl:allValuesFrom dl:PressureUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:PressureUnit
+                                  owl:someValuesFrom dl:PressureUnit
                                 ] ;
                 
                 mat:commonSymbol "E" ;
@@ -73,11 +73,11 @@
                  rdfs:subClassOf mat:IntensiveProperty ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:PressureUnit
+                                   owl:someValuesFrom dl:PressureUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:PressureUnit
+                                   owl:allValuesFrom dl:PressureUnit
                                  ] ;
                  
                  rdfs:comment "In mechanics, the flexural modulus or bending modulus is the ratio of stress to strain in flexural deformation, or the tendency for a material to bend. It is determined from the slope of a stress-strain curve produced by a flexural test, and uses units of force per area." ;
@@ -97,11 +97,11 @@
                   rdfs:subClassOf dl:MeasuredProperty ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:allValuesFrom dl:PressureUnit
+                                    owl:someValuesFrom dl:PressureUnit
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:someValuesFrom dl:PressureUnit
+                                    owl:allValuesFrom dl:PressureUnit
                                   ] ;
                   
                   <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of rupture" ,
@@ -120,6 +120,28 @@
                    rdfs:subClassOf dl:MeasuredProperty ;
                    
                    mat:commonSymbol "K" .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#GrainSize
+
+:GrainSize rdf:type owl:Class ;
+           
+           rdfs:label "grain size" ;
+           
+           rdfs:subClassOf dl:MeasuredProperty ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty dl:hasUnit ;
+                             owl:someValuesFrom dl:LengthUnit
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty dl:hasUnit ;
+                             owl:allValuesFrom dl:LengthUnit
+                           ] ;
+           
+           <http://www.w3.org/2004/02/skos/core#altLabel> "particle size" ;
+           
+           rdfs:comment "Grain size refers to the diameter of individual grains of sediment, or the lithified particles in clastic rocks. The term may also be applied to other granular materials. This is different from the crystallite size, which is the size of a single crystal inside the particles or grains. A single grain can be composed of several crystals. Granular material can range from very small colloidal particles, through clay, silt, sand, and gravel, to boulders." .
 
 
 
@@ -146,11 +168,11 @@
         rdfs:subClassOf dl:MeasuredProperty ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty dl:hasUnit ;
-                          owl:allValuesFrom dl:PressureUnit
+                          owl:someValuesFrom dl:PressureUnit
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty dl:hasUnit ;
-                          owl:someValuesFrom dl:PressureUnit
+                          owl:allValuesFrom dl:PressureUnit
                         ] ;
         
         rdfs:comment "In continuum mechanics, stress is a physical quantity that expresses the internal forces that neighbouring particles of a continuous material exert on each other." .
@@ -228,7 +250,7 @@
                  
                  rdfs:label "gigapascal" ;
                  
-                 dl:isRaisedToPowerOf "1.0E9"^^xsd:double ;
+                 dl:isScaledBy "1.0E9"^^xsd:double ;
                  
                  mat:symbol "GPa" ;
                  
@@ -243,7 +265,7 @@
                   
                   rdfs:label "hectopascal" ;
                   
-                  dl:isRaisedToPowerOf "100.0"^^xsd:double ;
+                  dl:isScaledBy "100.0"^^xsd:double ;
                   
                   mat:symbol "hPa" ;
                   
@@ -258,7 +280,7 @@
                  
                  rdfs:label "kilopascal" ;
                  
-                 dl:isRaisedToPowerOf "1000.0"^^xsd:double ;
+                 dl:isScaledBy "1000.0"^^xsd:double ;
                  
                  mat:symbol "kPa" ;
                  
@@ -273,7 +295,7 @@
                  
                  rdfs:label "megapascal" ;
                  
-                 dl:isRaisedToPowerOf "1000000.0"^^xsd:double ;
+                 dl:isScaledBy "1000000.0"^^xsd:double ;
                  
                  mat:symbol "MPa" ;
                  
@@ -294,6 +316,25 @@
 
 
 
+###  http://matonto.org/ontologies/thermomechanics#unit_micrometer
+
+:unit_micrometer rdf:type dl:LengthUnit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "micrometer" ;
+                 
+                 dl:isScaledBy "1.0E-6"^^xsd:double ;
+                 
+                 rdfs:comment "The micrometer is an SI derived unit of length equaling 1×10−6 of a meter; that is, one millionth of a meter (or one thousandth of a millimeter, 0.001 mm, or about 0.000039 inch)." ;
+                 
+                 mat:symbol "µm" ;
+                 
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "micrometre" ;
+                 
+                 dl:derivesFrom dl:unit_meter .
+
+
+
 ###  http://matonto.org/ontologies/thermomechanics#unit_pascal_1_meter_sqrt
 
 :unit_pascal_1_meter_sqrt rdf:type dl:Unit ,
@@ -305,6 +346,12 @@
                           
                           dl:derivesFrom :unit_meter_sqrt ,
                                          dl:unit_pascal .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter
+
+dl:unit_meter <http://www.w3.org/2004/02/skos/core#altLabel> "metre" .
 
 
 
