@@ -30,8 +30,7 @@
                                                     dl:periodic-table-complex ,
                                                     dl:property-complex ,
                                                     dl:unit-complex ,
-                                                    dl:unit-individuals ,
-                                                    <http://www.w3.org/2004/02/skos/core> .
+                                                    dl:unit-individuals .
 
 
 #################################################################
@@ -225,31 +224,6 @@
             rdfs:label "refactory" ;
             
             rdfs:subClassOf :MaterialCategory .
-
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
-
-rdf:List rdfs:subClassOf snap:ObjectAggregate .
-
-
-
-###  http://www.w3.org/2004/02/skos/core#Collection
-
-skos:Collection rdfs:subClassOf snap:ObjectAggregate .
-
-
-
-###  http://www.w3.org/2004/02/skos/core#Concept
-
-skos:Concept rdfs:subClassOf snap:Object .
-
-
-
-###  http://www.w3.org/2004/02/skos/core#ConceptScheme
-
-skos:ConceptScheme rdfs:subClassOf snap:ObjectAggregate .
-
 
 
 
