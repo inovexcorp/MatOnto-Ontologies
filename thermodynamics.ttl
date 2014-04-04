@@ -80,14 +80,14 @@
                  
                  rdfs:label "Gibbs free energy" ;
                  
-                 rdfs:subClassOf dl:Energy ,
+                 rdfs:subClassOf dl:MolarEnergy ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:EnergyUnit
+                                   owl:allValuesFrom dl:MolarEnergyUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:EnergyUnit
+                                   owl:someValuesFrom dl:MolarEnergyUnit
                                  ] ;
                  
                  rdfs:comment "a measure of the process-initiating work obtainable from a thermodynamic system at a constant temperature and pressure." .
@@ -127,11 +127,11 @@
                      rdfs:subClassOf dl:Energy ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:allValuesFrom dl:EnergyUnit
+                                       owl:someValuesFrom dl:EnergyUnit
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:someValuesFrom dl:EnergyUnit
+                                       owl:allValuesFrom dl:EnergyUnit
                                      ] ;
                      
                      rdfs:comment "the workobtainable from a closed thermodynamic system at a constant temperature" .
