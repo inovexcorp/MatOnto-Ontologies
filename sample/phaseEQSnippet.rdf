@@ -15,9 +15,8 @@
 ## mapping located at http://www.w3.org/ns/prov-dc-directmappings.ttl 
 ## to generate inferred PROV-O statements from the source spreadsheet
 
-## TODO perhaps create database of all users associated with MatOnto project
 
-## The source spreadsheet
+### The source spreadsheet
 espi:spreadsheet1 a dct:BibliographicResource ;
 	dct:format dbp:Comma-separated_values ;
 	dct:title "ESPEI-Expt-FirstPrinciples-Input-v11_PhaseEquilibriumData"^^xsd:string;
@@ -26,39 +25,42 @@ espi:spreadsheet1 a dct:BibliographicResource ;
 	
 dbp:Comma-separated_values a dct:FileFormat .
 
+# TODO perhaps create database of all users associated with MatOnto project
 espi:person1 a dcterms:Agent ;
 	rdfs:label "Richard Otis" .
 
-## An Alloy
-espi:alloy0 a faze:Alloy ;
+### An Alloy
+espi:alloy0 a faze:Alloy , prov:Entity ;
 	faze:hasPhaseEquilibrium espi:phaseEquilibrium1 ;
 	rdfs:label "Al-Mg" ;
 	prov:wasGeneratedBy espi:etl1 .
+# TODO consider implementing PROVO-O in matonto, so I do not have to define
+# every object as a prov:Entity
 
-espi:phaseEquilibrium1 a faze:PhaseEquilibrium ;
+espi:phaseEquilibrium1 a faze:PhaseEquilibrium , prov:Entity ;
 	faze:hasElement espi:element1 ;
 	faze:hasTemperature espi:temperature1 ;
 	faze:hasPressure espi:pressure1 ;
 	prov:wasGeneratedBy espi:etl1 .
 	
-espi:element1 a dl:Element ;
+espi:element1 a dl:Element , prov:Entity ;
 	faze:hasPhase espi:phase0 ;
 	rdfs:label "Aluminum" ;
 	prov:wasGeneratedBy espi:etl1 .
 
-espi:phase0 a dl:ChemicalPhase ;
+espi:phase0 a dl:ChemicalPhase , prov:Entity ;
 	rdfs:label "Liquid" .
 	prov:wasGeneratedBy espi:etl1 .
 
-espi:temperature1 a dl:Temperature ;
+espi:temperature1 a dl:Temperature , prov:Entity ;
 	owl:hasValue "724.7"^^xsd:double ;
 	prov:wasGeneratedBy espi:etl1 .
 
-espi:pressure1 a dl:Pressure ;
+espi:pressure1 a dl:Pressure , prov:Entity ;
 	owl:hasValue "101325"^^xsd:double ;
 	prov:wasGeneratedBy espi:etl1 .
 
-## Provenance Activity data.  
+### Provenance Activity data
 espi:etl1 a prov:Activity ;
 	prov:used espi:spreadsheet1 ;
 	prov:qualifiedUsage espi:espiEtl1 ;
