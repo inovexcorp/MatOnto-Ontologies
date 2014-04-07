@@ -30,9 +30,9 @@
             
             rdfs:label "Has Element"@en ;
             
-            rdfs:comment "A chemical phase has one or many chemical elements"@en ;
+            rdfs:comment "A phase equilibrium has at one or many elements"@en ;
             
-            rdfs:domain dl:ChemicalPhase ;
+            rdfs:domain :PhaseEquilibrium ;
             
             rdfs:range dl:Element .
 
@@ -44,11 +44,11 @@
           
           rdfs:label "Has Phase"@en ;
           
-          rdfs:comment "A phase equilibrium has at least two chemical phases"@en ;
-          
-          rdfs:domain :PhaseEquilibrium ;
+          rdfs:comment "An element has at one or many chemical phases"@en ;
           
           rdfs:range dl:ChemicalPhase ;
+          
+          rdfs:domain dl:Element ;
           
           rdfs:subPropertyOf owl:topObjectProperty .
 
