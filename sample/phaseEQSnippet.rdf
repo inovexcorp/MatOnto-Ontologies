@@ -53,11 +53,11 @@ espi:phase0 a dl:ChemicalPhase , prov:Entity ;
 	prov:wasGeneratedBy espi:etl1 .
 
 espi:temperature1 a dl:Temperature , prov:Entity ;
-	owl:hasValue "724.7"^^xsd:double ;
+	dl:hasValue "724.7"^^xsd:double ;
 	prov:wasGeneratedBy espi:etl1 .
 
 espi:pressure1 a dl:Pressure , prov:Entity ;
-	owl:hasValue "101325"^^xsd:double ;
+	dl:hasValue "101325"^^xsd:double ;
 	prov:wasGeneratedBy espi:etl1 .
 
 ### Provenance Activity data
