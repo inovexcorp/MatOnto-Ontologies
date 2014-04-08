@@ -21,12 +21,12 @@ espi:spreadsheet1 a dct:BibliographicResource ;
 	dct:format dbp:Comma-separated_values ;
 	dct:title "ESPEI-Expt-FirstPrinciples-Input-v11_PhaseEquilibriumData"^^xsd:string;
 	dct:creator espi:person1 ;
-	dct:publisher espi:person1 ;
+	dct:publisher espi:person1 .
 	
 dbp:Comma-separated_values a dct:FileFormat .
 
 # TODO perhaps create database of all users associated with MatOnto project
-espi:person1 a dcterms:Agent ;
+espi:person1 a dct:Agent ;
 	rdfs:label "Richard Otis" .
 
 ### An Alloy
@@ -49,7 +49,7 @@ espi:element1 a dl:Element , prov:Entity ;
 	prov:wasGeneratedBy espi:etl1 .
 
 espi:phase0 a dl:ChemicalPhase , prov:Entity ;
-	rdfs:label "Liquid" .
+	rdfs:label "Liquid" ;
 	prov:wasGeneratedBy espi:etl1 .
 
 espi:temperature1 a dl:Temperature , prov:Entity ;
@@ -65,7 +65,7 @@ espi:etl1 a prov:Activity ;
 	prov:used espi:spreadsheet1 ;
 	prov:qualifiedUsage espi:espiEtl1 ;
 	prov:wasAssociatedWith espi:person2 ;
-	prov:qualifiedAssociation espi:association1 .
+	prov:qualifiedAssociation espi:association1 ;
 	prov:generated espi:alloy0, espi:phaseEquilibrium1, 
 		espi:element1, espi:phase0, espi:temperature1, 
 		espi:pressure1.
