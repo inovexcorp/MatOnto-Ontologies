@@ -17,11 +17,10 @@
 
 
 ### The source spreadsheet
-espi:spreadsheet1 a dct:BibliographicResource ;
+espi:spreadsheet1 a prov:Entity ;
 	dct:format dbp:Comma-separated_values ;
 	dct:title "ESPEI-Expt-FirstPrinciples-Input-v11_PhaseEquilibriumData"^^xsd:string;
-	dct:creator espi:person1 ;
-	dct:publisher espi:person1 .
+	dct:creator espi:person1 .
 	
 dbp:Comma-separated_values a dct:FileFormat .
 
