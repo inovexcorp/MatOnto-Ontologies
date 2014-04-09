@@ -59,16 +59,20 @@ dbp:Comma-separated_values a dct:FileFormat .
 ### Provenance Activity data
 :etl1 a prov:Activity ;
 	prov:used :spreadsheet1 ;
-	prov:qualifiedUsage :Etl1 ;
-	prov:wasAssociatedWith :person2 ;
+	prov:qualifiedUsage :usage1 ;
+	prov:wasAssociatedWith :tool1 ;
 	prov:qualifiedAssociation :association1 ;
 	prov:generated :alloy0, :phaseEquilibrium1, 
 		:element1, :phase0, :temperature1, 
 		:pressure1.
 	
-:Etl1 a prov:Usage ;
+:usage1 a prov:Usage ;
 	prov:atTime "2014-04-03T12:00:00"^^xsd:dateTime .
 
+:tool1 a prov:SoftwareAgent ;
+	rdfs:label "Google Refine 2.5" ;
+	prov:actedOnBehalfOf :person2 ;
+	
 :person2 a prov:Agent, foaf:Person ;
 	rdfs:label "Brendan Heussler"^^xsd:string ;
 	foaf:givenName "Brendan"^^xsd:string ;
