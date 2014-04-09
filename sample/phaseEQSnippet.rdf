@@ -84,7 +84,7 @@ dbp:Comma-separated_values a dct:FileFormat .
 	foaf:mbox_sha1sum "81d78099f7ebbcc2f25d97554fd462e4aa97d924" .
 
 :association1 a prov:Association ;
-	prov:Agent :person2 ;
+	prov:agent :person2 ;
 	prov:hadRole :role1 ;
 	rdfs:label "iNovex"^^xsd:string .
 
