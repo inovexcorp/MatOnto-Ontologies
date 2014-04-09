@@ -11,10 +11,9 @@
 @prefix dbp: <http://dbpedia.org/data/> .
 @prefix : <http://matonto.org/data/2014/04/espei1/> .
 
-## The current implementation requires the user to run the PROV-DC
-## mapping located at http://www.w3.org/ns/prov-dc-directmappings.ttl 
+## The current implementation requires the PROV-DC mapping 
+## located at http://www.w3.org/ns/prov-dc-directmappings.ttl 
 ## to generate inferred PROV-O statements from the source spreadsheet
-
 
 ### The source spreadsheet
 :spreadsheet1 a prov:Entity ;
@@ -33,8 +32,6 @@ dbp:Comma-separated_values a dct:FileFormat .
 	faze:hasPhaseEquilibrium :phaseEquilibrium1 ;
 	rdfs:label "Al-Mg" ;
 	prov:wasGeneratedBy :etl1 .
-# TODO consider implementing PROVO-O in matonto, so I do not have to define
-# every object as a prov:Entity
 
 :phaseEquilibrium1 a faze:PhaseEquilibrium , prov:Entity ;
 	faze:hasElement :element1 ;
