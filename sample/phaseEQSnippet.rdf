@@ -5,11 +5,11 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dl: <http://ontology.dumontierlab.com/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix espi: <http://matonto.org/data/2014/04/espi1/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dbp: <http://dbpedia.org/data/> .
+@prefix : <http://matonto.org/data/2014/04/espei1/> .
 
 ## The current implementation requires the user to run the PROV-DC
 ## mapping located at http://www.w3.org/ns/prov-dc-directmappings.ttl 
@@ -17,62 +17,62 @@
 
 
 ### The source spreadsheet
-espi:spreadsheet1 a prov:Entity ;
+:spreadsheet1 a prov:Entity ;
 	dct:format dbp:Comma-separated_values ;
 	dct:title "ESPEI-Expt-FirstPrinciples-Input-v11_PhaseEquilibriumData"^^xsd:string;
-	dct:creator espi:person1 .
+	dct:creator :person1 .
 	
 dbp:Comma-separated_values a dct:FileFormat .
 
 # TODO perhaps create database of all users associated with MatOnto project
-espi:person1 a dct:Agent ;
+:person1 a dct:Agent ;
 	rdfs:label "Richard Otis" .
 
 ### An Alloy
-espi:alloy0 a faze:Alloy , prov:Entity ;
-	faze:hasPhaseEquilibrium espi:phaseEquilibrium1 ;
+:alloy0 a faze:Alloy , prov:Entity ;
+	faze:hasPhaseEquilibrium :phaseEquilibrium1 ;
 	rdfs:label "Al-Mg" ;
-	prov:wasGeneratedBy espi:etl1 .
+	prov:wasGeneratedBy :etl1 .
 # TODO consider implementing PROVO-O in matonto, so I do not have to define
 # every object as a prov:Entity
 
-espi:phaseEquilibrium1 a faze:PhaseEquilibrium , prov:Entity ;
-	faze:hasElement espi:element1 ;
-	faze:hasTemperature espi:temperature1 ;
-	faze:hasPressure espi:pressure1 ;
-	prov:wasGeneratedBy espi:etl1 .
+:phaseEquilibrium1 a faze:PhaseEquilibrium , prov:Entity ;
+	faze:hasElement :element1 ;
+	faze:hasTemperature :temperature1 ;
+	faze:hasPressure :pressure1 ;
+	prov:wasGeneratedBy :etl1 .
 	
-espi:element1 a dl:Element , prov:Entity ;
-	faze:hasPhase espi:phase0 ;
+:element1 a dl:Element , prov:Entity ;
+	faze:hasPhase :phase0 ;
 	rdfs:label "Aluminum" ;
-	prov:wasGeneratedBy espi:etl1 .
+	prov:wasGeneratedBy :etl1 .
 
-espi:phase0 a dl:ChemicalPhase , prov:Entity ;
+:phase0 a dl:ChemicalPhase , prov:Entity ;
 	rdfs:label "Liquid" ;
-	prov:wasGeneratedBy espi:etl1 .
+	prov:wasGeneratedBy :etl1 .
 
-espi:temperature1 a dl:Temperature , prov:Entity ;
+:temperature1 a dl:Temperature , prov:Entity ;
 	dl:hasValue "724.7"^^xsd:double ;
-	prov:wasGeneratedBy espi:etl1 .
+	prov:wasGeneratedBy :etl1 .
 
-espi:pressure1 a dl:Pressure , prov:Entity ;
+:pressure1 a dl:Pressure , prov:Entity ;
 	dl:hasValue "101325"^^xsd:double ;
-	prov:wasGeneratedBy espi:etl1 .
+	prov:wasGeneratedBy :etl1 .
 
 ### Provenance Activity data
-espi:etl1 a prov:Activity ;
-	prov:used espi:spreadsheet1 ;
-	prov:qualifiedUsage espi:espiEtl1 ;
-	prov:wasAssociatedWith espi:person2 ;
-	prov:qualifiedAssociation espi:association1 ;
-	prov:generated espi:alloy0, espi:phaseEquilibrium1, 
-		espi:element1, espi:phase0, espi:temperature1, 
-		espi:pressure1.
+:etl1 a prov:Activity ;
+	prov:used :spreadsheet1 ;
+	prov:qualifiedUsage :Etl1 ;
+	prov:wasAssociatedWith :person2 ;
+	prov:qualifiedAssociation :association1 ;
+	prov:generated :alloy0, :phaseEquilibrium1, 
+		:element1, :phase0, :temperature1, 
+		:pressure1.
 	
-espi:espiEtl1 a prov:Usage ;
+:Etl1 a prov:Usage ;
 	prov:atTime "2014-04-03T12:00:00"^^xsd:dateTime .
 
-espi:person2 a prov:Agent, foaf:Person ;
+:person2 a prov:Agent, foaf:Person ;
 	rdfs:label "Brendan Heussler"^^xsd:string ;
 	foaf:givenName "Brendan"^^xsd:string ;
 	foaf:familyName "Heussler"^^xsd:string ;
@@ -82,10 +82,10 @@ espi:person2 a prov:Agent, foaf:Person ;
 	foaf:sypeID "bheussler"^^xsd:string ;
 	foaf:mbox_sha1sum "81d78099f7ebbcc2f25d97554fd462e4aa97d924" .
 
-espi:association1 a prov:Association ;
-	prov:Agent espi:person2 ;
-	prov:hadRole espi:role1 ;
+:association1 a prov:Association ;
+	prov:Agent :person2 ;
+	prov:hadRole :role1 ;
 	rdfs:label "iNovex"^^xsd:string .
 
-espi:role1 a prov:Role ;
+:role1 a prov:Role ;
 	rdfs:label "Semantic Web Consultant"^^xsd:string .
