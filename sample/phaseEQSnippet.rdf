@@ -1,0 +1,92 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix faze: <http://matonto.org/ontologies/2014/03/phaseCharacterization#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dl: <http://ontology.dumontierlab.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dbp: <http://dbpedia.org/data/> .
+@prefix : <http://matonto.org/data/2014/04/espei1/> .
+
+## The current implementation requires the PROV-DC mapping 
+## located at http://www.w3.org/ns/prov-dc-directmappings.ttl 
+## to generate inferred PROV-O statements from the source spreadsheet
+
+### The source spreadsheet
+:spreadsheet1 a prov:Entity ;
+	dct:format dbp:Comma-separated_values ;
+	dct:title "ESPEI-Expt-FirstPrinciples-Input-v11_PhaseEquilibriumData"^^xsd:string;
+	dct:creator :person1 .
+	
+dbp:Comma-separated_values a dct:FileFormat .
+
+# TODO perhaps create database of all users associated with MatOnto project
+:person1 a dct:Agent ;
+	rdfs:label "Richard Otis" .
+
+### An Alloy
+:alloy0 a faze:Alloy , prov:Entity ;
+	faze:hasPhaseEquilibrium :phaseEquilibrium1 ;
+	rdfs:label "Al-Mg" ;
+	prov:wasGeneratedBy :etl1 .
+
+:phaseEquilibrium1 a faze:PhaseEquilibrium , prov:Entity ;
+	faze:hasElement :element1 ;
+	faze:hasTemperature :temperature1 ;
+	faze:hasPressure :pressure1 ;
+	prov:wasGeneratedBy :etl1 .
+	
+:element1 a dl:Element , prov:Entity ;
+	faze:hasPhase :phase0 ;
+	rdfs:label "Aluminum" ;
+	prov:wasGeneratedBy :etl1 .
+
+:phase0 a dl:ChemicalPhase , prov:Entity ;
+	rdfs:label "Liquid" ;
+	prov:wasGeneratedBy :etl1 .
+
+:temperature1 a dl:Temperature , prov:Entity ;
+	dl:hasValue "724.7"^^xsd:double ;
+	prov:wasGeneratedBy :etl1 .
+
+:pressure1 a dl:Pressure , prov:Entity ;
+	dl:hasValue "101325"^^xsd:double ;
+	prov:wasGeneratedBy :etl1 .
+
+### Provenance Activity data
+:etl1 a prov:Activity ;
+	prov:used :spreadsheet1 ;
+	prov:qualifiedUsage :usage1 ;
+	prov:wasAssociatedWith :tool1 ;
+	prov:qualifiedAssociation :association1 ;
+	prov:generated :alloy0, :phaseEquilibrium1, 
+		:element1, :phase0, :temperature1, 
+		:pressure1.
+	
+:usage1 a prov:Usage ;
+	prov:atTime "2014-04-03T12:00:00"^^xsd:dateTime .
+
+:tool1 a prov:SoftwareAgent ;
+	rdfs:label "Google Refine 2.5" ;
+	prov:actedOnBehalfOf :person2 ;
+	
+:person2 a prov:Agent, foaf:Person ;
+	rdfs:label "Brendan Heussler"^^xsd:string ;
+	foaf:givenName "Brendan"^^xsd:string ;
+	foaf:familyName "Heussler"^^xsd:string ;
+	foaf:name "Brendan Heussler"^^xsd:string ;
+	foaf:currentProject <http://matonto.org> ;
+	foaf:topic_interest "Semantic Web"^^xsd:string ;
+	foaf:sypeID "bheussler"^^xsd:string ;
+	foaf:mbox_sha1sum "81d78099f7ebbcc2f25d97554fd462e4aa97d924" .
+
+:association1 a prov:Association ;
+	prov:agent :person2 ;
+	prov:hadRole :role1 ;
+	rdfs:label "iNovex"^^xsd:string .
+
+:role1 a prov:Role ;
+	rdfs:label "Semantic Web Consultant"^^xsd:string .
