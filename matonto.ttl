@@ -62,6 +62,12 @@
 
 
 
+###  http://www.w3.org/2004/02/skos/core#altLabel
+
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+
 
 
 #################################################################
@@ -69,6 +75,38 @@
 #    Classes
 #
 #################################################################
+
+
+###  http://matonto.org/ontologies/matonto#BandGap
+
+:BandGap rdf:type owl:Class ;
+         
+         rdfs:label "band gap" ;
+         
+         rdfs:subClassOf dl:MeasuredProperty ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty dl:hasUnit ;
+                           owl:someValuesFrom :BandGapUnit
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty dl:hasUnit ;
+                           owl:allValuesFrom :BandGapUnit
+                         ] ;
+         
+         rdfs:comment "The energy difference between the top of the valence band and the botto of the conduction band in insulators and semiconductors" .
+
+
+
+###  http://matonto.org/ontologies/matonto#BandGapUnit
+
+:BandGapUnit rdf:type owl:Class ;
+             
+             rdfs:label "band gap unit" ;
+             
+             rdfs:subClassOf dl:Unit ;
+             
+             rdfs:comment "A standard unit for band gap" .
+
 
 
 ###  http://matonto.org/ontologies/matonto#Ceramics
@@ -228,11 +266,23 @@
 
 
 
+
 #################################################################
 #
 #    Individuals
 #
 #################################################################
+
+
+###  http://matonto.org/ontologies/matonto#unit_electron_volt
+
+:unit_electron_volt rdf:type :BandGapUnit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "electron volt" ;
+                    
+                    :symbol "eV" .
+
 
 
 ###  http://ontology.dumontierlab.com/unit_gram
