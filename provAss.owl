@@ -1,0 +1,108 @@
+@prefix : <http://matonto.org/ontologies/prov-ass/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://matonto.org/ontologies/prov-ass/> .
+
+<http://matonto.org/ontologies/prov-ass/> rdf:type owl:Ontology ;
+                                          
+                                          owl:imports <http://www.w3.org/ns/prov-o#> .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://matonto.org/ontologies/prov-ass/hasQualityAssessment
+
+<http://matonto.org/ontologies/prov-ass/hasQualityAssessment> rdf:type owl:ObjectProperty ;
+                                                              
+                                                              rdfs:label "has quality assessment" ;
+                                                              
+                                                              rdfs:comment "Adds an assessment of quality to a prov entity, action, or agent." ;
+                                                              
+                                                              rdfs:range <http://matonto.org/ontologies/prov-ass/QualityAssessment> ;
+                                                              
+                                                              rdfs:domain [ rdf:type owl:Class ;
+                                                                            owl:unionOf ( <http://www.w3.org/ns/prov#Activity>
+                                                                                          <http://www.w3.org/ns/prov#Agent>
+                                                                                          <http://www.w3.org/ns/prov#Entity>
+                                                                                        )
+                                                                          ] .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://matonto.org/ontologies/prov-ass/approved
+
+<http://matonto.org/ontologies/prov-ass/approved> rdf:type owl:DatatypeProperty ;
+                                                  
+                                                  rdfs:label "approved" ;
+                                                  
+                                                  rdfs:comment "A thumbs up or thumbs down for a prov entity, activity, or agent" ;
+                                                  
+                                                  rdfs:domain <http://matonto.org/ontologies/prov-ass/QualityAssessment> ;
+                                                  
+                                                  rdfs:range xsd:boolean .
+
+
+
+###  http://matonto.org/ontologies/prov-ass/hasComment
+
+<http://matonto.org/ontologies/prov-ass/hasComment> rdf:type owl:DatatypeProperty ;
+                                                    
+                                                    rdfs:label "has comment" ;
+                                                    
+                                                    rdfs:comment "A comment toward a prov entity, action, or agent." ;
+                                                    
+                                                    rdfs:domain <http://matonto.org/ontologies/prov-ass/QualityAssessment> ;
+                                                    
+                                                    rdfs:range xsd:string .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://matonto.org/ontologies/prov-ass/Assessment
+
+<http://matonto.org/ontologies/prov-ass/Assessment> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:label "Assessment" .
+
+
+
+###  http://matonto.org/ontologies/prov-ass/QualityAssessment
+
+<http://matonto.org/ontologies/prov-ass/QualityAssessment> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:label "quality assessment" ;
+                                                           
+                                                           rdfs:subClassOf <http://matonto.org/ontologies/prov-ass/Assessment> ;
+                                                           
+                                                           rdfs:comment "A quality assessment made against an agent, entity, or activity." .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+

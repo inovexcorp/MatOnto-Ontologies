@@ -129,6 +129,16 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 
+###  http://matonto.org/ontologies/matonto#CrystalSystem
+
+:CrystalSystem rdf:type owl:Class ;
+               
+               rdfs:label "crystal system" ;
+               
+               rdfs:subClassOf :SaceGroupProperty .
+
+
+
 ###  http://matonto.org/ontologies/matonto#Elastomers
 
 :Elastomers rdf:type owl:Class ;
@@ -262,6 +272,68 @@ skos:altLabel rdf:type owl:AnnotationProperty .
             rdfs:label "refactory" ;
             
             rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#SaceGroupProperty
+
+:SaceGroupProperty rdf:type owl:Class ;
+                   
+                   rdfs:label "space group property" ;
+                   
+                   rdfs:subClassOf snap:Quality .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroup
+
+:SpaceGroup rdf:type owl:Class ;
+            
+            rdfs:label "space group" ;
+            
+            rdfs:subClassOf snap:ThreeDimensionalRegion ;
+            
+            rdfs:comment " the symmetry group of a configuration in space, usually in three dimensions" .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroupHall
+
+:SpaceGroupHall rdf:type owl:Class ;
+                
+                rdfs:label "hall" ;
+                
+                rdfs:subClassOf :SaceGroupProperty .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroupNumber
+
+:SpaceGroupNumber rdf:type owl:Class ;
+                  
+                  rdfs:label "space group number" ;
+                  
+                  rdfs:subClassOf :SaceGroupProperty .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroupPointGroup
+
+:SpaceGroupPointGroup rdf:type owl:Class ;
+                      
+                      rdfs:label "point group" ;
+                      
+                      rdfs:subClassOf :SaceGroupProperty .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroupSymbol
+
+:SpaceGroupSymbol rdf:type owl:Class ;
+                  
+                  rdfs:label "symbol" ;
+                  
+                  rdfs:subClassOf :SaceGroupProperty .
 
 
 
