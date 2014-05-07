@@ -356,9 +356,9 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 
-###  http://matonto.org/ontologies/matonto#SpaceGroupSymbol
+###  http://matonto.org/ontologies/matonto#Symbol
 
-:SpaceGroupSymbol rdf:type owl:Class ;
+:Symbol rdf:type owl:Class ;
                   
                   rdfs:label "symbol" ;
                   
