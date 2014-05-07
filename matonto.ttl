@@ -333,7 +333,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                   
                   rdfs:label "symbol" ;
                   
-                  rdfs:subClassOf :SaceGroupProperty .
+                  rdfs:subClassOf snap:Quality .
 
 
 
