@@ -101,6 +101,25 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 #################################################################
 #
+#    Data properties
+#
+#################################################################
+
+
+###  http://matonto.org/ontologies/matonto#hasName
+
+:hasName rdf:type owl:DatatypeProperty ;
+         
+         rdfs:label "has Name"@en ;
+         
+         rdfs:range xsd:string .
+
+
+
+
+
+#################################################################
+#
 #    Classes
 #
 #################################################################
@@ -115,11 +134,11 @@ skos:altLabel rdf:type owl:AnnotationProperty .
          rdfs:subClassOf dl:MeasuredProperty ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:someValuesFrom :BandGapUnit
+                           owl:allValuesFrom :BandGapUnit
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:allValuesFrom :BandGapUnit
+                           owl:someValuesFrom :BandGapUnit
                          ] ;
          
          rdfs:comment "The energy difference between the top of the valence band and the botto of the conduction band in insulators and semiconductors" .
@@ -356,13 +375,19 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 
+###  http://matonto.org/ontologies/matonto#SpaceGroupSymbol
+
+:SpaceGroupSymbol rdf:type owl:Class .
+
+
+
 ###  http://matonto.org/ontologies/matonto#Symbol
 
 :Symbol rdf:type owl:Class ;
-                  
-                  rdfs:label "symbol" ;
-                  
-                  rdfs:subClassOf snap:Quality .
+        
+        rdfs:label "symbol" ;
+        
+        rdfs:subClassOf snap:Quality .
 
 
 
