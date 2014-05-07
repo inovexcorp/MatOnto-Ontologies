@@ -72,6 +72,35 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 #################################################################
 #
+#    Object Properties
+#
+#################################################################
+
+
+###  http://matonto.org/ontologies/matonto#hasMass
+
+:hasMass rdf:type owl:ObjectProperty ;
+         
+         rdfs:label "has mass"@en ;
+         
+         rdfs:range dl:Mass .
+
+
+
+###  http://matonto.org/ontologies/matonto#hasSymbol
+
+:hasSymbol rdf:type owl:ObjectProperty ;
+           
+           rdfs:label "has symbol"@en ;
+           
+           rdfs:range :SpaceGroupSymbol .
+
+
+
+
+
+#################################################################
+#
 #    Classes
 #
 #################################################################
