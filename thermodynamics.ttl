@@ -114,7 +114,7 @@
               
               rdfs:comment "Heat capacity is the measurable physical quantity of heat energy required to change the temperature of an object by a given amount." ;
               
-              mat:commonSymbol "C" .
+              mat:hasCommonSymbol "C" .
 
 
 
@@ -217,7 +217,7 @@
 #################################################################
 
 
-dl:SpecificEnergyUnit mat:commonSymbol "J/Kg" .
+dl:SpecificEnergyUnit mat:hasCommonSymbol "J/Kg" .
 
 
 

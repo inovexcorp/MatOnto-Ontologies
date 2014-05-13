@@ -40,31 +40,57 @@
 #################################################################
 
 
-###  http://matonto.org/ontologies/matonto#commonSymbol
-
-:commonSymbol rdf:type owl:AnnotationProperty ;
-              
-              rdfs:label "common symbol" ;
-              
-              rdfs:comment "A traditional or common symbol used to identify a quality in literature or mathematical functions.  For example, G is the common symbol for Newton's gravitational constant, as well as for the modulus of rigidity in materials science." .
-
-
-
-###  http://matonto.org/ontologies/matonto#symbol
-
-:symbol rdf:type owl:AnnotationProperty ;
-        
-        rdfs:label "SI Unit Symbol" ;
-        
-        rdfs:comment "The official SI symbol for a unit. For example, kg is the symbol for kilogram." ;
-        
-        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> .
-
-
-
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 
 skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://matonto.org/ontologies/matonto#hasCommonSymbol
+
+:hasCommonSymbol rdf:type owl:DatatypeProperty ;
+                 
+                 rdfs:label "has common symbol" ;
+                 
+                 rdfs:comment "A traditional or common symbol used to identify a quality in literature or mathematical functions.  For example, G is the common symbol for Newton's gravitational constant, as well as for the modulus of rigidity in materials science." ;
+                 
+                 rdfs:subPropertyOf :hasSymbol ;
+                 
+                 rdfs:range xsd:string .
+
+
+
+###  http://matonto.org/ontologies/matonto#hasSISymbol
+
+:hasSISymbol rdf:type owl:DatatypeProperty ;
+             
+             rdfs:label "has SI Unit Symbol" ;
+             
+             rdfs:comment "The official SI symbol for a unit. For example, kg is the symbol for kilogram." ;
+             
+             rdfs:subPropertyOf :hasSymbol ;
+             
+             rdfs:range xsd:string .
+
+
+
+###  http://matonto.org/ontologies/matonto#hasSymbol
+
+:hasSymbol rdf:type owl:DatatypeProperty ;
+           
+           rdfs:label "has symbol" ;
+           
+           rdfs:comment "Any string that is commonly associated with an object, or uniquely identifies it within a domain.  For example, \"He\" is a symbol for Helium, and \"g\" is a symbol for the mass unit gram." ;
+           
+           rdfs:range xsd:string .
 
 
 
@@ -407,7 +433,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                     
                     rdfs:label "electron volt" ;
                     
-                    :symbol "eV" .
+                    :hasSISymbol "eV" .
 
 
 
@@ -417,7 +443,7 @@ dl:unit_gram rdfs:label "gram" ;
              
              rdfs:comment "The gram is a metric system unit of mass." ;
              
-             :symbol "g" ;
+             :hasSISymbol "g" ;
              
              dl:derivesInto dl:unit_kilogram .
 
