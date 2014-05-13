@@ -47,11 +47,45 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://matonto.org/ontologies/matonto#hasMass
+
+:hasMass rdf:type owl:ObjectProperty ;
+         
+         rdfs:label "has mass"@en ;
+         
+         rdfs:range dl:Mass .
+
+
+
+
+
 #################################################################
 #
 #    Data properties
 #
 #################################################################
+
+
+###  http://matonto.org/ontologies/matonto#hasChemicalSymbol
+
+:hasChemicalSymbol rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "has chemical symbol"@en ;
+                   
+                   rdfs:comment "A chemical symbol is a notation of one or two letters representing a chemical element"@en ;
+                   
+                   rdfs:subPropertyOf :hasSymbol ;
+                   
+                   rdfs:range xsd:string .
+
 
 
 ###  http://matonto.org/ontologies/matonto#hasCommonSymbol
@@ -65,6 +99,16 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                  rdfs:subPropertyOf :hasSymbol ;
                  
                  rdfs:range xsd:string .
+
+
+
+###  http://matonto.org/ontologies/matonto#hasName
+
+:hasName rdf:type owl:DatatypeProperty ;
+         
+         rdfs:label "has Name"@en ;
+         
+         rdfs:range xsd:string .
 
 
 
@@ -86,7 +130,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 :hasSymbol rdf:type owl:DatatypeProperty ;
            
-           rdfs:label "has symbol" ;
+           rdfs:label "has symbol"@en ;
            
            rdfs:comment "Any string that is commonly associated with an object, or uniquely identifies it within a domain.  For example, \"He\" is a symbol for Helium, and \"g\" is a symbol for the mass unit gram." ;
            
@@ -350,16 +394,6 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                       rdfs:label "point group" ;
                       
                       rdfs:subClassOf :SaceGroupProperty .
-
-
-
-###  http://matonto.org/ontologies/matonto#SpaceGroupSymbol
-
-:SpaceGroupSymbol rdf:type owl:Class ;
-                  
-                  rdfs:label "symbol" ;
-                  
-                  rdfs:subClassOf :SaceGroupProperty .
 
 
 
