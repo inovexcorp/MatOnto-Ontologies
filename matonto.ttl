@@ -65,17 +65,6 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 
-###  http://matonto.org/ontologies/matonto#hasSymbol
-
-:hasSymbol rdf:type owl:ObjectProperty ;
-           
-           rdfs:label "has symbol" ,
-                      "has symbol"@en ;
-           
-           rdfs:comment "Any string that is commonly associated with an object, or uniquely identifies it within a domain.  For example, \"He\" is a symbol for Helium, and \"g\" is a symbol for the mass unit gram." .
-
-
-
 
 
 #################################################################
@@ -127,10 +116,10 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 :hasSymbol rdf:type owl:DatatypeProperty ;
            
-           rdfs:label "has symbol" ,
-                      "has symbol"@en ;
+           rdfs:label "has symbol"@en ;
            
-           rdfs:comment "Any string that is commonly associated with an object, or uniquely identifies it within a domain.  For example, \"He\" is a symbol for Helium, and \"g\" is a symbol for the mass unit gram." ;
+           rdfs:comment """Any string that is commonly associated with an object, or uniquely identifies it within a domain.  For example, \"He\" is a symbol for Helium, and \"g\" is a symbol for the mass unit gram.\" ;
+"""@en ;
            
            rdfs:range xsd:string .
 
@@ -392,16 +381,6 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                       rdfs:label "point group" ;
                       
                       rdfs:subClassOf :SaceGroupProperty .
-
-
-
-###  http://matonto.org/ontologies/matonto#Symbol
-
-:Symbol rdf:type owl:Class ;
-        
-        rdfs:label "symbol" ;
-        
-        rdfs:subClassOf snap:Quality .
 
 
 
