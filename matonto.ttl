@@ -74,6 +74,20 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 #################################################################
 
 
+###  http://matonto.org/ontologies/matonto#hasChemicalSymbol
+
+:hasChemicalSymbol rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "has chemical symbol"@en ;
+                   
+                   rdfs:comment "A chemical symbol is a notation of one or two letters representing a chemical element"@en ;
+                   
+                   rdfs:subPropertyOf :hasSymbol ;
+                   
+                   rdfs:range xsd:string .
+
+
+
 ###  http://matonto.org/ontologies/matonto#hasCommonSymbol
 
 :hasCommonSymbol rdf:type owl:DatatypeProperty ;
