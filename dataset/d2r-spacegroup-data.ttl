@@ -1,0 +1,5820 @@
+@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix dl: <http://ontology.dumontierlab.com/> .
+@prefix mat: <http://matonto.org/ontologies/matonto#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix matd: <http://matonto.org/data/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://matonto.org/ontologies/matonto#CrystalSystem
+
+mat:CrystalSystem rdf:type owl:Class ;
+                  
+                  rdfs:label "crystal system" .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroup
+
+mat:SpaceGroup rdf:type owl:Class ;
+               
+               rdfs:label "space group" .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroupNumber
+
+mat:SpaceGroupNumber rdf:type owl:Class ;
+                     
+                     rdfs:label "space group number" .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroupPointGroup
+
+mat:SpaceGroupPointGroup rdf:type owl:Class ;
+                         
+                         rdfs:label "point group" .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://matonto.org/data/crystalSystem_Cubic
+
+matd:crystalSystem_Cubic rdf:type mat:CrystalSystem ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "Cubicr"^^xsd:string ;
+                         
+                         dl:hasValue "Cubicr"^^xsd:string .
+
+
+
+###  http://matonto.org/data/crystalSystem_Hexagonal
+
+matd:crystalSystem_Hexagonal rdf:type mat:CrystalSystem ,
+                                      owl:NamedIndividual ;
+                             
+                             rdfs:label "Hexagonalr"^^xsd:string ;
+                             
+                             dl:hasValue "Hexagonalr"^^xsd:string .
+
+
+
+###  http://matonto.org/data/crystalSystem_Monoclinic
+
+matd:crystalSystem_Monoclinic rdf:type mat:CrystalSystem ,
+                                       owl:NamedIndividual ;
+                              
+                              rdfs:label "Monoclinicr"^^xsd:string ;
+                              
+                              dl:hasValue "Monoclinicr"^^xsd:string .
+
+
+
+###  http://matonto.org/data/crystalSystem_Orthorhombic
+
+matd:crystalSystem_Orthorhombic rdf:type mat:CrystalSystem ,
+                                         owl:NamedIndividual ;
+                                
+                                rdfs:label "Orthorhombicr"^^xsd:string ;
+                                
+                                dl:hasValue "Orthorhombicr"^^xsd:string .
+
+
+
+###  http://matonto.org/data/crystalSystem_Tetragonal
+
+matd:crystalSystem_Tetragonal rdf:type mat:CrystalSystem ,
+                                       owl:NamedIndividual ;
+                              
+                              rdfs:label "Tetragonalr"^^xsd:string ;
+                              
+                              dl:hasValue "Tetragonalr"^^xsd:string .
+
+
+
+###  http://matonto.org/data/crystalSystem_Triclinic
+
+matd:crystalSystem_Triclinic rdf:type mat:CrystalSystem ,
+                                      owl:NamedIndividual ;
+                             
+                             rdfs:label "Triclinicr"^^xsd:string ;
+                             
+                             dl:hasValue "Triclinicr"^^xsd:string .
+
+
+
+###  http://matonto.org/data/crystalSystem_Trigonal
+
+matd:crystalSystem_Trigonal rdf:type mat:CrystalSystem ,
+                                     owl:NamedIndividual ;
+                            
+                            rdfs:label "Trigonalr"^^xsd:string ;
+                            
+                            dl:hasValue "Trigonalr"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_1
+
+matd:pointGroup_1 rdf:type mat:SpaceGroupPointGroup ,
+                           owl:NamedIndividual ;
+                  
+                  rdfs:label "1"^^xsd:string ;
+                  
+                  dl:hasValue "1"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_2
+
+matd:pointGroup_2 rdf:type mat:SpaceGroupPointGroup ,
+                           owl:NamedIndividual ;
+                  
+                  rdfs:label "2"^^xsd:string ;
+                  
+                  dl:hasValue "2"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_222
+
+matd:pointGroup_222 rdf:type mat:SpaceGroupPointGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "222"^^xsd:string ;
+                    
+                    dl:hasValue "222"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_23
+
+matd:pointGroup_23 rdf:type mat:SpaceGroupPointGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "23"^^xsd:string ;
+                   
+                   dl:hasValue "23"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_2m
+
+matd:pointGroup_2m rdf:type mat:SpaceGroupPointGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "2/m"^^xsd:string ;
+                   
+                   dl:hasValue "2/m"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_2m2m2m
+
+matd:pointGroup_2m2m2m rdf:type mat:SpaceGroupPointGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "2/m 2/m 2/m"^^xsd:string ;
+                       
+                       dl:hasValue "2/m 2/m 2/m"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_2m3
+
+matd:pointGroup_2m3 rdf:type mat:SpaceGroupPointGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "2/mÿ3"^^xsd:string ;
+                    
+                    dl:hasValue "2/mÿ3"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_3
+
+matd:pointGroup_3 rdf:type mat:SpaceGroupPointGroup ,
+                           owl:NamedIndividual ;
+                  
+                  rdfs:label "3"^^xsd:string ;
+                  
+                  dl:hasValue "3"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_32
+
+matd:pointGroup_32 rdf:type mat:SpaceGroupPointGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "32"^^xsd:string ;
+                   
+                   dl:hasValue "32"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_32m
+
+matd:pointGroup_32m rdf:type mat:SpaceGroupPointGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "3ÿ2/m"^^xsd:string ;
+                    
+                    dl:hasValue "3ÿ2/m"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_3m
+
+matd:pointGroup_3m rdf:type mat:SpaceGroupPointGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "3m"^^xsd:string ;
+                   
+                   dl:hasValue "3m"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_4
+
+matd:pointGroup_4 rdf:type mat:SpaceGroupPointGroup ,
+                           owl:NamedIndividual ;
+                  
+                  rdfs:label "4"^^xsd:string ;
+                  
+                  dl:hasValue "4"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_422
+
+matd:pointGroup_422 rdf:type mat:SpaceGroupPointGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "422"^^xsd:string ;
+                    
+                    dl:hasValue "422"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_42m
+
+matd:pointGroup_42m rdf:type mat:SpaceGroupPointGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "42m"^^xsd:string ;
+                    
+                    dl:hasValue "42m"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_432
+
+matd:pointGroup_432 rdf:type mat:SpaceGroupPointGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "432"^^xsd:string ;
+                    
+                    dl:hasValue "432"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_43m
+
+matd:pointGroup_43m rdf:type mat:SpaceGroupPointGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "43m"^^xsd:string ;
+                    
+                    dl:hasValue "43m"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_4m
+
+matd:pointGroup_4m rdf:type mat:SpaceGroupPointGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "4/m"^^xsd:string ;
+                   
+                   dl:hasValue "4/m"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_4m2m2m
+
+matd:pointGroup_4m2m2m rdf:type mat:SpaceGroupPointGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "4/m 2/m 2/m"^^xsd:string ;
+                       
+                       dl:hasValue "4/m 2/m 2/m"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_4m32m
+
+matd:pointGroup_4m32m rdf:type mat:SpaceGroupPointGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "4/mÿ3ÿ2/m"^^xsd:string ;
+                      
+                      dl:hasValue "4/mÿ3ÿ2/m"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_4mm
+
+matd:pointGroup_4mm rdf:type mat:SpaceGroupPointGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "4mm"^^xsd:string ;
+                    
+                    dl:hasValue "4mm"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_6
+
+matd:pointGroup_6 rdf:type mat:SpaceGroupPointGroup ,
+                           owl:NamedIndividual ;
+                  
+                  rdfs:label "6"^^xsd:string ;
+                  
+                  dl:hasValue "6"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_622
+
+matd:pointGroup_622 rdf:type mat:SpaceGroupPointGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "622"^^xsd:string ;
+                    
+                    dl:hasValue "622"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_6m
+
+matd:pointGroup_6m rdf:type mat:SpaceGroupPointGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "6/m"^^xsd:string ;
+                   
+                   dl:hasValue "6/m"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_6m2
+
+matd:pointGroup_6m2 rdf:type mat:SpaceGroupPointGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "6m2"^^xsd:string ;
+                    
+                    dl:hasValue "6m2"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_6m2m2m
+
+matd:pointGroup_6m2m2m rdf:type mat:SpaceGroupPointGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "6/m 2/m 2/m"^^xsd:string ;
+                       
+                       dl:hasValue "6/m 2/m 2/m"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_6mm
+
+matd:pointGroup_6mm rdf:type mat:SpaceGroupPointGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "6mm"^^xsd:string ;
+                    
+                    dl:hasValue "6mm"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_m
+
+matd:pointGroup_m rdf:type mat:SpaceGroupPointGroup ,
+                           owl:NamedIndividual ;
+                  
+                  rdfs:label "m"^^xsd:string ;
+                  
+                  dl:hasValue "m"^^xsd:string .
+
+
+
+###  http://matonto.org/data/pointGroup_mm2
+
+matd:pointGroup_mm2 rdf:type mat:SpaceGroupPointGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "mm2"^^xsd:string ;
+                    
+                    dl:hasValue "mm2"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_1
+
+matd:spaceGroupNumber_1 rdf:type mat:SpaceGroupNumber ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "1"^^xsd:string ;
+                        
+                        dl:hasValue "1"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_10
+
+matd:spaceGroupNumber_10 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "10"^^xsd:string ;
+                         
+                         dl:hasValue "10"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_100
+
+matd:spaceGroupNumber_100 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "100"^^xsd:string ;
+                          
+                          dl:hasValue "100"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_101
+
+matd:spaceGroupNumber_101 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "101"^^xsd:string ;
+                          
+                          dl:hasValue "101"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_102
+
+matd:spaceGroupNumber_102 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "102"^^xsd:string ;
+                          
+                          dl:hasValue "102"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_103
+
+matd:spaceGroupNumber_103 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "103"^^xsd:string ;
+                          
+                          dl:hasValue "103"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_104
+
+matd:spaceGroupNumber_104 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "104"^^xsd:string ;
+                          
+                          dl:hasValue "104"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_105
+
+matd:spaceGroupNumber_105 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "105"^^xsd:string ;
+                          
+                          dl:hasValue "105"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_106
+
+matd:spaceGroupNumber_106 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "106"^^xsd:string ;
+                          
+                          dl:hasValue "106"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_107
+
+matd:spaceGroupNumber_107 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "107"^^xsd:string ;
+                          
+                          dl:hasValue "107"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_108
+
+matd:spaceGroupNumber_108 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "108"^^xsd:string ;
+                          
+                          dl:hasValue "108"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_109
+
+matd:spaceGroupNumber_109 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "109"^^xsd:string ;
+                          
+                          dl:hasValue "109"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_11
+
+matd:spaceGroupNumber_11 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "11"^^xsd:string ;
+                         
+                         dl:hasValue "11"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_110
+
+matd:spaceGroupNumber_110 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "110"^^xsd:string ;
+                          
+                          dl:hasValue "110"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_111
+
+matd:spaceGroupNumber_111 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "111"^^xsd:string ;
+                          
+                          dl:hasValue "111"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_112
+
+matd:spaceGroupNumber_112 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "112"^^xsd:string ;
+                          
+                          dl:hasValue "112"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_113
+
+matd:spaceGroupNumber_113 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "113"^^xsd:string ;
+                          
+                          dl:hasValue "113"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_114
+
+matd:spaceGroupNumber_114 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "114"^^xsd:string ;
+                          
+                          dl:hasValue "114"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_115
+
+matd:spaceGroupNumber_115 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "115"^^xsd:string ;
+                          
+                          dl:hasValue "115"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_116
+
+matd:spaceGroupNumber_116 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "116"^^xsd:string ;
+                          
+                          dl:hasValue "116"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_117
+
+matd:spaceGroupNumber_117 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "117"^^xsd:string ;
+                          
+                          dl:hasValue "117"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_118
+
+matd:spaceGroupNumber_118 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "118"^^xsd:string ;
+                          
+                          dl:hasValue "118"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_119
+
+matd:spaceGroupNumber_119 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "119"^^xsd:string ;
+                          
+                          dl:hasValue "119"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_12
+
+matd:spaceGroupNumber_12 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "12"^^xsd:string ;
+                         
+                         dl:hasValue "12"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_120
+
+matd:spaceGroupNumber_120 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "120"^^xsd:string ;
+                          
+                          dl:hasValue "120"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_121
+
+matd:spaceGroupNumber_121 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "121"^^xsd:string ;
+                          
+                          dl:hasValue "121"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_122
+
+matd:spaceGroupNumber_122 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "122"^^xsd:string ;
+                          
+                          dl:hasValue "122"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_123
+
+matd:spaceGroupNumber_123 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "123"^^xsd:string ;
+                          
+                          dl:hasValue "123"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_124
+
+matd:spaceGroupNumber_124 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "124"^^xsd:string ;
+                          
+                          dl:hasValue "124"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_125
+
+matd:spaceGroupNumber_125 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "125"^^xsd:string ;
+                          
+                          dl:hasValue "125"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_126
+
+matd:spaceGroupNumber_126 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "126"^^xsd:string ;
+                          
+                          dl:hasValue "126"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_127
+
+matd:spaceGroupNumber_127 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "127"^^xsd:string ;
+                          
+                          dl:hasValue "127"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_128
+
+matd:spaceGroupNumber_128 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "128"^^xsd:string ;
+                          
+                          dl:hasValue "128"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_129
+
+matd:spaceGroupNumber_129 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "129"^^xsd:string ;
+                          
+                          dl:hasValue "129"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_13
+
+matd:spaceGroupNumber_13 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "13"^^xsd:string ;
+                         
+                         dl:hasValue "13"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_130
+
+matd:spaceGroupNumber_130 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "130"^^xsd:string ;
+                          
+                          dl:hasValue "130"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_131
+
+matd:spaceGroupNumber_131 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "131"^^xsd:string ;
+                          
+                          dl:hasValue "131"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_132
+
+matd:spaceGroupNumber_132 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "132"^^xsd:string ;
+                          
+                          dl:hasValue "132"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_133
+
+matd:spaceGroupNumber_133 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "133"^^xsd:string ;
+                          
+                          dl:hasValue "133"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_134
+
+matd:spaceGroupNumber_134 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "134"^^xsd:string ;
+                          
+                          dl:hasValue "134"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_135
+
+matd:spaceGroupNumber_135 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "135"^^xsd:string ;
+                          
+                          dl:hasValue "135"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_136
+
+matd:spaceGroupNumber_136 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "136"^^xsd:string ;
+                          
+                          dl:hasValue "136"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_137
+
+matd:spaceGroupNumber_137 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "137"^^xsd:string ;
+                          
+                          dl:hasValue "137"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_138
+
+matd:spaceGroupNumber_138 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "138"^^xsd:string ;
+                          
+                          dl:hasValue "138"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_139
+
+matd:spaceGroupNumber_139 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "139"^^xsd:string ;
+                          
+                          dl:hasValue "139"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_14
+
+matd:spaceGroupNumber_14 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "14"^^xsd:string ;
+                         
+                         dl:hasValue "14"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_140
+
+matd:spaceGroupNumber_140 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "140"^^xsd:string ;
+                          
+                          dl:hasValue "140"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_141
+
+matd:spaceGroupNumber_141 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "141"^^xsd:string ;
+                          
+                          dl:hasValue "141"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_142
+
+matd:spaceGroupNumber_142 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "142"^^xsd:string ;
+                          
+                          dl:hasValue "142"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_143
+
+matd:spaceGroupNumber_143 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "143"^^xsd:string ;
+                          
+                          dl:hasValue "143"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_144
+
+matd:spaceGroupNumber_144 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "144"^^xsd:string ;
+                          
+                          dl:hasValue "144"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_145
+
+matd:spaceGroupNumber_145 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "145"^^xsd:string ;
+                          
+                          dl:hasValue "145"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_146
+
+matd:spaceGroupNumber_146 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "146"^^xsd:string ;
+                          
+                          dl:hasValue "146"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_147
+
+matd:spaceGroupNumber_147 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "147"^^xsd:string ;
+                          
+                          dl:hasValue "147"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_148
+
+matd:spaceGroupNumber_148 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "148"^^xsd:string ;
+                          
+                          dl:hasValue "148"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_149
+
+matd:spaceGroupNumber_149 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "149"^^xsd:string ;
+                          
+                          dl:hasValue "149"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_15
+
+matd:spaceGroupNumber_15 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "15"^^xsd:string ;
+                         
+                         dl:hasValue "15"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_150
+
+matd:spaceGroupNumber_150 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "150"^^xsd:string ;
+                          
+                          dl:hasValue "150"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_151
+
+matd:spaceGroupNumber_151 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "151"^^xsd:string ;
+                          
+                          dl:hasValue "151"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_152
+
+matd:spaceGroupNumber_152 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "152"^^xsd:string ;
+                          
+                          dl:hasValue "152"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_153
+
+matd:spaceGroupNumber_153 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "153"^^xsd:string ;
+                          
+                          dl:hasValue "153"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_154
+
+matd:spaceGroupNumber_154 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "154"^^xsd:string ;
+                          
+                          dl:hasValue "154"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_155
+
+matd:spaceGroupNumber_155 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "155"^^xsd:string ;
+                          
+                          dl:hasValue "155"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_156
+
+matd:spaceGroupNumber_156 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "156"^^xsd:string ;
+                          
+                          dl:hasValue "156"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_157
+
+matd:spaceGroupNumber_157 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "157"^^xsd:string ;
+                          
+                          dl:hasValue "157"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_158
+
+matd:spaceGroupNumber_158 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "158"^^xsd:string ;
+                          
+                          dl:hasValue "158"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_159
+
+matd:spaceGroupNumber_159 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "159"^^xsd:string ;
+                          
+                          dl:hasValue "159"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_16
+
+matd:spaceGroupNumber_16 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "16"^^xsd:string ;
+                         
+                         dl:hasValue "16"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_160
+
+matd:spaceGroupNumber_160 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "160"^^xsd:string ;
+                          
+                          dl:hasValue "160"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_161
+
+matd:spaceGroupNumber_161 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "161"^^xsd:string ;
+                          
+                          dl:hasValue "161"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_162
+
+matd:spaceGroupNumber_162 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "162"^^xsd:string ;
+                          
+                          dl:hasValue "162"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_163
+
+matd:spaceGroupNumber_163 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "163"^^xsd:string ;
+                          
+                          dl:hasValue "163"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_164
+
+matd:spaceGroupNumber_164 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "164"^^xsd:string ;
+                          
+                          dl:hasValue "164"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_165
+
+matd:spaceGroupNumber_165 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "165"^^xsd:string ;
+                          
+                          dl:hasValue "165"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_166
+
+matd:spaceGroupNumber_166 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "166"^^xsd:string ;
+                          
+                          dl:hasValue "166"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_167
+
+matd:spaceGroupNumber_167 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "167"^^xsd:string ;
+                          
+                          dl:hasValue "167"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_168
+
+matd:spaceGroupNumber_168 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "168"^^xsd:string ;
+                          
+                          dl:hasValue "168"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_169
+
+matd:spaceGroupNumber_169 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "169"^^xsd:string ;
+                          
+                          dl:hasValue "169"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_17
+
+matd:spaceGroupNumber_17 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "17"^^xsd:string ;
+                         
+                         dl:hasValue "17"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_170
+
+matd:spaceGroupNumber_170 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "170"^^xsd:string ;
+                          
+                          dl:hasValue "170"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_171
+
+matd:spaceGroupNumber_171 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "171"^^xsd:string ;
+                          
+                          dl:hasValue "171"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_172
+
+matd:spaceGroupNumber_172 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "172"^^xsd:string ;
+                          
+                          dl:hasValue "172"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_173
+
+matd:spaceGroupNumber_173 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "173"^^xsd:string ;
+                          
+                          dl:hasValue "173"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_174
+
+matd:spaceGroupNumber_174 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "174"^^xsd:string ;
+                          
+                          dl:hasValue "174"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_175
+
+matd:spaceGroupNumber_175 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "175"^^xsd:string ;
+                          
+                          dl:hasValue "175"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_176
+
+matd:spaceGroupNumber_176 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "176"^^xsd:string ;
+                          
+                          dl:hasValue "176"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_177
+
+matd:spaceGroupNumber_177 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "177"^^xsd:string ;
+                          
+                          dl:hasValue "177"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_178
+
+matd:spaceGroupNumber_178 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "178"^^xsd:string ;
+                          
+                          dl:hasValue "178"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_179
+
+matd:spaceGroupNumber_179 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "179"^^xsd:string ;
+                          
+                          dl:hasValue "179"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_18
+
+matd:spaceGroupNumber_18 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "18"^^xsd:string ;
+                         
+                         dl:hasValue "18"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_180
+
+matd:spaceGroupNumber_180 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "180"^^xsd:string ;
+                          
+                          dl:hasValue "180"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_181
+
+matd:spaceGroupNumber_181 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "181"^^xsd:string ;
+                          
+                          dl:hasValue "181"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_182
+
+matd:spaceGroupNumber_182 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "182"^^xsd:string ;
+                          
+                          dl:hasValue "182"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_183
+
+matd:spaceGroupNumber_183 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "183"^^xsd:string ;
+                          
+                          dl:hasValue "183"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_184
+
+matd:spaceGroupNumber_184 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "184"^^xsd:string ;
+                          
+                          dl:hasValue "184"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_185
+
+matd:spaceGroupNumber_185 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "185"^^xsd:string ;
+                          
+                          dl:hasValue "185"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_186
+
+matd:spaceGroupNumber_186 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "186"^^xsd:string ;
+                          
+                          dl:hasValue "186"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_187
+
+matd:spaceGroupNumber_187 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "187"^^xsd:string ;
+                          
+                          dl:hasValue "187"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_188
+
+matd:spaceGroupNumber_188 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "188"^^xsd:string ;
+                          
+                          dl:hasValue "188"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_189
+
+matd:spaceGroupNumber_189 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "189"^^xsd:string ;
+                          
+                          dl:hasValue "189"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_19
+
+matd:spaceGroupNumber_19 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "19"^^xsd:string ;
+                         
+                         dl:hasValue "19"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_190
+
+matd:spaceGroupNumber_190 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "190"^^xsd:string ;
+                          
+                          dl:hasValue "190"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_191
+
+matd:spaceGroupNumber_191 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "191"^^xsd:string ;
+                          
+                          dl:hasValue "191"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_192
+
+matd:spaceGroupNumber_192 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "192"^^xsd:string ;
+                          
+                          dl:hasValue "192"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_193
+
+matd:spaceGroupNumber_193 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "193"^^xsd:string ;
+                          
+                          dl:hasValue "193"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_194
+
+matd:spaceGroupNumber_194 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "194"^^xsd:string ;
+                          
+                          dl:hasValue "194"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_195
+
+matd:spaceGroupNumber_195 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "195"^^xsd:string ;
+                          
+                          dl:hasValue "195"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_196
+
+matd:spaceGroupNumber_196 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "196"^^xsd:string ;
+                          
+                          dl:hasValue "196"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_197
+
+matd:spaceGroupNumber_197 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "197"^^xsd:string ;
+                          
+                          dl:hasValue "197"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_198
+
+matd:spaceGroupNumber_198 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "198"^^xsd:string ;
+                          
+                          dl:hasValue "198"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_199
+
+matd:spaceGroupNumber_199 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "199"^^xsd:string ;
+                          
+                          dl:hasValue "199"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_2
+
+matd:spaceGroupNumber_2 rdf:type mat:SpaceGroupNumber ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "2"^^xsd:string ;
+                        
+                        dl:hasValue "2"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_20
+
+matd:spaceGroupNumber_20 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "20"^^xsd:string ;
+                         
+                         dl:hasValue "20"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_200
+
+matd:spaceGroupNumber_200 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "200"^^xsd:string ;
+                          
+                          dl:hasValue "200"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_201
+
+matd:spaceGroupNumber_201 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "201"^^xsd:string ;
+                          
+                          dl:hasValue "201"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_202
+
+matd:spaceGroupNumber_202 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "202"^^xsd:string ;
+                          
+                          dl:hasValue "202"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_203
+
+matd:spaceGroupNumber_203 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "203"^^xsd:string ;
+                          
+                          dl:hasValue "203"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_204
+
+matd:spaceGroupNumber_204 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "204"^^xsd:string ;
+                          
+                          dl:hasValue "204"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_205
+
+matd:spaceGroupNumber_205 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "205"^^xsd:string ;
+                          
+                          dl:hasValue "205"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_206
+
+matd:spaceGroupNumber_206 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "206"^^xsd:string ;
+                          
+                          dl:hasValue "206"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_207
+
+matd:spaceGroupNumber_207 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "207"^^xsd:string ;
+                          
+                          dl:hasValue "207"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_208
+
+matd:spaceGroupNumber_208 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "208"^^xsd:string ;
+                          
+                          dl:hasValue "208"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_209
+
+matd:spaceGroupNumber_209 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "209"^^xsd:string ;
+                          
+                          dl:hasValue "209"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_21
+
+matd:spaceGroupNumber_21 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "21"^^xsd:string ;
+                         
+                         dl:hasValue "21"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_210
+
+matd:spaceGroupNumber_210 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "210"^^xsd:string ;
+                          
+                          dl:hasValue "210"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_211
+
+matd:spaceGroupNumber_211 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "211"^^xsd:string ;
+                          
+                          dl:hasValue "211"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_212
+
+matd:spaceGroupNumber_212 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "212"^^xsd:string ;
+                          
+                          dl:hasValue "212"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_213
+
+matd:spaceGroupNumber_213 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "213"^^xsd:string ;
+                          
+                          dl:hasValue "213"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_214
+
+matd:spaceGroupNumber_214 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "214"^^xsd:string ;
+                          
+                          dl:hasValue "214"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_215
+
+matd:spaceGroupNumber_215 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "215"^^xsd:string ;
+                          
+                          dl:hasValue "215"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_216
+
+matd:spaceGroupNumber_216 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "216"^^xsd:string ;
+                          
+                          dl:hasValue "216"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_217
+
+matd:spaceGroupNumber_217 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "217"^^xsd:string ;
+                          
+                          dl:hasValue "217"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_218
+
+matd:spaceGroupNumber_218 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "218"^^xsd:string ;
+                          
+                          dl:hasValue "218"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_219
+
+matd:spaceGroupNumber_219 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "219"^^xsd:string ;
+                          
+                          dl:hasValue "219"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_22
+
+matd:spaceGroupNumber_22 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "22"^^xsd:string ;
+                         
+                         dl:hasValue "22"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_220
+
+matd:spaceGroupNumber_220 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "220"^^xsd:string ;
+                          
+                          dl:hasValue "220"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_221
+
+matd:spaceGroupNumber_221 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "221"^^xsd:string ;
+                          
+                          dl:hasValue "221"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_222
+
+matd:spaceGroupNumber_222 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "222"^^xsd:string ;
+                          
+                          dl:hasValue "222"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_223
+
+matd:spaceGroupNumber_223 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "223"^^xsd:string ;
+                          
+                          dl:hasValue "223"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_224
+
+matd:spaceGroupNumber_224 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "224"^^xsd:string ;
+                          
+                          dl:hasValue "224"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_225
+
+matd:spaceGroupNumber_225 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "225"^^xsd:string ;
+                          
+                          dl:hasValue "225"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_226
+
+matd:spaceGroupNumber_226 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "226"^^xsd:string ;
+                          
+                          dl:hasValue "226"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_227
+
+matd:spaceGroupNumber_227 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "227"^^xsd:string ;
+                          
+                          dl:hasValue "227"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_228
+
+matd:spaceGroupNumber_228 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "228"^^xsd:string ;
+                          
+                          dl:hasValue "228"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_229
+
+matd:spaceGroupNumber_229 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "229"^^xsd:string ;
+                          
+                          dl:hasValue "229"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_23
+
+matd:spaceGroupNumber_23 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "23"^^xsd:string ;
+                         
+                         dl:hasValue "23"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_230
+
+matd:spaceGroupNumber_230 rdf:type mat:SpaceGroupNumber ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "230"^^xsd:string ;
+                          
+                          dl:hasValue "230"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_24
+
+matd:spaceGroupNumber_24 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "24"^^xsd:string ;
+                         
+                         dl:hasValue "24"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_25
+
+matd:spaceGroupNumber_25 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "25"^^xsd:string ;
+                         
+                         dl:hasValue "25"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_26
+
+matd:spaceGroupNumber_26 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "26"^^xsd:string ;
+                         
+                         dl:hasValue "26"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_27
+
+matd:spaceGroupNumber_27 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "27"^^xsd:string ;
+                         
+                         dl:hasValue "27"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_28
+
+matd:spaceGroupNumber_28 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "28"^^xsd:string ;
+                         
+                         dl:hasValue "28"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_29
+
+matd:spaceGroupNumber_29 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "29"^^xsd:string ;
+                         
+                         dl:hasValue "29"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_3
+
+matd:spaceGroupNumber_3 rdf:type mat:SpaceGroupNumber ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "3"^^xsd:string ;
+                        
+                        dl:hasValue "3"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_30
+
+matd:spaceGroupNumber_30 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "30"^^xsd:string ;
+                         
+                         dl:hasValue "30"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_31
+
+matd:spaceGroupNumber_31 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "31"^^xsd:string ;
+                         
+                         dl:hasValue "31"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_32
+
+matd:spaceGroupNumber_32 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "32"^^xsd:string ;
+                         
+                         dl:hasValue "32"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_33
+
+matd:spaceGroupNumber_33 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "33"^^xsd:string ;
+                         
+                         dl:hasValue "33"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_34
+
+matd:spaceGroupNumber_34 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "34"^^xsd:string ;
+                         
+                         dl:hasValue "34"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_35
+
+matd:spaceGroupNumber_35 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "35"^^xsd:string ;
+                         
+                         dl:hasValue "35"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_36
+
+matd:spaceGroupNumber_36 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "36"^^xsd:string ;
+                         
+                         dl:hasValue "36"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_37
+
+matd:spaceGroupNumber_37 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "37"^^xsd:string ;
+                         
+                         dl:hasValue "37"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_38
+
+matd:spaceGroupNumber_38 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "38"^^xsd:string ;
+                         
+                         dl:hasValue "38"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_39
+
+matd:spaceGroupNumber_39 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "39"^^xsd:string ;
+                         
+                         dl:hasValue "39"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_4
+
+matd:spaceGroupNumber_4 rdf:type mat:SpaceGroupNumber ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "4"^^xsd:string ;
+                        
+                        dl:hasValue "4"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_40
+
+matd:spaceGroupNumber_40 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "40"^^xsd:string ;
+                         
+                         dl:hasValue "40"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_41
+
+matd:spaceGroupNumber_41 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "41"^^xsd:string ;
+                         
+                         dl:hasValue "41"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_42
+
+matd:spaceGroupNumber_42 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "42"^^xsd:string ;
+                         
+                         dl:hasValue "42"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_43
+
+matd:spaceGroupNumber_43 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "43"^^xsd:string ;
+                         
+                         dl:hasValue "43"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_44
+
+matd:spaceGroupNumber_44 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "44"^^xsd:string ;
+                         
+                         dl:hasValue "44"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_45
+
+matd:spaceGroupNumber_45 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "45"^^xsd:string ;
+                         
+                         dl:hasValue "45"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_46
+
+matd:spaceGroupNumber_46 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "46"^^xsd:string ;
+                         
+                         dl:hasValue "46"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_47
+
+matd:spaceGroupNumber_47 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "47"^^xsd:string ;
+                         
+                         dl:hasValue "47"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_48
+
+matd:spaceGroupNumber_48 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "48"^^xsd:string ;
+                         
+                         dl:hasValue "48"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_49
+
+matd:spaceGroupNumber_49 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "49"^^xsd:string ;
+                         
+                         dl:hasValue "49"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_5
+
+matd:spaceGroupNumber_5 rdf:type mat:SpaceGroupNumber ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "5"^^xsd:string ;
+                        
+                        dl:hasValue "5"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_50
+
+matd:spaceGroupNumber_50 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "50"^^xsd:string ;
+                         
+                         dl:hasValue "50"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_51
+
+matd:spaceGroupNumber_51 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "51"^^xsd:string ;
+                         
+                         dl:hasValue "51"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_52
+
+matd:spaceGroupNumber_52 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "52"^^xsd:string ;
+                         
+                         dl:hasValue "52"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_53
+
+matd:spaceGroupNumber_53 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "53"^^xsd:string ;
+                         
+                         dl:hasValue "53"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_54
+
+matd:spaceGroupNumber_54 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "54"^^xsd:string ;
+                         
+                         dl:hasValue "54"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_55
+
+matd:spaceGroupNumber_55 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "55"^^xsd:string ;
+                         
+                         dl:hasValue "55"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_56
+
+matd:spaceGroupNumber_56 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "56"^^xsd:string ;
+                         
+                         dl:hasValue "56"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_57
+
+matd:spaceGroupNumber_57 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "57"^^xsd:string ;
+                         
+                         dl:hasValue "57"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_58
+
+matd:spaceGroupNumber_58 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "58"^^xsd:string ;
+                         
+                         dl:hasValue "58"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_59
+
+matd:spaceGroupNumber_59 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "59"^^xsd:string ;
+                         
+                         dl:hasValue "59"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_6
+
+matd:spaceGroupNumber_6 rdf:type mat:SpaceGroupNumber ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "6"^^xsd:string ;
+                        
+                        dl:hasValue "6"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_60
+
+matd:spaceGroupNumber_60 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "60"^^xsd:string ;
+                         
+                         dl:hasValue "60"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_61
+
+matd:spaceGroupNumber_61 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "61"^^xsd:string ;
+                         
+                         dl:hasValue "61"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_62
+
+matd:spaceGroupNumber_62 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "62"^^xsd:string ;
+                         
+                         dl:hasValue "62"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_63
+
+matd:spaceGroupNumber_63 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "63"^^xsd:string ;
+                         
+                         dl:hasValue "63"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_64
+
+matd:spaceGroupNumber_64 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "64"^^xsd:string ;
+                         
+                         dl:hasValue "64"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_65
+
+matd:spaceGroupNumber_65 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "65"^^xsd:string ;
+                         
+                         dl:hasValue "65"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_66
+
+matd:spaceGroupNumber_66 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "66"^^xsd:string ;
+                         
+                         dl:hasValue "66"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_67
+
+matd:spaceGroupNumber_67 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "67"^^xsd:string ;
+                         
+                         dl:hasValue "67"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_68
+
+matd:spaceGroupNumber_68 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "68"^^xsd:string ;
+                         
+                         dl:hasValue "68"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_69
+
+matd:spaceGroupNumber_69 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "69"^^xsd:string ;
+                         
+                         dl:hasValue "69"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_7
+
+matd:spaceGroupNumber_7 rdf:type mat:SpaceGroupNumber ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "7"^^xsd:string ;
+                        
+                        dl:hasValue "7"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_70
+
+matd:spaceGroupNumber_70 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "70"^^xsd:string ;
+                         
+                         dl:hasValue "70"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_71
+
+matd:spaceGroupNumber_71 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "71"^^xsd:string ;
+                         
+                         dl:hasValue "71"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_72
+
+matd:spaceGroupNumber_72 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "72"^^xsd:string ;
+                         
+                         dl:hasValue "72"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_73
+
+matd:spaceGroupNumber_73 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "73"^^xsd:string ;
+                         
+                         dl:hasValue "73"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_74
+
+matd:spaceGroupNumber_74 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "74"^^xsd:string ;
+                         
+                         dl:hasValue "74"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_75
+
+matd:spaceGroupNumber_75 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "75"^^xsd:string ;
+                         
+                         dl:hasValue "75"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_76
+
+matd:spaceGroupNumber_76 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "76"^^xsd:string ;
+                         
+                         dl:hasValue "76"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_77
+
+matd:spaceGroupNumber_77 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "77"^^xsd:string ;
+                         
+                         dl:hasValue "77"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_78
+
+matd:spaceGroupNumber_78 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "78"^^xsd:string ;
+                         
+                         dl:hasValue "78"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_79
+
+matd:spaceGroupNumber_79 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "79"^^xsd:string ;
+                         
+                         dl:hasValue "79"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_8
+
+matd:spaceGroupNumber_8 rdf:type mat:SpaceGroupNumber ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "8"^^xsd:string ;
+                        
+                        dl:hasValue "8"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_80
+
+matd:spaceGroupNumber_80 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "80"^^xsd:string ;
+                         
+                         dl:hasValue "80"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_81
+
+matd:spaceGroupNumber_81 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "81"^^xsd:string ;
+                         
+                         dl:hasValue "81"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_82
+
+matd:spaceGroupNumber_82 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "82"^^xsd:string ;
+                         
+                         dl:hasValue "82"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_83
+
+matd:spaceGroupNumber_83 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "83"^^xsd:string ;
+                         
+                         dl:hasValue "83"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_84
+
+matd:spaceGroupNumber_84 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "84"^^xsd:string ;
+                         
+                         dl:hasValue "84"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_85
+
+matd:spaceGroupNumber_85 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "85"^^xsd:string ;
+                         
+                         dl:hasValue "85"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_86
+
+matd:spaceGroupNumber_86 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "86"^^xsd:string ;
+                         
+                         dl:hasValue "86"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_87
+
+matd:spaceGroupNumber_87 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "87"^^xsd:string ;
+                         
+                         dl:hasValue "87"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_88
+
+matd:spaceGroupNumber_88 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "88"^^xsd:string ;
+                         
+                         dl:hasValue "88"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_89
+
+matd:spaceGroupNumber_89 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "89"^^xsd:string ;
+                         
+                         dl:hasValue "89"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_9
+
+matd:spaceGroupNumber_9 rdf:type mat:SpaceGroupNumber ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "9"^^xsd:string ;
+                        
+                        dl:hasValue "9"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_90
+
+matd:spaceGroupNumber_90 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "90"^^xsd:string ;
+                         
+                         dl:hasValue "90"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_91
+
+matd:spaceGroupNumber_91 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "91"^^xsd:string ;
+                         
+                         dl:hasValue "91"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_92
+
+matd:spaceGroupNumber_92 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "92"^^xsd:string ;
+                         
+                         dl:hasValue "92"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_93
+
+matd:spaceGroupNumber_93 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "93"^^xsd:string ;
+                         
+                         dl:hasValue "93"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_94
+
+matd:spaceGroupNumber_94 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "94"^^xsd:string ;
+                         
+                         dl:hasValue "94"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_95
+
+matd:spaceGroupNumber_95 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "95"^^xsd:string ;
+                         
+                         dl:hasValue "95"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_96
+
+matd:spaceGroupNumber_96 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "96"^^xsd:string ;
+                         
+                         dl:hasValue "96"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_97
+
+matd:spaceGroupNumber_97 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "97"^^xsd:string ;
+                         
+                         dl:hasValue "97"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_98
+
+matd:spaceGroupNumber_98 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "98"^^xsd:string ;
+                         
+                         dl:hasValue "98"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroupNumber_99
+
+matd:spaceGroupNumber_99 rdf:type mat:SpaceGroupNumber ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "99"^^xsd:string ;
+                         
+                         dl:hasValue "99"^^xsd:string .
+
+
+
+###  http://matonto.org/data/spaceGroup_Aea2
+
+matd:spaceGroup_Aea2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Aea2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_41 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Aem2
+
+matd:spaceGroup_Aem2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Aem2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_39 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Ama2
+
+matd:spaceGroup_Ama2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Ama2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_40 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Amm2
+
+matd:spaceGroup_Amm2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Amm2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_38 .
+
+
+
+###  http://matonto.org/data/spaceGroup_C2
+
+matd:spaceGroup_C2 rdf:type mat:SpaceGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "C2"^^xsd:string ;
+                   
+                   dl:hasQuality matd:crystalSystem_Monoclinic ,
+                                 matd:pointGroup_2 ,
+                                 matd:spaceGroupNumber_5 .
+
+
+
+###  http://matonto.org/data/spaceGroup_C222
+
+matd:spaceGroup_C222 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "C222"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_222 ,
+                                   matd:spaceGroupNumber_21 .
+
+
+
+###  http://matonto.org/data/spaceGroup_C2221
+
+matd:spaceGroup_C2221 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "C2221"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                    matd:pointGroup_222 ,
+                                    matd:spaceGroupNumber_20 .
+
+
+
+###  http://matonto.org/data/spaceGroup_C2c
+
+matd:spaceGroup_C2c rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "C2/c"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Monoclinic ,
+                                  matd:pointGroup_2m ,
+                                  matd:spaceGroupNumber_15 .
+
+
+
+###  http://matonto.org/data/spaceGroup_C2m
+
+matd:spaceGroup_C2m rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "C2/m"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Monoclinic ,
+                                  matd:pointGroup_2m ,
+                                  matd:spaceGroupNumber_12 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Cc
+
+matd:spaceGroup_Cc rdf:type mat:SpaceGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "Cc"^^xsd:string ;
+                   
+                   dl:hasQuality matd:crystalSystem_Monoclinic ,
+                                 matd:pointGroup_m ,
+                                 matd:spaceGroupNumber_9 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Ccc2
+
+matd:spaceGroup_Ccc2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Ccc2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_37 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Ccce
+
+matd:spaceGroup_Ccce rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Ccce"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_68 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Cccm
+
+matd:spaceGroup_Cccm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Cccm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_66 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Cm
+
+matd:spaceGroup_Cm rdf:type mat:SpaceGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "Cm"^^xsd:string ;
+                   
+                   dl:hasQuality matd:crystalSystem_Monoclinic ,
+                                 matd:pointGroup_m ,
+                                 matd:spaceGroupNumber_8 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Cmc21
+
+matd:spaceGroup_Cmc21 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "Cmc21"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                    matd:pointGroup_mm2 ,
+                                    matd:spaceGroupNumber_36 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Cmce
+
+matd:spaceGroup_Cmce rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Cmce"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_64 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Cmcm
+
+matd:spaceGroup_Cmcm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Cmcm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_63 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Cmm2
+
+matd:spaceGroup_Cmm2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Cmm2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_35 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Cmme
+
+matd:spaceGroup_Cmme rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Cmme"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_67 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Cmmm
+
+matd:spaceGroup_Cmmm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Cmmm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_65 .
+
+
+
+###  http://matonto.org/data/spaceGroup_F222
+
+matd:spaceGroup_F222 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "F222"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_222 ,
+                                   matd:spaceGroupNumber_22 .
+
+
+
+###  http://matonto.org/data/spaceGroup_F23
+
+matd:spaceGroup_F23 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "F23"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Cubic ,
+                                  matd:pointGroup_23 ,
+                                  matd:spaceGroupNumber_196 .
+
+
+
+###  http://matonto.org/data/spaceGroup_F4132
+
+matd:spaceGroup_F4132 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "F4132"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Cubic ,
+                                    matd:pointGroup_432 ,
+                                    matd:spaceGroupNumber_210 .
+
+
+
+###  http://matonto.org/data/spaceGroup_F432
+
+matd:spaceGroup_F432 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "F432"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_432 ,
+                                   matd:spaceGroupNumber_209 .
+
+
+
+###  http://matonto.org/data/spaceGroup_F43c
+
+matd:spaceGroup_F43c rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "F43c"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_43m ,
+                                   matd:spaceGroupNumber_219 .
+
+
+
+###  http://matonto.org/data/spaceGroup_F43m
+
+matd:spaceGroup_F43m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "F43m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_43m ,
+                                   matd:spaceGroupNumber_216 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Fd3
+
+matd:spaceGroup_Fd3 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "Fd3"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Cubic ,
+                                  matd:pointGroup_2m3 ,
+                                  matd:spaceGroupNumber_203 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Fd3c
+
+matd:spaceGroup_Fd3c rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Fd3c"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_4m32m ,
+                                   matd:spaceGroupNumber_228 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Fd3m
+
+matd:spaceGroup_Fd3m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Fd3m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_4m32m ,
+                                   matd:spaceGroupNumber_227 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Fdd2
+
+matd:spaceGroup_Fdd2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Fdd2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_43 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Fddd
+
+matd:spaceGroup_Fddd rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Fddd"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_70 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Fm3
+
+matd:spaceGroup_Fm3 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "Fm3"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Cubic ,
+                                  matd:pointGroup_2m3 ,
+                                  matd:spaceGroupNumber_202 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Fm3c
+
+matd:spaceGroup_Fm3c rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Fm3c"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_4m32m ,
+                                   matd:spaceGroupNumber_226 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Fm3m
+
+matd:spaceGroup_Fm3m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Fm3m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_4m32m ,
+                                   matd:spaceGroupNumber_225 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Fmm2
+
+matd:spaceGroup_Fmm2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Fmm2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_42 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Fmmm
+
+matd:spaceGroup_Fmmm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Fmmm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_69 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I212121
+
+matd:spaceGroup_I212121 rdf:type mat:SpaceGroup ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "I212121"^^xsd:string ;
+                        
+                        dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                      matd:pointGroup_222 ,
+                                      matd:spaceGroupNumber_24 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I213
+
+matd:spaceGroup_I213 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "I213"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_23 ,
+                                   matd:spaceGroupNumber_199 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I222
+
+matd:spaceGroup_I222 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "I222"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_222 ,
+                                   matd:spaceGroupNumber_23 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I23
+
+matd:spaceGroup_I23 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "I23"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Cubic ,
+                                  matd:pointGroup_23 ,
+                                  matd:spaceGroupNumber_197 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I4
+
+matd:spaceGroup_I4 rdf:type mat:SpaceGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "I4"^^xsd:string ;
+                   
+                   dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                 matd:pointGroup_4 ,
+                                 matd:spaceGroupNumber_79 ,
+                                 matd:spaceGroupNumber_82 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I41
+
+matd:spaceGroup_I41 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "I41"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                  matd:pointGroup_4 ,
+                                  matd:spaceGroupNumber_80 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I4122
+
+matd:spaceGroup_I4122 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "I4122"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_422 ,
+                                    matd:spaceGroupNumber_98 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I4132
+
+matd:spaceGroup_I4132 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "I4132"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Cubic ,
+                                    matd:pointGroup_432 ,
+                                    matd:spaceGroupNumber_214 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I41a
+
+matd:spaceGroup_I41a rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "I41/a"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_4m ,
+                                   matd:spaceGroupNumber_88 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I41acd
+
+matd:spaceGroup_I41acd rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "I41/acd"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                     matd:pointGroup_4m2m2m ,
+                                     matd:spaceGroupNumber_142 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I41amd
+
+matd:spaceGroup_I41amd rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "I41/amd"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                     matd:pointGroup_4m2m2m ,
+                                     matd:spaceGroupNumber_141 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I41cd
+
+matd:spaceGroup_I41cd rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "I41cd"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4mm ,
+                                    matd:spaceGroupNumber_110 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I41md
+
+matd:spaceGroup_I41md rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "I41md"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4mm ,
+                                    matd:spaceGroupNumber_109 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I422
+
+matd:spaceGroup_I422 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "I422"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_422 ,
+                                   matd:spaceGroupNumber_97 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I42d
+
+matd:spaceGroup_I42d rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "I42d"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_42m ,
+                                   matd:spaceGroupNumber_122 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I42m
+
+matd:spaceGroup_I42m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "I42m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_42m ,
+                                   matd:spaceGroupNumber_121 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I432
+
+matd:spaceGroup_I432 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "I432"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_432 ,
+                                   matd:spaceGroupNumber_211 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I43d
+
+matd:spaceGroup_I43d rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "I43d"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_43m ,
+                                   matd:spaceGroupNumber_220 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I43m
+
+matd:spaceGroup_I43m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "I43m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_43m ,
+                                   matd:spaceGroupNumber_217 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I4c2
+
+matd:spaceGroup_I4c2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "I4c2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_42m ,
+                                   matd:spaceGroupNumber_120 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I4cm
+
+matd:spaceGroup_I4cm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "I4cm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_4mm ,
+                                   matd:spaceGroupNumber_108 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I4m
+
+matd:spaceGroup_I4m rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "I4/m"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                  matd:pointGroup_4m ,
+                                  matd:spaceGroupNumber_87 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I4m2
+
+matd:spaceGroup_I4m2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "I4m2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_42m ,
+                                   matd:spaceGroupNumber_119 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I4mcm
+
+matd:spaceGroup_I4mcm rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "I4/mcm"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4m2m2m ,
+                                    matd:spaceGroupNumber_140 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I4mm
+
+matd:spaceGroup_I4mm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "I4mm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_4mm ,
+                                   matd:spaceGroupNumber_107 .
+
+
+
+###  http://matonto.org/data/spaceGroup_I4mmm
+
+matd:spaceGroup_I4mmm rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "I4/mmm"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4m2m2m ,
+                                    matd:spaceGroupNumber_139 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Ia3
+
+matd:spaceGroup_Ia3 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "Ia3"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Cubic ,
+                                  matd:pointGroup_2m3 ,
+                                  matd:spaceGroupNumber_206 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Ia3d
+
+matd:spaceGroup_Ia3d rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Ia3d"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_4m32m ,
+                                   matd:spaceGroupNumber_230 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Iba2
+
+matd:spaceGroup_Iba2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Iba2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_45 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Ibam
+
+matd:spaceGroup_Ibam rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Ibam"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_72 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Ibca
+
+matd:spaceGroup_Ibca rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Ibca"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_73 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Im3
+
+matd:spaceGroup_Im3 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "Im3"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Cubic ,
+                                  matd:pointGroup_2m3 ,
+                                  matd:spaceGroupNumber_204 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Im3m
+
+matd:spaceGroup_Im3m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Im3m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_4m32m ,
+                                   matd:spaceGroupNumber_229 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Ima2
+
+matd:spaceGroup_Ima2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Ima2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_46 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Imm2
+
+matd:spaceGroup_Imm2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Imm2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_44 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Imma
+
+matd:spaceGroup_Imma rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Imma"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_74 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Immm
+
+matd:spaceGroup_Immm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Immm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_71 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P1
+
+matd:spaceGroup_P1 rdf:type mat:SpaceGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "P1"^^xsd:string ;
+                   
+                   dl:hasQuality matd:crystalSystem_Triclinic ,
+                                 matd:pointGroup_1 ,
+                                 matd:spaceGroupNumber_1 ,
+                                 matd:spaceGroupNumber_2 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P2
+
+matd:spaceGroup_P2 rdf:type mat:SpaceGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "P2"^^xsd:string ;
+                   
+                   dl:hasQuality matd:crystalSystem_Monoclinic ,
+                                 matd:pointGroup_2 ,
+                                 matd:spaceGroupNumber_3 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P21
+
+matd:spaceGroup_P21 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P21"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Monoclinic ,
+                                  matd:pointGroup_2 ,
+                                  matd:spaceGroupNumber_4 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P21212
+
+matd:spaceGroup_P21212 rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P21212"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                     matd:pointGroup_222 ,
+                                     matd:spaceGroupNumber_18 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P212121
+
+matd:spaceGroup_P212121 rdf:type mat:SpaceGroup ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "P212121"^^xsd:string ;
+                        
+                        dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                      matd:pointGroup_222 ,
+                                      matd:spaceGroupNumber_19 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P213
+
+matd:spaceGroup_P213 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P213"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_23 ,
+                                   matd:spaceGroupNumber_198 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P21c
+
+matd:spaceGroup_P21c rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P21/c"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Monoclinic ,
+                                   matd:pointGroup_2m ,
+                                   matd:spaceGroupNumber_14 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P21m
+
+matd:spaceGroup_P21m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P21/m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Monoclinic ,
+                                   matd:pointGroup_2m ,
+                                   matd:spaceGroupNumber_11 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P222
+
+matd:spaceGroup_P222 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P222"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_222 ,
+                                   matd:spaceGroupNumber_16 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P2221
+
+matd:spaceGroup_P2221 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P2221"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                    matd:pointGroup_222 ,
+                                    matd:spaceGroupNumber_17 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P23
+
+matd:spaceGroup_P23 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P23"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Cubic ,
+                                  matd:pointGroup_23 ,
+                                  matd:spaceGroupNumber_195 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P2c
+
+matd:spaceGroup_P2c rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P2/c"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Monoclinic ,
+                                  matd:pointGroup_2m ,
+                                  matd:spaceGroupNumber_13 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P2m
+
+matd:spaceGroup_P2m rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P2/m"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Monoclinic ,
+                                  matd:pointGroup_2m ,
+                                  matd:spaceGroupNumber_10 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P3
+
+matd:spaceGroup_P3 rdf:type mat:SpaceGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "P3"^^xsd:string ;
+                   
+                   dl:hasQuality matd:crystalSystem_Trigonal ,
+                                 matd:pointGroup_3 ,
+                                 matd:spaceGroupNumber_143 ,
+                                 matd:spaceGroupNumber_147 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P31
+
+matd:spaceGroup_P31 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P31"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Trigonal ,
+                                  matd:pointGroup_3 ,
+                                  matd:spaceGroupNumber_144 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P3112
+
+matd:spaceGroup_P3112 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P3112"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Trigonal ,
+                                    matd:pointGroup_32 ,
+                                    matd:spaceGroupNumber_151 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P312
+
+matd:spaceGroup_P312 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P312"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Trigonal ,
+                                   matd:pointGroup_32 ,
+                                   matd:spaceGroupNumber_149 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P3121
+
+matd:spaceGroup_P3121 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P3121"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Trigonal ,
+                                    matd:pointGroup_32 ,
+                                    matd:spaceGroupNumber_152 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P31c
+
+matd:spaceGroup_P31c rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P31c"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Trigonal ,
+                                   matd:pointGroup_32m ,
+                                   matd:pointGroup_3m ,
+                                   matd:spaceGroupNumber_159 ,
+                                   matd:spaceGroupNumber_163 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P31m
+
+matd:spaceGroup_P31m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P31m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Trigonal ,
+                                   matd:pointGroup_32m ,
+                                   matd:pointGroup_3m ,
+                                   matd:spaceGroupNumber_157 ,
+                                   matd:spaceGroupNumber_162 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P32
+
+matd:spaceGroup_P32 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P32"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Trigonal ,
+                                  matd:pointGroup_3 ,
+                                  matd:spaceGroupNumber_145 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P321
+
+matd:spaceGroup_P321 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P321"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Trigonal ,
+                                   matd:pointGroup_32 ,
+                                   matd:spaceGroupNumber_150 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P3212
+
+matd:spaceGroup_P3212 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P3212"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Trigonal ,
+                                    matd:pointGroup_32 ,
+                                    matd:spaceGroupNumber_153 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P3221
+
+matd:spaceGroup_P3221 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P3221"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Trigonal ,
+                                    matd:pointGroup_32 ,
+                                    matd:spaceGroupNumber_154 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P3c1
+
+matd:spaceGroup_P3c1 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P3c1"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Trigonal ,
+                                   matd:pointGroup_32m ,
+                                   matd:pointGroup_3m ,
+                                   matd:spaceGroupNumber_158 ,
+                                   matd:spaceGroupNumber_165 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P3m1
+
+matd:spaceGroup_P3m1 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P3m1"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Trigonal ,
+                                   matd:pointGroup_32m ,
+                                   matd:pointGroup_3m ,
+                                   matd:spaceGroupNumber_156 ,
+                                   matd:spaceGroupNumber_164 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4
+
+matd:spaceGroup_P4 rdf:type mat:SpaceGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "P4"^^xsd:string ;
+                   
+                   dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                 matd:pointGroup_4 ,
+                                 matd:spaceGroupNumber_75 ,
+                                 matd:spaceGroupNumber_81 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P41
+
+matd:spaceGroup_P41 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P41"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                  matd:pointGroup_4 ,
+                                  matd:spaceGroupNumber_76 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P41212
+
+matd:spaceGroup_P41212 rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P41212"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                     matd:pointGroup_422 ,
+                                     matd:spaceGroupNumber_92 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4122
+
+matd:spaceGroup_P4122 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4122"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_422 ,
+                                    matd:spaceGroupNumber_91 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4132
+
+matd:spaceGroup_P4132 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4132"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Cubic ,
+                                    matd:pointGroup_432 ,
+                                    matd:spaceGroupNumber_213 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42
+
+matd:spaceGroup_P42 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P42"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                  matd:pointGroup_4 ,
+                                  matd:spaceGroupNumber_77 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4212
+
+matd:spaceGroup_P4212 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4212"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_422 ,
+                                    matd:spaceGroupNumber_90 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P421c
+
+matd:spaceGroup_P421c rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P421c"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_42m ,
+                                    matd:spaceGroupNumber_114 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P421m
+
+matd:spaceGroup_P421m rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P421m"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_42m ,
+                                    matd:spaceGroupNumber_113 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P422
+
+matd:spaceGroup_P422 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P422"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_422 ,
+                                   matd:spaceGroupNumber_89 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42212
+
+matd:spaceGroup_P42212 rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P42212"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                     matd:pointGroup_422 ,
+                                     matd:spaceGroupNumber_94 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4222
+
+matd:spaceGroup_P4222 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4222"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_422 ,
+                                    matd:spaceGroupNumber_93 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4232
+
+matd:spaceGroup_P4232 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4232"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Cubic ,
+                                    matd:pointGroup_432 ,
+                                    matd:spaceGroupNumber_208 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42bc
+
+matd:spaceGroup_P42bc rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P42bc"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4mm ,
+                                    matd:spaceGroupNumber_106 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42c
+
+matd:spaceGroup_P42c rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P42c"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_42m ,
+                                   matd:spaceGroupNumber_112 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42cm
+
+matd:spaceGroup_P42cm rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P42cm"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4mm ,
+                                    matd:spaceGroupNumber_101 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42m
+
+matd:spaceGroup_P42m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P42/m"^^xsd:string ,
+                                "P42m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_42m ,
+                                   matd:pointGroup_4m ,
+                                   matd:spaceGroupNumber_111 ,
+                                   matd:spaceGroupNumber_84 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42mbc
+
+matd:spaceGroup_P42mbc rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P42/mbc"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                     matd:pointGroup_4m2m2m ,
+                                     matd:spaceGroupNumber_135 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42mc
+
+matd:spaceGroup_P42mc rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P42mc"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4mm ,
+                                    matd:spaceGroupNumber_105 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42mcm
+
+matd:spaceGroup_P42mcm rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P42/mcm"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                     matd:pointGroup_4m2m2m ,
+                                     matd:spaceGroupNumber_132 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42mmc
+
+matd:spaceGroup_P42mmc rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P42/mmc"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                     matd:pointGroup_4m2m2m ,
+                                     matd:spaceGroupNumber_131 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42mnm
+
+matd:spaceGroup_P42mnm rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P42/mnm"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                     matd:pointGroup_4m2m2m ,
+                                     matd:spaceGroupNumber_136 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42n
+
+matd:spaceGroup_P42n rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P42/n"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_4m ,
+                                   matd:spaceGroupNumber_86 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42nbc
+
+matd:spaceGroup_P42nbc rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P42/nbc"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                     matd:pointGroup_4m2m2m ,
+                                     matd:spaceGroupNumber_133 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42ncm
+
+matd:spaceGroup_P42ncm rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P42/ncm"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                     matd:pointGroup_4m2m2m ,
+                                     matd:spaceGroupNumber_138 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42nm
+
+matd:spaceGroup_P42nm rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P42nm"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4mm ,
+                                    matd:spaceGroupNumber_102 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42nmc
+
+matd:spaceGroup_P42nmc rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P42/nmc"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                     matd:pointGroup_4m2m2m ,
+                                     matd:spaceGroupNumber_137 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P42nnm
+
+matd:spaceGroup_P42nnm rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P42/nnm"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                     matd:pointGroup_4m2m2m ,
+                                     matd:spaceGroupNumber_134 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P43
+
+matd:spaceGroup_P43 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P43"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                  matd:pointGroup_4 ,
+                                  matd:spaceGroupNumber_78 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P432
+
+matd:spaceGroup_P432 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P432"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_432 ,
+                                   matd:spaceGroupNumber_207 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P43212
+
+matd:spaceGroup_P43212 rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P43212"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                     matd:pointGroup_422 ,
+                                     matd:spaceGroupNumber_96 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4322
+
+matd:spaceGroup_P4322 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4322"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_422 ,
+                                    matd:spaceGroupNumber_95 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4332
+
+matd:spaceGroup_P4332 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4332"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Cubic ,
+                                    matd:pointGroup_432 ,
+                                    matd:spaceGroupNumber_212 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P43m
+
+matd:spaceGroup_P43m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P43m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_43m ,
+                                   matd:spaceGroupNumber_215 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P43n
+
+matd:spaceGroup_P43n rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P43n"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_43m ,
+                                   matd:spaceGroupNumber_218 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4b2
+
+matd:spaceGroup_P4b2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P4b2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_42m ,
+                                   matd:spaceGroupNumber_117 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4bm
+
+matd:spaceGroup_P4bm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P4bm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_4mm ,
+                                   matd:spaceGroupNumber_100 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4c2
+
+matd:spaceGroup_P4c2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P4c2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_42m ,
+                                   matd:spaceGroupNumber_116 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4cc
+
+matd:spaceGroup_P4cc rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P4cc"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_4mm ,
+                                   matd:spaceGroupNumber_103 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4m
+
+matd:spaceGroup_P4m rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P4/m"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                  matd:pointGroup_4m ,
+                                  matd:spaceGroupNumber_83 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4m2
+
+matd:spaceGroup_P4m2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P4m2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_42m ,
+                                   matd:spaceGroupNumber_115 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4mbm
+
+matd:spaceGroup_P4mbm rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4/mbm"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4m2m2m ,
+                                    matd:spaceGroupNumber_127 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4mcc
+
+matd:spaceGroup_P4mcc rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4/mcc"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4m2m2m ,
+                                    matd:spaceGroupNumber_124 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4mm
+
+matd:spaceGroup_P4mm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P4mm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_4mm ,
+                                   matd:spaceGroupNumber_99 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4mmm
+
+matd:spaceGroup_P4mmm rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4/mmm"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4m2m2m ,
+                                    matd:spaceGroupNumber_123 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4mnc
+
+matd:spaceGroup_P4mnc rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4/mnc"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4m2m2m ,
+                                    matd:spaceGroupNumber_128 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4n
+
+matd:spaceGroup_P4n rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P4/n"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                  matd:pointGroup_4m ,
+                                  matd:spaceGroupNumber_85 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4n2
+
+matd:spaceGroup_P4n2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P4n2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_42m ,
+                                   matd:spaceGroupNumber_118 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4nbm
+
+matd:spaceGroup_P4nbm rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4/nbm"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4m2m2m ,
+                                    matd:spaceGroupNumber_125 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4nc
+
+matd:spaceGroup_P4nc rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P4nc"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                   matd:pointGroup_4mm ,
+                                   matd:spaceGroupNumber_104 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4ncc
+
+matd:spaceGroup_P4ncc rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4/ncc"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4m2m2m ,
+                                    matd:spaceGroupNumber_130 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4nmm
+
+matd:spaceGroup_P4nmm rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4/nmm"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4m2m2m ,
+                                    matd:spaceGroupNumber_129 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P4nnc
+
+matd:spaceGroup_P4nnc rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P4/nnc"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Tetragonal ,
+                                    matd:pointGroup_4m2m2m ,
+                                    matd:spaceGroupNumber_126 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P6
+
+matd:spaceGroup_P6 rdf:type mat:SpaceGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "P6"^^xsd:string ;
+                   
+                   dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                 matd:crystalSystem_Trigonal ,
+                                 matd:pointGroup_6 ,
+                                 matd:spaceGroupNumber_168 ,
+                                 matd:spaceGroupNumber_174 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P61
+
+matd:spaceGroup_P61 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P61"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                  matd:pointGroup_6 ,
+                                  matd:spaceGroupNumber_169 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P6122
+
+matd:spaceGroup_P6122 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P6122"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                    matd:pointGroup_622 ,
+                                    matd:spaceGroupNumber_178 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P62
+
+matd:spaceGroup_P62 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P62"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                  matd:pointGroup_6 ,
+                                  matd:spaceGroupNumber_171 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P622
+
+matd:spaceGroup_P622 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P622"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                   matd:pointGroup_622 ,
+                                   matd:spaceGroupNumber_177 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P6222
+
+matd:spaceGroup_P6222 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P6222"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                    matd:pointGroup_622 ,
+                                    matd:spaceGroupNumber_180 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P62c
+
+matd:spaceGroup_P62c rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P62c"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                   matd:pointGroup_6m2 ,
+                                   matd:spaceGroupNumber_190 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P62m
+
+matd:spaceGroup_P62m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P62m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                   matd:pointGroup_6m2 ,
+                                   matd:spaceGroupNumber_189 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P63
+
+matd:spaceGroup_P63 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P63"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                  matd:pointGroup_6 ,
+                                  matd:spaceGroupNumber_173 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P6322
+
+matd:spaceGroup_P6322 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P6322"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                    matd:pointGroup_622 ,
+                                    matd:spaceGroupNumber_182 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P63cm
+
+matd:spaceGroup_P63cm rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P63cm"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                    matd:pointGroup_6mm ,
+                                    matd:spaceGroupNumber_185 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P63m
+
+matd:spaceGroup_P63m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P63/m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                   matd:pointGroup_6m ,
+                                   matd:spaceGroupNumber_176 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P63mc
+
+matd:spaceGroup_P63mc rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P63mc"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                    matd:pointGroup_6mm ,
+                                    matd:spaceGroupNumber_186 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P63mcm
+
+matd:spaceGroup_P63mcm rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P63/mcm"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                     matd:pointGroup_6m2m2m ,
+                                     matd:spaceGroupNumber_193 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P63mmc
+
+matd:spaceGroup_P63mmc rdf:type mat:SpaceGroup ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "P63/mmc"^^xsd:string ;
+                       
+                       dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                     matd:pointGroup_6m2m2m ,
+                                     matd:spaceGroupNumber_194 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P64
+
+matd:spaceGroup_P64 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P64"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                  matd:pointGroup_6 ,
+                                  matd:spaceGroupNumber_172 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P6422
+
+matd:spaceGroup_P6422 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P6422"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                    matd:pointGroup_622 ,
+                                    matd:spaceGroupNumber_181 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P65
+
+matd:spaceGroup_P65 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P65"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                  matd:pointGroup_6 ,
+                                  matd:spaceGroupNumber_170 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P6522
+
+matd:spaceGroup_P6522 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P6522"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                    matd:pointGroup_622 ,
+                                    matd:spaceGroupNumber_179 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P6c2
+
+matd:spaceGroup_P6c2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P6c2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                   matd:pointGroup_6m2 ,
+                                   matd:spaceGroupNumber_188 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P6cc
+
+matd:spaceGroup_P6cc rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P6cc"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                   matd:pointGroup_6mm ,
+                                   matd:spaceGroupNumber_184 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P6m
+
+matd:spaceGroup_P6m rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "P6/m"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                  matd:pointGroup_6m ,
+                                  matd:spaceGroupNumber_175 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P6m2
+
+matd:spaceGroup_P6m2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P6m2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                   matd:pointGroup_6m2 ,
+                                   matd:spaceGroupNumber_187 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P6mcc
+
+matd:spaceGroup_P6mcc rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P6/mcc"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                    matd:pointGroup_6m2m2m ,
+                                    matd:spaceGroupNumber_192 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P6mm
+
+matd:spaceGroup_P6mm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "P6mm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                   matd:pointGroup_6mm ,
+                                   matd:spaceGroupNumber_183 .
+
+
+
+###  http://matonto.org/data/spaceGroup_P6mmm
+
+matd:spaceGroup_P6mmm rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "P6/mmm"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Hexagonal ,
+                                    matd:pointGroup_6m2m2m ,
+                                    matd:spaceGroupNumber_191 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pa3
+
+matd:spaceGroup_Pa3 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "Pa3"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Cubic ,
+                                  matd:pointGroup_2m3 ,
+                                  matd:spaceGroupNumber_205 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pba2
+
+matd:spaceGroup_Pba2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pba2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_32 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pbam
+
+matd:spaceGroup_Pbam rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pbam"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_55 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pban
+
+matd:spaceGroup_Pban rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pban"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_50 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pbca
+
+matd:spaceGroup_Pbca rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pbca"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_61 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pbcm
+
+matd:spaceGroup_Pbcm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pbcm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_57 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pbcn
+
+matd:spaceGroup_Pbcn rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pbcn"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_60 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pc
+
+matd:spaceGroup_Pc rdf:type mat:SpaceGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "Pc"^^xsd:string ;
+                   
+                   dl:hasQuality matd:crystalSystem_Monoclinic ,
+                                 matd:pointGroup_m ,
+                                 matd:spaceGroupNumber_7 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pca21
+
+matd:spaceGroup_Pca21 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "Pca21"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                    matd:pointGroup_mm2 ,
+                                    matd:spaceGroupNumber_29 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pcc2
+
+matd:spaceGroup_Pcc2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pcc2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_27 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pcca
+
+matd:spaceGroup_Pcca rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pcca"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_54 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pccm
+
+matd:spaceGroup_Pccm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pccm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_49 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pccn
+
+matd:spaceGroup_Pccn rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pccn"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_56 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pm
+
+matd:spaceGroup_Pm rdf:type mat:SpaceGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "Pm"^^xsd:string ;
+                   
+                   dl:hasQuality matd:crystalSystem_Monoclinic ,
+                                 matd:pointGroup_m ,
+                                 matd:spaceGroupNumber_6 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pm3
+
+matd:spaceGroup_Pm3 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "Pm3"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Cubic ,
+                                  matd:pointGroup_2m3 ,
+                                  matd:spaceGroupNumber_200 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pm3m
+
+matd:spaceGroup_Pm3m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pm3m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_4m32m ,
+                                   matd:spaceGroupNumber_221 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pm3n
+
+matd:spaceGroup_Pm3n rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pm3n"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_4m32m ,
+                                   matd:spaceGroupNumber_223 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pma2
+
+matd:spaceGroup_Pma2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pma2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_28 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pmc21
+
+matd:spaceGroup_Pmc21 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "Pmc21"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                    matd:pointGroup_mm2 ,
+                                    matd:spaceGroupNumber_26 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pmm2
+
+matd:spaceGroup_Pmm2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pmm2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_25 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pmma
+
+matd:spaceGroup_Pmma rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pmma"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_51 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pmmm
+
+matd:spaceGroup_Pmmm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pmmm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_47 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pmmn
+
+matd:spaceGroup_Pmmn rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pmmn"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_59 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pmn21
+
+matd:spaceGroup_Pmn21 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "Pmn21"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                    matd:pointGroup_mm2 ,
+                                    matd:spaceGroupNumber_31 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pmna
+
+matd:spaceGroup_Pmna rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pmna"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_53 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pn3
+
+matd:spaceGroup_Pn3 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "Pn3"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Cubic ,
+                                  matd:pointGroup_2m3 ,
+                                  matd:spaceGroupNumber_201 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pn3m
+
+matd:spaceGroup_Pn3m rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pn3m"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_4m32m ,
+                                   matd:spaceGroupNumber_224 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pn3n
+
+matd:spaceGroup_Pn3n rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pn3n"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Cubic ,
+                                   matd:pointGroup_4m32m ,
+                                   matd:spaceGroupNumber_222 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pna21
+
+matd:spaceGroup_Pna21 rdf:type mat:SpaceGroup ,
+                               owl:NamedIndividual ;
+                      
+                      rdfs:label "Pna21"^^xsd:string ;
+                      
+                      dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                    matd:pointGroup_mm2 ,
+                                    matd:spaceGroupNumber_33 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pnc2
+
+matd:spaceGroup_Pnc2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pnc2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_30 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pnma
+
+matd:spaceGroup_Pnma rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pnma"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_62 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pnn2
+
+matd:spaceGroup_Pnn2 rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pnn2"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_mm2 ,
+                                   matd:spaceGroupNumber_34 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pnna
+
+matd:spaceGroup_Pnna rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pnna"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_52 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pnnm
+
+matd:spaceGroup_Pnnm rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pnnm"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_58 .
+
+
+
+###  http://matonto.org/data/spaceGroup_Pnnn
+
+matd:spaceGroup_Pnnn rdf:type mat:SpaceGroup ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "Pnnn"^^xsd:string ;
+                     
+                     dl:hasQuality matd:crystalSystem_Orthorhombic ,
+                                   matd:pointGroup_2m2m2m ,
+                                   matd:spaceGroupNumber_48 .
+
+
+
+###  http://matonto.org/data/spaceGroup_R3
+
+matd:spaceGroup_R3 rdf:type mat:SpaceGroup ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "R3"^^xsd:string ;
+                   
+                   dl:hasQuality matd:crystalSystem_Trigonal ,
+                                 matd:pointGroup_3 ,
+                                 matd:spaceGroupNumber_146 ,
+                                 matd:spaceGroupNumber_148 .
+
+
+
+###  http://matonto.org/data/spaceGroup_R32
+
+matd:spaceGroup_R32 rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "R32"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Trigonal ,
+                                  matd:pointGroup_32 ,
+                                  matd:spaceGroupNumber_155 .
+
+
+
+###  http://matonto.org/data/spaceGroup_R3c
+
+matd:spaceGroup_R3c rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "R3c"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Trigonal ,
+                                  matd:pointGroup_32m ,
+                                  matd:pointGroup_3m ,
+                                  matd:spaceGroupNumber_161 ,
+                                  matd:spaceGroupNumber_167 .
+
+
+
+###  http://matonto.org/data/spaceGroup_R3m
+
+matd:spaceGroup_R3m rdf:type mat:SpaceGroup ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "R3m"^^xsd:string ;
+                    
+                    dl:hasQuality matd:crystalSystem_Trigonal ,
+                                  matd:pointGroup_32m ,
+                                  matd:pointGroup_3m ,
+                                  matd:spaceGroupNumber_160 ,
+                                  matd:spaceGroupNumber_166 .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
