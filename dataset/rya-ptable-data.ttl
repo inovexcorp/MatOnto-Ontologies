@@ -1,0 +1,1760 @@
+@prefix : <> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mato: <http://matonto.org/ontologies/matonto#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pt: <http://inovexirad.com/data/periodicTable/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dl: <http://ontology.dumontierlab.com/> .
+
+
+pt:H a dl:HydrogenAtom ;
+	rdfs:label "Hydrogen" ;
+	mato:hasName "Hydrogen" .
+
+pt:symbol_H dl:hasValue "H" ;
+	rdfs:label "H" .
+
+pt:H mato:hasSymbol pt:symbol_H .
+
+_:node18nc3fo0vx1 a dl:Mass ;
+	dl:hasValue "1.0079400000"^^xsd:double ;
+	rdfs:label "1.0079400000" .
+
+pt:H mato:hasMass _:node18nc3fo0vx1 .
+
+pt:He a dl:HeliumAtom ;
+	rdfs:label "Helium" ;
+	mato:hasName "Helium" .
+
+pt:symbol_He dl:hasValue "He" ;
+	rdfs:label "He" .
+
+pt:He mato:hasSymbol pt:symbol_He .
+
+_:node18nc3fo0vx2 a dl:Mass ;
+	dl:hasValue "4.0026020000"^^xsd:double ;
+	rdfs:label "4.0026020000" .
+
+pt:He mato:hasMass _:node18nc3fo0vx2 .
+
+pt:Li a dl:LithiumAtom ;
+	rdfs:label "Lithium" ;
+	mato:hasName "Lithium" .
+
+pt:symbol_Li dl:hasValue "Li" ;
+	rdfs:label "Li" .
+
+pt:Li mato:hasSymbol pt:symbol_Li .
+
+_:node18nc3fo0vx3 a dl:Mass ;
+	dl:hasValue "6.9410000000"^^xsd:double ;
+	rdfs:label "6.9410000000" .
+
+pt:Li mato:hasMass _:node18nc3fo0vx3 .
+
+pt:Be a dl:BerylliumAtom ;
+	rdfs:label "Beryllium" ;
+	mato:hasName "Beryllium" .
+
+pt:symbol_Be dl:hasValue "Be" ;
+	rdfs:label "Be" .
+
+pt:Be mato:hasSymbol pt:symbol_Be .
+
+_:node18nc3fo0vx4 a dl:Mass ;
+	dl:hasValue "9.0121820000"^^xsd:double ;
+	rdfs:label "9.0121820000" .
+
+pt:Be mato:hasMass _:node18nc3fo0vx4 .
+
+pt:B a dl:BoronAtom ;
+	rdfs:label "Boron" ;
+	mato:hasName "Boron" .
+
+pt:symbol_B dl:hasValue "B" ;
+	rdfs:label "B" .
+
+pt:B mato:hasSymbol pt:symbol_B .
+
+_:node18nc3fo0vx5 a dl:Mass ;
+	dl:hasValue "10.8110000000"^^xsd:double ;
+	rdfs:label "10.8110000000" .
+
+pt:B mato:hasMass _:node18nc3fo0vx5 .
+
+pt:C a dl:CarbonAtom ;
+	rdfs:label "Carbon" ;
+	mato:hasName "Carbon" .
+
+pt:symbol_C dl:hasValue "C" ;
+	rdfs:label "C" .
+
+pt:C mato:hasSymbol pt:symbol_C .
+
+_:node18nc3fo0vx6 a dl:Mass ;
+	dl:hasValue "12.0107000000"^^xsd:double ;
+	rdfs:label "12.0107000000" .
+
+pt:C mato:hasMass _:node18nc3fo0vx6 .
+
+pt:N a dl:NitrogenAtom ;
+	rdfs:label "Nitrogen" ;
+	mato:hasName "Nitrogen" .
+
+pt:symbol_N dl:hasValue "N" ;
+	rdfs:label "N" .
+
+pt:N mato:hasSymbol pt:symbol_N .
+
+_:node18nc3fo0vx7 a dl:Mass ;
+	dl:hasValue "14.0067000000"^^xsd:double ;
+	rdfs:label "14.0067000000" .
+
+pt:N mato:hasMass _:node18nc3fo0vx7 .
+
+pt:O a dl:OxygenAtom ;
+	rdfs:label "Oxygen" ;
+	mato:hasName "Oxygen" .
+
+pt:symbol_O dl:hasValue "O" ;
+	rdfs:label "O" .
+
+pt:O mato:hasSymbol pt:symbol_O .
+
+_:node18nc3fo0vx8 a dl:Mass ;
+	dl:hasValue "15.9994000000"^^xsd:double ;
+	rdfs:label "15.9994000000" .
+
+pt:O mato:hasMass _:node18nc3fo0vx8 .
+
+pt:F a dl:FluorineAtom ;
+	rdfs:label "Fluorine" ;
+	mato:hasName "Fluorine" .
+
+pt:symbol_F dl:hasValue "F" ;
+	rdfs:label "F" .
+
+pt:F mato:hasSymbol pt:symbol_F .
+
+_:node18nc3fo0vx9 a dl:Mass ;
+	dl:hasValue "18.9994000000"^^xsd:double ;
+	rdfs:label "18.9994000000" .
+
+pt:F mato:hasMass _:node18nc3fo0vx9 .
+
+pt:Ne a dl:NeonAtom ;
+	rdfs:label "Neon" ;
+	mato:hasName "Neon" .
+
+pt:symbol_Ne dl:hasValue "Ne" ;
+	rdfs:label "Ne" .
+
+pt:Ne mato:hasSymbol pt:symbol_Ne .
+
+_:node18nc3fo0vx10 a dl:Mass ;
+	dl:hasValue "20.1797000000"^^xsd:double ;
+	rdfs:label "20.1797000000" .
+
+pt:Ne mato:hasMass _:node18nc3fo0vx10 .
+
+pt:Na a dl:SodiumAtom ;
+	rdfs:label "Sodium" ;
+	mato:hasName "Sodium" .
+
+pt:symbol_Na dl:hasValue "Na" ;
+	rdfs:label "Na" .
+
+pt:Na mato:hasSymbol pt:symbol_Na .
+
+_:node18nc3fo0vx11 a dl:Mass ;
+	dl:hasValue "22.9897692800"^^xsd:double ;
+	rdfs:label "22.9897692800" .
+
+pt:Na mato:hasMass _:node18nc3fo0vx11 .
+
+pt:Mg a dl:MagnesiumAtom ;
+	rdfs:label "Magnesium" ;
+	mato:hasName "Magnesium" .
+
+pt:symbol_Mg dl:hasValue "Mg" ;
+	rdfs:label "Mg" .
+
+pt:Mg mato:hasSymbol pt:symbol_Mg .
+
+_:node18nc3fo0vx12 a dl:Mass ;
+	dl:hasValue "24.3050000000"^^xsd:double ;
+	rdfs:label "24.3050000000" .
+
+pt:Mg mato:hasMass _:node18nc3fo0vx12 .
+
+pt:Al a dl:AluminiumAtom ;
+	rdfs:label "Aluminium" ;
+	mato:hasName "Aluminium" .
+
+pt:symbol_Al dl:hasValue "Al" ;
+	rdfs:label "Al" .
+
+pt:Al mato:hasSymbol pt:symbol_Al .
+
+_:node18nc3fo0vx13 a dl:Mass ;
+	dl:hasValue "26.9815386000"^^xsd:double ;
+	rdfs:label "26.9815386000" .
+
+pt:Al mato:hasMass _:node18nc3fo0vx13 .
+
+pt:Si a dl:SiliconAtom ;
+	rdfs:label "Silicon" ;
+	mato:hasName "Silicon" .
+
+pt:symbol_Si dl:hasValue "Si" ;
+	rdfs:label "Si" .
+
+pt:Si mato:hasSymbol pt:symbol_Si .
+
+_:node18nc3fo0vx14 a dl:Mass ;
+	dl:hasValue "28.0855000000"^^xsd:double ;
+	rdfs:label "28.0855000000" .
+
+pt:Si mato:hasMass _:node18nc3fo0vx14 .
+
+pt:P a dl:PhosphorusAtom ;
+	rdfs:label "Phosphorus" ;
+	mato:hasName "Phosphorus" .
+
+pt:symbol_P dl:hasValue "P" ;
+	rdfs:label "P" .
+
+pt:P mato:hasSymbol pt:symbol_P .
+
+_:node18nc3fo0vx15 a dl:Mass ;
+	dl:hasValue "30.9737620000"^^xsd:double ;
+	rdfs:label "30.9737620000" .
+
+pt:P mato:hasMass _:node18nc3fo0vx15 .
+
+pt:S rdfs:label "Sulphur" ;
+	mato:hasName "Sulphur" .
+
+pt:symbol_S dl:hasValue "S" ;
+	rdfs:label "S" .
+
+pt:S mato:hasSymbol pt:symbol_S .
+
+_:node18nc3fo0vx16 a dl:Mass ;
+	dl:hasValue "32.0650000000"^^xsd:double ;
+	rdfs:label "32.0650000000" .
+
+pt:S mato:hasMass _:node18nc3fo0vx16 .
+
+pt:Cl a dl:ChlorineAtom ;
+	rdfs:label "Chlorine" ;
+	mato:hasName "Chlorine" .
+
+pt:symbol_Cl dl:hasValue "Cl" ;
+	rdfs:label "Cl" .
+
+pt:Cl mato:hasSymbol pt:symbol_Cl .
+
+_:node18nc3fo0vx17 a dl:Mass ;
+	dl:hasValue "35.4530000000"^^xsd:double ;
+	rdfs:label "35.4530000000" .
+
+pt:Cl mato:hasMass _:node18nc3fo0vx17 .
+
+pt:Ar a dl:ArgonAtom ;
+	rdfs:label "Argon" ;
+	mato:hasName "Argon" .
+
+pt:symbol_Ar dl:hasValue "Ar" ;
+	rdfs:label "Ar" .
+
+pt:Ar mato:hasSymbol pt:symbol_Ar .
+
+_:node18nc3fo0vx18 a dl:Mass ;
+	dl:hasValue "39.9480000000"^^xsd:double ;
+	rdfs:label "39.9480000000" .
+
+pt:Ar mato:hasMass _:node18nc3fo0vx18 .
+
+pt:K a dl:PotassiumAtom ;
+	rdfs:label "Potassium" ;
+	mato:hasName "Potassium" .
+
+pt:symbol_K dl:hasValue "K" ;
+	rdfs:label "K" .
+
+pt:K mato:hasSymbol pt:symbol_K .
+
+_:node18nc3fo0vx19 a dl:Mass ;
+	dl:hasValue "39.0983000000"^^xsd:double ;
+	rdfs:label "39.0983000000" .
+
+pt:K mato:hasMass _:node18nc3fo0vx19 .
+
+pt:Ca a dl:CalciumAtom ;
+	rdfs:label "Calcium" ;
+	mato:hasName "Calcium" .
+
+pt:symbol_Ca dl:hasValue "Ca" ;
+	rdfs:label "Ca" .
+
+pt:Ca mato:hasSymbol pt:symbol_Ca .
+
+_:node18nc3fo0vx20 a dl:Mass ;
+	dl:hasValue "40.0780000000"^^xsd:double ;
+	rdfs:label "40.0780000000" .
+
+pt:Ca mato:hasMass _:node18nc3fo0vx20 .
+
+pt:Sc a dl:ScandiumAtom ;
+	rdfs:label "Scandium" ;
+	mato:hasName "Scandium" .
+
+pt:symbol_Sc dl:hasValue "Sc" ;
+	rdfs:label "Sc" .
+
+pt:Sc mato:hasSymbol pt:symbol_Sc .
+
+_:node18nc3fo0vx21 a dl:Mass ;
+	dl:hasValue "44.9559120000"^^xsd:double ;
+	rdfs:label "44.9559120000" .
+
+pt:Sc mato:hasMass _:node18nc3fo0vx21 .
+
+pt:Ti a dl:TitaniumAtom ;
+	rdfs:label "Titanium" ;
+	mato:hasName "Titanium" .
+
+pt:symbol_Ti dl:hasValue "Ti" ;
+	rdfs:label "Ti" .
+
+pt:Ti mato:hasSymbol pt:symbol_Ti .
+
+_:node18nc3fo0vx22 a dl:Mass ;
+	dl:hasValue "47.8670000000"^^xsd:double ;
+	rdfs:label "47.8670000000" .
+
+pt:Ti mato:hasMass _:node18nc3fo0vx22 .
+
+pt:V a dl:VanadiumAtom ;
+	rdfs:label "Vanadium" ;
+	mato:hasName "Vanadium" .
+
+pt:symbol_V dl:hasValue "V" ;
+	rdfs:label "V" .
+
+pt:V mato:hasSymbol pt:symbol_V .
+
+_:node18nc3fo0vx23 a dl:Mass ;
+	dl:hasValue "50.9415000000"^^xsd:double ;
+	rdfs:label "50.9415000000" .
+
+pt:V mato:hasMass _:node18nc3fo0vx23 .
+
+pt:Cr a dl:ChromiumAtom ;
+	rdfs:label "Chromium" ;
+	mato:hasName "Chromium" .
+
+pt:symbol_Cr dl:hasValue "Cr" ;
+	rdfs:label "Cr" .
+
+pt:Cr mato:hasSymbol pt:symbol_Cr .
+
+_:node18nc3fo0vx24 a dl:Mass ;
+	dl:hasValue "51.9961000000"^^xsd:double ;
+	rdfs:label "51.9961000000" .
+
+pt:Cr mato:hasMass _:node18nc3fo0vx24 .
+
+pt:Mn a dl:ManganeseAtom ;
+	rdfs:label "Manganese" ;
+	mato:hasName "Manganese" .
+
+pt:symbol_Mn dl:hasValue "Mn" ;
+	rdfs:label "Mn" .
+
+pt:Mn mato:hasSymbol pt:symbol_Mn .
+
+_:node18nc3fo0vx25 a dl:Mass ;
+	dl:hasValue "54.9380450000"^^xsd:double ;
+	rdfs:label "54.9380450000" .
+
+pt:Mn mato:hasMass _:node18nc3fo0vx25 .
+
+pt:Fe a dl:IronAtom ;
+	rdfs:label "Iron" ;
+	mato:hasName "Iron" .
+
+pt:symbol_Fe dl:hasValue "Fe" ;
+	rdfs:label "Fe" .
+
+pt:Fe mato:hasSymbol pt:symbol_Fe .
+
+_:node18nc3fo0vx26 a dl:Mass ;
+	dl:hasValue "55.8450000000"^^xsd:double ;
+	rdfs:label "55.8450000000" .
+
+pt:Fe mato:hasMass _:node18nc3fo0vx26 .
+
+pt:Co a dl:CobaltAtom ;
+	rdfs:label "Cobalt" ;
+	mato:hasName "Cobalt" .
+
+pt:symbol_Co dl:hasValue "Co" ;
+	rdfs:label "Co" .
+
+pt:Co mato:hasSymbol pt:symbol_Co .
+
+_:node18nc3fo0vx27 a dl:Mass ;
+	dl:hasValue "58.9331950000"^^xsd:double ;
+	rdfs:label "58.9331950000" .
+
+pt:Co mato:hasMass _:node18nc3fo0vx27 .
+
+pt:Ni a dl:NickelAtom ;
+	rdfs:label "Nickel" ;
+	mato:hasName "Nickel" .
+
+pt:symbol_Ni dl:hasValue "Ni" ;
+	rdfs:label "Ni" .
+
+pt:Ni mato:hasSymbol pt:symbol_Ni .
+
+_:node18nc3fo0vx28 a dl:Mass ;
+	dl:hasValue "58.6934000000"^^xsd:double ;
+	rdfs:label "58.6934000000" .
+
+pt:Ni mato:hasMass _:node18nc3fo0vx28 .
+
+pt:Cu a dl:CopperAtom ;
+	rdfs:label "Copper" ;
+	mato:hasName "Copper" .
+
+pt:symbol_Cu dl:hasValue "Cu" ;
+	rdfs:label "Cu" .
+
+pt:Cu mato:hasSymbol pt:symbol_Cu .
+
+_:node18nc3fo0vx29 a dl:Mass ;
+	dl:hasValue "63.5460000000"^^xsd:double ;
+	rdfs:label "63.5460000000" .
+
+pt:Cu mato:hasMass _:node18nc3fo0vx29 .
+
+pt:Zn a dl:ZincAtom ;
+	rdfs:label "Zinc" ;
+	mato:hasName "Zinc" .
+
+pt:symbol_Zn dl:hasValue "Zn" ;
+	rdfs:label "Zn" .
+
+pt:Zn mato:hasSymbol pt:symbol_Zn .
+
+_:node18nc3fo0vx30 a dl:Mass ;
+	dl:hasValue "65.3800000000"^^xsd:double ;
+	rdfs:label "65.3800000000" .
+
+pt:Zn mato:hasMass _:node18nc3fo0vx30 .
+
+pt:Ga a dl:GalliumAtom ;
+	rdfs:label "Gallium" ;
+	mato:hasName "Gallium" .
+
+pt:symbol_Ga dl:hasValue "Ga" ;
+	rdfs:label "Ga" .
+
+pt:Ga mato:hasSymbol pt:symbol_Ga .
+
+_:node18nc3fo0vx31 a dl:Mass ;
+	dl:hasValue "69.7230000000"^^xsd:double ;
+	rdfs:label "69.7230000000" .
+
+pt:Ga mato:hasMass _:node18nc3fo0vx31 .
+
+pt:Ge a dl:GermaniumAtom ;
+	rdfs:label "Germanium" ;
+	mato:hasName "Germanium" .
+
+pt:symbol_Ge dl:hasValue "Ge" ;
+	rdfs:label "Ge" .
+
+pt:Ge mato:hasSymbol pt:symbol_Ge .
+
+_:node18nc3fo0vx32 a dl:Mass ;
+	dl:hasValue "72.6400000000"^^xsd:double ;
+	rdfs:label "72.6400000000" .
+
+pt:Ge mato:hasMass _:node18nc3fo0vx32 .
+
+pt:As a dl:ArsenicAtom ;
+	rdfs:label "Arsenic" ;
+	mato:hasName "Arsenic" .
+
+pt:symbol_As dl:hasValue "As" ;
+	rdfs:label "As" .
+
+pt:As mato:hasSymbol pt:symbol_As .
+
+_:node18nc3fo0vx33 a dl:Mass ;
+	dl:hasValue "74.9216000000"^^xsd:double ;
+	rdfs:label "74.9216000000" .
+
+pt:As mato:hasMass _:node18nc3fo0vx33 .
+
+pt:Se a dl:SeleniumAtom ;
+	rdfs:label "Selenium" ;
+	mato:hasName "Selenium" .
+
+pt:symbol_Se dl:hasValue "Se" ;
+	rdfs:label "Se" .
+
+pt:Se mato:hasSymbol pt:symbol_Se .
+
+_:node18nc3fo0vx34 a dl:Mass ;
+	dl:hasValue "78.9600000000"^^xsd:double ;
+	rdfs:label "78.9600000000" .
+
+pt:Se mato:hasMass _:node18nc3fo0vx34 .
+
+pt:Br a dl:BromineAtom ;
+	rdfs:label "Bromine" ;
+	mato:hasName "Bromine" .
+
+pt:symbol_Br dl:hasValue "Br" ;
+	rdfs:label "Br" .
+
+pt:Br mato:hasSymbol pt:symbol_Br .
+
+_:node18nc3fo0vx35 a dl:Mass ;
+	dl:hasValue "79.9040000000"^^xsd:double ;
+	rdfs:label "79.9040000000" .
+
+pt:Br mato:hasMass _:node18nc3fo0vx35 .
+
+pt:Kr a dl:KryptonAtom ;
+	rdfs:label "Krypton" ;
+	mato:hasName "Krypton" .
+
+pt:symbol_Kr dl:hasValue "Kr" ;
+	rdfs:label "Kr" .
+
+pt:Kr mato:hasSymbol pt:symbol_Kr .
+
+_:node18nc3fo0vx36 a dl:Mass ;
+	dl:hasValue "83.7980000000"^^xsd:double ;
+	rdfs:label "83.7980000000" .
+
+pt:Kr mato:hasMass _:node18nc3fo0vx36 .
+
+pt:Rb a dl:RubidiumAtom ;
+	rdfs:label "Rubidium" ;
+	mato:hasName "Rubidium" .
+
+pt:symbol_Rb dl:hasValue "Rb" ;
+	rdfs:label "Rb" .
+
+pt:Rb mato:hasSymbol pt:symbol_Rb .
+
+_:node18nc3fo0vx37 a dl:Mass ;
+	dl:hasValue "85.4678000000"^^xsd:double ;
+	rdfs:label "85.4678000000" .
+
+pt:Rb mato:hasMass _:node18nc3fo0vx37 .
+
+pt:Sr a dl:StrontiumAtom ;
+	rdfs:label "Strontium" ;
+	mato:hasName "Strontium" .
+
+pt:symbol_Sr dl:hasValue "Sr" ;
+	rdfs:label "Sr" .
+
+pt:Sr mato:hasSymbol pt:symbol_Sr .
+
+_:node18nc3fo0vx38 a dl:Mass ;
+	dl:hasValue "87.6200000000"^^xsd:double ;
+	rdfs:label "87.6200000000" .
+
+pt:Sr mato:hasMass _:node18nc3fo0vx38 .
+
+pt:Y a dl:YttriumAtom ;
+	rdfs:label "Yttrium" ;
+	mato:hasName "Yttrium" .
+
+pt:symbol_Y dl:hasValue "Y" ;
+	rdfs:label "Y" .
+
+pt:Y mato:hasSymbol pt:symbol_Y .
+
+_:node18nc3fo0vx39 a dl:Mass ;
+	dl:hasValue "88.9058500000"^^xsd:double ;
+	rdfs:label "88.9058500000" .
+
+pt:Y mato:hasMass _:node18nc3fo0vx39 .
+
+pt:Zr rdfs:label "Zirkonium" ;
+	mato:hasName "Zirkonium" .
+
+pt:symbol_Zr dl:hasValue "Zr" ;
+	rdfs:label "Zr" .
+
+pt:Zr mato:hasSymbol pt:symbol_Zr .
+
+_:node18nc3fo0vx40 a dl:Mass ;
+	dl:hasValue "91.2240000000"^^xsd:double ;
+	rdfs:label "91.2240000000" .
+
+pt:Zr mato:hasMass _:node18nc3fo0vx40 .
+
+pt:Nb a dl:NiobiumAtom ;
+	rdfs:label "Niobium" ;
+	mato:hasName "Niobium" .
+
+pt:symbol_Nb dl:hasValue "Nb" ;
+	rdfs:label "Nb" .
+
+pt:Nb mato:hasSymbol pt:symbol_Nb .
+
+_:node18nc3fo0vx41 a dl:Mass ;
+	dl:hasValue "92.9063800000"^^xsd:double ;
+	rdfs:label "92.9063800000" .
+
+pt:Nb mato:hasMass _:node18nc3fo0vx41 .
+
+pt:Mo rdfs:label "Molybdaenum" ;
+	mato:hasName "Molybdaenum" .
+
+pt:symbol_Mo dl:hasValue "Mo" ;
+	rdfs:label "Mo" .
+
+pt:Mo mato:hasSymbol pt:symbol_Mo .
+
+_:node18nc3fo0vx42 a dl:Mass ;
+	dl:hasValue "95.9600000000"^^xsd:double ;
+	rdfs:label "95.9600000000" .
+
+pt:Mo mato:hasMass _:node18nc3fo0vx42 .
+
+pt:Tc a dl:TechnetiumAtom ;
+	rdfs:label "Technetium" ;
+	mato:hasName "Technetium" .
+
+pt:symbol_Tc dl:hasValue "Tc" ;
+	rdfs:label "Tc" .
+
+pt:Tc mato:hasSymbol pt:symbol_Tc .
+
+_:node18nc3fo0vx43 a dl:Mass ;
+	dl:hasValue "98.0000000000"^^xsd:double ;
+	rdfs:label "98.0000000000" .
+
+pt:Tc mato:hasMass _:node18nc3fo0vx43 .
+
+pt:Ru a dl:RutheniumAtom ;
+	rdfs:label "Ruthenium" ;
+	mato:hasName "Ruthenium" .
+
+pt:symbol_Ru dl:hasValue "Ru" ;
+	rdfs:label "Ru" .
+
+pt:Ru mato:hasSymbol pt:symbol_Ru .
+
+_:node18nc3fo0vx44 a dl:Mass ;
+	dl:hasValue "101.0700000000"^^xsd:double ;
+	rdfs:label "101.0700000000" .
+
+pt:Ru mato:hasMass _:node18nc3fo0vx44 .
+
+pt:Rh a dl:RhodiumAtom ;
+	rdfs:label "Rhodium" ;
+	mato:hasName "Rhodium" .
+
+pt:symbol_Rh dl:hasValue "Rh" ;
+	rdfs:label "Rh" .
+
+pt:Rh mato:hasSymbol pt:symbol_Rh .
+
+_:node18nc3fo0vx45 a dl:Mass ;
+	dl:hasValue "102.9055000000"^^xsd:double ;
+	rdfs:label "102.9055000000" .
+
+pt:Rh mato:hasMass _:node18nc3fo0vx45 .
+
+pt:Pd a dl:PalladiumAtom ;
+	rdfs:label "Palladium" ;
+	mato:hasName "Palladium" .
+
+pt:symbol_Pd dl:hasValue "Pd" ;
+	rdfs:label "Pd" .
+
+pt:Pd mato:hasSymbol pt:symbol_Pd .
+
+_:node18nc3fo0vx46 a dl:Mass ;
+	dl:hasValue "106.4200000000"^^xsd:double ;
+	rdfs:label "106.4200000000" .
+
+pt:Pd mato:hasMass _:node18nc3fo0vx46 .
+
+pt:Ag a dl:SilverAtom ;
+	rdfs:label "Silver" ;
+	mato:hasName "Silver" .
+
+pt:symbol_Ag dl:hasValue "Ag" ;
+	rdfs:label "Ag" .
+
+pt:Ag mato:hasSymbol pt:symbol_Ag .
+
+_:node18nc3fo0vx47 a dl:Mass ;
+	dl:hasValue "107.8682000000"^^xsd:double ;
+	rdfs:label "107.8682000000" .
+
+pt:Ag mato:hasMass _:node18nc3fo0vx47 .
+
+pt:Cd a dl:CadmiumAtom ;
+	rdfs:label "Cadmium" ;
+	mato:hasName "Cadmium" .
+
+pt:symbol_Cd dl:hasValue "Cd" ;
+	rdfs:label "Cd" .
+
+pt:Cd mato:hasSymbol pt:symbol_Cd .
+
+_:node18nc3fo0vx48 a dl:Mass ;
+	dl:hasValue "112.4110000000"^^xsd:double ;
+	rdfs:label "112.4110000000" .
+
+pt:Cd mato:hasMass _:node18nc3fo0vx48 .
+
+pt:In a dl:IndiumAtom ;
+	rdfs:label "Indium" ;
+	mato:hasName "Indium" .
+
+pt:symbol_In dl:hasValue "In" ;
+	rdfs:label "In" .
+
+pt:In mato:hasSymbol pt:symbol_In .
+
+_:node18nc3fo0vx49 a dl:Mass ;
+	dl:hasValue "114.8180000000"^^xsd:double ;
+	rdfs:label "114.8180000000" .
+
+pt:In mato:hasMass _:node18nc3fo0vx49 .
+
+pt:Sn a dl:TinAtom ;
+	rdfs:label "Tin" ;
+	mato:hasName "Tin" .
+
+pt:symbol_Sn dl:hasValue "Sn" ;
+	rdfs:label "Sn" .
+
+pt:Sn mato:hasSymbol pt:symbol_Sn .
+
+_:node18nc3fo0vx50 a dl:Mass ;
+	dl:hasValue "118.7100000000"^^xsd:double ;
+	rdfs:label "118.7100000000" .
+
+pt:Sn mato:hasMass _:node18nc3fo0vx50 .
+
+pt:Sb a dl:AntimonyAtom ;
+	rdfs:label "Antimony" ;
+	mato:hasName "Antimony" .
+
+pt:symbol_Sb dl:hasValue "Sb" ;
+	rdfs:label "Sb" .
+
+pt:Sb mato:hasSymbol pt:symbol_Sb .
+
+_:node18nc3fo0vx51 a dl:Mass ;
+	dl:hasValue "121.7600000000"^^xsd:double ;
+	rdfs:label "121.7600000000" .
+
+pt:Sb mato:hasMass _:node18nc3fo0vx51 .
+
+pt:Te a dl:TelluriumAtom ;
+	rdfs:label "Tellurium" ;
+	mato:hasName "Tellurium" .
+
+pt:symbol_Te dl:hasValue "Te" ;
+	rdfs:label "Te" .
+
+pt:Te mato:hasSymbol pt:symbol_Te .
+
+_:node18nc3fo0vx52 a dl:Mass ;
+	dl:hasValue "127.6000000000"^^xsd:double ;
+	rdfs:label "127.6000000000" .
+
+pt:Te mato:hasMass _:node18nc3fo0vx52 .
+
+pt:I a dl:IodineAtom ;
+	rdfs:label "Iodine" ;
+	mato:hasName "Iodine" .
+
+pt:symbol_I dl:hasValue "I" ;
+	rdfs:label "I" .
+
+pt:I mato:hasSymbol pt:symbol_I .
+
+_:node18nc3fo0vx53 a dl:Mass ;
+	dl:hasValue "126.9044700000"^^xsd:double ;
+	rdfs:label "126.9044700000" .
+
+pt:I mato:hasMass _:node18nc3fo0vx53 .
+
+pt:Xe a dl:XenonAtom ;
+	rdfs:label "Xenon" ;
+	mato:hasName "Xenon" .
+
+pt:symbol_Xe dl:hasValue "Xe" ;
+	rdfs:label "Xe" .
+
+pt:Xe mato:hasSymbol pt:symbol_Xe .
+
+_:node18nc3fo0vx54 a dl:Mass ;
+	dl:hasValue "131.2930000000"^^xsd:double ;
+	rdfs:label "131.2930000000" .
+
+pt:Xe mato:hasMass _:node18nc3fo0vx54 .
+
+pt:Cs rdfs:label "Cesium" ;
+	mato:hasName "Cesium" .
+
+pt:symbol_Cs dl:hasValue "Cs" ;
+	rdfs:label "Cs" .
+
+pt:Cs mato:hasSymbol pt:symbol_Cs .
+
+_:node18nc3fo0vx55 a dl:Mass ;
+	dl:hasValue "132.9054519000"^^xsd:double ;
+	rdfs:label "132.9054519000" .
+
+pt:Cs mato:hasMass _:node18nc3fo0vx55 .
+
+pt:Ba a dl:BariumAtom ;
+	rdfs:label "Barium" ;
+	mato:hasName "Barium" .
+
+pt:symbol_Ba dl:hasValue "Ba" ;
+	rdfs:label "Ba" .
+
+pt:Ba mato:hasSymbol pt:symbol_Ba .
+
+_:node18nc3fo0vx56 a dl:Mass ;
+	dl:hasValue "137.3270000000"^^xsd:double ;
+	rdfs:label "137.3270000000" .
+
+pt:Ba mato:hasMass _:node18nc3fo0vx56 .
+
+pt:La a dl:LanthanumAtom ;
+	rdfs:label "Lanthanum" ;
+	mato:hasName "Lanthanum" .
+
+pt:symbol_La dl:hasValue "La" ;
+	rdfs:label "La" .
+
+pt:La mato:hasSymbol pt:symbol_La .
+
+_:node18nc3fo0vx57 a dl:Mass ;
+	dl:hasValue "138.9054700000"^^xsd:double ;
+	rdfs:label "138.9054700000" .
+
+pt:La mato:hasMass _:node18nc3fo0vx57 .
+
+pt:Ce a dl:CeriumAtom ;
+	rdfs:label "Cerium" ;
+	mato:hasName "Cerium" .
+
+pt:symbol_Ce dl:hasValue "Ce" ;
+	rdfs:label "Ce" .
+
+pt:Ce mato:hasSymbol pt:symbol_Ce .
+
+_:node18nc3fo0vx58 a dl:Mass ;
+	dl:hasValue "140.1160000000"^^xsd:double ;
+	rdfs:label "140.1160000000" .
+
+pt:Ce mato:hasMass _:node18nc3fo0vx58 .
+
+pt:Pr a dl:PraseodymiumAtom ;
+	rdfs:label "Praseodymium" ;
+	mato:hasName "Praseodymium" .
+
+pt:symbol_Pr dl:hasValue "Pr" ;
+	rdfs:label "Pr" .
+
+pt:Pr mato:hasSymbol pt:symbol_Pr .
+
+_:node18nc3fo0vx59 a dl:Mass ;
+	dl:hasValue "140.9076500000"^^xsd:double ;
+	rdfs:label "140.9076500000" .
+
+pt:Pr mato:hasMass _:node18nc3fo0vx59 .
+
+pt:Nd a dl:NeodymiumAtom ;
+	rdfs:label "Neodymium" ;
+	mato:hasName "Neodymium" .
+
+pt:symbol_Nd dl:hasValue "Nd" ;
+	rdfs:label "Nd" .
+
+pt:Nd mato:hasSymbol pt:symbol_Nd .
+
+_:node18nc3fo0vx60 a dl:Mass ;
+	dl:hasValue "144.2420000000"^^xsd:double ;
+	rdfs:label "144.2420000000" .
+
+pt:Nd mato:hasMass _:node18nc3fo0vx60 .
+
+pt:Pm a dl:PromethiumAtom ;
+	rdfs:label "Promethium" ;
+	mato:hasName "Promethium" .
+
+pt:symbol_Pm dl:hasValue "Pm" ;
+	rdfs:label "Pm" .
+
+pt:Pm mato:hasSymbol pt:symbol_Pm .
+
+_:node18nc3fo0vx61 a dl:Mass ;
+	dl:hasValue "145.0000000000"^^xsd:double ;
+	rdfs:label "145.0000000000" .
+
+pt:Pm mato:hasMass _:node18nc3fo0vx61 .
+
+pt:Sm a dl:SamariumAtom ;
+	rdfs:label "Samarium" ;
+	mato:hasName "Samarium" .
+
+pt:symbol_Sm dl:hasValue "Sm" ;
+	rdfs:label "Sm" .
+
+pt:Sm mato:hasSymbol pt:symbol_Sm .
+
+_:node18nc3fo0vx62 a dl:Mass ;
+	dl:hasValue "150.3600000000"^^xsd:double ;
+	rdfs:label "150.3600000000" .
+
+pt:Sm mato:hasMass _:node18nc3fo0vx62 .
+
+pt:Eu a dl:EuropiumAtom ;
+	rdfs:label "Europium" ;
+	mato:hasName "Europium" .
+
+pt:symbol_Eu dl:hasValue "Eu" ;
+	rdfs:label "Eu" .
+
+pt:Eu mato:hasSymbol pt:symbol_Eu .
+
+_:node18nc3fo0vx63 a dl:Mass ;
+	dl:hasValue "151.9640000000"^^xsd:double ;
+	rdfs:label "151.9640000000" .
+
+pt:Eu mato:hasMass _:node18nc3fo0vx63 .
+
+pt:Gd a dl:GadoliniumAtom ;
+	rdfs:label "Gadolinium" ;
+	mato:hasName "Gadolinium" .
+
+pt:symbol_Gd dl:hasValue "Gd" ;
+	rdfs:label "Gd" .
+
+pt:Gd mato:hasSymbol pt:symbol_Gd .
+
+_:node18nc3fo0vx64 a dl:Mass ;
+	dl:hasValue "157.2500000000"^^xsd:double ;
+	rdfs:label "157.2500000000" .
+
+pt:Gd mato:hasMass _:node18nc3fo0vx64 .
+
+pt:Tb a dl:TerbiumAtom ;
+	rdfs:label "Terbium" ;
+	mato:hasName "Terbium" .
+
+pt:symbol_Tb dl:hasValue "Tb" ;
+	rdfs:label "Tb" .
+
+pt:Tb mato:hasSymbol pt:symbol_Tb .
+
+_:node18nc3fo0vx65 a dl:Mass ;
+	dl:hasValue "158.9253500000"^^xsd:double ;
+	rdfs:label "158.9253500000" .
+
+pt:Tb mato:hasMass _:node18nc3fo0vx65 .
+
+pt:Dy a dl:DysprosiumAtom ;
+	rdfs:label "Dysprosium" ;
+	mato:hasName "Dysprosium" .
+
+pt:symbol_Dy dl:hasValue "Dy" ;
+	rdfs:label "Dy" .
+
+pt:Dy mato:hasSymbol pt:symbol_Dy .
+
+_:node18nc3fo0vx66 a dl:Mass ;
+	dl:hasValue "162.5001000000"^^xsd:double ;
+	rdfs:label "162.5001000000" .
+
+pt:Dy mato:hasMass _:node18nc3fo0vx66 .
+
+pt:Ho a dl:HolmiumAtom ;
+	rdfs:label "Holmium" ;
+	mato:hasName "Holmium" .
+
+pt:symbol_Ho dl:hasValue "Ho" ;
+	rdfs:label "Ho" .
+
+pt:Ho mato:hasSymbol pt:symbol_Ho .
+
+_:node18nc3fo0vx67 a dl:Mass ;
+	dl:hasValue "164.9303200000"^^xsd:double ;
+	rdfs:label "164.9303200000" .
+
+pt:Ho mato:hasMass _:node18nc3fo0vx67 .
+
+pt:Er a dl:ErbiumAtom ;
+	rdfs:label "Erbium" ;
+	mato:hasName "Erbium" .
+
+pt:symbol_Er dl:hasValue "Er" ;
+	rdfs:label "Er" .
+
+pt:Er mato:hasSymbol pt:symbol_Er .
+
+_:node18nc3fo0vx68 a dl:Mass ;
+	dl:hasValue "167.2590000000"^^xsd:double ;
+	rdfs:label "167.2590000000" .
+
+pt:Er mato:hasMass _:node18nc3fo0vx68 .
+
+pt:Tm a dl:ThuliumAtom ;
+	rdfs:label "Thulium" ;
+	mato:hasName "Thulium" .
+
+pt:symbol_Tm dl:hasValue "Tm" ;
+	rdfs:label "Tm" .
+
+pt:Tm mato:hasSymbol pt:symbol_Tm .
+
+_:node18nc3fo0vx69 a dl:Mass ;
+	dl:hasValue "168.9342100000"^^xsd:double ;
+	rdfs:label "168.9342100000" .
+
+pt:Tm mato:hasMass _:node18nc3fo0vx69 .
+
+pt:Yb a dl:YtterbiumAtom ;
+	rdfs:label "Ytterbium" ;
+	mato:hasName "Ytterbium" .
+
+pt:symbol_Yb dl:hasValue "Yb" ;
+	rdfs:label "Yb" .
+
+pt:Yb mato:hasSymbol pt:symbol_Yb .
+
+_:node18nc3fo0vx70 a dl:Mass ;
+	dl:hasValue "173.0540000000"^^xsd:double ;
+	rdfs:label "173.0540000000" .
+
+pt:Yb mato:hasMass _:node18nc3fo0vx70 .
+
+pt:Lu a dl:LutetiumAtom ;
+	rdfs:label "Lutetium" ;
+	mato:hasName "Lutetium" .
+
+pt:symbol_Lu dl:hasValue "Lu" ;
+	rdfs:label "Lu" .
+
+pt:Lu mato:hasSymbol pt:symbol_Lu .
+
+_:node18nc3fo0vx71 a dl:Mass ;
+	dl:hasValue "174.9668000000"^^xsd:double ;
+	rdfs:label "174.9668000000" .
+
+pt:Lu mato:hasMass _:node18nc3fo0vx71 .
+
+pt:Hf a dl:HafniumAtom ;
+	rdfs:label "Hafnium" ;
+	mato:hasName "Hafnium" .
+
+pt:symbol_Hf dl:hasValue "Hf" ;
+	rdfs:label "Hf" .
+
+pt:Hf mato:hasSymbol pt:symbol_Hf .
+
+_:node18nc3fo0vx72 a dl:Mass ;
+	dl:hasValue "178.4900000000"^^xsd:double ;
+	rdfs:label "178.4900000000" .
+
+pt:Hf mato:hasMass _:node18nc3fo0vx72 .
+
+pt:Ta a dl:TantalumAtom ;
+	rdfs:label "Tantalum" ;
+	mato:hasName "Tantalum" .
+
+pt:symbol_Ta dl:hasValue "Ta" ;
+	rdfs:label "Ta" .
+
+pt:Ta mato:hasSymbol pt:symbol_Ta .
+
+_:node18nc3fo0vx73 a dl:Mass ;
+	dl:hasValue "180.9478800000"^^xsd:double ;
+	rdfs:label "180.9478800000" .
+
+pt:Ta mato:hasMass _:node18nc3fo0vx73 .
+
+pt:W a dl:TungstenAtom ;
+	rdfs:label "Tungsten" ;
+	mato:hasName "Tungsten" .
+
+pt:symbol_W dl:hasValue "W" ;
+	rdfs:label "W" .
+
+pt:W mato:hasSymbol pt:symbol_W .
+
+_:node18nc3fo0vx74 a dl:Mass ;
+	dl:hasValue "183.8400000000"^^xsd:double ;
+	rdfs:label "183.8400000000" .
+
+pt:W mato:hasMass _:node18nc3fo0vx74 .
+
+pt:Re a dl:RheniumAtom ;
+	rdfs:label "Rhenium" ;
+	mato:hasName "Rhenium" .
+
+pt:symbol_Re dl:hasValue "Re" ;
+	rdfs:label "Re" .
+
+pt:Re mato:hasSymbol pt:symbol_Re .
+
+_:node18nc3fo0vx75 a dl:Mass ;
+	dl:hasValue "186.2070000000"^^xsd:double ;
+	rdfs:label "186.2070000000" .
+
+pt:Re mato:hasMass _:node18nc3fo0vx75 .
+
+pt:Os a dl:OsmiumAtom ;
+	rdfs:label "Osmium" ;
+	mato:hasName "Osmium" .
+
+pt:symbol_Os dl:hasValue "Os" ;
+	rdfs:label "Os" .
+
+pt:Os mato:hasSymbol pt:symbol_Os .
+
+_:node18nc3fo0vx76 a dl:Mass ;
+	dl:hasValue "190.2300000000"^^xsd:double ;
+	rdfs:label "190.2300000000" .
+
+pt:Os mato:hasMass _:node18nc3fo0vx76 .
+
+pt:Ir a dl:IridiumAtom ;
+	rdfs:label "Iridium" ;
+	mato:hasName "Iridium" .
+
+pt:symbol_Ir dl:hasValue "Ir" ;
+	rdfs:label "Ir" .
+
+pt:Ir mato:hasSymbol pt:symbol_Ir .
+
+_:node18nc3fo0vx77 a dl:Mass ;
+	dl:hasValue "192.2170000000"^^xsd:double ;
+	rdfs:label "192.2170000000" .
+
+pt:Ir mato:hasMass _:node18nc3fo0vx77 .
+
+pt:Pt a dl:PlatinumAtom ;
+	rdfs:label "Platinum" ;
+	mato:hasName "Platinum" .
+
+pt:symbol_Pt dl:hasValue "Pt" ;
+	rdfs:label "Pt" .
+
+pt:Pt mato:hasSymbol pt:symbol_Pt .
+
+_:node18nc3fo0vx78 a dl:Mass ;
+	dl:hasValue "192.0840000000"^^xsd:double ;
+	rdfs:label "192.0840000000" .
+
+pt:Pt mato:hasMass _:node18nc3fo0vx78 .
+
+pt:Au a dl:GoldAtom ;
+	rdfs:label "Gold" ;
+	mato:hasName "Gold" .
+
+pt:symbol_Au dl:hasValue "Au" ;
+	rdfs:label "Au" .
+
+pt:Au mato:hasSymbol pt:symbol_Au .
+
+_:node18nc3fo0vx79 a dl:Mass ;
+	dl:hasValue "196.9665690000"^^xsd:double ;
+	rdfs:label "196.9665690000" .
+
+pt:Au mato:hasMass _:node18nc3fo0vx79 .
+
+pt:Hg rdfs:label "Hydrargyrum" ;
+	mato:hasName "Hydrargyrum" .
+
+pt:symbol_Hg dl:hasValue "Hg" ;
+	rdfs:label "Hg" .
+
+pt:Hg mato:hasSymbol pt:symbol_Hg .
+
+_:node18nc3fo0vx80 a dl:Mass ;
+	dl:hasValue "200.5900000000"^^xsd:double ;
+	rdfs:label "200.5900000000" .
+
+pt:Hg mato:hasMass _:node18nc3fo0vx80 .
+
+pt:Tl a dl:ThalliumAtom ;
+	rdfs:label "Thallium" ;
+	mato:hasName "Thallium" .
+
+pt:symbol_Tl dl:hasValue "Tl" ;
+	rdfs:label "Tl" .
+
+pt:Tl mato:hasSymbol pt:symbol_Tl .
+
+_:node18nc3fo0vx81 a dl:Mass ;
+	dl:hasValue "204.3833000000"^^xsd:double ;
+	rdfs:label "204.3833000000" .
+
+pt:Tl mato:hasMass _:node18nc3fo0vx81 .
+
+pt:Pb a dl:LeadAtom ;
+	rdfs:label "Lead" ;
+	mato:hasName "Lead" .
+
+pt:symbol_Pb dl:hasValue "Pb" ;
+	rdfs:label "Pb" .
+
+pt:Pb mato:hasSymbol pt:symbol_Pb .
+
+_:node18nc3fo0vx82 a dl:Mass ;
+	dl:hasValue "207.2000000000"^^xsd:double ;
+	rdfs:label "207.2000000000" .
+
+pt:Pb mato:hasMass _:node18nc3fo0vx82 .
+
+pt:Bi a dl:BismuthAtom ;
+	rdfs:label "Bismuth" ;
+	mato:hasName "Bismuth" .
+
+pt:symbol_Bi dl:hasValue "Bi" ;
+	rdfs:label "Bi" .
+
+pt:Bi mato:hasSymbol pt:symbol_Bi .
+
+_:node18nc3fo0vx83 a dl:Mass ;
+	dl:hasValue "208.9804010000"^^xsd:double ;
+	rdfs:label "208.9804010000" .
+
+pt:Bi mato:hasMass _:node18nc3fo0vx83 .
+
+pt:Po a dl:PoloniumAtom ;
+	rdfs:label "Polonium" ;
+	mato:hasName "Polonium" .
+
+pt:symbol_Po dl:hasValue "Po" ;
+	rdfs:label "Po" .
+
+pt:Po mato:hasSymbol pt:symbol_Po .
+
+_:node18nc3fo0vx84 a dl:Mass ;
+	dl:hasValue "210.0000000000"^^xsd:double ;
+	rdfs:label "210.0000000000" .
+
+pt:Po mato:hasMass _:node18nc3fo0vx84 .
+
+pt:At a dl:AstatineAtom ;
+	rdfs:label "Astatine" ;
+	mato:hasName "Astatine" .
+
+pt:symbol_At dl:hasValue "At" ;
+	rdfs:label "At" .
+
+pt:At mato:hasSymbol pt:symbol_At .
+
+_:node18nc3fo0vx85 a dl:Mass ;
+	dl:hasValue "210.0000000000"^^xsd:double ;
+	rdfs:label "210.0000000000" .
+
+pt:At mato:hasMass _:node18nc3fo0vx85 .
+
+pt:Rn a dl:RadonAtom ;
+	rdfs:label "Radon" ;
+	mato:hasName "Radon" .
+
+pt:symbol_Rn dl:hasValue "Rn" ;
+	rdfs:label "Rn" .
+
+pt:Rn mato:hasSymbol pt:symbol_Rn .
+
+_:node18nc3fo0vx86 a dl:Mass ;
+	dl:hasValue "220.0000000000"^^xsd:double ;
+	rdfs:label "220.0000000000" .
+
+pt:Rn mato:hasMass _:node18nc3fo0vx86 .
+
+pt:Fr a dl:FranciumAtom ;
+	rdfs:label "Francium" ;
+	mato:hasName "Francium" .
+
+pt:symbol_Fr dl:hasValue "Fr" ;
+	rdfs:label "Fr" .
+
+pt:Fr mato:hasSymbol pt:symbol_Fr .
+
+_:node18nc3fo0vx87 a dl:Mass ;
+	dl:hasValue "223.0000000000"^^xsd:double ;
+	rdfs:label "223.0000000000" .
+
+pt:Fr mato:hasMass _:node18nc3fo0vx87 .
+
+pt:Ra a dl:RadiumAtom ;
+	rdfs:label "Radium" ;
+	mato:hasName "Radium" .
+
+pt:symbol_Ra dl:hasValue "Ra" ;
+	rdfs:label "Ra" .
+
+pt:Ra mato:hasSymbol pt:symbol_Ra .
+
+_:node18nc3fo0vx88 a dl:Mass ;
+	dl:hasValue "226.0000000000"^^xsd:double ;
+	rdfs:label "226.0000000000" .
+
+pt:Ra mato:hasMass _:node18nc3fo0vx88 .
+
+pt:Ac a dl:ActiniumAtom ;
+	rdfs:label "Actinium" ;
+	mato:hasName "Actinium" .
+
+pt:symbol_Ac dl:hasValue "Ac" ;
+	rdfs:label "Ac" .
+
+pt:Ac mato:hasSymbol pt:symbol_Ac .
+
+_:node18nc3fo0vx89 a dl:Mass ;
+	dl:hasValue "227.0000000000"^^xsd:double ;
+	rdfs:label "227.0000000000" .
+
+pt:Ac mato:hasMass _:node18nc3fo0vx89 .
+
+pt:Th a dl:ThoriumAtom ;
+	rdfs:label "Thorium" ;
+	mato:hasName "Thorium" .
+
+pt:symbol_Th dl:hasValue "Th" ;
+	rdfs:label "Th" .
+
+pt:Th mato:hasSymbol pt:symbol_Th .
+
+_:node18nc3fo0vx90 a dl:Mass ;
+	dl:hasValue "232.0380600000"^^xsd:double ;
+	rdfs:label "232.0380600000" .
+
+pt:Th mato:hasMass _:node18nc3fo0vx90 .
+
+pt:Pa a dl:ProtactiniumAtom ;
+	rdfs:label "Protactinium" ;
+	mato:hasName "Protactinium" .
+
+pt:symbol_Pa dl:hasValue "Pa" ;
+	rdfs:label "Pa" .
+
+pt:Pa mato:hasSymbol pt:symbol_Pa .
+
+_:node18nc3fo0vx91 a dl:Mass ;
+	dl:hasValue "231.0358800000"^^xsd:double ;
+	rdfs:label "231.0358800000" .
+
+pt:Pa mato:hasMass _:node18nc3fo0vx91 .
+
+pt:U a dl:UraniumAtom ;
+	rdfs:label "Uranium" ;
+	mato:hasName "Uranium" .
+
+pt:symbol_U dl:hasValue "U" ;
+	rdfs:label "U" .
+
+pt:U mato:hasSymbol pt:symbol_U .
+
+_:node18nc3fo0vx92 a dl:Mass ;
+	dl:hasValue "238.0289100000"^^xsd:double ;
+	rdfs:label "238.0289100000" .
+
+pt:U mato:hasMass _:node18nc3fo0vx92 .
+
+pt:Np a dl:NeptuniumAtom ;
+	rdfs:label "Neptunium" ;
+	mato:hasName "Neptunium" .
+
+pt:symbol_Np dl:hasValue "Np" ;
+	rdfs:label "Np" .
+
+pt:Np mato:hasSymbol pt:symbol_Np .
+
+_:node18nc3fo0vx93 a dl:Mass ;
+	dl:hasValue "237.0000000000"^^xsd:double ;
+	rdfs:label "237.0000000000" .
+
+pt:Np mato:hasMass _:node18nc3fo0vx93 .
+
+pt:Pu a dl:PlutoniumAtom ;
+	rdfs:label "Plutonium" ;
+	mato:hasName "Plutonium" .
+
+pt:symbol_Pu dl:hasValue "Pu" ;
+	rdfs:label "Pu" .
+
+pt:Pu mato:hasSymbol pt:symbol_Pu .
+
+_:node18nc3fo0vx94 a dl:Mass ;
+	dl:hasValue "244.0000000000"^^xsd:double ;
+	rdfs:label "244.0000000000" .
+
+pt:Pu mato:hasMass _:node18nc3fo0vx94 .
+
+pt:Am a dl:AmericiumAtom ;
+	rdfs:label "Americium" ;
+	mato:hasName "Americium" .
+
+pt:symbol_Am dl:hasValue "Am" ;
+	rdfs:label "Am" .
+
+pt:Am mato:hasSymbol pt:symbol_Am .
+
+_:node18nc3fo0vx95 a dl:Mass ;
+	dl:hasValue "243.0000000000"^^xsd:double ;
+	rdfs:label "243.0000000000" .
+
+pt:Am mato:hasMass _:node18nc3fo0vx95 .
+
+pt:Cm a dl:CuriumAtom ;
+	rdfs:label "Curium" ;
+	mato:hasName "Curium" .
+
+pt:symbol_Cm dl:hasValue "Cm" ;
+	rdfs:label "Cm" .
+
+pt:Cm mato:hasSymbol pt:symbol_Cm .
+
+_:node18nc3fo0vx96 a dl:Mass ;
+	dl:hasValue "247.0000000000"^^xsd:double ;
+	rdfs:label "247.0000000000" .
+
+pt:Cm mato:hasMass _:node18nc3fo0vx96 .
+
+pt:Bk a dl:BerkeliumAtom ;
+	rdfs:label "Berkelium" ;
+	mato:hasName "Berkelium" .
+
+pt:symbol_Bk dl:hasValue "Bk" ;
+	rdfs:label "Bk" .
+
+pt:Bk mato:hasSymbol pt:symbol_Bk .
+
+_:node18nc3fo0vx97 a dl:Mass ;
+	dl:hasValue "247.0000000000"^^xsd:double ;
+	rdfs:label "247.0000000000" .
+
+pt:Bk mato:hasMass _:node18nc3fo0vx97 .
+
+pt:Cf a dl:CaliforniumAtom ;
+	rdfs:label "Californium" ;
+	mato:hasName "Californium" .
+
+pt:symbol_Cf dl:hasValue "Cf" ;
+	rdfs:label "Cf" .
+
+pt:Cf mato:hasSymbol pt:symbol_Cf .
+
+_:node18nc3fo0vx98 a dl:Mass ;
+	dl:hasValue "251.0000000000"^^xsd:double ;
+	rdfs:label "251.0000000000" .
+
+pt:Cf mato:hasMass _:node18nc3fo0vx98 .
+
+pt:Es a dl:EinsteiniumAtom ;
+	rdfs:label "Einsteinium" ;
+	mato:hasName "Einsteinium" .
+
+pt:symbol_Es dl:hasValue "Es" ;
+	rdfs:label "Es" .
+
+pt:Es mato:hasSymbol pt:symbol_Es .
+
+_:node18nc3fo0vx99 a dl:Mass ;
+	dl:hasValue "252.0000000000"^^xsd:double ;
+	rdfs:label "252.0000000000" .
+
+pt:Es mato:hasMass _:node18nc3fo0vx99 .
+
+pt:Fm a dl:FermiumAtom ;
+	rdfs:label "Fermium" ;
+	mato:hasName "Fermium" .
+
+pt:symbol_Fm dl:hasValue "Fm" ;
+	rdfs:label "Fm" .
+
+pt:Fm mato:hasSymbol pt:symbol_Fm .
+
+_:node18nc3fo0vx100 a dl:Mass ;
+	dl:hasValue "257.0000000000"^^xsd:double ;
+	rdfs:label "257.0000000000" .
+
+pt:Fm mato:hasMass _:node18nc3fo0vx100 .
+
+pt:Md a dl:MendeleviumAtom ;
+	rdfs:label "Mendelevium" ;
+	mato:hasName "Mendelevium" .
+
+pt:symbol_Md dl:hasValue "Md" ;
+	rdfs:label "Md" .
+
+pt:Md mato:hasSymbol pt:symbol_Md .
+
+_:node18nc3fo0vx101 a dl:Mass ;
+	dl:hasValue "258.0000000000"^^xsd:double ;
+	rdfs:label "258.0000000000" .
+
+pt:Md mato:hasMass _:node18nc3fo0vx101 .
+
+pt:No a dl:NobeliumAtom ;
+	rdfs:label "Nobelium" ;
+	mato:hasName "Nobelium" .
+
+pt:symbol_No dl:hasValue "No" ;
+	rdfs:label "No" .
+
+pt:No mato:hasSymbol pt:symbol_No .
+
+_:node18nc3fo0vx102 a dl:Mass ;
+	dl:hasValue "259.0000000000"^^xsd:double ;
+	rdfs:label "259.0000000000" .
+
+pt:No mato:hasMass _:node18nc3fo0vx102 .
+
+pt:Lr a dl:LawrenciumAtom ;
+	rdfs:label "Lawrencium" ;
+	mato:hasName "Lawrencium" .
+
+pt:symbol_Lr dl:hasValue "Lr" ;
+	rdfs:label "Lr" .
+
+pt:Lr mato:hasSymbol pt:symbol_Lr .
+
+_:node18nc3fo0vx103 a dl:Mass ;
+	dl:hasValue "262.0000000000"^^xsd:double ;
+	rdfs:label "262.0000000000" .
+
+pt:Lr mato:hasMass _:node18nc3fo0vx103 .
+
+pt:Rf a dl:RutherfordiumAtom ;
+	rdfs:label "Rutherfordium" ;
+	mato:hasName "Rutherfordium" .
+
+pt:symbol_Rf dl:hasValue "Rf" ;
+	rdfs:label "Rf" .
+
+pt:Rf mato:hasSymbol pt:symbol_Rf .
+
+_:node18nc3fo0vx104 a dl:Mass ;
+	dl:hasValue "261.0000000000"^^xsd:double ;
+	rdfs:label "261.0000000000" .
+
+pt:Rf mato:hasMass _:node18nc3fo0vx104 .
+
+pt:Db a dl:DubniumAtom ;
+	rdfs:label "Dubnium" ;
+	mato:hasName "Dubnium" .
+
+pt:symbol_Db dl:hasValue "Db" ;
+	rdfs:label "Db" .
+
+pt:Db mato:hasSymbol pt:symbol_Db .
+
+_:node18nc3fo0vx105 a dl:Mass ;
+	dl:hasValue "262.0000000000"^^xsd:double ;
+	rdfs:label "262.0000000000" .
+
+pt:Db mato:hasMass _:node18nc3fo0vx105 .
+
+pt:Sg a dl:SeaborgiumAtom ;
+	rdfs:label "Seaborgium" ;
+	mato:hasName "Seaborgium" .
+
+pt:symbol_Sg dl:hasValue "Sg" ;
+	rdfs:label "Sg" .
+
+pt:Sg mato:hasSymbol pt:symbol_Sg .
+
+_:node18nc3fo0vx106 a dl:Mass ;
+	dl:hasValue "266.0000000000"^^xsd:double ;
+	rdfs:label "266.0000000000" .
+
+pt:Sg mato:hasMass _:node18nc3fo0vx106 .
+
+pt:Bh a dl:BohriumAtom ;
+	rdfs:label "Bohrium" ;
+	mato:hasName "Bohrium" .
+
+pt:symbol_Bh dl:hasValue "Bh" ;
+	rdfs:label "Bh" .
+
+pt:Bh mato:hasSymbol pt:symbol_Bh .
+
+_:node18nc3fo0vx107 a dl:Mass ;
+	dl:hasValue "264.0000000000"^^xsd:double ;
+	rdfs:label "264.0000000000" .
+
+pt:Bh mato:hasMass _:node18nc3fo0vx107 .
+
+pt:Hs a dl:HassiumAtom ;
+	rdfs:label "Hassium" ;
+	mato:hasName "Hassium" .
+
+pt:symbol_Hs dl:hasValue "Hs" ;
+	rdfs:label "Hs" .
+
+pt:Hs mato:hasSymbol pt:symbol_Hs .
+
+_:node18nc3fo0vx108 a dl:Mass ;
+	dl:hasValue "277.0000000000"^^xsd:double ;
+	rdfs:label "277.0000000000" .
+
+pt:Hs mato:hasMass _:node18nc3fo0vx108 .
+
+pt:Mt a dl:MeitneriumAtom ;
+	rdfs:label "Meitnerium" ;
+	mato:hasName "Meitnerium" .
+
+pt:symbol_Mt dl:hasValue "Mt" ;
+	rdfs:label "Mt" .
+
+pt:Mt mato:hasSymbol pt:symbol_Mt .
+
+_:node18nc3fo0vx109 a dl:Mass ;
+	dl:hasValue "268.0000000000"^^xsd:double ;
+	rdfs:label "268.0000000000" .
+
+pt:Mt mato:hasMass _:node18nc3fo0vx109 .
+
+pt:Ds a dl:UnunniliumAtom ;
+	rdfs:label "Ununnilium" ;
+	mato:hasName "Ununnilium" .
+
+pt:symbol_Ds dl:hasValue "Ds" ;
+	rdfs:label "Ds" .
+
+pt:Ds mato:hasSymbol pt:symbol_Ds .
+
+_:node18nc3fo0vx110 a dl:Mass ;
+	dl:hasValue "271.0000000000"^^xsd:double ;
+	rdfs:label "271.0000000000" .
+
+pt:Ds mato:hasMass _:node18nc3fo0vx110 .
+
+pt:Rg a dl:UnununiumAtom ;
+	rdfs:label "Unununium" ;
+	mato:hasName "Unununium" .
+
+pt:symbol_Rg dl:hasValue "Rg" ;
+	rdfs:label "Rg" .
+
+pt:Rg mato:hasSymbol pt:symbol_Rg .
+
+_:node18nc3fo0vx111 a dl:Mass ;
+	dl:hasValue "272.0000000000"^^xsd:double ;
+	rdfs:label "272.0000000000" .
+
+pt:Rg mato:hasMass _:node18nc3fo0vx111 .
+
+pt:Uub a dl:UnunbiumAtom ;
+	rdfs:label "Ununbium" ;
+	mato:hasName "Ununbium" .
+
+pt:symbol_Uub dl:hasValue "Uub" ;
+	rdfs:label "Uub" .
+
+pt:Uub mato:hasSymbol pt:symbol_Uub .
+
+_:node18nc3fo0vx112 a dl:Mass ;
+	dl:hasValue "285.0000000000"^^xsd:double ;
+	rdfs:label "285.0000000000" .
+
+pt:Uub mato:hasMass _:node18nc3fo0vx112 .
+
+pt:Uut a dl:UnuntriumAtom ;
+	rdfs:label "Ununtrium" ;
+	mato:hasName "Ununtrium" .
+
+pt:symbol_Uut dl:hasValue "Uut" ;
+	rdfs:label "Uut" .
+
+pt:Uut mato:hasSymbol pt:symbol_Uut .
+
+_:node18nc3fo0vx113 a dl:Mass ;
+	dl:hasValue "284.0000000000"^^xsd:double ;
+	rdfs:label "284.0000000000" .
+
+pt:Uut mato:hasMass _:node18nc3fo0vx113 .
+
+pt:Uuq a dl:UnunquadiumAtom ;
+	rdfs:label "Ununquadium" ;
+	mato:hasName "Ununquadium" .
+
+pt:symbol_Uuq dl:hasValue "Uuq" ;
+	rdfs:label "Uuq" .
+
+pt:Uuq mato:hasSymbol pt:symbol_Uuq .
+
+_:node18nc3fo0vx114 a dl:Mass ;
+	dl:hasValue "289.0000000000"^^xsd:double ;
+	rdfs:label "289.0000000000" .
+
+pt:Uuq mato:hasMass _:node18nc3fo0vx114 .
+
+pt:Uup a dl:UnunpentiumAtom ;
+	rdfs:label "Ununpentium" ;
+	mato:hasName "Ununpentium" .
+
+pt:symbol_Uup dl:hasValue "Uup" ;
+	rdfs:label "Uup" .
+
+pt:Uup mato:hasSymbol pt:symbol_Uup .
+
+_:node18nc3fo0vx115 a dl:Mass ;
+	dl:hasValue "288.0000000000"^^xsd:double ;
+	rdfs:label "288.0000000000" .
+
+pt:Uup mato:hasMass _:node18nc3fo0vx115 .
+
+pt:Uuh a dl:UnunhexiumAtom ;
+	rdfs:label "Ununhexium" ;
+	mato:hasName "Ununhexium" .
+
+pt:symbol_Uuh dl:hasValue "Uuh" ;
+	rdfs:label "Uuh" .
+
+pt:Uuh mato:hasSymbol pt:symbol_Uuh .
+
+_:node18nc3fo0vx116 a dl:Mass ;
+	dl:hasValue "292.0000000000"^^xsd:double ;
+	rdfs:label "292.0000000000" .
+
+pt:Uuh mato:hasMass _:node18nc3fo0vx116 .
+
+pt:Uuo a dl:UnunoctiumAtom ;
+	rdfs:label "Ununoctium" ;
+	mato:hasName "Ununoctium" .
+
+pt:symbol_Uuo dl:hasValue "Uuo" ;
+	rdfs:label "Uuo" .
+
+pt:Uuo mato:hasSymbol pt:symbol_Uuo .
+
+_:node18nc3fo0vx117 a dl:Mass ;
+	dl:hasValue "294.0000000000"^^xsd:double ;
+	rdfs:label "294.0000000000" .
+
+pt:Uuo mato:hasMass _:node18nc3fo0vx117 .
