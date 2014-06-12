@@ -1,0 +1,191 @@
+
+<http://matonto.org/ontologies/matonto-catalog> a <http://www.w3.org/2002/07/owl#Ontology> ;
+	<http://www.w3.org/2002/07/owl#versionInfo> "1.1" ;
+	<http://www.w3.org/2002/07/owl#versionIRI> <http://matonto.org/ontologies/mat-catalog/1.1> .
+
+<http://matonto.org/ontologies/matonto-catalog#MATONTO_1> a <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Classification scheme for MatOnto Dataset Catalog." ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Classification scheme for MatOnto Dataset Catalog." ;
+	<http://purl.org/dc/terms/title> "Classification scheme for MatOnto Dataset Catalog." ;
+	<http://purl.org/dc/terms/creator> <http://matonto.org/ontologies/matonto-catalog#iNovex> .
+
+<http://matonto.org/ontologies/matonto-catalog#iNovex> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://xmlns.com/foaf/0.1/Organization> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "iNovex Information Systems" ;
+	<http://xmlns.com/foaf/0.1/homepage> <http://www.inovexcorp.com/> .
+
+<http://matonto.org/ontologies/matonto-catalog#MATONTO_101> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Classification for a MatOnto Dataset that indicates it is a set of domain (materials science) data." , "data" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Classification for a MatOnto Dataset that indicates it is a set of domain (materials science) data." ;
+	<http://purl.org/dc/terms/title> "Classification for a MatOnto Dataset that indicates it is a set of domain (materials science) data." ;
+	<http://purl.org/dc/terms/creator> <http://matonto.org/ontologies/matonto-catalog#iNovex> ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> <http://matonto.org/ontologies/matonto-catalog#MATONTO_1> .
+
+<http://matonto.org/ontologies/matonto-catalog#MATONTO_102> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Classification for a MatOnto Dataset that indicates it is an analytic module." , "analytic" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Classification for a MatOnto Dataset that indicates it is an analytic module." ;
+	<http://purl.org/dc/terms/title> "Classification for a MatOnto Dataset that indicates it is an analytic module." ;
+	<http://purl.org/dc/terms/creator> <http://matonto.org/ontologies/matonto-catalog#iNovex> ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> <http://matonto.org/ontologies/matonto-catalog#MATONTO_1> .
+
+<http://matonto.org/ontologies/matonto-catalog#MATONTO_103> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Classification for a MatOnto Dataset that indicates it is a service module." , "service" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Classification for a MatOnto Dataset that indicates it is a service module." ;
+	<http://purl.org/dc/terms/title> "Classification for a MatOnto Dataset that indicates it is a service module." ;
+	<http://purl.org/dc/terms/creator> <http://matonto.org/ontologies/matonto-catalog#iNovex> ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> <http://matonto.org/ontologies/matonto-catalog#MATONTO_1> .
+
+<http://matonto.org/ontologies/matonto-catalog#MATONTO_104> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Classification for a MatOnto Dataset that indicates it is a SPARQL query." , "query" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Classification for a MatOnto Dataset that indicates it is a SPARQL query." ;
+	<http://purl.org/dc/terms/title> "Classification for a MatOnto Dataset that indicates it is a SPARQL query." ;
+	<http://purl.org/dc/terms/creator> <http://matonto.org/ontologies/matonto-catalog#iNovex> ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> <http://matonto.org/ontologies/matonto-catalog#MATONTO_1> .
+
+<http://matonto.org/ontologies/matonto-catalog#MATONTO_105> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Classification for a MatOnto Dataset that indicates it is a concept OWL ontology." , "ontology" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Classification for a MatOnto Dataset that indicates it is a concept OWL ontology." ;
+	<http://purl.org/dc/terms/title> "Classification for a MatOnto Dataset that indicates it is a concept OWL ontology." ;
+	<http://purl.org/dc/terms/creator> <http://matonto.org/ontologies/matonto-catalog#iNovex> ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> <http://matonto.org/ontologies/matonto-catalog#MATONTO_1> .
+
+<http://matonto.org/ontologies/matonto-catalog#MATONTO_106> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Classification for a MatOnto Dataset that indicates it is a DCAT dataset catalog." , "catalog" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Classification for a MatOnto Dataset that indicates it is a DCAT dataset catalog." ;
+	<http://purl.org/dc/terms/title> "Classification for a MatOnto Dataset that indicates it is a DCAT dataset catalog." ;
+	<http://purl.org/dc/terms/creator> <http://matonto.org/ontologies/matonto-catalog#iNovex> ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> <http://matonto.org/ontologies/matonto-catalog#MATONTO_1> .
+
+<http://matonto.org/ontologies/matonto-catalog#catalog> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/ns/dcat#Catalog> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "MatOnto Dataset Catalog" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "MatOnto Dataset Catalog.  Includes sets of data, analytic modules, SPARQL queries, service modules, OWL concept ontologies, and other DCAT catalogs." ;
+	<http://purl.org/dc/terms/title> "MatOnto Dataset Catalog" ;
+	<http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	<http://www.w3.org/ns/dcat#dataset> <http://matonto.org/ontologies/matonto-catalog#dataset-000> , <http://matonto.org/ontologies/matonto-catalog#dataset-001> , <http://matonto.org/ontologies/matonto-catalog#dataset-002> , <http://matonto.org/ontologies/matonto-catalog#dataset-003> , <http://matonto.org/ontologies/matonto-catalog#dataset-004> , <http://matonto.org/ontologies/matonto-catalog#dataset-005> ;
+	<http://purl.org/dc/terms/publisher> <http://matonto.org/ontologies/matonto-catalog#iNovex> ;
+	<http://xmlns.com/foaf/0.1/homepage> <http://matonto.org/matwiki/index.php/Catalog> ;
+	<http://www.w3.org/ns/dcat#themeTaxonomy> <http://matonto.org/ontologies/matonto-catalog#MATONTO_1> .
+
+<http://matonto.org/ontologies/matonto-catalog#dataset-000> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/ns/dcat#Dataset> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "MatOnto Dataset - Stardog:MatCatalog" ;
+	<http://purl.org/dc/terms/title> "Stardog:MatCatalog" ;
+	<http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	<http://purl.org/dc/terms/publisher> <http://matonto.org/ontologies/matonto-catalog#iNovex> ;
+	<http://purl.org/dc/terms/modified> "2014-06-04"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	<http://purl.org/dc/terms/issued> "2014-06-04"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	<http://www.w3.org/ns/dcat#keyword> "catalog" , "MatOnto" , "materials" , "science" , "DCAT" , "dataset" ;
+	<http://www.w3.org/ns/dcat#theme> <http://matonto.org/ontologies/matonto-catalog#MATONTO_106> ;
+	<http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Materials_Science> ;
+	<http://www.w3.org/ns/dcat#distribution> <http://matonto.org/ontologies/matonto-catalog#dataset-000-ttl-001> ;
+	<http://www.w3.org/ns/dcat#contactPoint> <http://matonto.org/matwiki/index.php/Contact> ;
+	<http://purl.org/dc/terms/accrualPeriodicity> <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+
+<http://matonto.org/ontologies/matonto-catalog#dataset-001> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/ns/dcat#Dataset> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "MatOnto Dataset - Stardog:MatProjRec" ;
+	<http://purl.org/dc/terms/title> "Stardog:MatProjRec" ;
+	<http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	<http://purl.org/dc/terms/publisher> <http://matonto.org/ontologies/matonto-catalog#iNovex> ;
+	<http://purl.org/dc/terms/modified> "2014-05-28"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	<http://purl.org/dc/terms/issued> "2014-05-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	<http://www.w3.org/ns/dcat#keyword> "MatOnto" , "materials" , "science" , "MaterialsProject" , "project" ;
+	<http://www.w3.org/ns/dcat#theme> <http://matonto.org/ontologies/matonto-catalog#MATONTO_101> ;
+	<http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Materials_Science> ;
+	<http://www.w3.org/ns/dcat#distribution> <http://matonto.org/ontologies/matonto-catalog#dataset-001-ttl-001> ;
+	<http://www.w3.org/ns/dcat#contactPoint> <http://matonto.org/matwiki/index.php/Contact> ;
+	<http://purl.org/dc/terms/accrualPeriodicity> <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+
+<http://matonto.org/ontologies/matonto-catalog#dataset-002> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/ns/dcat#Dataset> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "MatOnto Dataset - Stardog:MatOnto" ;
+	<http://purl.org/dc/terms/title> "Stardog:MatOnto" ;
+	<http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	<http://purl.org/dc/terms/publisher> <http://matonto.org/ontologies/matonto-catalog#iNovex> ;
+	<http://purl.org/dc/terms/modified> "2014-05-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	<http://purl.org/dc/terms/issued> "2014-05-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	<http://www.w3.org/ns/dcat#keyword> "MatOnto" , "materials" , "science" ;
+	<http://www.w3.org/ns/dcat#theme> <http://matonto.org/ontologies/matonto-catalog#MATONTO_105> ;
+	<http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Materials_Science> , <http://dbpedia.org/resource/Category:Ontology> ;
+	<http://www.w3.org/ns/dcat#distribution> <http://matonto.org/ontologies/matonto-catalog#dataset-002-ttl-001> ;
+	<http://www.w3.org/ns/dcat#contactPoint> <http://matonto.org/matwiki/index.php/Contact> ;
+	<http://purl.org/dc/terms/accrualPeriodicity> <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+
+<http://matonto.org/ontologies/matonto-catalog#dataset-003> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/ns/dcat#Dataset> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "MatOnto Dataset - Rya:PTable" ;
+	<http://purl.org/dc/terms/title> "Rya:PTable" ;
+	<http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	<http://purl.org/dc/terms/publisher> <http://matonto.org/ontologies/matonto-catalog#iNovex> ;
+	<http://purl.org/dc/terms/modified> "2014-05-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	<http://purl.org/dc/terms/issued> "2014-05-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	<http://www.w3.org/ns/dcat#keyword> "Rya" , "periodic" , "table" ;
+	<http://www.w3.org/ns/dcat#theme> <http://matonto.org/ontologies/matonto-catalog#MATONTO_101> ;
+	<http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Periodic_table> ;
+	<http://www.w3.org/ns/dcat#distribution> <http://matonto.org/ontologies/matonto-catalog#dataset-003-ttl-001> ;
+	<http://www.w3.org/ns/dcat#contactPoint> <http://matonto.org/matwiki/index.php/Contact> ;
+	<http://purl.org/dc/terms/accrualPeriodicity> <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+
+<http://matonto.org/ontologies/matonto-catalog#dataset-004> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/ns/dcat#Dataset> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "MatOnto Dataset - D2R:SpaceGroup" ;
+	<http://purl.org/dc/terms/title> "D2R:SpaceGroup" ;
+	<http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	<http://purl.org/dc/terms/publisher> <http://matonto.org/ontologies/matonto-catalog#iNovex> ;
+	<http://purl.org/dc/terms/modified> "2014-05-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	<http://purl.org/dc/terms/issued> "2014-05-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	<http://www.w3.org/ns/dcat#keyword> "D2RQ" , "space" , "group" , "groups" , "3D" , "crystalline" , "D2R" , "structure" ;
+	<http://www.w3.org/ns/dcat#theme> <http://matonto.org/ontologies/matonto-catalog#MATONTO_101> ;
+	<http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Space_groups> ;
+	<http://www.w3.org/ns/dcat#distribution> <http://matonto.org/ontologies/matonto-catalog#dataset-004-ttl-001> ;
+	<http://www.w3.org/ns/dcat#contactPoint> <http://matonto.org/matwiki/index.php/Contact> ;
+	<http://purl.org/dc/terms/accrualPeriodicity> <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+
+<http://matonto.org/ontologies/matonto-catalog#dataset-000-ttl-001> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/ns/dcat#Distribution> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "MatOnto Dataset Distribution - Stardog:MatCatalog" ;
+	<http://purl.org/dc/terms/title> "RDF/Turtle distribution of Stardog:MatCatalog" ;
+	<http://www.w3.org/ns/dcat#byteSize> "14816"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+	<http://www.w3.org/ns/dcat#mediaType> "application/x-turtle" ;
+	<http://www.w3.org/ns/dcat#downloadURL> <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/sd-matcatalog-catalog.ttl> .
+
+<http://matonto.org/ontologies/matonto-catalog#dataset-001-ttl-001> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/ns/dcat#Distribution> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "MatOnto Dataset Distribution - Stardog:MatProjRec" ;
+	<http://purl.org/dc/terms/title> "RDF/Turtle distribution of Stardog:MatProjRec" ;
+	<http://www.w3.org/ns/dcat#byteSize> "1351467"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+	<http://www.w3.org/ns/dcat#mediaType> "application/x-turtle" ;
+	<http://www.w3.org/ns/dcat#downloadURL> <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/sd-matprojrec-data.ttl> .
+
+<http://matonto.org/ontologies/matonto-catalog#dataset-002-ttl-001> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/ns/dcat#Distribution> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "MatOnto Dataset Distribution - Stardog:MatOnto" ;
+	<http://purl.org/dc/terms/title> "RDF/Turtle distribution of Stardog:MatOnto" ;
+	<http://www.w3.org/ns/dcat#byteSize> "1189480"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+	<http://www.w3.org/ns/dcat#mediaType> "application/x-turtle" ;
+	<http://www.w3.org/ns/dcat#downloadURL> <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/sd-matonto-data.ttl> .
+
+<http://matonto.org/ontologies/matonto-catalog#dataset-003-ttl-001> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/ns/dcat#Distribution> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "MatOnto Dataset Distribution - Rya:PTable" ;
+	<http://purl.org/dc/terms/title> "RDF/Turtle distribution of Rya:PTable" ;
+	<http://www.w3.org/ns/dcat#byteSize> "38871"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+	<http://www.w3.org/ns/dcat#mediaType> "application/x-turtle" ;
+	<http://www.w3.org/ns/dcat#downloadURL> <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/rya-ptable-data.ttl> .
+
+<http://matonto.org/ontologies/matonto-catalog#dataset-004-ttl-001> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/ns/dcat#Distribution> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "MatOnto Dataset Distribution - D2R:SpaceGroup" ;
+	<http://purl.org/dc/terms/title> "RDF/Turtle distribution of D2R:SpaceGroup" ;
+	<http://www.w3.org/ns/dcat#byteSize> "0"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+	<http://www.w3.org/ns/dcat#mediaType> "application/x-turtle" ;
+	<http://www.w3.org/ns/dcat#downloadURL> <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/d2r-spacegroup-data.ttl> .
+
+<http://matonto.org/ontologies/matonto-catalog#dataset-005> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/ns/dcat#Dataset> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "MatOnto Dataset - Widget:Sgvizler" ;
+	<http://purl.org/dc/terms/title> "Widget:Sgvizler" ;
+	<http://purl.org/dc/terms/publisher> <http://matonto.org/ontologies/matonto-catalog#iNovex> ;
+	<http://purl.org/dc/terms/modified> "2014-06-04"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	<http://purl.org/dc/terms/issued> "2014-06-04"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	<http://www.w3.org/ns/dcat#keyword> "analytic" , "vizualization" , "ozone" , "widget" , "application" , "web" ;
+	<http://www.w3.org/ns/dcat#theme> <http://matonto.org/ontologies/matonto-catalog#MATONTO_102> ;
+	<http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Visualisation> ;
+	<http://www.w3.org/ns/dcat#distribution> <http://matonto.org/ontologies/matonto-catalog#dataset-005-ttl-001> ;
+	<http://www.w3.org/ns/dcat#contactPoint> <http://matonto.org/matwiki/index.php/Contact> ;
+	<http://purl.org/dc/terms/accrualPeriodicity> <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+
+<http://matonto.org/ontologies/matonto-catalog#dataset-005-ttl-001> a <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/ns/dcat#Distribution> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "MatOnto Dataset Distribution - Widget:Sgvizler" ;
+	<http://purl.org/dc/terms/title> "Web Application Archive distribution of Sgvizler analytic" ;
+	<http://www.w3.org/ns/dcat#byteSize> "46486"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+	<http://www.w3.org/ns/dcat#mediaType> "application/java-archive" ;
+	<http://www.w3.org/ns/dcat#downloadURL> <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/analytic-widget-sgvizler.war> .
