@@ -1,474 +1,204 @@
 @prefix : <http://matonto.org/ontologies/matonto-catalog#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix stardog: <tag:stardog:api:> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix dctype: <http://purl.org/dc/dcmitype/> .
-@base <http://matonto.org/ontologies/matonto-catalog> .
-
-<http://matonto.org/ontologies/matonto-catalog> rdf:type owl:Ontology ;
-                                                
-                                                owl:versionInfo "1.1" ;
-                                                
-                                                owl:versionIRI <http://matonto.org/ontologies/mat-catalog/1.1> .
-
-
-#################################################################
-#
-#    Concepts
-#
-#################################################################
-
-
-
-:MATONTO_1		a skos:ConceptScheme ;
-			
-				rdfs:label "Classification scheme for MatOnto Dataset Catalog." ;
-
-				skos:prefLabel "Classification scheme for MatOnto Dataset Catalog." ;
-
-				dct:title "Classification scheme for MatOnto Dataset Catalog." ;
-
-				dct:creator :iNovex ;
-			
-				.
-
-
-
-
-:MATONTO_101	a skos:Concept ;
-				
-				skos:inScheme :MATONTO_1 ;
-
-				rdfs:label	"Classification for a MatOnto Dataset that indicates it is a set of domain (materials science) data." ,
-				
-							"data" ;
-
-				skos:prefLabel "Classification for a MatOnto Dataset that indicates it is a set of domain (materials science) data." ;
-				
-				dct:title "Classification for a MatOnto Dataset that indicates it is a set of domain (materials science) data." ;
-
-				dct:creator :iNovex ;
-				
-				.
-
-
-
-
-:MATONTO_102	a skos:Concept ;
-
-				skos:inScheme :MATONTO_1 ;
-
-				rdfs:label	"Classification for a MatOnto Dataset that indicates it is an analytic module." ,
-				
-							"analytic" ;
-
-				skos:prefLabel "Classification for a MatOnto Dataset that indicates it is an analytic module." ;
-
-				dct:title "Classification for a MatOnto Dataset that indicates it is an analytic module." ;
-
-				dct:creator :iNovex ;
-				
-				.
-
-
-
-
-:MATONTO_103	a skos:Concept ;
-
-				skos:inScheme :MATONTO_1 ;
-
-				rdfs:label "Classification for a MatOnto Dataset that indicates it is a service module." ,
-				
-							"service" ;
-
-				skos:prefLabel "Classification for a MatOnto Dataset that indicates it is a service module." ;
-
-				dct:title "Classification for a MatOnto Dataset that indicates it is a service module." ;
-
-				dct:creator :iNovex ;
-				
-				.
-
-
-
-
-:MATONTO_104	a skos:Concept ;
-
-				skos:inScheme :MATONTO_1 ;
-
-				rdfs:label "Classification for a MatOnto Dataset that indicates it is a SPARQL query." ,
-				
-							"query" ;
-
-				skos:prefLabel "Classification for a MatOnto Dataset that indicates it is a SPARQL query." ;
-
-				dct:title "Classification for a MatOnto Dataset that indicates it is a SPARQL query." ;
-
-				dct:creator :iNovex ;
-
-				.
-
-
-
-
-:MATONTO_105	a skos:Concept ;
-
-				skos:inScheme :MATONTO_1 ;
-
-				rdfs:label "Classification for a MatOnto Dataset that indicates it is a concept OWL ontology." ,
-				
-							"ontology" ;
-
-				skos:prefLabel "Classification for a MatOnto Dataset that indicates it is a concept OWL ontology." ;
-
-				dct:title "Classification for a MatOnto Dataset that indicates it is a concept OWL ontology." ;
-
-				dct:creator :iNovex ;
-
-				.
-
-
-
-:MATONTO_106	a skos:Concept ;
-
-				skos:inScheme :MATONTO_1 ;
-
-				rdfs:label "Classification for a MatOnto Dataset that indicates it is a DCAT dataset catalog." ,
-				
-							"catalog" ;
-
-				skos:prefLabel "Classification for a MatOnto Dataset that indicates it is a DCAT dataset catalog." ;
-
-				dct:title "Classification for a MatOnto Dataset that indicates it is a DCAT dataset catalog." ;
-
-				dct:creator :iNovex ;
-
-				.
-
-
-
-#################################################################
-#
-#    Individuals
-#
-#################################################################
-
-
-
-###  http://matonto.org/ontologies/matonto-catalog#catalog
-
-:catalog rdf:type owl:NamedIndividual ,
-                  dcat:Catalog ;
-         
-         rdfs:label "MatOnto Dataset Catalog" ;
-
-		 skos:prefLabel "MatOnto Dataset Catalog.  Includes sets of data, analytic modules, SPARQL queries, service modules, OWL concept ontologies, and other DCAT catalogs." ;
-         
-         dct:title "MatOnto Dataset Catalog" ;
-         
-         dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
-         
-         dcat:dataset :dataset-000 ,
-         			  :dataset-001 ,
-                      :dataset-002 ,
-                      :dataset-003 ,
-                      :dataset-004 ;
-         
-         dct:publisher :iNovex ;
-         
-         foaf:homepage <http://matonto.org/matwiki/index.php/Catalog> ;
-         
-         dcat:themeTaxonomy :MATONTO_1 ;
-         
-         .
-
-
-###  http://matonto.org/ontologies/matonto-catalog#dataset-000
-
-:dataset-000 rdf:type owl:NamedIndividual ,
-                      dcat:Dataset ;
-             
-             rdfs:label "MatOnto Dataset - Stardog:MatCatalog" ;
-             
-             dct:modified "2014-06-04"^^xsd:date ;
-             
-             dct:issued "2014-06-04"^^xsd:date ;
-             
-             dcat:keyword "MatOnto" ,
-                          "materials" ,
-                          "science",
-                          "DCAT",
-                          "dataset",
-						  "catalog" ;
-             
-             dct:title "Stardog:MatCatalog" ;
-                          
-			 dcat:theme :MATONTO_106 ;
-                          
-		     dct:subject <http://dbpedia.org/resource/Materials_Science> ;
-             
-             dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
-             
-             dcat:distribution :dataset-000-ttl-001 ;
-             
-             dct:publisher :iNovex ;
-             
-             dcat:contactPoint <http://matonto.org/matwiki/index.php/Contact> ;
-             
-             dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
-
-
-
-###  http://matonto.org/ontologies/matonto-catalog#dataset-000-ttl-001
-
-:dataset-000-ttl-001 rdf:type owl:NamedIndividual ,
-                              dcat:Distribution ;
-                     
-                     rdfs:label "MatOnto Dataset Distribution - Stardog:MatCatalog" ;
-                     
-                     dcat:byteSize 1351467 ;
-                     
-                     dct:title "RDF/Turtle distribution of Stardog:MatCatalog" ;
-                     
-                     dcat:mediaType "application/x-turtle" ;
-                     
-                     dcat:downloadURL <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/sd-matcatalog-catalog.ttl> .
-
-
-
-
-
-
-###  http://matonto.org/ontologies/matonto-catalog#dataset-001
-
-:dataset-001 rdf:type owl:NamedIndividual ,
-                      dcat:Dataset ;
-             
-             rdfs:label "MatOnto Dataset - Stardog:MatProjRec" ;
-             
-             dct:modified "2014-05-28"^^xsd:date ;
-             
-             dct:issued "2014-05-20"^^xsd:date ;
-             
-             dcat:keyword "MaterialsProject" ,
-                          "MatOnto" ,
-                          "materials" ;
-             
-             dct:title "Stardog:MatProjRec" ;
-             
-             dcat:keyword "project" ,
-                          "science" ;
-                          
-			 dcat:theme :MATONTO_101 ;
-                          
-		     dct:subject <http://dbpedia.org/resource/Materials_Science>;
-             
-             dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
-             
-             dcat:distribution :dataset-001-ttl-001 ;
-             
-             dct:publisher :iNovex ;
-             
-             dcat:contactPoint <http://matonto.org/matwiki/index.php/Contact> ;
-             
-             dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
-
-
-
-###  http://matonto.org/ontologies/matonto-catalog#dataset-001-ttl-001
-
-:dataset-001-ttl-001 rdf:type owl:NamedIndividual ,
-                              dcat:Distribution ;
-                     
-                     rdfs:label "MatOnto Dataset Distribution - Stardog:MatProjRec" ;
-                     
-                     dcat:byteSize 1351467 ;
-                     
-                     dct:title "RDF/Turtle distribution of Stardog:MatProjRec" ;
-                     
-                     dcat:mediaType "application/x-turtle" ;
-                     
-                     dcat:downloadURL <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/sd-matprojrec-data.ttl> .
-
-
-
-###  http://matonto.org/ontologies/matonto-catalog#dataset-002
-
-:dataset-002 rdf:type owl:NamedIndividual ,
-                      dcat:Dataset ;
-             
-             rdfs:label "MatOnto Dataset - Stardog:MatOnto" ;
-             
-             dct:modified "2014-05-20"^^xsd:date ;
-             
-             dct:issued "2014-05-20"^^xsd:date ;
-             
-             dcat:keyword "MatOnto" ,
-                          "materials" ;
-             
-             dct:title "Stardog:MatOnto" ;
-             
-             dcat:keyword "science" ;
-                          
-			 dcat:theme :MATONTO_105 ;
-             
-             dct:subject <http://dbpedia.org/resource/Materials_Science>;
-             
-             dct:subject <http://dbpedia.org/resource/Category:Ontology>;
-             
-             dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
-             
-             dcat:distribution :dataset-002-ttl-001 ;
-             
-             dct:publisher :iNovex ;
-             
-             dcat:contactPoint <http://matonto.org/matwiki/index.php/Contact> ;
-             
-             dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
-
-
-
-###  http://matonto.org/ontologies/matonto-catalog#dataset-002-ttl-001
-
-:dataset-002-ttl-001 rdf:type owl:NamedIndividual ,
-                              dcat:Distribution ;
-                     
-                     rdfs:label "MatOnto Dataset Distribution - Stardog:MatOnto" ;
-                     
-                     dcat:byteSize 1189480 ;
-                     
-                     dcat:mediaType "application/x-turtle" ;
-                     
-                     dct:title "RDF/Turtle distribution of Stardog:MatOnto" ;
-                     
-                     dcat:downloadURL <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/sd-matonto-data.ttl> .
-
-
-
-###  http://matonto.org/ontologies/matonto-catalog#dataset-003
-
-:dataset-003 rdf:type owl:NamedIndividual ,
-                      dcat:Dataset ;
-             
-             rdfs:label "MatOnto Dataset - Rya:PTable" ;
-             
-             dct:modified "2014-05-20"^^xsd:date ;
-             
-             dct:issued "2014-05-20"^^xsd:date ;
-             
-             dcat:keyword "Rya" ,
-                          "periodic" ,
-                          "table" ;
-             
-             dct:title "Rya:PTable" ;
-                          
-			 dcat:theme :MATONTO_101 ;
-             
-             dct:subject <http://dbpedia.org/resource/Periodic_table>;
-             
-             dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
-             
-             dcat:distribution :dataset-003-ttl-001 ;
-             
-             dct:publisher :iNovex ;
-             
-             dcat:contactPoint <http://matonto.org/matwiki/index.php/Contact> ;
-             
-             dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
-
-
-
-###  http://matonto.org/ontologies/matonto-catalog#dataset-003-ttl-001
-
-:dataset-003-ttl-001 rdf:type owl:NamedIndividual ,
-                              dcat:Distribution ;
-                     
-                     rdfs:label "MatOnto Dataset Distribution - Rya:PTable" ;
-                     
-                     dcat:byteSize 38871 ;
-                     
-                     dcat:mediaType "application/x-turtle" ;
-                     
-                     dct:title "RDF/Turtle distribution of Rya:PTable" ;
-                     
-                     dcat:downloadURL <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/rya-ptable-data.ttl> .
-
-
-
-###  http://matonto.org/ontologies/matonto-catalog#dataset-004
-
-:dataset-004 rdf:type owl:NamedIndividual ,
-                      dcat:Dataset ;
-             
-             rdfs:label "MatOnto Dataset - D2R:SpaceGroup" ;
-             
-             dct:issued "2014-05-20"^^xsd:date ;
-             
-             dct:modified "2014-05-20"^^xsd:date ;
-             
-             dcat:keyword "D2RQ" ,
-                          "space" ,
-                          "group",
-	                      "groups" ;
-             
-             dct:title "D2R:SpaceGroup" ;
-             
-             dcat:keyword "3D" ,
-                          "crystalline" ,
-                          "D2R" ,
-                          "structure" ;
-                          
-			 dcat:theme :MATONTO_101 ;
-                          
-			 dct:subject <http://dbpedia.org/resource/Space_groups>;
-             
-             dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
-             
-             dcat:distribution :dataset-004-ttl-001 ;
-             
-             dct:publisher :iNovex ;
-             
-             dcat:contactPoint <http://matonto.org/matwiki/index.php/Contact> ;
-             
-             dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
-
-
-
-###  http://matonto.org/ontologies/matonto-catalog#dataset-004-ttl-001
-
-:dataset-004-ttl-001 rdf:type owl:NamedIndividual ,
-                              dcat:Distribution ;
-                     
-                     rdfs:label "MatOnto Dataset Distribution - D2R:SpaceGroup" ;
-                     
-                     dcat:byteSize 0 ;
-                     
-                     dcat:mediaType "application/x-turtle" ;
-                     
-                     dct:title "RDF/Turtle distribution of D2R:SpaceGroup" ;
-                     
-                     dcat:downloadURL <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/d2r-spacegroup-data.ttl> .
-
-
-
-###  http://matonto.org/ontologies/matonto-catalog#iNovex
-
-:iNovex rdf:type owl:NamedIndividual ,
-                 foaf:Organization ;
-        
-        rdfs:label "iNovex Information Systems" ;
-        
-        foaf:homepage <http://www.inovexcorp.com/> .
-
-
-
-
-###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
-
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://matonto.org/ontologies/matonto-catalog> a owl:Ontology ;
+	owl:versionInfo "1.1" ;
+	owl:versionIRI <http://matonto.org/ontologies/mat-catalog/1.1> .
+
+:MATONTO_1 a skos:ConceptScheme ;
+	rdfs:label "Classification scheme for MatOnto Dataset Catalog." ;
+	skos:prefLabel "Classification scheme for MatOnto Dataset Catalog." ;
+	dct:title "Classification scheme for MatOnto Dataset Catalog." ;
+	dct:creator :iNovex .
+
+:iNovex a owl:NamedIndividual , foaf:Organization ;
+	rdfs:label "iNovex Information Systems" ;
+	foaf:homepage <http://www.inovexcorp.com/> .
+
+:MATONTO_101 a skos:Concept ;
+	rdfs:label "Classification for a MatOnto Dataset that indicates it is a set of domain (materials science) data." , "data" ;
+	skos:prefLabel "Classification for a MatOnto Dataset that indicates it is a set of domain (materials science) data." ;
+	dct:title "Classification for a MatOnto Dataset that indicates it is a set of domain (materials science) data." ;
+	dct:creator :iNovex ;
+	skos:inScheme :MATONTO_1 .
+
+:MATONTO_102 a skos:Concept ;
+	rdfs:label "Classification for a MatOnto Dataset that indicates it is an analytic module." , "analytic" ;
+	skos:prefLabel "Classification for a MatOnto Dataset that indicates it is an analytic module." ;
+	dct:title "Classification for a MatOnto Dataset that indicates it is an analytic module." ;
+	dct:creator :iNovex ;
+	skos:inScheme :MATONTO_1 .
+
+:MATONTO_103 a skos:Concept ;
+	rdfs:label "Classification for a MatOnto Dataset that indicates it is a service module." , "service" ;
+	skos:prefLabel "Classification for a MatOnto Dataset that indicates it is a service module." ;
+	dct:title "Classification for a MatOnto Dataset that indicates it is a service module." ;
+	dct:creator :iNovex ;
+	skos:inScheme :MATONTO_1 .
+
+:MATONTO_104 a skos:Concept ;
+	rdfs:label "Classification for a MatOnto Dataset that indicates it is a SPARQL query." , "query" ;
+	skos:prefLabel "Classification for a MatOnto Dataset that indicates it is a SPARQL query." ;
+	dct:title "Classification for a MatOnto Dataset that indicates it is a SPARQL query." ;
+	dct:creator :iNovex ;
+	skos:inScheme :MATONTO_1 .
+
+:MATONTO_105 a skos:Concept ;
+	rdfs:label "Classification for a MatOnto Dataset that indicates it is a concept OWL ontology." , "ontology" ;
+	skos:prefLabel "Classification for a MatOnto Dataset that indicates it is a concept OWL ontology." ;
+	dct:title "Classification for a MatOnto Dataset that indicates it is a concept OWL ontology." ;
+	dct:creator :iNovex ;
+	skos:inScheme :MATONTO_1 .
+
+:MATONTO_106 a skos:Concept ;
+	rdfs:label "Classification for a MatOnto Dataset that indicates it is a DCAT dataset catalog." , "catalog" ;
+	skos:prefLabel "Classification for a MatOnto Dataset that indicates it is a DCAT dataset catalog." ;
+	dct:title "Classification for a MatOnto Dataset that indicates it is a DCAT dataset catalog." ;
+	dct:creator :iNovex ;
+	skos:inScheme :MATONTO_1 .
+
+:catalog a owl:NamedIndividual , dcat:Catalog ;
+	rdfs:label "MatOnto Dataset Catalog" ;
+	skos:prefLabel "MatOnto Dataset Catalog.  Includes sets of data, analytic modules, SPARQL queries, service modules, OWL concept ontologies, and other DCAT catalogs." ;
+	dct:title "MatOnto Dataset Catalog" ;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	dcat:dataset :dataset-000 , :dataset-001 , :dataset-002 , :dataset-003 , :dataset-004 , :dataset-005 ;
+	dct:publisher :iNovex ;
+	foaf:homepage <http://matonto.org/matwiki/index.php/Catalog> ;
+	dcat:themeTaxonomy :MATONTO_1 .
+
+:dataset-000 a owl:NamedIndividual , dcat:Dataset ;
+	rdfs:label "MatOnto Dataset - Stardog:MatCatalog" ;
+	dct:title "Stardog:MatCatalog" ;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	dct:publisher :iNovex ;
+	dct:modified "2014-06-04"^^xsd:date ;
+	dct:issued "2014-06-04"^^xsd:date ;
+	dcat:keyword "catalog" , "MatOnto" , "materials" , "science" , "DCAT" , "dataset" ;
+	dcat:theme :MATONTO_106 ;
+	dct:subject <http://dbpedia.org/resource/Materials_Science> ;
+	dcat:distribution :dataset-000-ttl-001 ;
+	dcat:contactPoint <http://matonto.org/matwiki/index.php/Contact> ;
+	dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+
+:dataset-001 a owl:NamedIndividual , dcat:Dataset ;
+	rdfs:label "MatOnto Dataset - Stardog:MatProjRec" ;
+	dct:title "Stardog:MatProjRec" ;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	dct:publisher :iNovex ;
+	dct:modified "2014-05-28"^^xsd:date ;
+	dct:issued "2014-05-20"^^xsd:date ;
+	dcat:keyword "MatOnto" , "materials" , "science" , "MaterialsProject" , "project" ;
+	dcat:theme :MATONTO_101 ;
+	dct:subject <http://dbpedia.org/resource/Materials_Science> ;
+	dcat:distribution :dataset-001-ttl-001 ;
+	dcat:contactPoint <http://matonto.org/matwiki/index.php/Contact> ;
+	dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+
+:dataset-002 a owl:NamedIndividual , dcat:Dataset ;
+	rdfs:label "MatOnto Dataset - Stardog:MatOnto" ;
+	dct:title "Stardog:MatOnto" ;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	dct:publisher :iNovex ;
+	dct:modified "2014-05-20"^^xsd:date ;
+	dct:issued "2014-05-20"^^xsd:date ;
+	dcat:keyword "MatOnto" , "materials" , "science" ;
+	dcat:theme :MATONTO_105 ;
+	dct:subject <http://dbpedia.org/resource/Materials_Science> , <http://dbpedia.org/resource/Category:Ontology> ;
+	dcat:distribution :dataset-002-ttl-001 ;
+	dcat:contactPoint <http://matonto.org/matwiki/index.php/Contact> ;
+	dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+
+:dataset-003 a owl:NamedIndividual , dcat:Dataset ;
+	rdfs:label "MatOnto Dataset - Rya:PTable" ;
+	dct:title "Rya:PTable" ;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	dct:publisher :iNovex ;
+	dct:modified "2014-05-20"^^xsd:date ;
+	dct:issued "2014-05-20"^^xsd:date ;
+	dcat:keyword "Rya" , "periodic" , "table" ;
+	dcat:theme :MATONTO_101 ;
+	dct:subject <http://dbpedia.org/resource/Periodic_table> ;
+	dcat:distribution :dataset-003-ttl-001 ;
+	dcat:contactPoint <http://matonto.org/matwiki/index.php/Contact> ;
+	dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+
+:dataset-004 a owl:NamedIndividual , dcat:Dataset ;
+	rdfs:label "MatOnto Dataset - D2R:SpaceGroup" ;
+	dct:title "D2R:SpaceGroup" ;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	dct:publisher :iNovex ;
+	dct:modified "2014-05-20"^^xsd:date ;
+	dct:issued "2014-05-20"^^xsd:date ;
+	dcat:keyword "D2RQ" , "space" , "group" , "groups" , "3D" , "crystalline" , "D2R" , "structure" ;
+	dcat:theme :MATONTO_101 ;
+	dct:subject <http://dbpedia.org/resource/Space_groups> ;
+	dcat:distribution :dataset-004-ttl-001 ;
+	dcat:contactPoint <http://matonto.org/matwiki/index.php/Contact> ;
+	dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+
+:dataset-000-ttl-001 a owl:NamedIndividual , dcat:Distribution ;
+	rdfs:label "MatOnto Dataset Distribution - Stardog:MatCatalog" ;
+	dct:title "RDF/Turtle distribution of Stardog:MatCatalog" ;
+	dcat:byteSize "14816"^^xsd:integer ;
+	dcat:mediaType "application/x-turtle" ;
+	dcat:downloadURL <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/sd-matcatalog-catalog.ttl> .
+
+:dataset-001-ttl-001 a owl:NamedIndividual , dcat:Distribution ;
+	rdfs:label "MatOnto Dataset Distribution - Stardog:MatProjRec" ;
+	dct:title "RDF/Turtle distribution of Stardog:MatProjRec" ;
+	dcat:byteSize "1351467"^^xsd:integer ;
+	dcat:mediaType "application/x-turtle" ;
+	dcat:downloadURL <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/sd-matprojrec-data.ttl> .
+
+:dataset-002-ttl-001 a owl:NamedIndividual , dcat:Distribution ;
+	rdfs:label "MatOnto Dataset Distribution - Stardog:MatOnto" ;
+	dct:title "RDF/Turtle distribution of Stardog:MatOnto" ;
+	dcat:byteSize "1189480"^^xsd:integer ;
+	dcat:mediaType "application/x-turtle" ;
+	dcat:downloadURL <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/sd-matonto-data.ttl> .
+
+:dataset-003-ttl-001 a owl:NamedIndividual , dcat:Distribution ;
+	rdfs:label "MatOnto Dataset Distribution - Rya:PTable" ;
+	dct:title "RDF/Turtle distribution of Rya:PTable" ;
+	dcat:byteSize "38871"^^xsd:integer ;
+	dcat:mediaType "application/x-turtle" ;
+	dcat:downloadURL <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/rya-ptable-data.ttl> .
+
+:dataset-004-ttl-001 a owl:NamedIndividual , dcat:Distribution ;
+	rdfs:label "MatOnto Dataset Distribution - D2R:SpaceGroup" ;
+	dct:title "RDF/Turtle distribution of D2R:SpaceGroup" ;
+	dcat:byteSize "0"^^xsd:integer ;
+	dcat:mediaType "application/x-turtle" ;
+	dcat:downloadURL <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/d2r-spacegroup-data.ttl> .
+
+:dataset-005 a owl:NamedIndividual , dcat:Dataset ;
+	rdfs:label "MatOnto Dataset - Widget:Sgvizler" ;
+	dct:title "Widget:Sgvizler" ;
+	dct:publisher :iNovex ;
+	dct:modified "2014-06-04"^^xsd:date ;
+	dct:issued "2014-06-04"^^xsd:date ;
+	dcat:keyword "analytic" , "vizualization" , "ozone" , "widget" , "application" , "web" ;
+	dcat:theme :MATONTO_102 ;
+	dct:subject <http://dbpedia.org/resource/Visualisation> ;
+	dcat:distribution :dataset-005-ttl-001 ;
+	dcat:contactPoint <http://matonto.org/matwiki/index.php/Contact> ;
+	dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+
+:dataset-005-ttl-001 a owl:NamedIndividual , dcat:Distribution ;
+	rdfs:label "MatOnto Dataset Distribution - Widget:Sgvizler" ;
+	dct:title "Web Application Archive distribution of Sgvizler analytic" ;
+	dcat:byteSize "46486"^^xsd:integer ;
+	dcat:mediaType "application/java-archive" ;
+	dcat:downloadURL <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/analytic-widget-sgvizler.war> .
