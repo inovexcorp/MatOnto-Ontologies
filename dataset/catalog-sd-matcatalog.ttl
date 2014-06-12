@@ -195,6 +195,26 @@
 	dcat:distribution :dataset-005-ttl-001 ;
 	dcat:contactPoint <http://matonto.org/matwiki/index.php/Contact> ;
 	dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+	
+:dataset-006 a owl:NamedIndividual , dcat:Dataset ;
+	rdfs:label "MatOnto Dataset - Instance Count Union Query" ;
+	dct:title "Instance Counte Union Query" ;
+	dct:publisher :iNovex ;
+	dct:modified "2014-06-12"^^xsd:date ;
+	dct:issued "2014-06-12"^^xsd:data ;
+	dcat:keyword "query" , "instance" , "count" , "union" ;
+	dcat:theme :MATONTO_104 ;
+	dct:subject <http://dbpedia.org/page/Query_string> ;
+	dcat:distribution :dataset-006-rq-001 ;
+	dcat:contactPoint <http://matonto.org/matwiki/index.php/Contact> ;
+	dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-Q> .
+	
+:dataset-006-rq-001 a owl:NamedIndividual , dcat:Distribution ;
+	rdfs:label "MatOnto Dataset Distribution - Instance Count Union Query" ;
+	dct:title "SPARQL distribution of Instance Count Union Query" ;
+	dcat:byteSize "278"^^xsd:integer ;
+	dcat:mediaType "application/sparql-query" ;
+	dcat:downloadURL <https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/query-instanceCount.rq> .
 
 :dataset-005-ttl-001 a owl:NamedIndividual , dcat:Distribution ;
 	rdfs:label "MatOnto Dataset Distribution - Widget:Sgvizler" ;
