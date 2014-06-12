@@ -1,0 +1,11 @@
+SELECT ?class (count(?instance) AS ?number) 
+WHERE{  {SERVICE <http://10.10.1.184:8080/d2rq/sparql> { 
+        ?instance a ?class .
+} } 
+UNION{SERVICE <http://10.10.1.176:5820/MatProjRec/query/> { 
+        ?instance a ?class .
+} } 
+  
+}
+GROUP BY ?class
+ORDER BY ?class
