@@ -1,0 +1,1525 @@
+@prefix : <http://ontology.dumontierlab.com/unit-individuals> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dl: <http://ontology.dumontierlab.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://ontology.dumontierlab.com/unit-individuals> .
+
+<http://ontology.dumontierlab.com/unit-individuals> rdf:type owl:Ontology ;
+                                                    
+                                                    owl:versionInfo "2.0"^^xsd:string ;
+                                                    
+                                                    dc:date "2007-10-01"^^xsd:date ;
+                                                    
+                                                    dc:publisher "Dumontier Lab"^^xsd:string ;
+                                                    
+                                                    dc:creator "Michel Dumontier"^^xsd:string ;
+                                                    
+                                                    dc:description "This ontology is populated with SI unit instances."^^xsd:string ;
+                                                    
+                                                    dc:title "Unit Ontology (individuals)"^^xsd:string ;
+                                                    
+                                                    dc:format "application/rdf+xml"^^xsd:string ;
+                                                    
+                                                    dc:language "en"^^xsd:string ;
+                                                    
+                                                    owl:imports <http://matonto.org/ontologies/matonto> ,
+                                                                dl:annotation ,
+                                                                dl:atom-complex-atomic-number ,
+                                                                dl:atom-complex-disjoint ,
+                                                                dl:bfo ,
+                                                                dl:bro ,
+                                                                dl:chemistry-complex ,
+                                                                dl:molecule-complex ,
+                                                                dl:nulo ,
+                                                                dl:organic-compound-complex ,
+                                                                dl:organic-functional-group-complex ,
+                                                                dl:periodic-table-complex ,
+                                                                dl:property-complex ,
+                                                                dl:unit-complex ,
+                                                                <http://ontology.dumontierlab.com/unit-individuals> .
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://ontology.dumontierlab.com/bit
+
+dl:bit rdf:type dl:InformationUnit ,
+                owl:NamedIndividual ;
+       
+       rdfs:label "bit"^^xsd:string ;
+       
+       rdfs:comment "The bit is a binary digit holding the values of 0 or 1."^^xsd:string .
+
+
+
+###  http://ontology.dumontierlab.com/byte
+
+dl:byte rdf:type dl:InformationUnit ,
+                 owl:NamedIndividual ;
+        
+        rdfs:label "byte"^^xsd:string ;
+        
+        dl:isScaledBy "8.0"^^xsd:double ;
+        
+        rdfs:comment "The byte is an information unit comprising of 8 bits."^^xsd:string ;
+        
+        dl:derivesFrom dl:bit .
+
+
+
+###  http://ontology.dumontierlab.com/degree
+
+dl:degree rdf:type dl:PlaneAngleUnit ,
+                   owl:NamedIndividual ;
+          
+          rdfs:label "'degree"^^xsd:string ;
+          
+          rdfs:comment "The degree is a plane angle unit."^^xsd:string ;
+          
+          dl:derivesFrom dl:unit_meter ,
+                         dl:unit_meter_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_ampere
+
+dl:unit_ampere rdf:type dl:ElectricCurrentUnit ,
+                        owl:NamedIndividual ,
+                        owl:Thing ;
+               
+               rdfs:label "ampere"^^xsd:string ;
+               
+               rdfs:comment "The ampere (symbol: A) is an SI base unit of electric current, or amount of electric charge per second."^^xsd:string .
+
+
+
+###  http://ontology.dumontierlab.com/unit_ampere_-1
+
+dl:unit_ampere_-1 rdf:type dl:Unit ,
+                           owl:NamedIndividual ;
+                  
+                  rdfs:label "per ampere"^^xsd:string ;
+                  
+                  dl:isRaisedToPowerOf "-1.0"^^xsd:double ;
+                  
+                  dl:derivesFrom dl:unit_ampere .
+
+
+
+###  http://ontology.dumontierlab.com/unit_ampere_-2
+
+dl:unit_ampere_-2 rdf:type dl:Unit ,
+                           owl:NamedIndividual ;
+                  
+                  rdfs:label "per ampere squared"^^xsd:string ;
+                  
+                  dl:isRaisedToPowerOf "-2.0"^^xsd:double ;
+                  
+                  dl:derivesFrom dl:unit_ampere .
+
+
+
+###  http://ontology.dumontierlab.com/unit_ampere_1_meter_-1
+
+dl:unit_ampere_1_meter_-1 rdf:type dl:MagneticFieldStrengthUnit ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "ampere per meter"^^xsd:string ;
+                          
+                          rdfs:comment "Ampere per meter is the SI derived unit for magnetic field strength."^^xsd:string ;
+                          
+                          dl:derivesFrom dl:unit_ampere ,
+                                         dl:unit_meter_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_ampere_1_meter_-2
+
+dl:unit_ampere_1_meter_-2 rdf:type dl:Unit ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "ampere per square meter"^^xsd:string ;
+                          
+                          rdfs:comment "The ampere per square meter is the SI derived unit for current density."^^xsd:string ;
+                          
+                          dl:derivesFrom dl:unit_ampere ,
+                                         dl:unit_meter_-2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_ampere_2
+
+dl:unit_ampere_2 rdf:type dl:Unit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "ampere squared"^^xsd:string ;
+                 
+                 dl:isRaisedToPowerOf "2.0"^^xsd:double ;
+                 
+                 dl:derivesFrom dl:unit_ampere .
+
+
+
+###  http://ontology.dumontierlab.com/unit_becquerel
+
+dl:unit_becquerel rdf:type dl:RadioactivityUnit ,
+                           owl:NamedIndividual ,
+                           owl:Thing ;
+                  
+                  rdfs:label "becquerel"^^xsd:string ;
+                  
+                  rdfs:comment "The becquerel (symbol: Bq) is the SI derived unit of radioactivity."^^xsd:string ;
+                  
+                  dl:derivesFrom dl:unit_second_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_candela
+
+dl:unit_candela rdf:type dl:LuminousIntensityUnit ,
+                         owl:NamedIndividual ;
+                
+                rdfs:label "candela"^^xsd:string ;
+                
+                rdfs:comment "The candela (symbol: Cd) is the SI unit of luminous intensity. It is defined as the luminous intensity, in a given direction, of a source that emits monochromatic radiation of frequency 540×1012 hertz and that has a radiant intensity in that direction of 1/683 watt per steradian."^^xsd:string .
+
+
+
+###  http://ontology.dumontierlab.com/unit_candela_1_meter_-2
+
+dl:unit_candela_1_meter_-2 rdf:type dl:LuminanceUnit ,
+                                    owl:NamedIndividual ;
+                           
+                           rdfs:label "candela per square meter"^^xsd:string ;
+                           
+                           rdfs:comment "The candela per square meter is the SI derived unit for luminance."^^xsd:string ;
+                           
+                           dl:derivesFrom dl:unit_candela ,
+                                          dl:unit_meter_-2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_celcius
+
+dl:unit_celcius rdf:type dl:TemperatureUnit ,
+                         owl:NamedIndividual ;
+                
+                rdfs:label "celcius"^^xsd:string ;
+                
+                dl:isShiftedBy "273.0"^^xsd:double ;
+                
+                rdfs:comment "The celcius (symbol: C) is a unit of temperature."^^xsd:string ;
+                
+                dl:derivesFrom dl:unit_kelvin .
+
+
+
+###  http://ontology.dumontierlab.com/unit_coulomb
+
+dl:unit_coulomb rdf:type dl:ElectricChargeUnit ,
+                         owl:NamedIndividual ;
+                
+                rdfs:label "coulomb"^^xsd:string ;
+                
+                rdfs:comment "The coulomb is a unit of electric charge."^^xsd:string ;
+                
+                owl:sameAs dl:unit_second_1_ampere_1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_coulomb_1_kilogram_-1
+
+dl:unit_coulomb_1_kilogram_-1 rdf:type dl:ExposureUnit ,
+                                       owl:NamedIndividual ;
+                              
+                              rdfs:label "coulomb per kilogram"^^xsd:string ;
+                              
+                              rdfs:comment "The coulomb per kilogram is the SI derived unit for exposure to x and gamma rays."^^xsd:string ;
+                              
+                              dl:derivesFrom dl:unit_coulomb ,
+                                             dl:unit_kilogram_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_coulomb_1_meter_-2
+
+dl:unit_coulomb_1_meter_-2 rdf:type dl:ElectricFluxDensityUnit ,
+                                    owl:NamedIndividual ;
+                           
+                           rdfs:label "coulomb per square meter"^^xsd:string ;
+                           
+                           rdfs:comment "The coulomb per square meter is the SI derived unit for electric charge density."^^xsd:string ;
+                           
+                           dl:derivesFrom dl:unit_coulomb ,
+                                          dl:unit_meter_-2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_coulomb_1_meter_-3
+
+dl:unit_coulomb_1_meter_-3 rdf:type dl:ElectricChargeDensityUnit ,
+                                    owl:NamedIndividual ;
+                           
+                           rdfs:label "coulomb per cubic meter"^^xsd:string ;
+                           
+                           rdfs:comment "The coulomb per cubic meter is the SI derived unit for electric charge density."^^xsd:string ;
+                           
+                           dl:derivesFrom dl:unit_coulomb ,
+                                          dl:unit_meter_-3 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_dalton
+
+dl:unit_dalton rdf:type dl:MassUnit ,
+                        owl:NamedIndividual ;
+               
+               rdfs:label "dalton"^^xsd:string ;
+               
+               rdfs:comment "A unit of molecular mass approximately equal to the mass of a hydrogen atom."^^xsd:string .
+
+
+
+###  http://ontology.dumontierlab.com/unit_fahrenheit
+
+dl:unit_fahrenheit rdf:type dl:TemperatureUnit ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "fahrenheit"^^xsd:string ;
+                   
+                   rdfs:comment "The fahrenheit (symbol: F) is a unit of temperature."^^xsd:string ;
+                   
+                   dl:derivesFrom dl:unit_kelvin .
+
+
+
+###  http://ontology.dumontierlab.com/unit_farad
+
+dl:unit_farad rdf:type dl:CapacitanceUnit ,
+                       owl:NamedIndividual ;
+              
+              rdfs:label "farad"^^xsd:string ;
+              
+              rdfs:comment "The farad (symbol: F) is a unit of capacitance."^^xsd:string ;
+              
+              dl:derivesFrom dl:unit_coulomb ;
+              
+              owl:sameAs dl:unit_kilogram_-1_meter_-2_second_4_ampere_2 ;
+              
+              dl:derivesFrom dl:unit_volt_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_farad_1_meter_-1
+
+dl:unit_farad_1_meter_-1 rdf:type dl:PermittivityUnit ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "farad per meter"^^xsd:string ;
+                         
+                         rdfs:comment "The farad per meter is the SI derived unit for permittivity."^^xsd:string ;
+                         
+                         dl:derivesFrom dl:unit_farad ,
+                                        dl:unit_meter_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_gray
+
+dl:unit_gray rdf:type dl:AbsorbedDoseUnit ,
+                      owl:NamedIndividual ;
+             
+             rdfs:label "gray"^^xsd:string ;
+             
+             rdfs:comment "The gray (symbol:Gy) is a unit of absorbed dose."^^xsd:string ;
+             
+             dl:derivesFrom dl:unit_joule ,
+                            dl:unit_kilogram_-1 ;
+             
+             owl:sameAs dl:unit_meter_2_second_-2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_gray_1_second_-1
+
+dl:unit_gray_1_second_-1 rdf:type dl:AbsorbedDoseRateUnit ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "gray per second"^^xsd:string ;
+                         
+                         rdfs:comment "The gray per second is the SI derived unit for absorbed dose rate."^^xsd:string ;
+                         
+                         dl:derivesFrom dl:unit_gray ,
+                                        dl:unit_second_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_henry
+
+dl:unit_henry rdf:type dl:InductanceUnit ,
+                       owl:NamedIndividual ;
+              
+              rdfs:label "henry"^^xsd:string ;
+              
+              rdfs:comment "The henry (symbol: H) is a unit of inductance."^^xsd:string ;
+              
+              dl:derivesFrom dl:unit_ampere_-1 ;
+              
+              owl:sameAs dl:unit_kilogram_1_meter_2_second_-2_ampere_-2 ;
+              
+              dl:derivesFrom dl:unit_weber .
+
+
+
+###  http://ontology.dumontierlab.com/unit_henry_1_meter_-1
+
+dl:unit_henry_1_meter_-1 rdf:type dl:PermeabilityUnit ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "henry per meter"^^xsd:string ;
+                         
+                         rdfs:comment "The henry per meter is the SI derived unit for permeability."^^xsd:string ;
+                         
+                         dl:derivesFrom dl:unit_henry ,
+                                        dl:unit_meter_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_hertz
+
+dl:unit_hertz rdf:type dl:FrequencyUnit ,
+                       owl:NamedIndividual ;
+              
+              rdfs:label "hertz"^^xsd:string ;
+              
+              dl:isRaisedToPowerOf "-1.0"^^xsd:double ;
+              
+              rdfs:comment "The Hertz (symbol: Hz) is an SI derived unit for frequency."^^xsd:string ;
+              
+              dl:derivesFrom dl:unit_second ;
+              
+              owl:sameAs dl:unit_second_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_joule
+
+dl:unit_joule rdf:type dl:EnergyUnit ,
+                       owl:NamedIndividual ;
+              
+              rdfs:label "joule"^^xsd:string ;
+              
+              rdfs:comment "The joule is a unit of energy."^^xsd:string ;
+              
+              owl:sameAs dl:unit_kilogram_1_meter_2_second_-2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_joule_1_kelvin_-1
+
+dl:unit_joule_1_kelvin_-1 rdf:type dl:EntropyUnit ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "joule per kelvin"^^xsd:string ;
+                          
+                          rdfs:comment "The joule per kelvin is the SI derived unit for entropy or heat capacity."^^xsd:string ;
+                          
+                          dl:derivesFrom dl:unit_joule ,
+                                         dl:unit_kelvin_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_joule_1_kilogram_-1
+
+dl:unit_joule_1_kilogram_-1 rdf:type dl:SpecificEnergyUnit ,
+                                     owl:NamedIndividual ;
+                            
+                            rdfs:label "joule per kilogram"^^xsd:string ;
+                            
+                            rdfs:comment "The joule per kilogram is the SI derived unit for specific energy."^^xsd:string ;
+                            
+                            dl:derivesFrom dl:unit_joule ,
+                                           dl:unit_kilogram_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_joule_1_kilogram_-1_kelvin_-1
+
+dl:unit_joule_1_kilogram_-1_kelvin_-1 rdf:type dl:SpecificEntropyUnit ,
+                                               owl:NamedIndividual ;
+                                      
+                                      rdfs:label "joule per kilogram per kelvin"^^xsd:string ;
+                                      
+                                      rdfs:comment "The joule per kilogram per kelvin is the SI derived unit for specific entropy or specific heat capacity."^^xsd:string ;
+                                      
+                                      dl:derivesFrom dl:unit_joule ,
+                                                     dl:unit_kelvin_-1 ,
+                                                     dl:unit_kilogram_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_joule_1_meter_-3
+
+dl:unit_joule_1_meter_-3 rdf:type dl:EnergyDensityUnit ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "joule per cubic meter"^^xsd:string ;
+                         
+                         rdfs:comment "The joule per cubic meter is the SI derived unit for energy density."^^xsd:string ;
+                         
+                         dl:derivesFrom dl:unit_joule ,
+                                        dl:unit_meter_-3 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_joule_1_mole_-1
+
+dl:unit_joule_1_mole_-1 rdf:type dl:MolarEnergyUnit ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "joule per mole"^^xsd:string ;
+                        
+                        rdfs:comment "The joule per mole is the SI derived unit for molar energy."^^xsd:string ;
+                        
+                        dl:derivesFrom dl:unit_joule ,
+                                       dl:unit_mole_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_joule_1_mole_-1_kelvin_-1
+
+dl:unit_joule_1_mole_-1_kelvin_-1 rdf:type dl:MolarEntropyUnit ,
+                                           owl:NamedIndividual ;
+                                  
+                                  rdfs:label "joule per mole per kelvin"^^xsd:string ;
+                                  
+                                  rdfs:comment "The joule per mole per kelvin is the SI derived unit for molar entropy."^^xsd:string ;
+                                  
+                                  dl:derivesFrom dl:unit_joule ,
+                                                 dl:unit_kelvin_-1 ,
+                                                 dl:unit_mole_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_katal
+
+dl:unit_katal rdf:type dl:CatalyticActivityUnit ,
+                       owl:NamedIndividual ;
+              
+              rdfs:label "katal"^^xsd:string ;
+              
+              rdfs:comment "The katal (symbol: kat) is a unit of catalytic activity."^^xsd:string ;
+              
+              owl:sameAs dl:unit_mole_1_second_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_katal_1_meter_-3
+
+dl:unit_katal_1_meter_-3 rdf:type dl:CatalyticConcentrationUnit ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "katal per cubic meter"^^xsd:string ;
+                         
+                         rdfs:comment "The katal per cubic meter is the SI derived unit for catalytic concentration."^^xsd:string ;
+                         
+                         dl:derivesFrom dl:unit_katal ,
+                                        dl:unit_meter_-3 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kelvin
+
+dl:unit_kelvin rdf:type dl:TemperatureUnit ,
+                        owl:NamedIndividual ;
+               
+               rdfs:label "kelvin"^^xsd:string ;
+               
+               rdfs:comment "The kelvin (symbol: K) is an SI base unit increment of temperature. The Kelvin scale is a thermodynamic (absolute) temperature scale where absolute zero—the coldest possible temperature—is defined as being equivalent to zero kelvin (0 K)."^^xsd:string .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kelvin_-1
+
+dl:unit_kelvin_-1 rdf:type dl:Unit ,
+                           owl:NamedIndividual ;
+                  
+                  dl:isRaisedToPowerOf "-1.0"^^xsd:double ;
+                  
+                  dl:derivesFrom dl:unit_kelvin .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram
+
+dl:unit_kilogram rdf:type dl:MassUnit ,
+                          owl:NamedIndividual ,
+                          owl:Thing ;
+                 
+                 rdfs:label "kilogram"^^xsd:string ;
+                 
+                 dl:isScaledBy "10000.0"^^xsd:double ;
+                 
+                 rdfs:comment "The kilogram (symbol: kg) is the SI base unit of mass. It is defined as being equal to the mass of the international prototype of the kilogram."^^xsd:string .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_-1
+
+dl:unit_kilogram_-1 rdf:type dl:Unit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "per kilogram"^^xsd:string ;
+                    
+                    dl:isRaisedToPowerOf "-1.0"^^xsd:double ;
+                    
+                    dl:derivesFrom dl:unit_kilogram .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_-1_meter_-2_second_3_ampere_2
+
+dl:unit_kilogram_-1_meter_-2_second_3_ampere_2 rdf:type dl:ElectricConductionUnit ,
+                                                        owl:NamedIndividual ;
+                                               
+                                               rdfs:label "m-2·kg-1·s3·A2"^^xsd:string ;
+                                               
+                                               rdfs:comment "The m-2·kg-1·s3·A2 is the SI derived unit for electric conductance."^^xsd:string ;
+                                               
+                                               dl:derivesFrom dl:unit_ampere_2 ,
+                                                              dl:unit_kilogram_-1 ,
+                                                              dl:unit_meter_-2 ,
+                                                              dl:unit_second_3 ;
+                                               
+                                               owl:sameAs dl:unit_siemens .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_-1_meter_-2_second_4_ampere_2
+
+dl:unit_kilogram_-1_meter_-2_second_4_ampere_2 rdf:type dl:CapacitanceUnit ,
+                                                        owl:NamedIndividual ;
+                                               
+                                               rdfs:label "m-2·kg-1·s4·A2"^^xsd:string ;
+                                               
+                                               rdfs:comment "The m-2·kg-1·s4·A2 is the SI derived unit for capacitance."^^xsd:string ;
+                                               
+                                               dl:derivesFrom dl:unit_ampere_2 ,
+                                                              dl:unit_kilogram_-1 ,
+                                                              dl:unit_meter_-2 ,
+                                                              dl:unit_second_4 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_-2
+
+dl:unit_kilogram_-2 rdf:type dl:Unit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "per kilogram squared"^^xsd:string ;
+                    
+                    dl:isRaisedToPowerOf "-2.0"^^xsd:double ;
+                    
+                    dl:derivesFrom dl:unit_kilogram .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_-3
+
+dl:unit_kilogram_-3 rdf:type dl:Unit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "per kilogram cubed"^^xsd:string ;
+                    
+                    dl:isRaisedToPowerOf "-3.0"^^xsd:double ;
+                    
+                    dl:derivesFrom dl:unit_kilogram .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_1_kilogram_-1
+
+dl:unit_kilogram_1_kilogram_-1 rdf:type dl:Unit ,
+                                        owl:NamedIndividual ;
+                               
+                               rdfs:label "kilogram per kilogram"^^xsd:string ;
+                               
+                               rdfs:comment "The kilogram per kilogram is the SI derived unit for mass fraction."^^xsd:string ;
+                               
+                               dl:derivesFrom dl:unit_kilogram ,
+                                              dl:unit_kilogram_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_1_meter_-1_second_-2
+
+dl:unit_kilogram_1_meter_-1_second_-2 rdf:type dl:PressureUnit ,
+                                               owl:NamedIndividual ;
+                                      
+                                      rdfs:label "kilogram per meter per second squared"^^xsd:string ;
+                                      
+                                      rdfs:comment "The kilogram per meter per second squared is the SI derived unit for pressure."^^xsd:string ;
+                                      
+                                      dl:derivesFrom dl:unit_kilogram ,
+                                                     dl:unit_meter_-1 ;
+                                      
+                                      owl:sameAs dl:unit_pascal ;
+                                      
+                                      dl:derivesFrom dl:unit_second_-2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_1_meter_-3
+
+dl:unit_kilogram_1_meter_-3 rdf:type dl:VolumeDensityUnit ,
+                                     owl:NamedIndividual ;
+                            
+                            rdfs:label "kilogram per cubic meter"^^xsd:string ;
+                            
+                            rdfs:comment "The kilogram per cubic meter is the SI derived unit for density."^^xsd:string ;
+                            
+                            dl:derivesFrom dl:unit_kilogram ,
+                                           dl:unit_meter_-3 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_1_meter_2_second_-2
+
+dl:unit_kilogram_1_meter_2_second_-2 rdf:type dl:EnergyUnit ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "kilogram squared meter per second squared"^^xsd:string ;
+                                     
+                                     rdfs:comment "The  m2·kg·s-2 is the SI derived unit for energy."^^xsd:string ;
+                                     
+                                     dl:derivesFrom dl:unit_kilogram ,
+                                                    dl:unit_meter_2 ,
+                                                    dl:unit_second_-2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_1_meter_2_second_-2_ampere_-1
+
+dl:unit_kilogram_1_meter_2_second_-2_ampere_-1 rdf:type dl:MagneticFluxUnit ,
+                                                        owl:NamedIndividual ;
+                                               
+                                               rdfs:label "m2·kg·s-2·A-1"^^xsd:string ;
+                                               
+                                               rdfs:comment "The m2·kg·s-2·A-1 is the SI derived unit for magnetic flux."^^xsd:string ;
+                                               
+                                               dl:derivesFrom dl:unit_ampere_-1 ,
+                                                              dl:unit_kilogram ,
+                                                              dl:unit_meter_2 ,
+                                                              dl:unit_second_-2 ;
+                                               
+                                               owl:sameAs dl:unit_weber .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_1_meter_2_second_-2_ampere_-2
+
+dl:unit_kilogram_1_meter_2_second_-2_ampere_-2 rdf:type dl:InductanceUnit ,
+                                                        owl:NamedIndividual ;
+                                               
+                                               rdfs:label "m2·kg·s-2·A-2"^^xsd:string ;
+                                               
+                                               rdfs:comment "The m2·kg·s-2·A-2 is the SI derived unit for inductance."^^xsd:string ;
+                                               
+                                               dl:derivesFrom dl:unit_ampere_-2 ,
+                                                              dl:unit_kilogram ,
+                                                              dl:unit_meter_2 ,
+                                                              dl:unit_second_-2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_1_meter_2_second_-3
+
+dl:unit_kilogram_1_meter_2_second_-3 rdf:type dl:PowerUnit ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "kilogram meter squared per second cubed"^^xsd:string ;
+                                     
+                                     rdfs:comment "The m2·kg·s-3 is the SI derived unit for power."^^xsd:string ;
+                                     
+                                     dl:derivesFrom dl:unit_kilogram ,
+                                                    dl:unit_meter_2 ,
+                                                    dl:unit_second_-3 ;
+                                     
+                                     owl:sameAs dl:unit_watt .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_1_meter_2_second_-3_ampere_-1
+
+dl:unit_kilogram_1_meter_2_second_-3_ampere_-1 rdf:type dl:PotentialDifferenceUnit ,
+                                                        owl:NamedIndividual ;
+                                               
+                                               rdfs:label "m2·kg·s-3·A-1"^^xsd:string ;
+                                               
+                                               rdfs:comment "The m2·kg·s-3·A-1 is the SI derived unit for potential difference."^^xsd:string ;
+                                               
+                                               dl:derivesFrom dl:unit_ampere_-1 ,
+                                                              dl:unit_kilogram ,
+                                                              dl:unit_meter_2 ,
+                                                              dl:unit_second_-3 ;
+                                               
+                                               owl:sameAs dl:unit_volt .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_1_meter_2_second_-3_ampere_-2
+
+dl:unit_kilogram_1_meter_2_second_-3_ampere_-2 rdf:type dl:ElectricResistanceUnit ,
+                                                        owl:NamedIndividual ;
+                                               
+                                               rdfs:label "m2·kg·s-3·A-2"^^xsd:string ;
+                                               
+                                               rdfs:comment "The m2·kg·s-3·A-2 is the SI derived unit for electric resistance."^^xsd:string ;
+                                               
+                                               dl:derivesFrom dl:unit_ampere_-2 ,
+                                                              dl:unit_kilogram ,
+                                                              dl:unit_meter_2 ;
+                                               
+                                               owl:sameAs dl:unit_ohm ;
+                                               
+                                               dl:derivesFrom dl:unit_second_-3 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_kilogram_1_second_-2_ampere_-1
+
+dl:unit_kilogram_1_second_-2_ampere_-1 rdf:type dl:MagneticFluxDensityUnit ,
+                                                owl:NamedIndividual ;
+                                       
+                                       rdfs:label "kg·s-2·A-1"^^xsd:string ;
+                                       
+                                       rdfs:comment "The kg·s-2·A-1 is the SI derived unit for magnetic flux density."^^xsd:string ;
+                                       
+                                       dl:derivesFrom dl:unit_ampere_-1 ,
+                                                      dl:unit_kilogram ,
+                                                      dl:unit_second_-2 ;
+                                       
+                                       owl:sameAs dl:unit_tesla .
+
+
+
+###  http://ontology.dumontierlab.com/unit_lumen
+
+dl:unit_lumen rdf:type dl:LuminousFluxUnit ,
+                       owl:NamedIndividual ;
+              
+              rdfs:label "lumen"^^xsd:string ;
+              
+              rdfs:comment "The lumen (symbol:lm) is a unit of luminous flux."^^xsd:string ;
+              
+              dl:derivesFrom dl:unit_candela ,
+                             dl:unit_steradian .
+
+
+
+###  http://ontology.dumontierlab.com/unit_lux
+
+dl:unit_lux rdf:type dl:IlluminanceUnit ,
+                     owl:NamedIndividual ;
+            
+            rdfs:label "lux"^^xsd:string ;
+            
+            rdfs:comment "The lux (symbol: lx) is a unit of illuminance."^^xsd:string ;
+            
+            dl:derivesFrom dl:unit_lumen ,
+                           dl:unit_meter_-2 ;
+            
+            owl:sameAs dl:unit_meter_2_meter_-4_candela_1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter
+
+dl:unit_meter rdf:type dl:LengthUnit ,
+                       owl:NamedIndividual ;
+              
+              rdfs:label "meter"^^xsd:string ;
+              
+              rdfs:comment "The meter (symbol m) is an SI unit of length. It is defined as the distance travelled by light in absolute vacuum in 1/299,792,458 of a second."^^xsd:string .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_-1
+
+dl:unit_meter_-1 rdf:type dl:Unit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "per meter"^^xsd:string ;
+                 
+                 dl:isRaisedToPowerOf "-1.0"^^xsd:double ;
+                 
+                 dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_-2
+
+dl:unit_meter_-2 rdf:type dl:Unit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "per squared meter"^^xsd:string ;
+                 
+                 dl:isRaisedToPowerOf "-2.0"^^xsd:double ;
+                 
+                 dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_-3
+
+dl:unit_meter_-3 rdf:type dl:Unit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "per cubic meter"^^xsd:string ;
+                 
+                 dl:isRaisedToPowerOf "-3.0"^^xsd:double ;
+                 
+                 dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_-4
+
+dl:unit_meter_-4 rdf:type dl:Unit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "per meter power 4"^^xsd:string ;
+                 
+                 dl:isRaisedToPowerOf "-4.0"^^xsd:double ;
+                 
+                 dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_1_kilogram_1_second_-2
+
+dl:unit_meter_1_kilogram_1_second_-2 rdf:type dl:ForceUnit ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "meter kilogram per second squared"^^xsd:string ;
+                                     
+                                     rdfs:comment "The meter kilogram per second squared is the SI derived unit for force."^^xsd:string ;
+                                     
+                                     dl:derivesFrom dl:unit_kilogram ,
+                                                    dl:unit_meter ;
+                                     
+                                     owl:sameAs dl:unit_newton ;
+                                     
+                                     dl:derivesFrom dl:unit_second_-2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_1_second_-1
+
+dl:unit_meter_1_second_-1 rdf:type dl:VelocityUnit ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "meter per second"^^xsd:string ;
+                          
+                          rdfs:comment "The meter per second is the SI derived unit for speed or velocity."^^xsd:string ;
+                          
+                          dl:derivesFrom dl:unit_meter ,
+                                         dl:unit_second_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_1_second_-2
+
+dl:unit_meter_1_second_-2 rdf:type dl:AccelerationUnit ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "meter per second squared"^^xsd:string ;
+                          
+                          rdfs:comment "The meter per second squared is the SI derived unit for acceleration."^^xsd:string ;
+                          
+                          dl:derivesFrom dl:unit_meter ,
+                                         dl:unit_second_-2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_2
+
+dl:unit_meter_2 rdf:type dl:AreaUnit ,
+                         owl:NamedIndividual ;
+                
+                rdfs:label "meter squared"^^xsd:string ;
+                
+                dl:isRaisedToPowerOf "2.0"^^xsd:double ;
+                
+                rdfs:comment "The squared meter is an SI derived unit for area."^^xsd:string ;
+                
+                dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_2_meter_-2
+
+dl:unit_meter_2_meter_-2 rdf:type dl:SolidAngleUnit ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "m2·m-2"^^xsd:string ;
+                         
+                         rdfs:comment "The m2·m-2 is the SI derived unit for solid angle."^^xsd:string ;
+                         
+                         dl:derivesFrom dl:unit_meter_-2 ,
+                                        dl:unit_meter_2 ;
+                         
+                         owl:sameAs dl:unit_steradian .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_2_meter_-2_candela_1
+
+dl:unit_meter_2_meter_-2_candela_1 rdf:type dl:LuminousFluxUnit ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "m2·m-2·cd"^^xsd:string ;
+                                   
+                                   rdfs:comment "The m2·m-2·cd is the SI derived unit for luminous flux."^^xsd:string ;
+                                   
+                                   dl:derivesFrom dl:unit_candela ,
+                                                  dl:unit_meter_2_meter_-2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_2_meter_-4_candela_1
+
+dl:unit_meter_2_meter_-4_candela_1 rdf:type dl:IlluminanceUnit ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "m2·m-4·cd"^^xsd:string ;
+                                   
+                                   rdfs:comment "The m2·m-4·cd is the SI derived unit of illuminance."^^xsd:string ;
+                                   
+                                   dl:derivesFrom dl:unit_candela ,
+                                                  dl:unit_meter_-4 ,
+                                                  dl:unit_meter_2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_2_second_-2
+
+dl:unit_meter_2_second_-2 rdf:type dl:AbsorbedDoseUnit ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "m2·s-2"^^xsd:string ;
+                          
+                          rdfs:comment "The m2·s-2 is the SI derived unit for absorbed dose."^^xsd:string ;
+                          
+                          dl:derivesFrom dl:unit_meter_2 ,
+                                         dl:unit_second_-2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_3
+
+dl:unit_meter_3 rdf:type dl:VolumeUnit ,
+                         owl:NamedIndividual ;
+                
+                rdfs:label "cubic meter"^^xsd:string ;
+                
+                dl:isRaisedToPowerOf "3.0"^^xsd:double ;
+                
+                rdfs:comment "The cubic meter is the SI derived unit for volume."^^xsd:string ;
+                
+                dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter_3_kilogram_-1
+
+dl:unit_meter_3_kilogram_-1 rdf:type dl:SpecificVolumeUnit ,
+                                     owl:NamedIndividual ;
+                            
+                            rdfs:label "cubic meter per kilogram"^^xsd:string ;
+                            
+                            rdfs:comment "The cubic meter per kilogram is the SI derived unit for specific volume."^^xsd:string ;
+                            
+                            dl:derivesFrom dl:unit_kilogram_-1 ,
+                                           dl:unit_meter_3 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_mole
+
+dl:unit_mole rdf:type dl:AmountOfSubstanceUnit ,
+                      owl:NamedIndividual ;
+             
+             rdfs:label "mole"^^xsd:string ;
+             
+             rdfs:comment "The mole (symbol: mol) is the SI base unit for an amount of substance. One mole contains Avogadro's number (approximately 6.022×1023) entities."^^xsd:string .
+
+
+
+###  http://ontology.dumontierlab.com/unit_mole_-1
+
+dl:unit_mole_-1 rdf:type dl:Unit ,
+                         owl:NamedIndividual ;
+                
+                rdfs:label "per mole"^^xsd:string ;
+                
+                dl:isRaisedToPowerOf "-1.0"^^xsd:double ;
+                
+                dl:derivesFrom dl:unit_mole .
+
+
+
+###  http://ontology.dumontierlab.com/unit_mole_1_meter_-3
+
+dl:unit_mole_1_meter_-3 rdf:type dl:AmountOfSubstanceConcentrationUnit ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "mole per cubic meter"^^xsd:string ;
+                        
+                        rdfs:comment "The mole per cubic meter is the SI derived unit for amount of substance concentration."^^xsd:string ;
+                        
+                        dl:derivesFrom dl:unit_meter_-3 ,
+                                       dl:unit_mole .
+
+
+
+###  http://ontology.dumontierlab.com/unit_mole_1_second_-1
+
+dl:unit_mole_1_second_-1 rdf:type dl:CatalyticActivityUnit ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "second per mole"^^xsd:string ;
+                         
+                         rdfs:comment "The second per mole is the SI derived unit for catalytic activity."^^xsd:string ;
+                         
+                         dl:derivesFrom dl:unit_mole ,
+                                        dl:unit_second_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_newton
+
+dl:unit_newton rdf:type dl:ForceUnit ,
+                        owl:NamedIndividual ;
+               
+               rdfs:label "newton"^^xsd:string ;
+               
+               rdfs:comment "The newton (symbol: N)  is a unit for force."^^xsd:string .
+
+
+
+###  http://ontology.dumontierlab.com/unit_newton_1_meter_-1
+
+dl:unit_newton_1_meter_-1 rdf:type dl:SurfaceTensionUnit ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "newton per meter"^^xsd:string ;
+                          
+                          rdfs:comment "The newton per meter is the SI derived unit for surface tension."^^xsd:string ;
+                          
+                          dl:derivesFrom dl:unit_meter_-1 ,
+                                         dl:unit_newton .
+
+
+
+###  http://ontology.dumontierlab.com/unit_newton_1_meter_1
+
+dl:unit_newton_1_meter_1 rdf:type dl:MomentOfForceUnit ,
+                                  owl:NamedIndividual ;
+                         
+                         rdfs:label "newton meter"^^xsd:string ;
+                         
+                         rdfs:comment "The newton meter is the SI derived unit for moment of force."^^xsd:string ;
+                         
+                         dl:derivesFrom dl:unit_meter ,
+                                        dl:unit_newton .
+
+
+
+###  http://ontology.dumontierlab.com/unit_ohm
+
+dl:unit_ohm rdf:type dl:ElectricResistanceUnit ,
+                     owl:NamedIndividual ;
+            
+            rdfs:label "ohm"^^xsd:string ;
+            
+            rdfs:comment "The ohm is a unit of electric resistance."^^xsd:string ;
+            
+            dl:derivesFrom dl:unit_ampere_-1 ,
+                           dl:unit_volt .
+
+
+
+###  http://ontology.dumontierlab.com/unit_pascal
+
+dl:unit_pascal rdf:type dl:PressureUnit ,
+                        owl:NamedIndividual ;
+               
+               rdfs:label "pascal"^^xsd:string ;
+               
+               rdfs:comment "The pascal is a unit of pressure."^^xsd:string .
+
+
+
+###  http://ontology.dumontierlab.com/unit_pascal_1_second_-1
+
+dl:unit_pascal_1_second_-1 rdf:type dl:DynamicViscosityUnit ,
+                                    owl:NamedIndividual ;
+                           
+                           rdfs:label "pascal per second"^^xsd:string ;
+                           
+                           rdfs:comment "The pascal per second is the SI derived unit for dynamic viscosity."^^xsd:string ;
+                           
+                           dl:derivesFrom dl:unit_pascal ,
+                                          dl:unit_second_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_radian
+
+dl:unit_radian rdf:type dl:PlaneAngleUnit ,
+                        owl:NamedIndividual ;
+               
+               rdfs:label "radian"^^xsd:string ;
+               
+               rdfs:comment "The radian (symbol: rad) is a unit for plane angle."^^xsd:string ;
+               
+               dl:derivesFrom dl:unit_meter ,
+                              dl:unit_meter_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_radian_1_second_-1
+
+dl:unit_radian_1_second_-1 rdf:type dl:AngularVelocityUnit ,
+                                    owl:NamedIndividual ;
+                           
+                           rdfs:label "radian per second"^^xsd:string ;
+                           
+                           rdfs:comment "The radian per second is the SI derived unit for angular velocity."^^xsd:string ;
+                           
+                           dl:derivesFrom dl:unit_radian ,
+                                          dl:unit_second_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_radian_1_second_-2
+
+dl:unit_radian_1_second_-2 rdf:type dl:AngularAccelerationUnit ,
+                                    owl:NamedIndividual ;
+                           
+                           rdfs:label "radian per second squared"^^xsd:string ;
+                           
+                           rdfs:comment "The radian per second squared is the SI derived unit for angular acceleration."^^xsd:string ;
+                           
+                           dl:derivesFrom dl:unit_radian ,
+                                          dl:unit_second_-2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_second
+
+dl:unit_second rdf:type dl:TimeUnit ,
+                        owl:NamedIndividual ;
+               
+               rdfs:label "second"^^xsd:string ;
+               
+               rdfs:comment "The second (symbol: s), is a SI base unit of time. It is defined as the duration of 9,192,631,770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the caesium-133 atom."^^xsd:string .
+
+
+
+###  http://ontology.dumontierlab.com/unit_second_-1
+
+dl:unit_second_-1 rdf:type dl:Unit ,
+                           owl:NamedIndividual ;
+                  
+                  rdfs:label "reciprocal second"^^xsd:string ;
+                  
+                  dl:isRaisedToPowerOf "-1.0"^^xsd:double ;
+                  
+                  dl:derivesFrom dl:unit_second .
+
+
+
+###  http://ontology.dumontierlab.com/unit_second_-2
+
+dl:unit_second_-2 rdf:type dl:Unit ,
+                           owl:NamedIndividual ;
+                  
+                  rdfs:label "per second squared"^^xsd:string ;
+                  
+                  dl:isRaisedToPowerOf "-2.0"^^xsd:double ;
+                  
+                  dl:derivesFrom dl:unit_second .
+
+
+
+###  http://ontology.dumontierlab.com/unit_second_-3
+
+dl:unit_second_-3 rdf:type dl:Unit ,
+                           owl:NamedIndividual ;
+                  
+                  dl:isRaisedToPowerOf "-3.0"^^xsd:double ;
+                  
+                  dl:derivesFrom dl:unit_second .
+
+
+
+###  http://ontology.dumontierlab.com/unit_second_1_ampere_1
+
+dl:unit_second_1_ampere_1 rdf:type dl:ElectricChargeUnit ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "second ampere"^^xsd:string ;
+                          
+                          rdfs:comment "The second ampere is the SI derived unit for electric charge."^^xsd:string ;
+                          
+                          dl:derivesFrom dl:unit_ampere ,
+                                         dl:unit_second .
+
+
+
+###  http://ontology.dumontierlab.com/unit_second_2
+
+dl:unit_second_2 rdf:type dl:Unit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "per second squared"^^xsd:string ;
+                 
+                 dl:isRaisedToPowerOf "2.0"^^xsd:double ;
+                 
+                 dl:derivesFrom dl:unit_second .
+
+
+
+###  http://ontology.dumontierlab.com/unit_second_3
+
+dl:unit_second_3 rdf:type dl:Unit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "second cubed"^^xsd:string ;
+                 
+                 dl:isRaisedToPowerOf "3.0"^^xsd:double ;
+                 
+                 dl:derivesFrom dl:unit_second .
+
+
+
+###  http://ontology.dumontierlab.com/unit_second_4
+
+dl:unit_second_4 rdf:type dl:Unit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "second power 4"^^xsd:string ;
+                 
+                 dl:isRaisedToPowerOf "4.0"^^xsd:double ;
+                 
+                 dl:derivesFrom dl:unit_second .
+
+
+
+###  http://ontology.dumontierlab.com/unit_siemens
+
+dl:unit_siemens rdf:type dl:ElectricConductionUnit ,
+                         owl:NamedIndividual ;
+                
+                rdfs:label "siemens"^^xsd:string ;
+                
+                rdfs:comment "The siemens is a unit of electric conductance."^^xsd:string ;
+                
+                dl:derivesFrom dl:unit_ampere ,
+                               dl:unit_volt_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_sievert
+
+dl:unit_sievert rdf:type dl:DoseEquivalentUnit ,
+                         owl:NamedIndividual ;
+                
+                rdfs:label "sievert"^^xsd:string ;
+                
+                rdfs:comment "The sievert (symbol: Sv) is a unit of dose equivalence."^^xsd:string ;
+                
+                dl:derivesFrom dl:unit_joule ,
+                               dl:unit_kilogram_-1 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_steradian
+
+dl:unit_steradian rdf:type dl:SolidAngleUnit ,
+                           owl:NamedIndividual ;
+                  
+                  rdfs:label "steradian"^^xsd:string ;
+                  
+                  rdfs:comment "The steradian is the SI derived unit for solid angle."^^xsd:string ;
+                  
+                  dl:derivesFrom dl:unit_meter_-2 ,
+                                 dl:unit_meter_2 .
+
+
+
+###  http://ontology.dumontierlab.com/unit_steradian_-1
+
+dl:unit_steradian_-1 rdf:type dl:Unit ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "per steradian"^^xsd:string ;
+                     
+                     dl:isRaisedToPowerOf "-1.0"^^xsd:double ;
+                     
+                     dl:derivesFrom dl:unit_steradian .
+
+
+
+###  http://ontology.dumontierlab.com/unit_tesla
+
+dl:unit_tesla rdf:type dl:MagneticFluxDensityUnit ,
+                       owl:NamedIndividual ;
+              
+              rdfs:label "tesla"^^xsd:string ;
+              
+              rdfs:comment "The tesla (symbol: T) is a unit of magnetic flux density."^^xsd:string ;
+              
+              dl:derivesFrom dl:unit_meter_-2 ,
+                             dl:unit_weber .
+
+
+
+###  http://ontology.dumontierlab.com/unit_volt
+
+dl:unit_volt rdf:type dl:PotentialDifferenceUnit ,
+                      owl:NamedIndividual ;
+             
+             rdfs:label "volt"^^xsd:string ;
+             
+             rdfs:comment "The volt is a unit of potential difference."^^xsd:string ;
+             
+             dl:derivesFrom dl:unit_ampere_-1 ,
+                            dl:unit_watt .
+
+
+
+###  http://ontology.dumontierlab.com/unit_volt_-1
+
+dl:unit_volt_-1 rdf:type dl:Unit ,
+                         owl:NamedIndividual ;
+                
+                rdfs:label "per volt"^^xsd:string ;
+                
+                dl:isRaisedToPowerOf "-1.0"^^xsd:double ;
+                
+                dl:derivesFrom dl:unit_volt .
+
+
+
+###  http://ontology.dumontierlab.com/unit_volt_1_meter_-1
+
+dl:unit_volt_1_meter_-1 rdf:type dl:ElectricFieldStrengthUnit ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "volt per meter"^^xsd:string ;
+                        
+                        rdfs:comment "The volt per meter is the SI derived unit for electric field strength."^^xsd:string ;
+                        
+                        dl:derivesFrom dl:unit_meter_-1 ,
+                                       dl:unit_volt .
+
+
+
+###  http://ontology.dumontierlab.com/unit_watt
+
+dl:unit_watt rdf:type dl:PowerUnit ,
+                      owl:NamedIndividual ;
+             
+             rdfs:label "watt"^^xsd:string ;
+             
+             rdfs:comment "The watt (symbol: W) is a unit of power."^^xsd:string .
+
+
+
+###  http://ontology.dumontierlab.com/unit_watt_1_meter_-1_kelvin_-1
+
+dl:unit_watt_1_meter_-1_kelvin_-1 rdf:type dl:ThermalConductionUnit ,
+                                           owl:NamedIndividual ;
+                                  
+                                  rdfs:label "watt per meter per kelvin"^^xsd:string ;
+                                  
+                                  rdfs:comment "The watt per meter per kelvin is the SI derived unit for thermal conductivity."^^xsd:string ;
+                                  
+                                  dl:derivesFrom dl:unit_kelvin_-1 ,
+                                                 dl:unit_meter_-1 ,
+                                                 dl:unit_watt .
+
+
+
+###  http://ontology.dumontierlab.com/unit_watt_1_meter_-2
+
+dl:unit_watt_1_meter_-2 rdf:type dl:IrradianceUnit ,
+                                 owl:NamedIndividual ;
+                        
+                        rdfs:label "watt per square meter"^^xsd:string ;
+                        
+                        rdfs:comment "The watt per square meter is the SI derived unit for irradiance."^^xsd:string ;
+                        
+                        dl:derivesFrom dl:unit_meter_-2 ,
+                                       dl:unit_watt .
+
+
+
+###  http://ontology.dumontierlab.com/unit_watt_1_meter_-2_steradian_-1
+
+dl:unit_watt_1_meter_-2_steradian_-1 rdf:type dl:RadianceUnit ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "watt per square meter per steradian"^^xsd:string ;
+                                     
+                                     rdfs:comment "The watt per square meter per steradian is the SI derived unit for radiance."^^xsd:string ;
+                                     
+                                     dl:derivesFrom dl:unit_meter_-2 ,
+                                                    dl:unit_steradian_-1 ,
+                                                    dl:unit_watt .
+
+
+
+###  http://ontology.dumontierlab.com/unit_watt_1_steradian_-1
+
+dl:unit_watt_1_steradian_-1 rdf:type dl:RadiantIntensityUnit ,
+                                     owl:NamedIndividual ;
+                            
+                            rdfs:label "watt per steradian"^^xsd:string ;
+                            
+                            rdfs:comment "The watt per steradian is the SI derived unit for radiant intensity."^^xsd:string ;
+                            
+                            dl:derivesFrom dl:unit_steradian_-1 ,
+                                           dl:unit_watt .
+
+
+
+###  http://ontology.dumontierlab.com/unit_weber
+
+dl:unit_weber rdf:type dl:MagneticFluxUnit ,
+                       owl:NamedIndividual ;
+              
+              rdfs:label "weber"^^xsd:string ;
+              
+              rdfs:comment "The weber (symbol:Wb) is a unit of magnetic flux."^^xsd:string ;
+              
+              dl:derivesFrom dl:unit_second ,
+                             dl:unit_volt .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
