@@ -19,6 +19,5 @@ Deploying
 6. Commit / Push changes
 7. Publish using MatRest/owl/publish and Raw URL 
 
-RAW URL: `https://raw.githubusercontent.com/iNovexIrad/MatOnto-Ontologies/master/matonto-release.ttl" into MatRest/owl/publish`
-
+RaW URL: `https://raw.githubusercontent.com/iNovexIrad/MatOnto-Ontologies/master/matonto-release.ttl`
 At this point if the ontology validated, there will be a new distribution of the ontology in CKAN.  Use the "Load" Button in CKAN to update Stardog/MatOnto
