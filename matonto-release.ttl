@@ -2,7 +2,6 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dl: <http://ontology.dumontierlab.com/> .
 @prefix bfo: <http://www.ifomis.org/bfo/1.0#> .
-@prefix cer: <http://matonto.org/ontologies/ceramic#> .
 @prefix mat: <http://matonto.org/ontologies/matonto#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -980,9 +979,9 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty .
 #################################################################
 
 
-###  http://matonto.org/ontologies/ceramic#ceramic
+###  http://matonto.org/ontologies/matonto#ceramic
 
-cer:ceramic rdf:type owl:Class ;
+:ceramic rdf:type owl:Class ;
             
             rdfs:label "ceramic"^^xsd:string ;
             
@@ -992,9 +991,9 @@ cer:ceramic rdf:type owl:Class ;
 
 
 
-###  http://matonto.org/ontologies/ceramic#chemicalClass
+###  http://matonto.org/ontologies/matonto#chemicalClass
 
-cer:chemicalClass rdf:type owl:Class ;
+:chemicalClass rdf:type owl:Class ;
                   
                   rdfs:label "Chemical Class"^^xsd:string ;
                   
@@ -1002,9 +1001,9 @@ cer:chemicalClass rdf:type owl:Class ;
 
 
 
-###  http://matonto.org/ontologies/ceramic#chemicalFamily
+###  http://matonto.org/ontologies/matonto#chemicalFamily
 
-cer:chemicalFamily rdf:type owl:Class ;
+:chemicalFamily rdf:type owl:Class ;
                    
                    rdfs:label "Chemical Family"^^xsd:string ;
                    
@@ -1012,9 +1011,9 @@ cer:chemicalFamily rdf:type owl:Class ;
 
 
 
-###  http://matonto.org/ontologies/ceramic#chemicalFormula
+###  http://matonto.org/ontologies/matonto#chemicalFormula
 
-cer:chemicalFormula rdf:type owl:Class ;
+:chemicalFormula rdf:type owl:Class ;
                     
                     rdfs:label "Chemical Formula"^^xsd:string ;
                     
@@ -1022,9 +1021,9 @@ cer:chemicalFormula rdf:type owl:Class ;
 
 
 
-###  http://matonto.org/ontologies/ceramic#structureType
+###  http://matonto.org/ontologies/matonto#structureType
 
-cer:structureType rdf:type owl:Class ;
+:structureType rdf:type owl:Class ;
                   
                   rdfs:label "Structure Type"^^xsd:string ;
                   
@@ -9581,8 +9580,8 @@ dl:SulfonylHalideGroup rdf:type owl:Class ;
 
 
 ###  http://ontology.dumontierlab.com/SulfoxideGroup
-
 dl:SulfoxideGroup rdf:type owl:Class ;
+
                   
                   owl:equivalentClass [ rdf:type owl:Class ;
                                         owl:intersectionOf ( dl:CarbonGroup
