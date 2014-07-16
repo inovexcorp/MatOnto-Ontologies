@@ -119,7 +119,6 @@
                                                      dl:unit-primitive .
 
 
-
 #################################################################
 #
 #    Object Properties
@@ -979,58 +978,6 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty .
 #################################################################
 
 
-###  http://matonto.org/ontologies/matonto#ceramic
-
-:ceramic rdf:type owl:Class ;
-            
-            rdfs:label "ceramic"^^xsd:string ;
-            
-            rdfs:subClassOf :Material ;
-            
-            rdfs:comment "A ceramic that is studied in materials science"^^xsd:string .
-
-
-
-###  http://matonto.org/ontologies/matonto#chemicalClass
-
-:chemicalClass rdf:type owl:Class ;
-                  
-                  rdfs:label "Chemical Class"^^xsd:string ;
-                  
-                  rdfs:subClassOf dl:ChemicalQuality .
-
-
-
-###  http://matonto.org/ontologies/matonto#chemicalFamily
-
-:chemicalFamily rdf:type owl:Class ;
-                   
-                   rdfs:label "Chemical Family"^^xsd:string ;
-                   
-                   rdfs:subClassOf dl:ChemicalQuality .
-
-
-
-###  http://matonto.org/ontologies/matonto#chemicalFormula
-
-:chemicalFormula rdf:type owl:Class ;
-                    
-                    rdfs:label "Chemical Formula"^^xsd:string ;
-                    
-                    rdfs:subClassOf dl:ChemicalQuality .
-
-
-
-###  http://matonto.org/ontologies/matonto#structureType
-
-:structureType rdf:type owl:Class ;
-                  
-                  rdfs:label "Structure Type"^^xsd:string ;
-                  
-                  rdfs:subClassOf :MaterialQuality .
-
-
-
 ###  http://matonto.org/ontologies/matonto#Alloy
 
 :Alloy rdf:type owl:Class ;
@@ -1050,11 +997,11 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty .
          rdfs:subClassOf dl:MeasuredProperty ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:someValuesFrom :BandGapUnit
+                           owl:allValuesFrom :BandGapUnit
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:allValuesFrom :BandGapUnit
+                           owl:someValuesFrom :BandGapUnit
                          ] ;
          
          rdfs:comment "The energy difference between the top of the valence band and the botto of the conduction band in insulators and semiconductors" .
@@ -1161,6 +1108,18 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty .
 
 
 
+###  http://matonto.org/ontologies/matonto#EmpiricalFormula
+
+:EmpiricalFormula rdf:type owl:Class ;
+                  
+                  rdfs:label "Empirical Formula" ;
+                  
+                  rdfs:subClassOf :chemicalFormula ;
+                  
+                  rdfs:comment "In chemistry, the empirical formula of a chemical is a simple expression of the relative number of each type of atom or ratio of the elements in the compound. Empirical formulas are the standard for ionic compounds, such as CaCl2, and for macromolecules, such as SiO2." .
+
+
+
 ###  http://matonto.org/ontologies/matonto#Enthalpy
 
 :Enthalpy rdf:type owl:Class ;
@@ -1242,11 +1201,11 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty .
                   rdfs:subClassOf dl:MeasuredProperty ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:someValuesFrom dl:PressureUnit
+                                    owl:allValuesFrom dl:PressureUnit
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:allValuesFrom dl:PressureUnit
+                                    owl:someValuesFrom dl:PressureUnit
                                   ] ;
                   
                   skos:altLabel "modulus of rupture" ,
@@ -1327,11 +1286,11 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty .
               rdfs:subClassOf :ExtensiveProperty ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:EntropyUnit
+                                owl:someValuesFrom dl:EntropyUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:EntropyUnit
+                                owl:allValuesFrom dl:EntropyUnit
                               ] ;
               
               rdfs:comment "Heat capacity is the measurable physical quantity of heat energy required to change the temperature of an object by a given amount." ;
@@ -1349,11 +1308,11 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty .
                      rdfs:subClassOf dl:Energy ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:someValuesFrom dl:EnergyUnit
+                                       owl:allValuesFrom dl:EnergyUnit
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:allValuesFrom dl:EnergyUnit
+                                       owl:someValuesFrom dl:EnergyUnit
                                      ] ;
                      
                      rdfs:comment "the workobtainable from a closed thermodynamic system at a constant temperature" .
@@ -1441,6 +1400,18 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty .
         rdfs:label "metals" ;
         
         rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#MolecularFormula
+
+:MolecularFormula rdf:type owl:Class ;
+                  
+                  rdfs:label "Molecular Formula" ;
+                  
+                  rdfs:subClassOf :chemicalFormula ;
+                  
+                  rdfs:comment "A molecular formula enumerates the number of atoms to reflect those in the molecule, so that the molecular formula for glucose is C6H12O6 rather than the glucose empirical formula, which is CH2O" .
 
 
 
@@ -1583,11 +1554,11 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty .
               rdfs:subClassOf :IntensiveProperty ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:SpecificEntropyUnit
+                                owl:allValuesFrom dl:SpecificEntropyUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:SpecificEntropyUnit
+                                owl:someValuesFrom dl:SpecificEntropyUnit
                               ] ;
               
               rdfs:comment "Specific heat is the heat capacity per unit mass of a material." ;
@@ -1679,17 +1650,69 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty .
 
 
 
+###  http://matonto.org/ontologies/matonto#ceramic
+
+:ceramic rdf:type owl:Class ;
+         
+         rdfs:label "ceramic"^^xsd:string ;
+         
+         rdfs:subClassOf :Material ;
+         
+         rdfs:comment "A ceramic that is studied in materials science"^^xsd:string .
+
+
+
+###  http://matonto.org/ontologies/matonto#chemicalClass
+
+:chemicalClass rdf:type owl:Class ;
+               
+               rdfs:label "Chemical Class"^^xsd:string ;
+               
+               rdfs:subClassOf dl:ChemicalQuality .
+
+
+
+###  http://matonto.org/ontologies/matonto#chemicalFamily
+
+:chemicalFamily rdf:type owl:Class ;
+                
+                rdfs:label "Chemical Family"^^xsd:string ;
+                
+                rdfs:subClassOf dl:ChemicalQuality .
+
+
+
+###  http://matonto.org/ontologies/matonto#chemicalFormula
+
+:chemicalFormula rdf:type owl:Class ;
+                 
+                 rdfs:label "Chemical Formula"^^xsd:string ;
+                 
+                 rdfs:subClassOf dl:ChemicalQuality .
+
+
+
+###  http://matonto.org/ontologies/matonto#structureType
+
+:structureType rdf:type owl:Class ;
+               
+               rdfs:label "Structure Type"^^xsd:string ;
+               
+               rdfs:subClassOf :MaterialQuality .
+
+
+
 ###  http://ontology.dumontierlab.com/AbsorbedDose
 
 dl:AbsorbedDose rdf:type owl:Class ;
                 
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:AbsorbedDoseUnit
+                                  owl:allValuesFrom dl:AbsorbedDoseUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:AbsorbedDoseUnit
+                                  owl:someValuesFrom dl:AbsorbedDoseUnit
                                 ] .
 
 
@@ -1700,11 +1723,11 @@ dl:AbsorbedDoseRate rdf:type owl:Class ;
                     
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasUnit ;
-                                      owl:allValuesFrom dl:AbsorbedDoseRateUnit
+                                      owl:someValuesFrom dl:AbsorbedDoseRateUnit
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasUnit ;
-                                      owl:someValuesFrom dl:AbsorbedDoseRateUnit
+                                      owl:allValuesFrom dl:AbsorbedDoseRateUnit
                                     ] .
 
 
@@ -1737,6 +1760,10 @@ dl:AbsorbedDoseUnit rdf:type owl:Class ;
                     
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:derivesFrom ;
+                                      owl:someValuesFrom dl:EnergyUnit
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dl:derivesFrom ;
                                       owl:someValuesFrom [ rdf:type owl:Class ;
                                                            owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                 [ rdf:type owl:Restriction ;
@@ -1745,10 +1772,6 @@ dl:AbsorbedDoseUnit rdf:type owl:Class ;
                                                                                 ]
                                                                               )
                                                          ]
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty dl:derivesFrom ;
-                                      owl:someValuesFrom dl:EnergyUnit
                                     ] .
 
 
@@ -1759,11 +1782,11 @@ dl:Acceleration rdf:type owl:Class ;
                 
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:AccelerationUnit
+                                  owl:someValuesFrom dl:AccelerationUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:AccelerationUnit
+                                  owl:allValuesFrom dl:AccelerationUnit
                                 ] .
 
 
@@ -1802,11 +1825,11 @@ dl:AcidBaseReaction rdf:type owl:Class ;
                     
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasParticipant ;
-                                      owl:someValuesFrom dl:Acid
+                                      owl:someValuesFrom dl:Base
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasParticipant ;
-                                      owl:someValuesFrom dl:Base
+                                      owl:someValuesFrom dl:Acid
                                     ] .
 
 
@@ -2291,11 +2314,11 @@ dl:AmountOfSubstance rdf:type owl:Class ;
                      
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:allValuesFrom dl:AmountOfSubstanceUnit
+                                       owl:someValuesFrom dl:AmountOfSubstanceUnit
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:someValuesFrom dl:AmountOfSubstanceUnit
+                                       owl:allValuesFrom dl:AmountOfSubstanceUnit
                                      ] .
 
 
@@ -2349,11 +2372,11 @@ dl:Angle rdf:type owl:Class ;
          
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:someValuesFrom dl:AngleUnit
+                           owl:allValuesFrom dl:AngleUnit
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:allValuesFrom dl:AngleUnit
+                           owl:someValuesFrom dl:AngleUnit
                          ] .
 
 
@@ -2427,10 +2450,6 @@ dl:AngularVelocityUnit rdf:type owl:Class ;
                        
                        rdfs:subClassOf [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:derivesFrom ;
-                                         owl:someValuesFrom dl:AngleUnit
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty dl:derivesFrom ;
                                          owl:someValuesFrom [ rdf:type owl:Class ;
                                                               owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                    [ rdf:type owl:Restriction ;
@@ -2439,6 +2458,10 @@ dl:AngularVelocityUnit rdf:type owl:Class ;
                                                                                    ]
                                                                                  )
                                                             ]
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty dl:derivesFrom ;
+                                         owl:someValuesFrom dl:AngleUnit
                                        ] .
 
 
@@ -2536,11 +2559,11 @@ dl:AreaDensity rdf:type owl:Class ;
                
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:someValuesFrom dl:AreaDensityUnit
+                                 owl:allValuesFrom dl:AreaDensityUnit
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:allValuesFrom dl:AreaDensityUnit
+                                 owl:someValuesFrom dl:AreaDensityUnit
                                ] .
 
 
@@ -3461,10 +3484,6 @@ dl:CatalyticConcentrationUnit rdf:type owl:Class ;
                               
                               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                 owl:onProperty dl:derivesFrom ;
-                                                owl:someValuesFrom dl:CatalyticActivityUnit
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty dl:derivesFrom ;
                                                 owl:someValuesFrom [ rdf:type owl:Class ;
                                                                      owl:intersectionOf ( dl:UnitRaisedToPowerNegativeThree
                                                                                           [ rdf:type owl:Restriction ;
@@ -3473,6 +3492,10 @@ dl:CatalyticConcentrationUnit rdf:type owl:Class ;
                                                                                           ]
                                                                                         )
                                                                    ]
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dl:derivesFrom ;
+                                                owl:someValuesFrom dl:CatalyticActivityUnit
                                               ] .
 
 
@@ -3563,12 +3586,12 @@ dl:ChemicalBond rdf:type owl:Class ;
                 rdfs:subClassOf bfo:Process ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasParticipant ;
-                                  owl:onClass dl:Atom ;
-                                  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                  owl:someValuesFrom dl:Atom
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasParticipant ;
-                                  owl:someValuesFrom dl:Atom
+                                  owl:onClass dl:Atom ;
+                                  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                 ] ;
                 
                 owl:disjointWith dl:Ring ,
@@ -3798,11 +3821,11 @@ dl:Concentration rdf:type owl:Class ;
                  
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:ConcentrationUnit
+                                   owl:allValuesFrom dl:ConcentrationUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:ConcentrationUnit
+                                   owl:someValuesFrom dl:ConcentrationUnit
                                  ] .
 
 
@@ -3824,11 +3847,11 @@ dl:Conduction rdf:type owl:Class ;
               
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:ConductionUnit
+                                owl:allValuesFrom dl:ConductionUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:ConductionUnit
+                                owl:someValuesFrom dl:ConductionUnit
                               ] .
 
 
@@ -4111,6 +4134,10 @@ dl:DoseEquivalentUnit rdf:type owl:Class ;
                       
                       rdfs:subClassOf [ rdf:type owl:Restriction ;
                                         owl:onProperty dl:derivesFrom ;
+                                        owl:someValuesFrom dl:EnergyUnit
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty dl:derivesFrom ;
                                         owl:someValuesFrom [ rdf:type owl:Class ;
                                                              owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                   [ rdf:type owl:Restriction ;
@@ -4119,10 +4146,6 @@ dl:DoseEquivalentUnit rdf:type owl:Class ;
                                                                                   ]
                                                                                 )
                                                            ]
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty dl:derivesFrom ;
-                                        owl:someValuesFrom dl:EnergyUnit
                                       ] .
 
 
@@ -4262,11 +4285,11 @@ dl:ElectricCharge rdf:type owl:Class ;
                   
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:allValuesFrom dl:ElectricChargeUnit
+                                    owl:someValuesFrom dl:ElectricChargeUnit
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:someValuesFrom dl:ElectricChargeUnit
+                                    owl:allValuesFrom dl:ElectricChargeUnit
                                   ] .
 
 
@@ -4277,11 +4300,11 @@ dl:ElectricChargeDensity rdf:type owl:Class ;
                          
                          rdfs:subClassOf [ rdf:type owl:Restriction ;
                                            owl:onProperty dl:hasUnit ;
-                                           owl:allValuesFrom dl:ElectricChargeDensityUnit
+                                           owl:someValuesFrom dl:ElectricChargeDensityUnit
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty dl:hasUnit ;
-                                           owl:someValuesFrom dl:ElectricChargeDensityUnit
+                                           owl:allValuesFrom dl:ElectricChargeDensityUnit
                                          ] .
 
 
@@ -4314,11 +4337,11 @@ dl:ElectricChargeUnit rdf:type owl:Class ;
                       
                       rdfs:subClassOf [ rdf:type owl:Restriction ;
                                         owl:onProperty dl:derivesFrom ;
-                                        owl:someValuesFrom dl:ElectricCurrentUnit
+                                        owl:someValuesFrom dl:TimeUnit
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty dl:derivesFrom ;
-                                        owl:someValuesFrom dl:TimeUnit
+                                        owl:someValuesFrom dl:ElectricCurrentUnit
                                       ] .
 
 
@@ -4329,11 +4352,11 @@ dl:ElectricConductance rdf:type owl:Class ;
                        
                        rdfs:subClassOf [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:someValuesFrom dl:ElectricConductionUnit
+                                         owl:allValuesFrom dl:ElectricConductionUnit
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:allValuesFrom dl:ElectricConductionUnit
+                                         owl:someValuesFrom dl:ElectricConductionUnit
                                        ] .
 
 
@@ -4344,6 +4367,10 @@ dl:ElectricConductionUnit rdf:type owl:Class ;
                           
                           rdfs:subClassOf [ rdf:type owl:Restriction ;
                                             owl:onProperty dl:derivesFrom ;
+                                            owl:someValuesFrom dl:ElectricCurrentUnit
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty dl:derivesFrom ;
                                             owl:someValuesFrom [ rdf:type owl:Class ;
                                                                  owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                       [ rdf:type owl:Restriction ;
@@ -4352,10 +4379,6 @@ dl:ElectricConductionUnit rdf:type owl:Class ;
                                                                                       ]
                                                                                     )
                                                                ]
-                                          ] ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty dl:derivesFrom ;
-                                            owl:someValuesFrom dl:ElectricCurrentUnit
                                           ] ;
                           
                           owl:disjointWith dl:ThermalConductionUnit .
@@ -4383,11 +4406,11 @@ dl:ElectricCurrentDensity rdf:type owl:Class ;
                           
                           rdfs:subClassOf [ rdf:type owl:Restriction ;
                                             owl:onProperty dl:hasUnit ;
-                                            owl:allValuesFrom dl:ElectricCurrentDensityUnit
+                                            owl:someValuesFrom dl:ElectricCurrentDensityUnit
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty dl:hasUnit ;
-                                            owl:someValuesFrom dl:ElectricCurrentDensityUnit
+                                            owl:allValuesFrom dl:ElectricCurrentDensityUnit
                                           ] .
 
 
@@ -4398,10 +4421,6 @@ dl:ElectricCurrentDensityUnit rdf:type owl:Class ;
                               
                               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                 owl:onProperty dl:derivesFrom ;
-                                                owl:someValuesFrom dl:ElectricCurrentUnit
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty dl:derivesFrom ;
                                                 owl:someValuesFrom [ rdf:type owl:Class ;
                                                                      owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                                           [ rdf:type owl:Restriction ;
@@ -4410,6 +4429,10 @@ dl:ElectricCurrentDensityUnit rdf:type owl:Class ;
                                                                                           ]
                                                                                         )
                                                                    ]
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dl:derivesFrom ;
+                                                owl:someValuesFrom dl:ElectricCurrentUnit
                                               ] .
 
 
@@ -4515,6 +4538,10 @@ dl:ElectricResistanceUnit rdf:type owl:Class ;
                           
                           rdfs:subClassOf [ rdf:type owl:Restriction ;
                                             owl:onProperty dl:derivesFrom ;
+                                            owl:someValuesFrom dl:PotentialDifferenceUnit
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty dl:derivesFrom ;
                                             owl:someValuesFrom [ rdf:type owl:Class ;
                                                                  owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                       [ rdf:type owl:Restriction ;
@@ -4523,10 +4550,6 @@ dl:ElectricResistanceUnit rdf:type owl:Class ;
                                                                                       ]
                                                                                     )
                                                                ]
-                                          ] ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty dl:derivesFrom ;
-                                            owl:someValuesFrom dl:PotentialDifferenceUnit
                                           ] .
 
 
@@ -4537,11 +4560,11 @@ dl:ElectromagneticRadiation rdf:type owl:Class ;
                             
                             rdfs:subClassOf [ rdf:type owl:Restriction ;
                                               owl:onProperty dl:hasUnit ;
-                                              owl:allValuesFrom dl:ElectromagneticRadiationUnit
+                                              owl:someValuesFrom dl:ElectromagneticRadiationUnit
                                             ] ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty dl:hasUnit ;
-                                              owl:someValuesFrom dl:ElectromagneticRadiationUnit
+                                              owl:allValuesFrom dl:ElectromagneticRadiationUnit
                                             ] .
 
 
@@ -4591,11 +4614,11 @@ dl:Energy rdf:type owl:Class ;
           
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:someValuesFrom dl:EnergyUnit
+                            owl:allValuesFrom dl:EnergyUnit
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:allValuesFrom dl:EnergyUnit
+                            owl:someValuesFrom dl:EnergyUnit
                           ] .
 
 
@@ -4643,11 +4666,11 @@ dl:EnergyUnit rdf:type owl:Class ;
               
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:derivesFrom ;
-                                owl:someValuesFrom dl:ForceUnit
+                                owl:someValuesFrom dl:LengthUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:derivesFrom ;
-                                owl:someValuesFrom dl:LengthUnit
+                                owl:someValuesFrom dl:ForceUnit
                               ] .
 
 
@@ -4673,10 +4696,6 @@ dl:EntropyUnit rdf:type owl:Class ;
                
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:derivesFrom ;
-                                 owl:someValuesFrom dl:EnergyUnit
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty dl:derivesFrom ;
                                  owl:someValuesFrom [ rdf:type owl:Class ;
                                                       owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                            [ rdf:type owl:Restriction ;
@@ -4685,6 +4704,10 @@ dl:EntropyUnit rdf:type owl:Class ;
                                                                            ]
                                                                          )
                                                     ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty dl:derivesFrom ;
+                                 owl:someValuesFrom dl:EnergyUnit
                                ] .
 
 
@@ -4850,11 +4873,11 @@ dl:Exposure rdf:type owl:Class ;
             
             rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:allValuesFrom dl:ExposureUnit
+                              owl:someValuesFrom dl:ExposureUnit
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:someValuesFrom dl:ExposureUnit
+                              owl:allValuesFrom dl:ExposureUnit
                             ] .
 
 
@@ -4970,11 +4993,11 @@ dl:Force rdf:type owl:Class ;
          
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:allValuesFrom dl:ForceUnit
+                           owl:someValuesFrom dl:ForceUnit
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:someValuesFrom dl:ForceUnit
+                           owl:allValuesFrom dl:ForceUnit
                          ] .
 
 
@@ -4989,10 +5012,6 @@ dl:ForceUnit rdf:type owl:Class ;
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:derivesFrom ;
-                               owl:someValuesFrom dl:LengthUnit
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty dl:derivesFrom ;
                                owl:someValuesFrom [ rdf:type owl:Class ;
                                                     owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                          [ rdf:type owl:Restriction ;
@@ -5001,6 +5020,10 @@ dl:ForceUnit rdf:type owl:Class ;
                                                                          ]
                                                                        )
                                                   ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dl:derivesFrom ;
+                               owl:someValuesFrom dl:LengthUnit
                              ] .
 
 
@@ -5045,11 +5068,11 @@ dl:Frequency rdf:type owl:Class ;
              
              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:allValuesFrom dl:FrequencyUnit
+                               owl:someValuesFrom dl:FrequencyUnit
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:someValuesFrom dl:FrequencyUnit
+                               owl:allValuesFrom dl:FrequencyUnit
                              ] .
 
 
@@ -5383,19 +5406,19 @@ dl:Group1Element rdf:type owl:Class ;
 dl:Group2Element rdf:type owl:Class ;
                  
                  owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( dl:Actinide
+                                                     dl:Lanthanide
+                                                     dl:Scandium
+                                                     dl:Yttrium
+                                                   )
+                                     ] ,
+                                     [ rdf:type owl:Class ;
                                        owl:unionOf ( dl:Barium
                                                      dl:Beryllium
                                                      dl:Calcium
                                                      dl:Magnesium
                                                      dl:Radium
                                                      dl:Strontium
-                                                   )
-                                     ] ,
-                                     [ rdf:type owl:Class ;
-                                       owl:unionOf ( dl:Actinide
-                                                     dl:Lanthanide
-                                                     dl:Scandium
-                                                     dl:Yttrium
                                                    )
                                      ] .
 
@@ -5873,6 +5896,10 @@ dl:IlluminanceUnit rdf:type owl:Class ;
                    
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
                                      owl:onProperty dl:derivesFrom ;
+                                     owl:someValuesFrom dl:LuminousFluxUnit
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dl:derivesFrom ;
                                      owl:someValuesFrom [ rdf:type owl:Class ;
                                                           owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                                [ rdf:type owl:Restriction ;
@@ -5881,10 +5908,6 @@ dl:IlluminanceUnit rdf:type owl:Class ;
                                                                                ]
                                                                              )
                                                         ]
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty dl:derivesFrom ;
-                                     owl:someValuesFrom dl:LuminousFluxUnit
                                    ] .
 
 
@@ -6136,11 +6159,11 @@ dl:Irradiance rdf:type owl:Class ;
               
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:IrradianceUnit
+                                owl:someValuesFrom dl:IrradianceUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:IrradianceUnit
+                                owl:allValuesFrom dl:IrradianceUnit
                               ] .
 
 
@@ -6151,6 +6174,10 @@ dl:IrradianceUnit rdf:type owl:Class ;
                   
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:derivesFrom ;
+                                    owl:someValuesFrom dl:PowerUnit
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty dl:derivesFrom ;
                                     owl:someValuesFrom [ rdf:type owl:Class ;
                                                          owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                               [ rdf:type owl:Restriction ;
@@ -6159,10 +6186,6 @@ dl:IrradianceUnit rdf:type owl:Class ;
                                                                               ]
                                                                             )
                                                        ]
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty dl:derivesFrom ;
-                                    owl:someValuesFrom dl:PowerUnit
                                   ] .
 
 
@@ -6394,11 +6417,11 @@ dl:Length rdf:type owl:Class ;
           
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:someValuesFrom dl:LengthUnit
+                            owl:allValuesFrom dl:LengthUnit
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:allValuesFrom dl:LengthUnit
+                            owl:someValuesFrom dl:LengthUnit
                           ] .
 
 
@@ -6663,11 +6686,11 @@ dl:MagneticFlux rdf:type owl:Class ;
                 
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:MagneticFluxUnit
+                                  owl:someValuesFrom dl:MagneticFluxUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:MagneticFluxUnit
+                                  owl:allValuesFrom dl:MagneticFluxUnit
                                 ] .
 
 
@@ -6678,11 +6701,11 @@ dl:MagneticFluxDensity rdf:type owl:Class ;
                        
                        rdfs:subClassOf [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:allValuesFrom dl:MagneticFluxDensityUnit
+                                         owl:someValuesFrom dl:MagneticFluxDensityUnit
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:someValuesFrom dl:MagneticFluxDensityUnit
+                                         owl:allValuesFrom dl:MagneticFluxDensityUnit
                                        ] .
 
 
@@ -6715,11 +6738,11 @@ dl:MagneticFluxUnit rdf:type owl:Class ;
                     
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:derivesFrom ;
-                                      owl:someValuesFrom dl:PotentialDifferenceUnit
+                                      owl:someValuesFrom dl:TimeUnit
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:derivesFrom ;
-                                      owl:someValuesFrom dl:TimeUnit
+                                      owl:someValuesFrom dl:PotentialDifferenceUnit
                                     ] .
 
 
@@ -6949,12 +6972,12 @@ dl:Mixture rdf:type owl:Class ;
            rdfs:subClassOf snap:Object ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasProperPart ;
-                             owl:someValuesFrom dl:ChemicalSubstance
+                             owl:onClass dl:ChemicalSubstance ;
+                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasProperPart ;
-                             owl:onClass dl:ChemicalSubstance ;
-                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                             owl:someValuesFrom dl:ChemicalSubstance
                            ] .
 
 
@@ -6965,11 +6988,11 @@ dl:Molality rdf:type owl:Class ;
             
             rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:someValuesFrom dl:MolalityUnit
+                              owl:allValuesFrom dl:MolalityUnit
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:allValuesFrom dl:MolalityUnit
+                              owl:someValuesFrom dl:MolalityUnit
                             ] .
 
 
@@ -7002,11 +7025,11 @@ dl:MolarEnergy rdf:type owl:Class ;
                
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:allValuesFrom dl:MolarEnergyUnit
+                                 owl:someValuesFrom dl:MolarEnergyUnit
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:someValuesFrom dl:MolarEnergyUnit
+                                 owl:allValuesFrom dl:MolarEnergyUnit
                                ] .
 
 
@@ -7017,6 +7040,10 @@ dl:MolarEnergyUnit rdf:type owl:Class ;
                    
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
                                      owl:onProperty dl:derivesFrom ;
+                                     owl:someValuesFrom dl:EnergyUnit
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dl:derivesFrom ;
                                      owl:someValuesFrom [ rdf:type owl:Class ;
                                                           owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                [ rdf:type owl:Restriction ;
@@ -7025,10 +7052,6 @@ dl:MolarEnergyUnit rdf:type owl:Class ;
                                                                                ]
                                                                              )
                                                         ]
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty dl:derivesFrom ;
-                                     owl:someValuesFrom dl:EnergyUnit
                                    ] .
 
 
@@ -7039,11 +7062,11 @@ dl:MolarEntropy rdf:type owl:Class ;
                 
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:MolarEntropyUnit
+                                  owl:allValuesFrom dl:MolarEntropyUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:MolarEntropyUnit
+                                  owl:someValuesFrom dl:MolarEntropyUnit
                                 ] .
 
 
@@ -7053,6 +7076,17 @@ dl:MolarEntropy rdf:type owl:Class ;
 dl:MolarEntropyUnit rdf:type owl:Class ;
                     
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty dl:derivesFrom ;
+                                      owl:someValuesFrom [ rdf:type owl:Class ;
+                                                           owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty dl:derivesFrom ;
+                                                                                  owl:someValuesFrom dl:AmountOfSubstanceUnit
+                                                                                ]
+                                                                              )
+                                                         ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:derivesFrom ;
                                       owl:someValuesFrom dl:EnergyUnit
                                     ] ,
@@ -7066,17 +7100,6 @@ dl:MolarEntropyUnit rdf:type owl:Class ;
                                                                                 ]
                                                                               )
                                                          ]
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty dl:derivesFrom ;
-                                      owl:someValuesFrom [ rdf:type owl:Class ;
-                                                           owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
-                                                                                [ rdf:type owl:Restriction ;
-                                                                                  owl:onProperty dl:derivesFrom ;
-                                                                                  owl:someValuesFrom dl:AmountOfSubstanceUnit
-                                                                                ]
-                                                                              )
-                                                         ]
                                     ] .
 
 
@@ -7087,11 +7110,11 @@ dl:MolarMass rdf:type owl:Class ;
              
              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:someValuesFrom dl:MolarMassUnit
+                               owl:allValuesFrom dl:MolarMassUnit
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:allValuesFrom dl:MolarMassUnit
+                               owl:someValuesFrom dl:MolarMassUnit
                              ] .
 
 
@@ -7102,6 +7125,10 @@ dl:MolarMassUnit rdf:type owl:Class ;
                  
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:derivesFrom ;
+                                   owl:someValuesFrom dl:MassUnit
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dl:derivesFrom ;
                                    owl:someValuesFrom [ rdf:type owl:Class ;
                                                         owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                              [ rdf:type owl:Restriction ;
@@ -7110,10 +7137,6 @@ dl:MolarMassUnit rdf:type owl:Class ;
                                                                              ]
                                                                            )
                                                       ]
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty dl:derivesFrom ;
-                                   owl:someValuesFrom dl:MassUnit
                                  ] .
 
 
@@ -7130,11 +7153,11 @@ dl:MolecularMass rdf:type owl:Class ;
                  
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:MolecularMassUnit
+                                   owl:allValuesFrom dl:MolecularMassUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:MolecularMassUnit
+                                   owl:someValuesFrom dl:MolecularMassUnit
                                  ] .
 
 
@@ -7145,10 +7168,6 @@ dl:MolecularMassUnit rdf:type owl:Class ;
                      
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:derivesFrom ;
-                                       owl:someValuesFrom dl:MassUnit
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty dl:derivesFrom ;
                                        owl:someValuesFrom [ rdf:type owl:Class ;
                                                             owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                  [ rdf:type owl:Restriction ;
@@ -7157,6 +7176,10 @@ dl:MolecularMassUnit rdf:type owl:Class ;
                                                                                  ]
                                                                                )
                                                           ]
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty dl:derivesFrom ;
+                                       owl:someValuesFrom dl:MassUnit
                                      ] .
 
 
@@ -7218,11 +7241,11 @@ dl:MomentOfForce rdf:type owl:Class ;
                  
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:MomentOfForceUnit
+                                   owl:someValuesFrom dl:MomentOfForceUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:MomentOfForceUnit
+                                   owl:allValuesFrom dl:MomentOfForceUnit
                                  ] .
 
 
@@ -7233,11 +7256,11 @@ dl:MomentOfForceUnit rdf:type owl:Class ;
                      
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:derivesFrom ;
-                                       owl:someValuesFrom dl:LengthUnit
+                                       owl:someValuesFrom dl:ForceUnit
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:derivesFrom ;
-                                       owl:someValuesFrom dl:ForceUnit
+                                       owl:someValuesFrom dl:LengthUnit
                                      ] .
 
 
@@ -7746,11 +7769,11 @@ dl:PartsPerNotation rdf:type owl:Class ;
                     
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasUnit ;
-                                      owl:someValuesFrom dl:PartsPerNotationUnit
+                                      owl:allValuesFrom dl:PartsPerNotationUnit
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasUnit ;
-                                      owl:allValuesFrom dl:PartsPerNotationUnit
+                                      owl:someValuesFrom dl:PartsPerNotationUnit
                                     ] .
 
 
@@ -7761,6 +7784,10 @@ dl:PartsPerNotationUnit rdf:type owl:Class ;
                         
                         rdfs:subClassOf [ rdf:type owl:Restriction ;
                                           owl:onProperty dl:derivesFrom ;
+                                          owl:someValuesFrom dl:Unit
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty dl:derivesFrom ;
                                           owl:someValuesFrom [ rdf:type owl:Class ;
                                                                owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                     [ rdf:type owl:Restriction ;
@@ -7769,10 +7796,6 @@ dl:PartsPerNotationUnit rdf:type owl:Class ;
                                                                                     ]
                                                                                   )
                                                              ]
-                                        ] ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty dl:derivesFrom ;
-                                          owl:someValuesFrom dl:Unit
                                         ] .
 
 
@@ -7982,11 +8005,11 @@ dl:Permeability rdf:type owl:Class ;
                 
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:PermeabilityUnit
+                                  owl:someValuesFrom dl:PermeabilityUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:PermeabilityUnit
+                                  owl:allValuesFrom dl:PermeabilityUnit
                                 ] .
 
 
@@ -8300,11 +8323,11 @@ dl:PotentialDifference rdf:type owl:Class ;
                        
                        rdfs:subClassOf [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:someValuesFrom dl:PotentialDifferenceUnit
+                                         owl:allValuesFrom dl:PotentialDifferenceUnit
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:allValuesFrom dl:PotentialDifferenceUnit
+                                         owl:someValuesFrom dl:PotentialDifferenceUnit
                                        ] .
 
 
@@ -8315,6 +8338,10 @@ dl:PotentialDifferenceUnit rdf:type owl:Class ;
                            
                            rdfs:subClassOf [ rdf:type owl:Restriction ;
                                              owl:onProperty dl:derivesFrom ;
+                                             owl:someValuesFrom dl:PowerUnit
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty dl:derivesFrom ;
                                              owl:someValuesFrom [ rdf:type owl:Class ;
                                                                   owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                        [ rdf:type owl:Restriction ;
@@ -8323,10 +8350,6 @@ dl:PotentialDifferenceUnit rdf:type owl:Class ;
                                                                                        ]
                                                                                      )
                                                                 ]
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty dl:derivesFrom ;
-                                             owl:someValuesFrom dl:PowerUnit
                                            ] .
 
 
@@ -8337,11 +8360,11 @@ dl:Power rdf:type owl:Class ;
          
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:someValuesFrom dl:PowerUnit
+                           owl:allValuesFrom dl:PowerUnit
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:allValuesFrom dl:PowerUnit
+                           owl:someValuesFrom dl:PowerUnit
                          ] .
 
 
@@ -8352,6 +8375,10 @@ dl:PowerUnit rdf:type owl:Class ;
              
              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty dl:derivesFrom ;
+                               owl:someValuesFrom dl:EnergyUnit
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dl:derivesFrom ;
                                owl:someValuesFrom [ rdf:type owl:Class ;
                                                     owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                          [ rdf:type owl:Restriction ;
@@ -8360,10 +8387,6 @@ dl:PowerUnit rdf:type owl:Class ;
                                                                          ]
                                                                        )
                                                   ]
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty dl:derivesFrom ;
-                               owl:someValuesFrom dl:EnergyUnit
                              ] .
 
 
@@ -8417,10 +8440,6 @@ dl:PressureUnit rdf:type owl:Class ;
                 
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:derivesFrom ;
-                                  owl:someValuesFrom dl:ForceUnit
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty dl:derivesFrom ;
                                   owl:someValuesFrom [ rdf:type owl:Class ;
                                                        owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                             [ rdf:type owl:Restriction ;
@@ -8429,6 +8448,10 @@ dl:PressureUnit rdf:type owl:Class ;
                                                                             ]
                                                                           )
                                                      ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dl:derivesFrom ;
+                                  owl:someValuesFrom dl:ForceUnit
                                 ] .
 
 
@@ -8568,11 +8591,11 @@ dl:Radiance rdf:type owl:Class ;
             
             rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:someValuesFrom dl:RadianceUnit
+                              owl:allValuesFrom dl:RadianceUnit
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:allValuesFrom dl:RadianceUnit
+                              owl:someValuesFrom dl:RadianceUnit
                             ] .
 
 
@@ -8583,14 +8606,7 @@ dl:RadianceUnit rdf:type owl:Class ;
                 
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:derivesFrom ;
-                                  owl:someValuesFrom [ rdf:type owl:Class ;
-                                                       owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty dl:derivesFrom ;
-                                                                              owl:someValuesFrom dl:SolidAngleUnit
-                                                                            ]
-                                                                          )
-                                                     ]
+                                  owl:someValuesFrom dl:PowerUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:derivesFrom ;
@@ -8605,7 +8621,14 @@ dl:RadianceUnit rdf:type owl:Class ;
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:derivesFrom ;
-                                  owl:someValuesFrom dl:PowerUnit
+                                  owl:someValuesFrom [ rdf:type owl:Class ;
+                                                       owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty dl:derivesFrom ;
+                                                                              owl:someValuesFrom dl:SolidAngleUnit
+                                                                            ]
+                                                                          )
+                                                     ]
                                 ] .
 
 
@@ -8616,11 +8639,11 @@ dl:RadiantIntensity rdf:type owl:Class ;
                     
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasUnit ;
-                                      owl:allValuesFrom dl:RadiantIntensityUnit
+                                      owl:someValuesFrom dl:RadiantIntensityUnit
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasUnit ;
-                                      owl:someValuesFrom dl:RadiantIntensityUnit
+                                      owl:allValuesFrom dl:RadiantIntensityUnit
                                     ] .
 
 
@@ -8653,11 +8676,11 @@ dl:Radiation rdf:type owl:Class ;
              
              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:allValuesFrom dl:RadiationUnit
+                               owl:someValuesFrom dl:RadiationUnit
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:someValuesFrom dl:RadiationUnit
+                               owl:allValuesFrom dl:RadiationUnit
                              ] .
 
 
@@ -8679,11 +8702,11 @@ dl:Radioactivity rdf:type owl:Class ;
                  
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:RadioactivityUnit
+                                   owl:someValuesFrom dl:RadioactivityUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:RadioactivityUnit
+                                   owl:allValuesFrom dl:RadioactivityUnit
                                  ] .
 
 
@@ -9209,11 +9232,11 @@ dl:SolidAngle rdf:type owl:Class ;
               
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:SolidAngleUnit
+                                owl:allValuesFrom dl:SolidAngleUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:SolidAngleUnit
+                                owl:someValuesFrom dl:SolidAngleUnit
                               ] .
 
 
@@ -9260,11 +9283,11 @@ dl:SpecificEnergy rdf:type owl:Class ;
                   
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:someValuesFrom dl:SpecificEnergyUnit
+                                    owl:allValuesFrom dl:SpecificEnergyUnit
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:allValuesFrom dl:SpecificEnergyUnit
+                                    owl:someValuesFrom dl:SpecificEnergyUnit
                                   ] .
 
 
@@ -9275,10 +9298,6 @@ dl:SpecificEnergyUnit rdf:type owl:Class ;
                       
                       rdfs:subClassOf [ rdf:type owl:Restriction ;
                                         owl:onProperty dl:derivesFrom ;
-                                        owl:someValuesFrom dl:EnergyUnit
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty dl:derivesFrom ;
                                         owl:someValuesFrom [ rdf:type owl:Class ;
                                                              owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                   [ rdf:type owl:Restriction ;
@@ -9287,6 +9306,10 @@ dl:SpecificEnergyUnit rdf:type owl:Class ;
                                                                                   ]
                                                                                 )
                                                            ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty dl:derivesFrom ;
+                                        owl:someValuesFrom dl:EnergyUnit
                                       ] .
 
 
@@ -9320,7 +9343,7 @@ dl:SpecificEntropyUnit rdf:type owl:Class ;
                                                               owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                    [ rdf:type owl:Restriction ;
                                                                                      owl:onProperty dl:derivesFrom ;
-                                                                                     owl:someValuesFrom dl:TemperatureUnit
+                                                                                     owl:someValuesFrom dl:MassUnit
                                                                                    ]
                                                                                  )
                                                             ]
@@ -9331,7 +9354,7 @@ dl:SpecificEntropyUnit rdf:type owl:Class ;
                                                               owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                    [ rdf:type owl:Restriction ;
                                                                                      owl:onProperty dl:derivesFrom ;
-                                                                                     owl:someValuesFrom dl:MassUnit
+                                                                                     owl:someValuesFrom dl:TemperatureUnit
                                                                                    ]
                                                                                  )
                                                             ]
@@ -9580,8 +9603,8 @@ dl:SulfonylHalideGroup rdf:type owl:Class ;
 
 
 ###  http://ontology.dumontierlab.com/SulfoxideGroup
-dl:SulfoxideGroup rdf:type owl:Class ;
 
+dl:SulfoxideGroup rdf:type owl:Class ;
                   
                   owl:equivalentClass [ rdf:type owl:Class ;
                                         owl:intersectionOf ( dl:CarbonGroup
@@ -9911,17 +9934,6 @@ dl:ThermalConductionUnit rdf:type owl:Class ;
                                                                 owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty dl:derivesFrom ;
-                                                                                       owl:someValuesFrom dl:TemperatureUnit
-                                                                                     ]
-                                                                                   )
-                                                              ]
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty dl:derivesFrom ;
-                                           owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
-                                                                                     [ rdf:type owl:Restriction ;
-                                                                                       owl:onProperty dl:derivesFrom ;
                                                                                        owl:someValuesFrom dl:LengthUnit
                                                                                      ]
                                                                                    )
@@ -9930,6 +9942,17 @@ dl:ThermalConductionUnit rdf:type owl:Class ;
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty dl:derivesFrom ;
                                            owl:someValuesFrom dl:PowerUnit
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty dl:derivesFrom ;
+                                           owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty dl:derivesFrom ;
+                                                                                       owl:someValuesFrom dl:TemperatureUnit
+                                                                                     ]
+                                                                                   )
+                                                              ]
                                          ] .
 
 
@@ -10602,10 +10625,6 @@ dl:VelocityUnit rdf:type owl:Class ;
                 
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:derivesFrom ;
-                                  owl:someValuesFrom dl:LengthUnit
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty dl:derivesFrom ;
                                   owl:someValuesFrom [ rdf:type owl:Class ;
                                                        owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                             [ rdf:type owl:Restriction ;
@@ -10614,6 +10633,10 @@ dl:VelocityUnit rdf:type owl:Class ;
                                                                             ]
                                                                           )
                                                      ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dl:derivesFrom ;
+                                  owl:someValuesFrom dl:LengthUnit
                                 ] .
 
 
@@ -10654,11 +10677,11 @@ dl:VolumeDensity rdf:type owl:Class ;
                  
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:VolumeDensityUnit
+                                   owl:allValuesFrom dl:VolumeDensityUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:VolumeDensityUnit
+                                   owl:someValuesFrom dl:VolumeDensityUnit
                                  ] .
 
 
@@ -10709,11 +10732,11 @@ dl:Wavenumber rdf:type owl:Class ;
               
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:WavenumberUnit
+                                owl:allValuesFrom dl:WavenumberUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:WavenumberUnit
+                                owl:someValuesFrom dl:WavenumberUnit
                               ] .
 
 
@@ -10957,6 +10980,10 @@ dl:pHUnit rdf:type owl:Class ;
           
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty dl:derivesFrom ;
+                            owl:someValuesFrom dl:AmountOfSubstanceConcentrationUnit
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty dl:derivesFrom ;
                             owl:someValuesFrom [ rdf:type owl:Class ;
                                                  owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                       [ rdf:type owl:Restriction ;
@@ -10965,10 +10992,6 @@ dl:pHUnit rdf:type owl:Class ;
                                                                       ]
                                                                     )
                                                ]
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty dl:derivesFrom ;
-                            owl:someValuesFrom dl:AmountOfSubstanceConcentrationUnit
                           ] .
 
 
@@ -11662,6 +11685,66 @@ snap:ZeroDimensionalRegion rdf:type owl:Class ;
 
 
 
+###  http://matonto.org/ontologies/matonto#unit_angstrom
+
+:unit_angstrom rdf:type owl:NamedIndividual ;
+               
+               rdfs:label "angstrom" ;
+               
+               dl:isScaledBy "1.0E-10" ;
+               
+               dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_angstrom_3
+
+:unit_angstrom_3 rdf:type dl:VolumeUnit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "cubic angstrom" ;
+                 
+                 dl:isRaisedToPowerOf "3.0" ;
+                 
+                 dl:derivesFrom :unit_angstrom .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_bohr_magneton
+
+:unit_bohr_magneton rdf:type dl:Unit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "Bohr magneton" .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_centimeter
+
+:unit_centimeter rdf:type dl:LengthUnit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "centimeter" ;
+                 
+                 dl:isScaledBy "1.0E-2" ;
+                 
+                 dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_centimeter_-3
+
+:unit_centimeter_-3 rdf:type dl:Unit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "per cubic centimeter" ;
+                    
+                    dl:isRaisedToPowerOf "-3.0" ;
+                    
+                    dl:derivesFrom :unit_centimeter .
+
+
+
 ###  http://matonto.org/ontologies/matonto#unit_electron_volt
 
 :unit_electron_volt rdf:type :BandGapUnit ,
@@ -11685,6 +11768,18 @@ snap:ZeroDimensionalRegion rdf:type owl:Class ;
                  :hasSISymbol "GPa" ;
                  
                  dl:derivesFrom dl:unit_pascal .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_gram_1_centimeter_-3
+
+:unit_gram_1_centimeter_-3 rdf:type dl:VolumeDensityUnit ,
+                                    owl:NamedIndividual ;
+                           
+                           rdfs:label "gram per cubic centimeter" ;
+                           
+                           dl:derivesFrom :unit_centimeter_-3 ,
+                                          dl:unit_gram .
 
 
 
@@ -13286,28 +13381,6 @@ dl:unit_weber rdf:type dl:MagneticFluxUnit ,
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( dl:AbsorbedDoseRateUnit
-                dl:AbsorbedDoseUnit
-                dl:DoseEquivalentUnit
-                dl:ExposureUnit
-                dl:RadioactivityUnit
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( dl:AmountOfSubstanceConcentrationUnit
-                dl:CatalyticConcentrationUnit
-                dl:MolalityUnit
-                dl:PartsPerNotationUnit
-                dl:pHUnit
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( dl:AreaDensityUnit
-                dl:LinearDensityUnit
-                dl:VolumeDensityUnit
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
   owl:members ( dl:AccelerationUnit
                 dl:AmountOfSubstanceUnit
                 dl:AngleUnit
@@ -13361,6 +13434,28 @@ dl:unit_weber rdf:type dl:MagneticFluxUnit ,
                 dl:VelocityUnit
                 dl:VolumeUnit
                 dl:WavenumberUnit
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dl:AbsorbedDoseRateUnit
+                dl:AbsorbedDoseUnit
+                dl:DoseEquivalentUnit
+                dl:ExposureUnit
+                dl:RadioactivityUnit
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dl:AreaDensityUnit
+                dl:LinearDensityUnit
+                dl:VolumeDensityUnit
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dl:AmountOfSubstanceConcentrationUnit
+                dl:CatalyticConcentrationUnit
+                dl:MolalityUnit
+                dl:PartsPerNotationUnit
+                dl:pHUnit
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
