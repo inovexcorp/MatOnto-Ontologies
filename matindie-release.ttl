@@ -513,6 +513,19 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
 #
 #################################################################
 
+###  http://matonto.org/ontologies/matindie#hasComponentProperty
+
+<http://matonto.org/ontologies/matindie#hasComponentProperty> rdf:type owl:ObjectProperty ;
+                                                              
+                                                              rdfs:label "has component property" ;
+                                                              
+                                                              rdfs:comment "indicates a ComponentProperty (i.e. attribute/dimension) expected on an Observation" ;
+                                                              
+                                                              rdfs:range <http://purl.org/linked-data/cube#ComponentProperty> ;
+                                                              
+                                                              rdfs:domain <http://purl.org/linked-data/cube#Observation> .
+
+															  
 
 ###  http://purl.org/linked-data/cube#attribute
 
