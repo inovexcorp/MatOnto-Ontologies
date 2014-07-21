@@ -1,15 +1,15 @@
-@prefix : <http://matonto.org/ontology/matonto#> .
+@prefix : <http://matonto.org/ontologies/matonto#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dl: <http://ontology.dumontierlab.com/> .
-@prefix mat: <http://matonto.org/ontology/matonto#> .
+@prefix mat: <http://matonto.org/ontologies/matonto#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://matonto.org/ontology/matonto> .
+@base <http://matonto.org/ontologies/matonto> .
 
-<http://matonto.org/ontology/matonto> rdf:type owl:Ontology ;
+<http://matonto.org/ontologies/matonto> rdf:type owl:Ontology ;
                                       
                                       owl:versionInfo "1.0"^^xsd:string ,
                                                       "2.0"^^xsd:string ,
@@ -140,361 +140,6 @@
                                       rdfs:seeAlso <http://www.daml.org/2003/01/periodictable/PeriodicTable.owl> .
 
 
-#################################################################
-#
-#    Annotation properties
-#
-#################################################################
-
-
-###  http://matonto.org/ontology/matonto#hasPhaseEquilibrium
-
-:hasPhaseEquilibrium rdf:type owl:AnnotationProperty ;
-                     
-                     rdfs:label "Has Phase Equilibrium"@en ;
-                     
-                     rdfs:comment "A system may have one or many phase equilibriums"@en ;
-                     
-                     rdfs:domain dl:Compound .
-
-
-
-###  http://ontology.dumontierlab.com/derivesFrom
-
-dl:derivesFrom rdfs:label "derives from"^^xsd:string ;
-               
-               rdfs:comment "A transitive, temporal relation in which one continuant derives from another non-identical continuant."^^xsd:string ;
-               
-               dl:example "glucose-6-phosphate derivesFrom glucose in glucose metabolism"^^xsd:string .
-
-
-
-###  http://ontology.dumontierlab.com/example
-
-dl:example rdf:type owl:AnnotationProperty ;
-           
-           rdfs:label "example"@en ;
-           
-           rdfs:comment "An illustration of a general principle."@en .
-
-
-
-###  http://ontology.dumontierlab.com/isRaisedToPowerOf
-
-dl:isRaisedToPowerOf rdfs:label "is raised to the power of"^^xsd:string .
-
-
-
-###  http://ontology.dumontierlab.com/isScaledBy
-
-dl:isScaledBy rdfs:label "is scaled by"^^xsd:string .
-
-
-
-###  http://ontology.dumontierlab.com/synonym
-
-dl:synonym rdf:type owl:AnnotationProperty ;
-           
-           rdfs:label "synonym"@en ;
-           
-           rdfs:comment "A word having the same meaning as another"@en .
-
-
-
-###  http://purl.org/dc/elements/1.1/contributor
-
-dc:contributor rdf:type owl:AnnotationProperty ;
-               
-               rdfs:label "Contributor"@en-us ;
-               
-               rdfs:isDefinedBy "" ;
-               
-               rdfs:comment """An entity responsible for making contributions to the
-         content of the resource."""@en-us ;
-               
-               dc:description """Examples of a Contributor include a person, an 
-         organisation, or a service.  Typically, the name of a 
-         Contributor should be used to indicate the entity."""@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/coverage
-
-dc:coverage rdf:type owl:AnnotationProperty ;
-            
-            rdfs:label "Coverage"@en-us ;
-            
-            rdfs:isDefinedBy "" ;
-            
-            dc:description """Coverage will typically include spatial location (a place name
-         or geographic coordinates), temporal period (a period label,
-         date, or date range) or jurisdiction (such as a named
-         administrative entity).
-         Recommended best practice is to select a value from a
-         controlled vocabulary (for example, the Thesaurus of Geographic
-         Names [TGN]) and that, where appropriate, named places or time
-         periods be used in preference to numeric identifiers such as
-         sets of coordinates or date ranges."""@en-us ;
-            
-            rdfs:comment "The extent or scope of the content of the resource."@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/creator
-
-dc:creator rdf:type owl:AnnotationProperty ;
-           
-           rdfs:label "Creator"@en-us ;
-           
-           rdfs:isDefinedBy "" ;
-           
-           rdfs:comment """An entity primarily responsible for making the content 
-         of the resource."""@en-us ;
-           
-           dc:description """Examples of a Creator include a person, an organisation,
-         or a service.  Typically, the name of a Creator should 
-         be used to indicate the entity."""@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/date
-
-dc:date rdf:type owl:AnnotationProperty ;
-        
-        rdfs:label "Date"@en-us ;
-        
-        rdfs:isDefinedBy "" ;
-        
-        rdfs:comment """A date associated with an event in the life cycle of the
-         resource."""@en-us ;
-        
-        dc:description """Typically, Date will be associated with the creation or
-         availability of the resource.  Recommended best practice
-         for encoding the date value is defined in a profile of
-         ISO 8601 [W3CDTF] and follows the YYYY-MM-DD format."""@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/description
-
-dc:description rdf:type owl:AnnotationProperty ;
-               
-               rdfs:label "Description"@en-us ;
-               
-               rdfs:isDefinedBy "" ;
-               
-               rdfs:comment "An account of the content of the resource."@en-us ;
-               
-               dc:description """Description may include but is not limited to: an abstract,
-         table of contents, reference to a graphical representation
-         of content or a free-text account of the content."""@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/format
-
-dc:format rdf:type owl:AnnotationProperty ;
-          
-          rdfs:label "Format"@en-us ;
-          
-          rdfs:isDefinedBy "" ;
-          
-          rdfs:comment "The physical or digital manifestation of the resource."@en-us ;
-          
-          dc:description """Typically, Format may include the media-type or dimensions of
-         the resource. Format may be used to determine the software,
-         hardware or other equipment needed to display or operate the
-         resource. Examples of dimensions include size and duration.
-         Recommended best practice is to select a value from a
-         controlled vocabulary (for example, the list of Internet Media
-         Types [MIME] defining computer media formats)."""@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/identifier
-
-dc:identifier rdf:type owl:AnnotationProperty ;
-              
-              rdfs:label "Resource Identifier"@en-us ;
-              
-              rdfs:isDefinedBy "" ;
-              
-              rdfs:comment "An unambiguous reference to the resource within a given context."@en-us ;
-              
-              dc:description """Recommended best practice is to identify the resource by means
-         of a string or number conforming to a formal identification
-         system.
-         Example formal identification systems include the Uniform
-         Resource Identifier (URI) (including the Uniform Resource
-         Locator (URL)), the Digital Object Identifier (DOI) and the
-         International Standard Book Number (ISBN)."""@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/language
-
-dc:language rdf:type owl:AnnotationProperty ;
-            
-            rdfs:label "Language"@en-us ;
-            
-            rdfs:isDefinedBy "" ;
-            
-            rdfs:comment "A language of the intellectual content of the resource."@en-us ;
-            
-            dc:description """Recommended best practice is to use RFC 3066 [RFC3066],
-         which, in conjunction with ISO 639 [ISO639], defines two-
-         and three-letter primary language tags with optional
-         subtags.  Examples include \"en\" or \"eng\" for English,
-         \"akk\" for Akkadian, and \"en-GB\" for English used in the
-         United Kingdom."""@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/publisher
-
-dc:publisher rdf:type owl:AnnotationProperty ;
-             
-             rdfs:label "Publisher"@en-us ;
-             
-             rdfs:isDefinedBy "" ;
-             
-             rdfs:comment "An entity responsible for making the resource available"@en-us ;
-             
-             dc:description """Examples of a Publisher include a person, an organisation,
-         or a service.
-         Typically, the name of a Publisher should be used to
-         indicate the entity."""@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/relation
-
-dc:relation rdf:type owl:AnnotationProperty ;
-            
-            rdfs:label "Relation"@en-us ;
-            
-            rdfs:isDefinedBy "" ;
-            
-            rdfs:comment "A reference to a related resource."@en-us ;
-            
-            dc:description """Recommended best practice is to reference the resource by means
-         of a string or number conforming to a formal identification
-         system."""@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/rights
-
-dc:rights rdf:type owl:AnnotationProperty ;
-          
-          rdfs:label "Rights Management"@en-us ;
-          
-          rdfs:isDefinedBy "" ;
-          
-          rdfs:comment "Information about rights held in and over the resource."@en-us ;
-          
-          dc:description """Typically, a Rights element will contain a rights 
-          management statement for the resource, or reference 
-          a service providing such information. Rights information 
-          often encompasses Intellectual Property Rights (IPR), 
-          Copyright, and various Property Rights. 
-          If the Rights element is absent, no assumptions can be made 
-          about the status of these and other rights with respect to 
-          the resource."""@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/source
-
-dc:source rdf:type owl:AnnotationProperty ;
-          
-          rdfs:label "Source"@en-us ;
-          
-          rdfs:isDefinedBy "" ;
-          
-          rdfs:comment """A reference to a resource from which the present resource
-         is derived."""@en-us ;
-          
-          dc:description """The present resource may be derived from the Source resource
-         in whole or in part.  Recommended best practice is to reference
-         the resource by means of a string or number conforming to a
-         formal identification system."""@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/subject
-
-dc:subject rdf:type owl:AnnotationProperty ;
-           
-           rdfs:label "Subject and Keywords"@en-us ;
-           
-           rdfs:isDefinedBy "" ;
-           
-           rdfs:comment "The topic of the content of the resource."@en-us ;
-           
-           dc:description """Typically, a Subject will be expressed as keywords,
-         key phrases or classification codes that describe a topic
-         of the resource.  Recommended best practice is to select 
-         a value from a controlled vocabulary or formal 
-         classification scheme."""@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/title
-
-dc:title rdf:type owl:AnnotationProperty ;
-         
-         rdfs:label "Title"@en-us ;
-         
-         rdfs:isDefinedBy "" ;
-         
-         dc:description "A name by which the resource is formally known."@en-us ;
-         
-         rdfs:comment "A name given to the resource."@en-us .
-
-
-
-###  http://purl.org/dc/elements/1.1/type
-
-dc:type rdf:type owl:AnnotationProperty ;
-        
-        rdfs:label "Resource Type"@en-us ;
-        
-        rdfs:isDefinedBy "" ;
-        
-        rdfs:comment "The nature or genre of the content of the resource."@en-us ;
-        
-        dc:description """Type includes terms describing general categories, functions,
-         genres, or aggregation levels for content. Recommended best
-         practice is to select a value from a controlled vocabulary
-         (for example, the DCMI Type Vocabulary [DCMITYPE]). To 
-         describe the physical or digital manifestation of the 
-         resource, use the Format element."""@en-us .
-
-
-
-###  http://www.w3.org/2004/02/skos/core#altLabel
-
-<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
-
-
-
-
-
-#################################################################
-#
-#    Datatypes
-#
-#################################################################
-
-
-###  http://www.w3.org/2001/XMLSchema#double
-
-xsd:double rdf:type rdfs:Datatype .
-
-
-
-
 
 #################################################################
 #
@@ -503,86 +148,88 @@ xsd:double rdf:type rdfs:Datatype .
 #################################################################
 
 
-###  http://matonto.org/ontology/matonto#hasElement
+###  http://matonto.org/ontologies/matonto#hasElement
 
-:hasElement rdf:type owl:ObjectProperty ;
+mat:hasElement rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "Has Element"@en ;
+               
+               rdfs:comment "A phase equilibrium has at one or many elements"@en ;
+               
+               rdfs:domain mat:PhaseEquilibrium ;
+               
+               rdfs:range dl:Element .
+
+
+
+###  http://matonto.org/ontologies/matonto#hasMass
+
+mat:hasMass rdf:type owl:ObjectProperty ;
             
-            rdfs:label "Has Element"@en ;
+            rdfs:label "has mass"@en ;
             
-            rdfs:comment "A phase equilibrium has at one or many elements"@en ;
-            
-            rdfs:domain :PhaseEquilibrium ;
-            
-            rdfs:range dl:Element .
+            rdfs:range dl:Mass .
 
 
 
-###  http://matonto.org/ontology/matonto#hasMass
+###  http://matonto.org/ontologies/matonto#hasPhase
 
-:hasMass rdf:type owl:ObjectProperty ;
-         
-         rdfs:label "has mass"@en ;
-         
-         rdfs:range dl:Mass .
-
-
-
-###  http://matonto.org/ontology/matonto#hasPhase
-
-:hasPhase rdf:type owl:ObjectProperty ;
-          
-          rdfs:label "Has Phase"@en ;
-          
-          rdfs:comment "An element has at one or many chemical phases"@en ;
-          
-          rdfs:range dl:ChemicalPhase ;
-          
-          rdfs:domain dl:Element ;
-          
-          rdfs:subPropertyOf owl:topObjectProperty .
-
-
-
-###  http://matonto.org/ontology/matonto#hasPhaseEquilibrium
-
-:hasPhaseEquilibrium rdf:type owl:ObjectProperty ;
-                     
-                     rdfs:label "Has Phase Equilibrium"@en ;
-                     
-                     rdfs:comment "A system may have one or many phase equilibriums"@en ;
-                     
-                     rdfs:domain :Alloy ;
-                     
-                     rdfs:range :PhaseEquilibrium .
-
-
-
-###  http://matonto.org/ontology/matonto#hasPressure
-
-:hasPressure rdf:type owl:ObjectProperty ;
+mat:hasPhase rdf:type owl:ObjectProperty ;
              
-             rdfs:label "Has Pressure"@en ;
+             rdfs:label "Has Phase"@en ;
              
-             rdfs:comment "A phase equilibrium occurs at a specific pressure"@en ;
+             rdfs:comment "An element has at one or many chemical phases"@en ;
              
-             rdfs:domain :PhaseEquilibrium ;
+             rdfs:range dl:ChemicalPhase ;
              
-             rdfs:range dl:Pressure .
+             rdfs:domain dl:Element ;
+             
+             rdfs:subPropertyOf owl:topObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#hasTemperature
+###  http://matonto.org/ontologies/matonto#hasPhaseEquilibrium
 
-:hasTemperature rdf:type owl:FunctionalProperty ,
-                         owl:ObjectProperty ;
+mat:hasPhaseEquilibrium rdf:type owl:ObjectProperty ;
+                        
+                        rdfs:label "Has Phase Equilibrium"@en ;
+                        
+                        rdfs:comment "A system may have one or many phase equilibriums"@en ;
+                        
+                        rdfs:domain mat:Alloy ;
+                        
+                        rdfs:range mat:PhaseEquilibrium ;
+                        
+                        rdfs:domain dl:Compound .
+
+
+
+###  http://matonto.org/ontologies/matonto#hasPressure
+
+mat:hasPressure rdf:type owl:ObjectProperty ;
                 
-                rdfs:label "Has Temperature"@en ;
+                rdfs:label "Has Pressure"@en ;
                 
-                rdfs:comment "A phase equilibrium has a specific temperature"@en ;
+                rdfs:comment "A phase equilibrium occurs at a specific pressure"@en ;
                 
-                rdfs:domain :PhaseEquilibrium ;
+                rdfs:domain mat:PhaseEquilibrium ;
                 
-                rdfs:range dl:Temperature .
+                rdfs:range dl:Pressure .
+
+
+
+###  http://matonto.org/ontologies/matonto#hasTemperature
+
+mat:hasTemperature rdf:type owl:FunctionalProperty ,
+                            owl:ObjectProperty ;
+                   
+                   rdfs:label "Has Temperature"@en ;
+                   
+                   rdfs:comment "A phase equilibrium has a specific temperature"@en ;
+                   
+                   rdfs:domain mat:PhaseEquilibrium ;
+                   
+                   rdfs:range dl:Temperature .
 
 
 
@@ -1853,67 +1500,67 @@ dl:transformsInto rdf:type owl:ObjectProperty ,
 #################################################################
 
 
-###  http://matonto.org/ontology/matonto#hasChemicalSymbol
+###  http://matonto.org/ontologies/matonto#hasChemicalSymbol
 
-:hasChemicalSymbol rdf:type owl:DatatypeProperty ;
-                   
-                   rdfs:label "has chemical symbol"@en ;
-                   
-                   rdfs:comment "A chemical symbol is a notation of one or two letters representing a chemical element"@en ;
-                   
-                   rdfs:subPropertyOf :hasSymbol ;
-                   
-                   rdfs:range xsd:string .
-
-
-
-###  http://matonto.org/ontology/matonto#hasCommonSymbol
-
-:hasCommonSymbol rdf:type owl:DatatypeProperty ;
-                 
-                 rdfs:label "has common symbol" ;
-                 
-                 rdfs:comment "A traditional or common symbol used to identify a quality in literature or mathematical functions.  For example, G is the common symbol for Newton's gravitational constant, as well as for the modulus of rigidity in materials science." ;
-                 
-                 rdfs:subPropertyOf :hasSymbol ;
-                 
-                 rdfs:range xsd:string .
+mat:hasChemicalSymbol rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "has chemical symbol"@en ;
+                      
+                      rdfs:comment "A chemical symbol is a notation of one or two letters representing a chemical element"@en ;
+                      
+                      rdfs:subPropertyOf mat:hasSymbol ;
+                      
+                      rdfs:range xsd:string .
 
 
 
-###  http://matonto.org/ontology/matonto#hasName
+###  http://matonto.org/ontologies/matonto#hasCommonSymbol
 
-:hasName rdf:type owl:DatatypeProperty ;
-         
-         rdfs:label "has Name"@en ;
-         
-         rdfs:range xsd:string .
-
-
-
-###  http://matonto.org/ontology/matonto#hasSISymbol
-
-:hasSISymbol rdf:type owl:DatatypeProperty ;
-             
-             rdfs:label "has SI Unit Symbol" ;
-             
-             rdfs:comment "The official SI symbol for a unit. For example, kg is the symbol for kilogram." ;
-             
-             rdfs:subPropertyOf :hasSymbol ;
-             
-             rdfs:range xsd:string .
+mat:hasCommonSymbol rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:label "has common symbol" ;
+                    
+                    rdfs:comment "A traditional or common symbol used to identify a quality in literature or mathematical functions.  For example, G is the common symbol for Newton's gravitational constant, as well as for the modulus of rigidity in materials science." ;
+                    
+                    rdfs:subPropertyOf mat:hasSymbol ;
+                    
+                    rdfs:range xsd:string .
 
 
 
-###  http://matonto.org/ontology/matonto#hasSymbol
+###  http://matonto.org/ontologies/matonto#hasName
 
-:hasSymbol rdf:type owl:DatatypeProperty ;
-           
-           rdfs:label "has symbol"@en ;
-           
-           rdfs:comment "Any string that is commonly associated with an object, or uniquely identifies it within a domain.  For example, \"He\" is a symbol for Helium, and \"g\" is a symbol for the mass unit gram." ;
-           
-           rdfs:range xsd:string .
+mat:hasName rdf:type owl:DatatypeProperty ;
+            
+            rdfs:label "has Name"@en ;
+            
+            rdfs:range xsd:string .
+
+
+
+###  http://matonto.org/ontologies/matonto#hasSISymbol
+
+mat:hasSISymbol rdf:type owl:DatatypeProperty ;
+                
+                rdfs:label "has SI Unit Symbol" ;
+                
+                rdfs:comment "The official SI symbol for a unit. For example, kg is the symbol for kilogram." ;
+                
+                rdfs:subPropertyOf mat:hasSymbol ;
+                
+                rdfs:range xsd:string .
+
+
+
+###  http://matonto.org/ontologies/matonto#hasSymbol
+
+mat:hasSymbol rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "has symbol"@en ;
+              
+              rdfs:comment "Any string that is commonly associated with an object, or uniquely identifies it within a domain.  For example, \"He\" is a symbol for Helium, and \"g\" is a symbol for the mass unit gram." ;
+              
+              rdfs:range xsd:string .
 
 
 
@@ -2018,740 +1665,739 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty ;
 #################################################################
 
 
-###  http://matonto.org/ontology/matonto#Alloy
+###  http://matonto.org/ontologies/matonto#Alloy
 
-:Alloy rdf:type owl:Class ;
-       
-       rdfs:label "Alloy"@en ;
-       
-       rdfs:subClassOf dl:Solution .
-
-
-
-###  http://matonto.org/ontology/matonto#BandGap
-
-:BandGap rdf:type owl:Class ;
-         
-         rdfs:label "band gap" ;
-         
-         rdfs:subClassOf dl:MeasuredProperty ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty dl:hasUnit ;
-                           owl:someValuesFrom :BandGapUnit
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty dl:hasUnit ;
-                           owl:allValuesFrom :BandGapUnit
-                         ] ;
-         
-         rdfs:comment "The energy difference between the top of the valence band and the botto of the conduction band in insulators and semiconductors" .
-
-
-
-###  http://matonto.org/ontology/matonto#BandGapUnit
-
-:BandGapUnit rdf:type owl:Class ;
-             
-             rdfs:label "band gap unit" ;
-             
-             rdfs:subClassOf dl:Unit ;
-             
-             rdfs:comment "A standard unit for band gap" .
-
-
-
-###  http://matonto.org/ontology/matonto#BulkModulus
-
-:BulkModulus rdf:type owl:Class ;
-             
-             rdfs:label "bulk modulus" ;
-             
-             rdfs:subClassOf :ElasticModulus ;
-             
-             rdfs:comment "The bulk modulus describes volumetric elasticity, or the tendency of an object to deform in all directions when uniformly loaded in all directions; it is defined as volumetric stress over volumetric strain, and is the inverse of compressibility. The bulk modulus is an extension of Young's modulus to three dimensions." .
-
-
-
-###  http://matonto.org/ontology/matonto#CeramicMaterial
-
-:CeramicMaterial rdf:type owl:Class ;
-                 
-                 rdfs:label "Ceramic Material"^^xsd:string ;
-                 
-                 rdfs:subClassOf :Material ;
-                 
-                 rdfs:comment "A ceramic material that is studied in materials science."^^xsd:string .
-
-
-
-###  http://matonto.org/ontology/matonto#Ceramics
-
-:Ceramics rdf:type owl:Class ;
+mat:Alloy rdf:type owl:Class ;
           
-          rdfs:label "ceramics" ;
+          rdfs:label "Alloy"@en ;
           
-          rdfs:subClassOf :MaterialCategory .
+          rdfs:subClassOf dl:Solution .
 
 
 
-###  http://matonto.org/ontology/matonto#ChemicalClass
+###  http://matonto.org/ontologies/matonto#BandGap
 
-:ChemicalClass rdf:type owl:Class ;
-               
-               rdfs:label "Chemical Class"^^xsd:string ;
-               
-               rdfs:subClassOf dl:ChemicalQuality .
-
-
-
-###  http://matonto.org/ontology/matonto#ChemicalFamily
-
-:ChemicalFamily rdf:type owl:Class ;
-                
-                rdfs:label "Chemical Family"^^xsd:string ;
-                
-                rdfs:subClassOf :ChemicalQuality .
-
-
-
-###  http://matonto.org/ontology/matonto#ChemicalFormula
-
-:ChemicalFormula rdf:type owl:Class ;
-                 
-                 rdfs:label "Chemical Formula"^^xsd:string ;
-                 
-                 rdfs:subClassOf :ChemicalQuality .
-
-
-
-###  http://matonto.org/ontology/matonto#ChemicalQuality
-
-:ChemicalQuality rdf:type owl:Class .
-
-
-
-###  http://matonto.org/ontology/matonto#ClosedThermodynamicSystem
-
-:ClosedThermodynamicSystem rdf:type owl:Class ;
-                           
-                           rdfs:label "closed thermodynamic system" ;
-                           
-                           rdfs:subClassOf :ThermodynamicSystem ;
-                           
-                           rdfs:comment "a thermodynamic system in which no mass can be transferred in or out of the system boundaries" .
-
-
-
-###  http://matonto.org/ontology/matonto#Composites
-
-:Composites rdf:type owl:Class ;
+mat:BandGap rdf:type owl:Class ;
             
-            rdfs:label "composites" ;
+            rdfs:label "band gap" ;
             
-            rdfs:subClassOf :MaterialCategory .
-
-
-
-###  http://matonto.org/ontology/matonto#CrystalSystem
-
-:CrystalSystem rdf:type owl:Class ;
-               
-               rdfs:label "crystal system" ;
-               
-               rdfs:subClassOf :SaceGroupProperty .
-
-
-
-###  http://matonto.org/ontology/matonto#ElasticModulus
-
-:ElasticModulus rdf:type owl:Class ;
-                
-                rdfs:label "elastic modulus" ;
-                
-                rdfs:subClassOf dl:MeasuredProperty ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:PressureUnit
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:PressureUnit
-                                ] ;
-                
-                rdfs:comment "An elastic modulus, or modulus of elasticity, is the mathematical description of an object or substance's tendency to be deformed elastically (i.e., non-permanently) when a force is applied to it. The elastic modulus of an object is defined as the slope of its stress�strain curve in the elastic deformation region." ;
-                
-                <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of elasticity" .
-
-
-
-###  http://matonto.org/ontology/matonto#Elastomers
-
-:Elastomers rdf:type owl:Class ;
+            rdfs:subClassOf dl:MeasuredProperty ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty dl:hasUnit ;
+                              owl:someValuesFrom mat:BandGapUnit
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty dl:hasUnit ;
+                              owl:allValuesFrom mat:BandGapUnit
+                            ] ;
             
-            rdfs:label "elastomers" ;
-            
-            rdfs:subClassOf :Polymers ;
-            
-            rdfs:comment "A rubber-like (viscoelastic) polymer. Generally, has a low Young's modulus and high failure strain." .
+            rdfs:comment "The energy difference between the top of the valence band and the botto of the conduction band in insulators and semiconductors" .
 
 
 
-###  http://matonto.org/ontology/matonto#EmpiricalFormula
+###  http://matonto.org/ontologies/matonto#BandGapUnit
 
-:EmpiricalFormula rdf:type owl:Class ;
+mat:BandGapUnit rdf:type owl:Class ;
+                
+                rdfs:label "band gap unit" ;
+                
+                rdfs:subClassOf dl:Unit ;
+                
+                rdfs:comment "A standard unit for band gap" .
+
+
+
+###  http://matonto.org/ontologies/matonto#BulkModulus
+
+mat:BulkModulus rdf:type owl:Class ;
+                
+                rdfs:label "bulk modulus" ;
+                
+                rdfs:subClassOf mat:ElasticModulus ;
+                
+                rdfs:comment "The bulk modulus describes volumetric elasticity, or the tendency of an object to deform in all directions when uniformly loaded in all directions; it is defined as volumetric stress over volumetric strain, and is the inverse of compressibility. The bulk modulus is an extension of Young's modulus to three dimensions." .
+
+
+
+###  http://matonto.org/ontologies/matonto#CeramicMaterial
+
+mat:CeramicMaterial rdf:type owl:Class ;
+                    
+                    rdfs:label "Ceramic Material"^^xsd:string ;
+                    
+                    rdfs:subClassOf mat:Material ;
+                    
+                    rdfs:comment "A ceramic material that is studied in materials science."^^xsd:string .
+
+
+
+###  http://matonto.org/ontologies/matonto#Ceramics
+
+mat:Ceramics rdf:type owl:Class ;
+             
+             rdfs:label "ceramics" ;
+             
+             rdfs:subClassOf mat:MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#ChemicalClass
+
+mat:ChemicalClass rdf:type owl:Class ;
                   
-                  rdfs:label "Empirical Formula" ;
+                  rdfs:label "Chemical Class"^^xsd:string ;
                   
-                  rdfs:subClassOf :chemicalFormula ;
+                  rdfs:subClassOf dl:ChemicalQuality .
+
+
+
+###  http://matonto.org/ontologies/matonto#ChemicalFamily
+
+mat:ChemicalFamily rdf:type owl:Class ;
+                   
+                   rdfs:label "Chemical Family"^^xsd:string ;
+                   
+                   rdfs:subClassOf mat:ChemicalQuality .
+
+
+
+###  http://matonto.org/ontologies/matonto#ChemicalFormula
+
+mat:ChemicalFormula rdf:type owl:Class ;
+                    
+                    rdfs:label "Chemical Formula"^^xsd:string ;
+                    
+                    rdfs:subClassOf mat:ChemicalQuality .
+
+
+
+###  http://matonto.org/ontologies/matonto#ChemicalQuality
+
+mat:ChemicalQuality rdf:type owl:Class .
+
+
+
+###  http://matonto.org/ontologies/matonto#ClosedThermodynamicSystem
+
+mat:ClosedThermodynamicSystem rdf:type owl:Class ;
+                              
+                              rdfs:label "closed thermodynamic system" ;
+                              
+                              rdfs:subClassOf mat:ThermodynamicSystem ;
+                              
+                              rdfs:comment "a thermodynamic system in which no mass can be transferred in or out of the system boundaries" .
+
+
+
+###  http://matonto.org/ontologies/matonto#Composites
+
+mat:Composites rdf:type owl:Class ;
+               
+               rdfs:label "composites" ;
+               
+               rdfs:subClassOf mat:MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#CrystalSystem
+
+mat:CrystalSystem rdf:type owl:Class ;
                   
-                  rdfs:comment "In chemistry, the empirical formula of a chemical is a simple expression of the relative number of each type of atom or ratio of the elements in the compound. Empirical formulas are the standard for ionic compounds, such as CaCl2, and for macromolecules, such as SiO2." .
+                  rdfs:label "crystal system" ;
+                  
+                  rdfs:subClassOf mat:SaceGroupProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#Enthalpy
+###  http://matonto.org/ontologies/matonto#ElasticModulus
 
-:Enthalpy rdf:type owl:Class ;
-          
-          rdfs:label "enthalpy" ;
-          
-          rdfs:subClassOf dl:MeasuredProperty ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty dl:hasUnit ;
-                            owl:someValuesFrom :EnthalpyUnit
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty dl:hasUnit ;
-                            owl:allValuesFrom :EnthalpyUnit
-                          ] ;
-          
-          rdfs:comment "A measure of the total energy of a thermodynamic system." .
+mat:ElasticModulus rdf:type owl:Class ;
+                   
+                   rdfs:label "elastic modulus" ;
+                   
+                   rdfs:subClassOf dl:MeasuredProperty ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dl:hasUnit ;
+                                     owl:allValuesFrom dl:PressureUnit
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dl:hasUnit ;
+                                     owl:someValuesFrom dl:PressureUnit
+                                   ] ;
+                   
+                   <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of elasticity" ;
+                   
+                   rdfs:comment "An elastic modulus, or modulus of elasticity, is the mathematical description of an object or substance's tendency to be deformed elastically (i.e., non-permanently) when a force is applied to it. The elastic modulus of an object is defined as the slope of its stress�strain curve in the elastic deformation region." .
 
 
 
-###  http://matonto.org/ontology/matonto#EnthalpyUnit
+###  http://matonto.org/ontologies/matonto#Elastomers
 
-:EnthalpyUnit rdf:type owl:Class ;
+mat:Elastomers rdf:type owl:Class ;
+               
+               rdfs:label "elastomers" ;
+               
+               rdfs:subClassOf mat:Polymers ;
+               
+               rdfs:comment "A rubber-like (viscoelastic) polymer. Generally, has a low Young's modulus and high failure strain." .
+
+
+
+###  http://matonto.org/ontologies/matonto#EmpiricalFormula
+
+mat:EmpiricalFormula rdf:type owl:Class ;
+                     
+                     rdfs:label "Empirical Formula" ;
+                     
+                     rdfs:subClassOf mat:chemicalFormula ;
+                     
+                     rdfs:comment "In chemistry, the empirical formula of a chemical is a simple expression of the relative number of each type of atom or ratio of the elements in the compound. Empirical formulas are the standard for ionic compounds, such as CaCl2, and for macromolecules, such as SiO2." .
+
+
+
+###  http://matonto.org/ontologies/matonto#Enthalpy
+
+mat:Enthalpy rdf:type owl:Class ;
+             
+             rdfs:label "enthalpy" ;
+             
+             rdfs:subClassOf dl:MeasuredProperty ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dl:hasUnit ;
+                               owl:allValuesFrom mat:EnthalpyUnit
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dl:hasUnit ;
+                               owl:someValuesFrom mat:EnthalpyUnit
+                             ] ;
+             
+             rdfs:comment "A measure of the total energy of a thermodynamic system." .
+
+
+
+###  http://matonto.org/ontologies/matonto#EnthalpyUnit
+
+mat:EnthalpyUnit rdf:type owl:Class ;
+                 
+                 rdfs:label "enthalpy unit" ;
+                 
+                 rdfs:subClassOf dl:Unit ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dl:derivesFrom ;
+                                   owl:someValuesFrom dl:EnergyUnit
+                                 ] ;
+                 
+                 rdfs:comment "a standard measurement unit for enthalpy" .
+
+
+
+###  http://matonto.org/ontologies/matonto#ExtensiveProperty
+
+mat:ExtensiveProperty rdf:type owl:Class ;
+                      
+                      rdfs:label "extensive property" ;
+                      
+                      rdfs:subClassOf dl:MeasuredProperty ;
+                      
+                      owl:disjointWith mat:IntensiveProperty ;
+                      
+                      rdfs:comment "An extensive property is a physical quantity that is the sum of the properties of separate noninteracting subsystems that compose the entire system. The value of such an additive property is proportional to the size of the system it describes, or to the quantity of matter in the system" .
+
+
+
+###  http://matonto.org/ontologies/matonto#FlexuralModulus
+
+mat:FlexuralModulus rdf:type owl:Class ;
+                    
+                    rdfs:label "flexural modulus" ;
+                    
+                    rdfs:subClassOf mat:IntensiveProperty ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dl:hasUnit ;
+                                      owl:someValuesFrom dl:PressureUnit
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dl:hasUnit ;
+                                      owl:allValuesFrom dl:PressureUnit
+                                    ] ;
+                    
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "bending modulus" ;
+                    
+                    rdfs:comment "In mechanics, the flexural modulus or bending modulus is the ratio of stress to strain in flexural deformation, or the tendency for a material to bend. It is determined from the slope of a stress-strain curve produced by a flexural test, and uses units of force per area." .
+
+
+
+###  http://matonto.org/ontologies/matonto#FlexuralStrength
+
+mat:FlexuralStrength rdf:type owl:Class ;
+                     
+                     rdfs:label "flexural strength" ;
+                     
+                     rdfs:subClassOf dl:MeasuredProperty ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty dl:hasUnit ;
+                                       owl:allValuesFrom dl:PressureUnit
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty dl:hasUnit ;
+                                       owl:someValuesFrom dl:PressureUnit
+                                     ] ;
+                     
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of rupture" ,
+                                                                    "bend strength" ;
+                     
+                     rdfs:comment "Flexural strength is a mechanical parameter for brittle material, is defined as a material's ability to resist deformation under load." .
+
+
+
+###  http://matonto.org/ontologies/matonto#FractureToughness
+
+mat:FractureToughness rdf:type owl:Class ;
+                      
+                      rdfs:label "fracture toughness" ;
+                      
+                      rdfs:subClassOf dl:MeasuredProperty .
+
+
+
+###  http://matonto.org/ontologies/matonto#GibbsFreeEnergy
+
+mat:GibbsFreeEnergy rdf:type owl:Class ;
+                    
+                    rdfs:label "Gibbs free energy" ;
+                    
+                    rdfs:subClassOf dl:MolarEnergy ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dl:hasUnit ;
+                                      owl:someValuesFrom dl:MolarEnergyUnit
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dl:hasUnit ;
+                                      owl:allValuesFrom dl:MolarEnergyUnit
+                                    ] ;
+                    
+                    rdfs:comment "a measure of the process-initiating work obtainable from a thermodynamic system at a constant temperature and pressure." .
+
+
+
+###  http://matonto.org/ontologies/matonto#Glasses
+
+mat:Glasses rdf:type owl:Class ;
+            
+            rdfs:label "glasses" ;
+            
+            rdfs:subClassOf mat:MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#GrainSize
+
+mat:GrainSize rdf:type owl:Class ;
               
-              rdfs:label "enthalpy unit" ;
+              rdfs:label "grain size" ;
               
-              rdfs:subClassOf dl:Unit ,
+              rdfs:subClassOf dl:MeasuredProperty ,
                               [ rdf:type owl:Restriction ;
-                                owl:onProperty dl:derivesFrom ;
-                                owl:someValuesFrom dl:EnergyUnit
+                                owl:onProperty dl:hasUnit ;
+                                owl:someValuesFrom dl:LengthUnit
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty dl:hasUnit ;
+                                owl:allValuesFrom dl:LengthUnit
                               ] ;
               
-              rdfs:comment "a standard measurement unit for enthalpy" .
+              <http://www.w3.org/2004/02/skos/core#altLabel> "particle size" ;
+              
+              rdfs:comment "Grain size refers to the diameter of individual grains of sediment, or the lithified particles in clastic rocks. The term may also be applied to other granular materials. This is different from the crystallite size, which is the size of a single crystal inside the particles or grains. A single grain can be composed of several crystals. Granular material can range from very small colloidal particles, through clay, silt, sand, and gravel, to boulders." .
 
 
 
-###  http://matonto.org/ontology/matonto#ExtensiveProperty
+###  http://matonto.org/ontologies/matonto#HeatCapacity
 
-:ExtensiveProperty rdf:type owl:Class ;
-                   
-                   rdfs:label "extensive property" ;
-                   
-                   rdfs:subClassOf dl:MeasuredProperty ;
-                   
-                   owl:disjointWith :IntensiveProperty ;
-                   
-                   rdfs:comment "An extensive property is a physical quantity that is the sum of the properties of separate noninteracting subsystems that compose the entire system. The value of such an additive property is proportional to the size of the system it describes, or to the quantity of matter in the system" .
-
-
-
-###  http://matonto.org/ontology/matonto#FlexuralModulus
-
-:FlexuralModulus rdf:type owl:Class ;
+mat:HeatCapacity rdf:type owl:Class ;
                  
-                 rdfs:label "flexural modulus" ;
+                 rdfs:label "heat capacity" ;
                  
-                 rdfs:subClassOf :IntensiveProperty ,
+                 rdfs:subClassOf mat:ExtensiveProperty ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:PressureUnit
+                                   owl:allValuesFrom dl:EntropyUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:PressureUnit
+                                   owl:someValuesFrom dl:EntropyUnit
                                  ] ;
                  
-                 rdfs:comment "In mechanics, the flexural modulus or bending modulus is the ratio of stress to strain in flexural deformation, or the tendency for a material to bend. It is determined from the slope of a stress-strain curve produced by a flexural test, and uses units of force per area." ;
+                 rdfs:comment "Heat capacity is the measurable physical quantity of heat energy required to change the temperature of an object by a given amount." ;
                  
-                 <http://www.w3.org/2004/02/skos/core#altLabel> "bending modulus" .
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "thermal capacity" .
 
 
 
-###  http://matonto.org/ontology/matonto#FlexuralStrength
+###  http://matonto.org/ontologies/matonto#HelmholtzFreeEnergy
 
-:FlexuralStrength rdf:type owl:Class ;
-                  
-                  rdfs:label "flexural strength" ;
-                  
-                  rdfs:subClassOf dl:MeasuredProperty ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty dl:hasUnit ;
-                                    owl:allValuesFrom dl:PressureUnit
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty dl:hasUnit ;
-                                    owl:someValuesFrom dl:PressureUnit
-                                  ] ;
-                  
-                  <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of rupture" ;
-                  
-                  rdfs:comment "Flexural strength is a mechanical parameter for brittle material, is defined as a material's ability to resist deformation under load." ;
-                  
-                  <http://www.w3.org/2004/02/skos/core#altLabel> "bend strength" .
+mat:HelmholtzFreeEnergy rdf:type owl:Class ;
+                        
+                        rdfs:label "Helmholtz free energy" ;
+                        
+                        rdfs:subClassOf dl:Energy ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty dl:hasUnit ;
+                                          owl:someValuesFrom dl:EnergyUnit
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty dl:hasUnit ;
+                                          owl:allValuesFrom dl:EnergyUnit
+                                        ] ;
+                        
+                        rdfs:comment "the workobtainable from a closed thermodynamic system at a constant temperature" .
 
 
 
-###  http://matonto.org/ontology/matonto#FractureToughness
+###  http://matonto.org/ontologies/matonto#IntensiveProperty
 
-:FractureToughness rdf:type owl:Class ;
+mat:IntensiveProperty rdf:type owl:Class ;
+                      
+                      rdfs:label "intensive property" ;
+                      
+                      rdfs:subClassOf dl:MeasuredProperty ;
+                      
+                      <http://www.w3.org/2004/02/skos/core#altLabel> "bulk property" ;
+                      
+                      rdfs:comment "An intensive property is a physical property of a system that does not depend on the system size or the amount of material in the system." .
+
+
+
+###  http://matonto.org/ontologies/matonto#InternalEnergy
+
+mat:InternalEnergy rdf:type owl:Class ;
                    
-                   rdfs:label "fracture toughness" ;
+                   rdfs:label "internal energy" ;
                    
-                   rdfs:subClassOf dl:MeasuredProperty .
+                   rdfs:subClassOf dl:Energy ;
+                   
+                   rdfs:comment "energy contained by a thermodynamic system" .
 
 
 
-###  http://matonto.org/ontology/matonto#GibbsFreeEnergy
+###  http://matonto.org/ontologies/matonto#IsolatedThermodynamicSystem
 
-:GibbsFreeEnergy rdf:type owl:Class ;
-                 
-                 rdfs:label "Gibbs free energy" ;
-                 
-                 rdfs:subClassOf dl:MolarEnergy ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:MolarEnergyUnit
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:MolarEnergyUnit
-                                 ] ;
-                 
-                 rdfs:comment "a measure of the process-initiating work obtainable from a thermodynamic system at a constant temperature and pressure." .
+mat:IsolatedThermodynamicSystem rdf:type owl:Class ;
+                                
+                                rdfs:label "isolated thermodynamic system" ;
+                                
+                                rdfs:subClassOf mat:ThermodynamicSystem ;
+                                
+                                rdfs:comment "a thermodynamic system that does not interact with its surroundings in any way" .
 
 
 
-###  http://matonto.org/ontology/matonto#Glasses
+###  http://matonto.org/ontologies/matonto#Material
 
-:Glasses rdf:type owl:Class ;
-         
-         rdfs:label "glasses" ;
-         
-         rdfs:subClassOf :MaterialCategory .
+mat:Material rdf:type owl:Class ;
+             
+             rdfs:label "material" ;
+             
+             rdfs:subClassOf dl:ChemicalSubstance ;
+             
+             rdfs:comment "A chemical substance that is studied in materials science." .
 
 
 
-###  http://matonto.org/ontology/matonto#GrainSize
+###  http://matonto.org/ontologies/matonto#MaterialCategory
 
-:GrainSize rdf:type owl:Class ;
+mat:MaterialCategory rdf:type owl:Class ;
+                     
+                     rdfs:label "material category" ;
+                     
+                     rdfs:subClassOf mat:MaterialQuality ;
+                     
+                     rdfs:comment "A category used to classify different materials." .
+
+
+
+###  http://matonto.org/ontologies/matonto#MaterialQuality
+
+mat:MaterialQuality rdf:type owl:Class ;
+                    
+                    rdfs:label "material quality" ;
+                    
+                    rdfs:subClassOf dl:ChemicalQuality ;
+                    
+                    rdfs:comment "Qualities of chemical substances that are studied in materials science." .
+
+
+
+###  http://matonto.org/ontologies/matonto#Metals
+
+mat:Metals rdf:type owl:Class ;
            
-           rdfs:label "grain size" ;
+           rdfs:label "metals" ;
+           
+           rdfs:subClassOf mat:MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#MolecularFormula
+
+mat:MolecularFormula rdf:type owl:Class ;
+                     
+                     rdfs:label "Molecular Formula" ;
+                     
+                     rdfs:subClassOf mat:chemicalFormula ;
+                     
+                     rdfs:comment "A molecular formula enumerates the number of atoms to reflect those in the molecule, so that the molecular formula for glucose is C6H12O6 rather than the glucose empirical formula, which is CH2O" .
+
+
+
+###  http://matonto.org/ontologies/matonto#Nanomaterials
+
+mat:Nanomaterials rdf:type owl:Class ;
+                  
+                  rdfs:label "nanomaterials" ;
+                  
+                  rdfs:subClassOf mat:MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#OpenThermodynamicSystem
+
+mat:OpenThermodynamicSystem rdf:type owl:Class ;
+                            
+                            rdfs:label "open thermodynamic system" ;
+                            
+                            rdfs:subClassOf mat:ThermodynamicSystem ;
+                            
+                            rdfs:comment "a thermodynamic system in which matter may flow in and out of some segments of the system boundaries" .
+
+
+
+###  http://matonto.org/ontologies/matonto#PhaseEquilibrium
+
+mat:PhaseEquilibrium rdf:type owl:Class ;
+                     
+                     rdfs:label "Phase Equilibrium"@en ;
+                     
+                     rdfs:subClassOf dl:MeasuredProperty ;
+                     
+                     rdfs:comment "The conditions at which two phases can be at equilibrium"@en .
+
+
+
+###  http://matonto.org/ontologies/matonto#Plastics
+
+mat:Plastics rdf:type owl:Class ;
+             
+             rdfs:label "plastics" ;
+             
+             rdfs:subClassOf mat:Polymers .
+
+
+
+###  http://matonto.org/ontologies/matonto#Polymers
+
+mat:Polymers rdf:type owl:Class ;
+             
+             rdfs:label "polymers" ;
+             
+             rdfs:subClassOf mat:MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Refractory
+
+mat:Refractory rdf:type owl:Class ;
+               
+               rdfs:label "refactory" ;
+               
+               rdfs:subClassOf mat:MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#SaceGroupProperty
+
+mat:SaceGroupProperty rdf:type owl:Class ;
+                      
+                      rdfs:label "space group property" ;
+                      
+                      rdfs:subClassOf <http://www.ifomis.org/bfo/1.0/snap#Quality> .
+
+
+
+###  http://matonto.org/ontologies/matonto#ShearModulus
+
+mat:ShearModulus rdf:type owl:Class ;
+                 
+                 rdfs:label "shear modulus" ;
+                 
+                 rdfs:subClassOf mat:ElasticModulus ;
+                 
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of rigidity" ;
+                 
+                 rdfs:comment "The shear modulus describes an object's tendency to shear (the deformation of shape at constant volume) when acted upon by opposing forces; it is defined as shear stress over shear strain. The shear modulus is part of the derivation of viscosity." .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroup
+
+mat:SpaceGroup rdf:type owl:Class ;
+               
+               rdfs:label "space group" ;
+               
+               rdfs:subClassOf <http://www.ifomis.org/bfo/1.0/snap#ThreeDimensionalRegion> ;
+               
+               rdfs:comment " the symmetry group of a configuration in space, usually in three dimensions" .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroupHall
+
+mat:SpaceGroupHall rdf:type owl:Class ;
+                   
+                   rdfs:label "hall" ;
+                   
+                   rdfs:subClassOf mat:SaceGroupProperty .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroupNumber
+
+mat:SpaceGroupNumber rdf:type owl:Class ;
+                     
+                     rdfs:label "space group number" ;
+                     
+                     rdfs:subClassOf mat:SaceGroupProperty .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroupPointGroup
+
+mat:SpaceGroupPointGroup rdf:type owl:Class ;
+                         
+                         rdfs:label "point group" ;
+                         
+                         rdfs:subClassOf mat:SaceGroupProperty .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpecificHeat
+
+mat:SpecificHeat rdf:type owl:Class ;
+                 
+                 rdfs:label "specific heat" ;
+                 
+                 rdfs:subClassOf mat:IntensiveProperty ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dl:hasUnit ;
+                                   owl:someValuesFrom dl:SpecificEntropyUnit
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dl:hasUnit ;
+                                   owl:allValuesFrom dl:SpecificEntropyUnit
+                                 ] ;
+                 
+                 rdfs:comment "Specific heat is the heat capacity per unit mass of a material." ;
+                 
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "specific heat capacity" .
+
+
+
+###  http://matonto.org/ontologies/matonto#Stress
+
+mat:Stress rdf:type owl:Class ;
            
            rdfs:subClassOf dl:MeasuredProperty ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasUnit ;
-                             owl:someValuesFrom dl:LengthUnit
+                             owl:allValuesFrom dl:PressureUnit
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasUnit ;
-                             owl:allValuesFrom dl:LengthUnit
+                             owl:someValuesFrom dl:PressureUnit
                            ] ;
            
-           <http://www.w3.org/2004/02/skos/core#altLabel> "particle size" ;
-           
-           rdfs:comment "Grain size refers to the diameter of individual grains of sediment, or the lithified particles in clastic rocks. The term may also be applied to other granular materials. This is different from the crystallite size, which is the size of a single crystal inside the particles or grains. A single grain can be composed of several crystals. Granular material can range from very small colloidal particles, through clay, silt, sand, and gravel, to boulders." .
+           rdfs:comment "In continuum mechanics, stress is a physical quantity that expresses the internal forces that neighbouring particles of a continuous material exert on each other." .
 
 
 
-###  http://matonto.org/ontology/matonto#HeatCapacity
+###  http://matonto.org/ontologies/matonto#StructureType
 
-:HeatCapacity rdf:type owl:Class ;
-              
-              rdfs:label "heat capacity" ;
-              
-              rdfs:subClassOf :ExtensiveProperty ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:EntropyUnit
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:EntropyUnit
-                              ] ;
-              
-              <http://www.w3.org/2004/02/skos/core#altLabel> "thermal capacity" ;
-              
-              rdfs:comment "Heat capacity is the measurable physical quantity of heat energy required to change the temperature of an object by a given amount." .
+mat:StructureType rdf:type owl:Class ;
+                  
+                  rdfs:label "Structure Type"^^xsd:string ;
+                  
+                  rdfs:subClassOf mat:MaterialQuality .
 
 
 
-###  http://matonto.org/ontology/matonto#HelmholtzFreeEnergy
+###  http://matonto.org/ontologies/matonto#ThermodynamicSystem
 
-:HelmholtzFreeEnergy rdf:type owl:Class ;
-                     
-                     rdfs:label "Helmholtz free energy" ;
-                     
-                     rdfs:subClassOf dl:Energy ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty dl:hasUnit ;
-                                       owl:someValuesFrom dl:EnergyUnit
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty dl:hasUnit ;
-                                       owl:allValuesFrom dl:EnergyUnit
-                                     ] ;
-                     
-                     rdfs:comment "the workobtainable from a closed thermodynamic system at a constant temperature" .
+mat:ThermodynamicSystem rdf:type owl:Class ;
+                        
+                        rdfs:label "thermodynamic system" ;
+                        
+                        rdfs:subClassOf <http://www.ifomis.org/bfo/1.0/snap#ThreeDimensionalRegion> ;
+                        
+                        rdfs:comment "a macroscopic region defined by boundaries that determine processes which are allowed to affect the interior of the region" .
 
 
 
-###  http://matonto.org/ontology/matonto#IntensiveProperty
+###  http://matonto.org/ontologies/matonto#UltimateTensileStrength
 
-:IntensiveProperty rdf:type owl:Class ;
+mat:UltimateTensileStrength rdf:type owl:Class ;
+                            
+                            rdfs:label "ultimate tensile strength" ;
+                            
+                            rdfs:subClassOf dl:MeasuredProperty ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty dl:hasUnit ;
+                                              owl:someValuesFrom dl:PressureUnit
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty dl:hasUnit ;
+                                              owl:allValuesFrom dl:PressureUnit
+                                            ] ;
+                            
+                            <http://www.w3.org/2004/02/skos/core#altLabel> "ultimate strength" ,
+                                                                           "UTS" ;
+                            
+                            rdfs:comment "Ultimate tensile strength is the maximum stress that a material can withstand while being stretched or pulled before failing or breaking." ;
+                            
+                            <http://www.w3.org/2004/02/skos/core#altLabel> "tensile strength" ,
+                                                                           "TS" .
+
+
+
+###  http://matonto.org/ontologies/matonto#WeibullModulus
+
+mat:WeibullModulus rdf:type owl:Class ;
                    
-                   rdfs:label "intensive property" ;
+                   rdfs:label "weibull modulus" ;
                    
                    rdfs:subClassOf dl:MeasuredProperty ;
                    
-                   rdfs:comment "An intensive property is a physical property of a system that does not depend on the system size or the amount of material in the system." ;
-                   
-                   <http://www.w3.org/2004/02/skos/core#altLabel> "bulk property" .
+                   rdfs:comment "The Weibull modulus is a dimensionless parameter of the Weibull distribution which is used to describe variability in measured material strength of brittle materials." .
 
 
 
-###  http://matonto.org/ontology/matonto#InternalEnergy
+###  http://matonto.org/ontologies/matonto#YoungsModulus
 
-:InternalEnergy rdf:type owl:Class ;
-                
-                rdfs:label "internal energy" ;
-                
-                rdfs:subClassOf dl:Energy ;
-                
-                rdfs:comment "energy contained by a thermodynamic system" .
-
-
-
-###  http://matonto.org/ontology/matonto#IsolatedThermodynamicSystem
-
-:IsolatedThermodynamicSystem rdf:type owl:Class ;
-                             
-                             rdfs:label "isolated thermodynamic system" ;
-                             
-                             rdfs:subClassOf :ThermodynamicSystem ;
-                             
-                             rdfs:comment "a thermodynamic system that does not interact with its surroundings in any way" .
-
-
-
-###  http://matonto.org/ontology/matonto#Material
-
-:Material rdf:type owl:Class ;
-          
-          rdfs:label "material" ;
-          
-          rdfs:subClassOf dl:ChemicalSubstance ;
-          
-          rdfs:comment "A chemical substance that is studied in materials science." .
-
-
-
-###  http://matonto.org/ontology/matonto#MaterialCategory
-
-:MaterialCategory rdf:type owl:Class ;
+mat:YoungsModulus rdf:type owl:Class ;
                   
-                  rdfs:label "material category" ;
+                  rdfs:label "youngs modulus" ;
                   
-                  rdfs:subClassOf :MaterialQuality ;
+                  rdfs:subClassOf mat:ElasticModulus ;
                   
-                  rdfs:comment "A category used to classify different materials." .
-
-
-
-###  http://matonto.org/ontology/matonto#MaterialQuality
-
-:MaterialQuality rdf:type owl:Class ;
-                 
-                 rdfs:label "material quality" ;
-                 
-                 rdfs:subClassOf dl:ChemicalQuality ;
-                 
-                 rdfs:comment "Qualities of chemical substances that are studied in materials science." .
-
-
-
-###  http://matonto.org/ontology/matonto#Metals
-
-:Metals rdf:type owl:Class ;
-        
-        rdfs:label "metals" ;
-        
-        rdfs:subClassOf :MaterialCategory .
-
-
-
-###  http://matonto.org/ontology/matonto#MolecularFormula
-
-:MolecularFormula rdf:type owl:Class ;
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "tensile modulus" ,
+                                                                 "Young's modulus" ;
                   
-                  rdfs:label "Molecular Formula" ;
-                  
-                  rdfs:subClassOf :chemicalFormula ;
-                  
-                  rdfs:comment "A molecular formula enumerates the number of atoms to reflect those in the molecule, so that the molecular formula for glucose is C6H12O6 rather than the glucose empirical formula, which is CH2O" .
+                  rdfs:comment "Young's modulus is a measure of the stiffness of an elastic isotropic material and is a quantity used to characterize materials. It is defined as the ratio of the stress along an axis over the strain along that axis in the range of stress in which Hooke's law holds." .
 
 
 
-###  http://matonto.org/ontology/matonto#Nanomaterials
+###  http://matonto.org/ontologies/matonto#chemicalFormula
 
-:Nanomaterials rdf:type owl:Class ;
-               
-               rdfs:label "nanomaterials" ;
-               
-               rdfs:subClassOf :MaterialCategory .
-
-
-
-###  http://matonto.org/ontology/matonto#OpenThermodynamicSystem
-
-:OpenThermodynamicSystem rdf:type owl:Class ;
-                         
-                         rdfs:label "open thermodynamic system" ;
-                         
-                         rdfs:subClassOf :ThermodynamicSystem ;
-                         
-                         rdfs:comment "a thermodynamic system in which matter may flow in and out of some segments of the system boundaries" .
-
-
-
-###  http://matonto.org/ontology/matonto#PhaseEquilibrium
-
-:PhaseEquilibrium rdf:type owl:Class ;
-                  
-                  rdfs:label "Phase Equilibrium"@en ;
-                  
-                  rdfs:subClassOf dl:MeasuredProperty ;
-                  
-                  rdfs:comment "The conditions at which two phases can be at equilibrium"@en .
-
-
-
-###  http://matonto.org/ontology/matonto#Plastics
-
-:Plastics rdf:type owl:Class ;
-          
-          rdfs:label "plastics" ;
-          
-          rdfs:subClassOf :Polymers .
-
-
-
-###  http://matonto.org/ontology/matonto#Polymers
-
-:Polymers rdf:type owl:Class ;
-          
-          rdfs:label "polymers" ;
-          
-          rdfs:subClassOf :MaterialCategory .
-
-
-
-###  http://matonto.org/ontology/matonto#Refractory
-
-:Refractory rdf:type owl:Class ;
-            
-            rdfs:label "refactory" ;
-            
-            rdfs:subClassOf :MaterialCategory .
-
-
-
-###  http://matonto.org/ontology/matonto#SaceGroupProperty
-
-:SaceGroupProperty rdf:type owl:Class ;
-                   
-                   rdfs:label "space group property" ;
-                   
-                   rdfs:subClassOf <http://www.ifomis.org/bfo/1.0/snap#Quality> .
-
-
-
-###  http://matonto.org/ontology/matonto#ShearModulus
-
-:ShearModulus rdf:type owl:Class ;
-              
-              rdfs:label "shear modulus" ;
-              
-              rdfs:subClassOf :ElasticModulus ;
-              
-              rdfs:comment "The shear modulus describes an object's tendency to shear (the deformation of shape at constant volume) when acted upon by opposing forces; it is defined as shear stress over shear strain. The shear modulus is part of the derivation of viscosity." ;
-              
-              <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of rigidity" .
-
-
-
-###  http://matonto.org/ontology/matonto#SpaceGroup
-
-:SpaceGroup rdf:type owl:Class ;
-            
-            rdfs:label "space group" ;
-            
-            rdfs:subClassOf <http://www.ifomis.org/bfo/1.0/snap#ThreeDimensionalRegion> ;
-            
-            rdfs:comment " the symmetry group of a configuration in space, usually in three dimensions" .
-
-
-
-###  http://matonto.org/ontology/matonto#SpaceGroupHall
-
-:SpaceGroupHall rdf:type owl:Class ;
-                
-                rdfs:label "hall" ;
-                
-                rdfs:subClassOf :SaceGroupProperty .
-
-
-
-###  http://matonto.org/ontology/matonto#SpaceGroupNumber
-
-:SpaceGroupNumber rdf:type owl:Class ;
-                  
-                  rdfs:label "space group number" ;
-                  
-                  rdfs:subClassOf :SaceGroupProperty .
-
-
-
-###  http://matonto.org/ontology/matonto#SpaceGroupPointGroup
-
-:SpaceGroupPointGroup rdf:type owl:Class ;
-                      
-                      rdfs:label "point group" ;
-                      
-                      rdfs:subClassOf :SaceGroupProperty .
-
-
-
-###  http://matonto.org/ontology/matonto#SpecificHeat
-
-:SpecificHeat rdf:type owl:Class ;
-              
-              rdfs:label "specific heat" ;
-              
-              rdfs:subClassOf :IntensiveProperty ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:SpecificEntropyUnit
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:SpecificEntropyUnit
-                              ] ;
-              
-              <http://www.w3.org/2004/02/skos/core#altLabel> "specific heat capacity" ;
-              
-              rdfs:comment "Specific heat is the heat capacity per unit mass of a material." .
-
-
-
-###  http://matonto.org/ontology/matonto#Stress
-
-:Stress rdf:type owl:Class ;
-        
-        rdfs:subClassOf dl:MeasuredProperty ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty dl:hasUnit ;
-                          owl:someValuesFrom dl:PressureUnit
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty dl:hasUnit ;
-                          owl:allValuesFrom dl:PressureUnit
-                        ] ;
-        
-        rdfs:comment "In continuum mechanics, stress is a physical quantity that expresses the internal forces that neighbouring particles of a continuous material exert on each other." .
-
-
-
-###  http://matonto.org/ontology/matonto#StructureType
-
-:StructureType rdf:type owl:Class ;
-               
-               rdfs:label "Structure Type"^^xsd:string ;
-               
-               rdfs:subClassOf :MaterialQuality .
-
-
-
-###  http://matonto.org/ontology/matonto#ThermodynamicSystem
-
-:ThermodynamicSystem rdf:type owl:Class ;
-                     
-                     rdfs:label "thermodynamic system" ;
-                     
-                     rdfs:subClassOf <http://www.ifomis.org/bfo/1.0/snap#ThreeDimensionalRegion> ;
-                     
-                     rdfs:comment "a macroscopic region defined by boundaries that determine processes which are allowed to affect the interior of the region" .
-
-
-
-###  http://matonto.org/ontology/matonto#UltimateTensileStrength
-
-:UltimateTensileStrength rdf:type owl:Class ;
-                         
-                         rdfs:label "ultimate tensile strength" ;
-                         
-                         rdfs:subClassOf dl:MeasuredProperty ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty dl:hasUnit ;
-                                           owl:allValuesFrom dl:PressureUnit
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty dl:hasUnit ;
-                                           owl:someValuesFrom dl:PressureUnit
-                                         ] ;
-                         
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "UTS" ,
-                                                                        "ultimate strength" ;
-                         
-                         rdfs:comment "Ultimate tensile strength is the maximum stress that a material can withstand while being stretched or pulled before failing or breaking." ;
-                         
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "TS" ,
-                                                                        "tensile strength" .
-
-
-
-###  http://matonto.org/ontology/matonto#WeibullModulus
-
-:WeibullModulus rdf:type owl:Class ;
-                
-                rdfs:label "weibull modulus" ;
-                
-                rdfs:subClassOf dl:MeasuredProperty ;
-                
-                rdfs:comment "The Weibull modulus is a dimensionless parameter of the Weibull distribution which is used to describe variability in measured material strength of brittle materials." .
-
-
-
-###  http://matonto.org/ontology/matonto#YoungsModulus
-
-:YoungsModulus rdf:type owl:Class ;
-               
-               rdfs:label "youngs modulus" ;
-               
-               rdfs:subClassOf :ElasticModulus ;
-               
-               rdfs:comment "Young's modulus is a measure of the stiffness of an elastic isotropic material and is a quantity used to characterize materials. It is defined as the ratio of the stress along an axis over the strain along that axis in the range of stress in which Hooke's law holds." ;
-               
-               <http://www.w3.org/2004/02/skos/core#altLabel> "Young's modulus" ,
-                                                              "tensile modulus" .
-
-
-
-###  http://matonto.org/ontology/matonto#chemicalFormula
-
-:chemicalFormula rdf:type owl:Class .
+mat:chemicalFormula rdf:type owl:Class .
 
 
 
@@ -2784,11 +2430,11 @@ dl:AbsorbedDoseRate rdf:type owl:Class ;
                     rdfs:subClassOf dl:Radiation ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasUnit ;
-                                      owl:someValuesFrom dl:AbsorbedDoseRateUnit
+                                      owl:allValuesFrom dl:AbsorbedDoseRateUnit
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasUnit ;
-                                      owl:allValuesFrom dl:AbsorbedDoseRateUnit
+                                      owl:someValuesFrom dl:AbsorbedDoseRateUnit
                                     ] ;
                     
                     rdfs:comment "The measure of the rate of energy deposited in a medium by ionising radiation."^^xsd:string .
@@ -2858,11 +2504,11 @@ dl:Acceleration rdf:type owl:Class ;
                 rdfs:subClassOf dl:MeasuredProperty ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:AccelerationUnit
+                                  owl:allValuesFrom dl:AccelerationUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:AccelerationUnit
+                                  owl:someValuesFrom dl:AccelerationUnit
                                 ] ;
                 
                 rdfs:comment "The measure of the rate at which an object's velocity is changing."^^xsd:string .
@@ -2878,6 +2524,10 @@ dl:AccelerationUnit rdf:type owl:Class ;
                     rdfs:subClassOf dl:Unit ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:derivesFrom ;
+                                      owl:someValuesFrom dl:LengthUnit
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dl:derivesFrom ;
                                       owl:someValuesFrom [ rdf:type owl:Class ;
                                                            owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                                 [ rdf:type owl:Restriction ;
@@ -2886,10 +2536,6 @@ dl:AccelerationUnit rdf:type owl:Class ;
                                                                                 ]
                                                                               )
                                                          ]
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty dl:derivesFrom ;
-                                      owl:someValuesFrom dl:LengthUnit
                                     ] ;
                     
                     rdfs:comment "A standard measure for acceleration."^^xsd:string .
@@ -2917,11 +2563,11 @@ dl:AcidBaseReaction rdf:type owl:Class ;
                     rdfs:subClassOf dl:ChemicalReaction ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasParticipant ;
-                                      owl:someValuesFrom dl:Acid
+                                      owl:someValuesFrom dl:Base
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasParticipant ;
-                                      owl:someValuesFrom dl:Base
+                                      owl:someValuesFrom dl:Acid
                                     ] ;
                     
                     rdfs:comment "A chemical reaction in which an acid reacts with a base."^^xsd:string .
@@ -3595,11 +3241,11 @@ dl:AmountOfSubstance rdf:type owl:Class ;
                      rdfs:subClassOf dl:MeasuredProperty ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:someValuesFrom dl:AmountOfSubstanceUnit
+                                       owl:allValuesFrom dl:AmountOfSubstanceUnit
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:allValuesFrom dl:AmountOfSubstanceUnit
+                                       owl:someValuesFrom dl:AmountOfSubstanceUnit
                                      ] ;
                      
                      rdfs:comment "The measure of the number of elementary entities in the object."^^xsd:string .
@@ -3615,11 +3261,11 @@ dl:AmountOfSubstanceConcentration rdf:type owl:Class ;
                                   rdfs:subClassOf dl:Concentration ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty dl:hasUnit ;
-                                                    owl:allValuesFrom dl:AmountOfSubstanceConcentrationUnit
+                                                    owl:someValuesFrom dl:AmountOfSubstanceConcentrationUnit
                                                   ] ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty dl:hasUnit ;
-                                                    owl:someValuesFrom dl:AmountOfSubstanceConcentrationUnit
+                                                    owl:allValuesFrom dl:AmountOfSubstanceConcentrationUnit
                                                   ] ;
                                   
                                   rdfs:comment "A measure of the number of atoms per unit volume in a sample of a matter."^^xsd:string .
@@ -3635,6 +3281,10 @@ dl:AmountOfSubstanceConcentrationUnit rdf:type owl:Class ;
                                       rdfs:subClassOf dl:ConcentrationUnit ,
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty dl:derivesFrom ;
+                                                        owl:someValuesFrom dl:AmountOfSubstanceUnit
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty dl:derivesFrom ;
                                                         owl:someValuesFrom [ rdf:type owl:Class ;
                                                                              owl:intersectionOf ( dl:UnitRaisedToPowerNegativeThree
                                                                                                   [ rdf:type owl:Restriction ;
@@ -3643,10 +3293,6 @@ dl:AmountOfSubstanceConcentrationUnit rdf:type owl:Class ;
                                                                                                   ]
                                                                                                 )
                                                                            ]
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty dl:derivesFrom ;
-                                                        owl:someValuesFrom dl:AmountOfSubstanceUnit
                                                       ] ;
                                       
                                       rdfs:comment "A standard measure for an amount of substance concentration."^^xsd:string .
@@ -3710,11 +3356,11 @@ dl:AngularAcceleration rdf:type owl:Class ;
                        rdfs:subClassOf dl:MeasuredProperty ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:someValuesFrom dl:AngularAccelerationUnit
+                                         owl:allValuesFrom dl:AngularAccelerationUnit
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:allValuesFrom dl:AngularAccelerationUnit
+                                         owl:someValuesFrom dl:AngularAccelerationUnit
                                        ] ;
                        
                        rdfs:comment "The measure of the rate of change of angular velocity over time."^^xsd:string .
@@ -3730,6 +3376,10 @@ dl:AngularAccelerationUnit rdf:type owl:Class ;
                            rdfs:subClassOf dl:Unit ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty dl:derivesFrom ;
+                                             owl:someValuesFrom dl:AngleUnit
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty dl:derivesFrom ;
                                              owl:someValuesFrom [ rdf:type owl:Class ;
                                                                   owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                                        [ rdf:type owl:Restriction ;
@@ -3738,10 +3388,6 @@ dl:AngularAccelerationUnit rdf:type owl:Class ;
                                                                                        ]
                                                                                      )
                                                                 ]
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty dl:derivesFrom ;
-                                             owl:someValuesFrom dl:AngleUnit
                                            ] ;
                            
                            rdfs:comment "A standard measure for angular acceleration unit."^^xsd:string .
@@ -3757,11 +3403,11 @@ dl:AngularVelocity rdf:type owl:Class ;
                    rdfs:subClassOf dl:MeasuredProperty ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dl:hasUnit ;
-                                     owl:allValuesFrom dl:AngularVelocityUnit
+                                     owl:someValuesFrom dl:AngularVelocityUnit
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dl:hasUnit ;
-                                     owl:someValuesFrom dl:AngularVelocityUnit
+                                     owl:allValuesFrom dl:AngularVelocityUnit
                                    ] ;
                    
                    rdfs:comment "A measure of the angular displacement per unit time."^^xsd:string .
@@ -3906,11 +3552,11 @@ dl:Area rdf:type owl:Class ;
         rdfs:subClassOf dl:MeasuredProperty ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty dl:hasUnit ;
-                          owl:someValuesFrom dl:AreaUnit
+                          owl:allValuesFrom dl:AreaUnit
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty dl:hasUnit ;
-                          owl:allValuesFrom dl:AreaUnit
+                          owl:someValuesFrom dl:AreaUnit
                         ] ;
         
         rdfs:comment "A measure of the space enclosed within a plane."^^xsd:string .
@@ -4900,6 +4546,10 @@ dl:CapacitanceUnit rdf:type owl:Class ;
                    rdfs:subClassOf dl:Unit ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dl:derivesFrom ;
+                                     owl:someValuesFrom dl:ElectricChargeUnit
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dl:derivesFrom ;
                                      owl:someValuesFrom [ rdf:type owl:Class ;
                                                           owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                [ rdf:type owl:Restriction ;
@@ -4908,10 +4558,6 @@ dl:CapacitanceUnit rdf:type owl:Class ;
                                                                                ]
                                                                              )
                                                         ]
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty dl:derivesFrom ;
-                                     owl:someValuesFrom dl:ElectricChargeUnit
                                    ] ;
                    
                    rdfs:comment "A standard measure for capacitance."^^xsd:string .
@@ -5133,11 +4779,11 @@ dl:CatalyticActivity rdf:type owl:Class ;
                      rdfs:subClassOf dl:MeasuredProperty ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:allValuesFrom dl:CatalyticActivityUnit
+                                       owl:someValuesFrom dl:CatalyticActivityUnit
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:someValuesFrom dl:CatalyticActivityUnit
+                                       owl:allValuesFrom dl:CatalyticActivityUnit
                                      ] ;
                      
                      rdfs:comment "The measure of the acceleration of a chemical reaction."^^xsd:string .
@@ -5153,6 +4799,10 @@ dl:CatalyticActivityUnit rdf:type owl:Class ;
                          rdfs:subClassOf dl:Unit ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty dl:derivesFrom ;
+                                           owl:someValuesFrom dl:AmountOfSubstanceUnit
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty dl:derivesFrom ;
                                            owl:someValuesFrom [ rdf:type owl:Class ;
                                                                 owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                      [ rdf:type owl:Restriction ;
@@ -5161,10 +4811,6 @@ dl:CatalyticActivityUnit rdf:type owl:Class ;
                                                                                      ]
                                                                                    )
                                                               ]
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty dl:derivesFrom ;
-                                           owl:someValuesFrom dl:AmountOfSubstanceUnit
                                          ] ;
                          
                          rdfs:comment "A standard measure for catalytic activity."^^xsd:string .
@@ -5180,11 +4826,11 @@ dl:CatalyticConcentration rdf:type owl:Class ;
                           rdfs:subClassOf dl:Concentration ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty dl:hasUnit ;
-                                            owl:allValuesFrom dl:CatalyticConcentrationUnit
+                                            owl:someValuesFrom dl:CatalyticConcentrationUnit
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty dl:hasUnit ;
-                                            owl:someValuesFrom dl:CatalyticConcentrationUnit
+                                            owl:allValuesFrom dl:CatalyticConcentrationUnit
                                           ] ;
                           
                           rdfs:comment "The measure of catalytic activity per unit volume."^^xsd:string .
@@ -5200,10 +4846,6 @@ dl:CatalyticConcentrationUnit rdf:type owl:Class ;
                               rdfs:subClassOf dl:ConcentrationUnit ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dl:derivesFrom ;
-                                                owl:someValuesFrom dl:CatalyticActivityUnit
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty dl:derivesFrom ;
                                                 owl:someValuesFrom [ rdf:type owl:Class ;
                                                                      owl:intersectionOf ( dl:UnitRaisedToPowerNegativeThree
                                                                                           [ rdf:type owl:Restriction ;
@@ -5212,6 +4854,10 @@ dl:CatalyticConcentrationUnit rdf:type owl:Class ;
                                                                                           ]
                                                                                         )
                                                                    ]
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dl:derivesFrom ;
+                                                owl:someValuesFrom dl:CatalyticActivityUnit
                                               ] ;
                               
                               rdfs:comment "A standard measure for catalytic concentration."^^xsd:string .
@@ -5373,12 +5019,12 @@ dl:ChemicalBond rdf:type owl:Class ;
                                 <http://www.ifomis.org/bfo/1.0/span#Process> ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasParticipant ;
-                                  owl:someValuesFrom dl:Atom
+                                  owl:onClass dl:Atom ;
+                                  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasParticipant ;
-                                  owl:onClass dl:Atom ;
-                                  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                  owl:someValuesFrom dl:Atom
                                 ] ;
                 
                 owl:disjointWith dl:Ring ,
@@ -5768,11 +5414,11 @@ dl:Concentration rdf:type owl:Class ;
                  rdfs:subClassOf dl:MeasuredProperty ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:ConcentrationUnit
+                                   owl:someValuesFrom dl:ConcentrationUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:ConcentrationUnit
+                                   owl:allValuesFrom dl:ConcentrationUnit
                                  ] ;
                  
                  rdfs:comment "A measure of some entity per unit volume."^^xsd:string .
@@ -5804,11 +5450,11 @@ dl:Conduction rdf:type owl:Class ;
               rdfs:subClassOf dl:MeasuredProperty ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:ConductionUnit
+                                owl:someValuesFrom dl:ConductionUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:ConductionUnit
+                                owl:allValuesFrom dl:ConductionUnit
                               ] ;
               
               rdfs:comment "The measure of the transmission of heat or electricity or sound."^^xsd:string .
@@ -6174,11 +5820,11 @@ dl:Density rdf:type owl:Class ;
            rdfs:subClassOf dl:MeasuredProperty ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasUnit ;
-                             owl:someValuesFrom dl:DensityUnit
+                             owl:allValuesFrom dl:DensityUnit
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasUnit ;
-                             owl:allValuesFrom dl:DensityUnit
+                             owl:someValuesFrom dl:DensityUnit
                            ] ;
            
            rdfs:comment "A measure of mass per some dimension."^^xsd:string .
@@ -6293,12 +5939,12 @@ dl:DisulfideBond rdf:type owl:Class ;
                  rdfs:subClassOf dl:CovalentBond ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasParticipant ;
-                                   owl:someValuesFrom dl:SulfurAtom
+                                   owl:onClass dl:SulfurAtom ;
+                                   owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasParticipant ;
-                                   owl:onClass dl:SulfurAtom ;
-                                   owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                   owl:someValuesFrom dl:SulfurAtom
                                  ] ;
                  
                  rdfs:comment "A chemical bond between two sulfur atoms."^^xsd:string .
@@ -6314,10 +5960,6 @@ dl:DoseEquivalentUnit rdf:type owl:Class ;
                       rdfs:subClassOf dl:RadiationUnit ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty dl:derivesFrom ;
-                                        owl:someValuesFrom dl:EnergyUnit
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty dl:derivesFrom ;
                                         owl:someValuesFrom [ rdf:type owl:Class ;
                                                              owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                   [ rdf:type owl:Restriction ;
@@ -6326,6 +5968,10 @@ dl:DoseEquivalentUnit rdf:type owl:Class ;
                                                                                   ]
                                                                                 )
                                                            ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty dl:derivesFrom ;
+                                        owl:someValuesFrom dl:EnergyUnit
                                       ] ;
                       
                       rdfs:comment "A standard measure for dose equivalence."^^xsd:string .
@@ -6406,11 +6052,11 @@ dl:DynamicViscosityUnit rdf:type owl:Class ;
                         rdfs:subClassOf dl:Unit ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty dl:derivesFrom ;
-                                          owl:someValuesFrom dl:TimeUnit
+                                          owl:someValuesFrom dl:PressureUnit
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty dl:derivesFrom ;
-                                          owl:someValuesFrom dl:PressureUnit
+                                          owl:someValuesFrom dl:TimeUnit
                                         ] ;
                         
                         rdfs:comment "A standard measure for dynamic viscosity."^^xsd:string .
@@ -6681,11 +6327,11 @@ dl:ElectricCurrentDensity rdf:type owl:Class ;
                           rdfs:subClassOf dl:MeasuredProperty ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty dl:hasUnit ;
-                                            owl:allValuesFrom dl:ElectricCurrentDensityUnit
+                                            owl:someValuesFrom dl:ElectricCurrentDensityUnit
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty dl:hasUnit ;
-                                            owl:someValuesFrom dl:ElectricCurrentDensityUnit
+                                            owl:allValuesFrom dl:ElectricCurrentDensityUnit
                                           ] ;
                           
                           rdfs:comment "A measure of the electric current per cross-sectional area."^^xsd:string .
@@ -6740,11 +6386,11 @@ dl:ElectricFieldStrength rdf:type owl:Class ;
                          rdfs:subClassOf dl:MeasuredProperty ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty dl:hasUnit ;
-                                           owl:allValuesFrom dl:ElectricFieldStrengthUnit
+                                           owl:someValuesFrom dl:ElectricFieldStrengthUnit
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty dl:hasUnit ;
-                                           owl:someValuesFrom dl:ElectricFieldStrengthUnit
+                                           owl:allValuesFrom dl:ElectricFieldStrengthUnit
                                          ] ;
                          
                          rdfs:comment "A measure of the force exerted on electrically charged objects by an electric charge."^^xsd:string .
@@ -6760,10 +6406,6 @@ dl:ElectricFieldStrengthUnit rdf:type owl:Class ;
                              rdfs:subClassOf dl:Unit ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty dl:derivesFrom ;
-                                               owl:someValuesFrom dl:PotentialDifferenceUnit
-                                             ] ,
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty dl:derivesFrom ;
                                                owl:someValuesFrom [ rdf:type owl:Class ;
                                                                     owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                          [ rdf:type owl:Restriction ;
@@ -6772,6 +6414,10 @@ dl:ElectricFieldStrengthUnit rdf:type owl:Class ;
                                                                                          ]
                                                                                        )
                                                                   ]
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty dl:derivesFrom ;
+                                               owl:someValuesFrom dl:PotentialDifferenceUnit
                                              ] ;
                              
                              rdfs:comment "A standard measure for electric field strength."^^xsd:string .
@@ -6807,6 +6453,10 @@ dl:ElectricFluxDensityUnit rdf:type owl:Class ;
                            rdfs:subClassOf dl:Unit ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty dl:derivesFrom ;
+                                             owl:someValuesFrom dl:ElectricChargeUnit
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty dl:derivesFrom ;
                                              owl:someValuesFrom [ rdf:type owl:Class ;
                                                                   owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                                        [ rdf:type owl:Restriction ;
@@ -6815,10 +6465,6 @@ dl:ElectricFluxDensityUnit rdf:type owl:Class ;
                                                                                        ]
                                                                                      )
                                                                 ]
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty dl:derivesFrom ;
-                                             owl:someValuesFrom dl:ElectricChargeUnit
                                            ] ;
                            
                            rdfs:comment "A standard measure for electric flux density."^^xsd:string .
@@ -6881,11 +6527,11 @@ dl:ElectromagneticRadiation rdf:type owl:Class ;
                             rdfs:subClassOf dl:MeasuredProperty ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty dl:hasUnit ;
-                                              owl:someValuesFrom dl:ElectromagneticRadiationUnit
+                                              owl:allValuesFrom dl:ElectromagneticRadiationUnit
                                             ] ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty dl:hasUnit ;
-                                              owl:allValuesFrom dl:ElectromagneticRadiationUnit
+                                              owl:someValuesFrom dl:ElectromagneticRadiationUnit
                                             ] ;
                             
                             rdfs:comment "A measure of quantities of electromagnetic radiation."^^xsd:string .
@@ -6995,11 +6641,11 @@ dl:Energy rdf:type owl:Class ;
           rdfs:subClassOf dl:MeasuredProperty ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:someValuesFrom dl:EnergyUnit
+                            owl:allValuesFrom dl:EnergyUnit
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:allValuesFrom dl:EnergyUnit
+                            owl:someValuesFrom dl:EnergyUnit
                           ] ;
           
           rdfs:comment "A measure of the amount of work a physical system can do on another."^^xsd:string .
@@ -7015,11 +6661,11 @@ dl:EnergyDensity rdf:type owl:Class ;
                  rdfs:subClassOf dl:MeasuredProperty ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:EnergyDensityUnit
+                                   owl:allValuesFrom dl:EnergyDensityUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:EnergyDensityUnit
+                                   owl:someValuesFrom dl:EnergyDensityUnit
                                  ] ;
                  
                  rdfs:comment "A measure of the amount of energy in a region of space per unit volume or mass."^^xsd:string .
@@ -7102,6 +6748,10 @@ dl:EntropyUnit rdf:type owl:Class ;
                rdfs:subClassOf dl:Unit ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:derivesFrom ;
+                                 owl:someValuesFrom dl:EnergyUnit
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty dl:derivesFrom ;
                                  owl:someValuesFrom [ rdf:type owl:Class ;
                                                       owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                            [ rdf:type owl:Restriction ;
@@ -7110,10 +6760,6 @@ dl:EntropyUnit rdf:type owl:Class ;
                                                                            ]
                                                                          )
                                                     ]
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty dl:derivesFrom ;
-                                 owl:someValuesFrom dl:EnergyUnit
                                ] ;
                
                rdfs:comment "A standard measure for entropy."^^xsd:string .
@@ -7327,11 +6973,11 @@ dl:Exposure rdf:type owl:Class ;
             rdfs:subClassOf dl:Radiation ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:allValuesFrom dl:ExposureUnit
+                              owl:someValuesFrom dl:ExposureUnit
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:someValuesFrom dl:ExposureUnit
+                              owl:allValuesFrom dl:ExposureUnit
                             ] ;
             
             rdfs:comment "A measure of the amount of radiation detected."^^xsd:string .
@@ -7347,10 +6993,6 @@ dl:ExposureUnit rdf:type owl:Class ;
                 rdfs:subClassOf dl:RadiationUnit ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:derivesFrom ;
-                                  owl:someValuesFrom dl:ElectricChargeUnit
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty dl:derivesFrom ;
                                   owl:someValuesFrom [ rdf:type owl:Class ;
                                                        owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                             [ rdf:type owl:Restriction ;
@@ -7359,6 +7001,10 @@ dl:ExposureUnit rdf:type owl:Class ;
                                                                             ]
                                                                           )
                                                      ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dl:derivesFrom ;
+                                  owl:someValuesFrom dl:ElectricChargeUnit
                                 ] ;
                 
                 rdfs:comment "A standard measure for radiation exposure."^^xsd:string .
@@ -7512,11 +7158,11 @@ dl:Force rdf:type owl:Class ;
          rdfs:subClassOf dl:MeasuredProperty ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:someValuesFrom dl:ForceUnit
+                           owl:allValuesFrom dl:ForceUnit
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:allValuesFrom dl:ForceUnit
+                           owl:someValuesFrom dl:ForceUnit
                          ] ;
          
          rdfs:comment "A measure of the rate of change of the momentum of a body."^^xsd:string .
@@ -7532,6 +7178,14 @@ dl:ForceUnit rdf:type owl:Class ;
              rdfs:subClassOf dl:Unit ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:derivesFrom ;
+                               owl:someValuesFrom dl:LengthUnit
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dl:derivesFrom ;
+                               owl:someValuesFrom dl:MassUnit
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dl:derivesFrom ;
                                owl:someValuesFrom [ rdf:type owl:Class ;
                                                     owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                          [ rdf:type owl:Restriction ;
@@ -7540,14 +7194,6 @@ dl:ForceUnit rdf:type owl:Class ;
                                                                          ]
                                                                        )
                                                   ]
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty dl:derivesFrom ;
-                               owl:someValuesFrom dl:LengthUnit
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty dl:derivesFrom ;
-                               owl:someValuesFrom dl:MassUnit
                              ] ;
              
              rdfs:comment "A standard measure for force."^^xsd:string .
@@ -7623,11 +7269,11 @@ dl:Frequency rdf:type owl:Class ;
              rdfs:subClassOf dl:MeasuredProperty ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:allValuesFrom dl:FrequencyUnit
+                               owl:someValuesFrom dl:FrequencyUnit
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:someValuesFrom dl:FrequencyUnit
+                               owl:allValuesFrom dl:FrequencyUnit
                              ] ;
              
              rdfs:comment "A measure of the number of number of occurrences of a repeated event per unit of time."^^xsd:string .
@@ -8130,19 +7776,19 @@ dl:Group2Element rdf:type owl:Class ;
                  rdfs:label "group 2 element" ;
                  
                  owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( dl:Actinide
+                                                     dl:Lanthanide
+                                                     dl:Scandium
+                                                     dl:Yttrium
+                                                   )
+                                     ] ,
+                                     [ rdf:type owl:Class ;
                                        owl:unionOf ( dl:Barium
                                                      dl:Beryllium
                                                      dl:Calcium
                                                      dl:Magnesium
                                                      dl:Radium
                                                      dl:Strontium
-                                                   )
-                                     ] ,
-                                     [ rdf:type owl:Class ;
-                                       owl:unionOf ( dl:Actinide
-                                                     dl:Lanthanide
-                                                     dl:Scandium
-                                                     dl:Yttrium
                                                    )
                                      ] ;
                  
@@ -8863,11 +8509,11 @@ dl:Illuminance rdf:type owl:Class ;
                rdfs:subClassOf dl:ElectromagneticRadiation ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:someValuesFrom dl:IlluminanceUnit
+                                 owl:allValuesFrom dl:IlluminanceUnit
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:allValuesFrom dl:IlluminanceUnit
+                                 owl:someValuesFrom dl:IlluminanceUnit
                                ] ;
                
                rdfs:comment "A measure of the total luminous flux incident on a surface per unit area."^^xsd:string .
@@ -8883,6 +8529,10 @@ dl:IlluminanceUnit rdf:type owl:Class ;
                    rdfs:subClassOf dl:ElectromagneticRadiationUnit ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dl:derivesFrom ;
+                                     owl:someValuesFrom dl:LuminousFluxUnit
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dl:derivesFrom ;
                                      owl:someValuesFrom [ rdf:type owl:Class ;
                                                           owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                                [ rdf:type owl:Restriction ;
@@ -8891,10 +8541,6 @@ dl:IlluminanceUnit rdf:type owl:Class ;
                                                                                ]
                                                                              )
                                                         ]
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty dl:derivesFrom ;
-                                     owl:someValuesFrom dl:LuminousFluxUnit
                                    ] ;
                    
                    rdfs:comment "A standard measure for illuminance."^^xsd:string .
@@ -9050,11 +8696,11 @@ dl:Information rdf:type owl:Class ;
                rdfs:subClassOf dl:MeasuredProperty ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:allValuesFrom dl:InformationUnit
+                                 owl:someValuesFrom dl:InformationUnit
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:someValuesFrom dl:InformationUnit
+                                 owl:allValuesFrom dl:InformationUnit
                                ] ;
                
                rdfs:comment "A measure of information."^^xsd:string .
@@ -9270,11 +8916,11 @@ dl:Irradiance rdf:type owl:Class ;
               rdfs:subClassOf dl:ElectromagneticRadiation ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:IrradianceUnit
+                                owl:someValuesFrom dl:IrradianceUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:IrradianceUnit
+                                owl:allValuesFrom dl:IrradianceUnit
                               ] ;
               
               rdfs:comment "A measure of the power of electromagnetic radiation at a surface."^^xsd:string .
@@ -9857,11 +9503,11 @@ dl:LuminousIntensity rdf:type owl:Class ;
                      rdfs:subClassOf dl:ElectromagneticRadiation ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:someValuesFrom dl:LuminousIntensityUnit
+                                       owl:allValuesFrom dl:LuminousIntensityUnit
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:allValuesFrom dl:LuminousIntensityUnit
+                                       owl:someValuesFrom dl:LuminousIntensityUnit
                                      ] ;
                      
                      rdfs:comment "A measure of the power emitted by a light source in a particular direction."^^xsd:string .
@@ -9961,11 +9607,11 @@ dl:MagneticFieldStrength rdf:type owl:Class ;
                          rdfs:subClassOf dl:MeasuredProperty ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty dl:hasUnit ;
-                                           owl:someValuesFrom dl:MagneticFieldStrengthUnit
+                                           owl:allValuesFrom dl:MagneticFieldStrengthUnit
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty dl:hasUnit ;
-                                           owl:allValuesFrom dl:MagneticFieldStrengthUnit
+                                           owl:someValuesFrom dl:MagneticFieldStrengthUnit
                                          ] ;
                          
                          rdfs:comment "A measure of the intensity of a magnetic field at a point."^^xsd:string .
@@ -10008,11 +9654,11 @@ dl:MagneticFlux rdf:type owl:Class ;
                 rdfs:subClassOf dl:MeasuredProperty ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:MagneticFluxUnit
+                                  owl:someValuesFrom dl:MagneticFluxUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:MagneticFluxUnit
+                                  owl:allValuesFrom dl:MagneticFluxUnit
                                 ] ;
                 
                 rdfs:comment "A measure of the strength and extent of a magnetic field."^^xsd:string .
@@ -10028,11 +9674,11 @@ dl:MagneticFluxDensity rdf:type owl:Class ;
                        rdfs:subClassOf dl:MeasuredProperty ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:someValuesFrom dl:MagneticFluxDensityUnit
+                                         owl:allValuesFrom dl:MagneticFluxDensityUnit
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:allValuesFrom dl:MagneticFluxDensityUnit
+                                         owl:someValuesFrom dl:MagneticFluxDensityUnit
                                        ] ;
                        
                        rdfs:comment "A measure of the magnetic flux in an area perpendicular to the direction of magnetic flow."^^xsd:string .
@@ -10532,14 +10178,7 @@ dl:MolarEntropyUnit rdf:type owl:Class ;
                     rdfs:subClassOf dl:Unit ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:derivesFrom ;
-                                      owl:someValuesFrom [ rdf:type owl:Class ;
-                                                           owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
-                                                                                [ rdf:type owl:Restriction ;
-                                                                                  owl:onProperty dl:derivesFrom ;
-                                                                                  owl:someValuesFrom dl:AmountOfSubstanceUnit
-                                                                                ]
-                                                                              )
-                                                         ]
+                                      owl:someValuesFrom dl:EnergyUnit
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:derivesFrom ;
@@ -10554,7 +10193,14 @@ dl:MolarEntropyUnit rdf:type owl:Class ;
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:derivesFrom ;
-                                      owl:someValuesFrom dl:EnergyUnit
+                                      owl:someValuesFrom [ rdf:type owl:Class ;
+                                                           owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty dl:derivesFrom ;
+                                                                                  owl:someValuesFrom dl:AmountOfSubstanceUnit
+                                                                                ]
+                                                                              )
+                                                         ]
                                     ] ;
                     
                     rdfs:comment "A standard measure for molar entropy."^^xsd:string .
@@ -10570,11 +10216,11 @@ dl:MolarMass rdf:type owl:Class ;
              rdfs:subClassOf dl:MeasuredProperty ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:allValuesFrom dl:MolarMassUnit
+                               owl:someValuesFrom dl:MolarMassUnit
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:someValuesFrom dl:MolarMassUnit
+                               owl:allValuesFrom dl:MolarMassUnit
                              ] ;
              
              rdfs:comment "A measure of the mass of one mole of a chemical element or compound."^^xsd:string .
@@ -10590,10 +10236,6 @@ dl:MolarMassUnit rdf:type owl:Class ;
                  rdfs:subClassOf dl:Unit ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:derivesFrom ;
-                                   owl:someValuesFrom dl:MassUnit
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty dl:derivesFrom ;
                                    owl:someValuesFrom [ rdf:type owl:Class ;
                                                         owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                              [ rdf:type owl:Restriction ;
@@ -10602,6 +10244,10 @@ dl:MolarMassUnit rdf:type owl:Class ;
                                                                              ]
                                                                            )
                                                       ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dl:derivesFrom ;
+                                   owl:someValuesFrom dl:MassUnit
                                  ] ;
                  
                  rdfs:comment "A standard measure for molar mass."^^xsd:string .
@@ -10697,11 +10343,11 @@ dl:MolecularMass rdf:type owl:Class ;
                                  dl:MolecularQuality ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:MolecularMassUnit
+                                   owl:allValuesFrom dl:MolecularMassUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:MolecularMassUnit
+                                   owl:someValuesFrom dl:MolecularMassUnit
                                  ] ;
                  
                  rdfs:comment "A measure of the mass of one molecule of a substance."^^xsd:string .
@@ -10717,10 +10363,6 @@ dl:MolecularMassUnit rdf:type owl:Class ;
                      rdfs:subClassOf dl:Unit ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:derivesFrom ;
-                                       owl:someValuesFrom dl:MassUnit
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty dl:derivesFrom ;
                                        owl:someValuesFrom [ rdf:type owl:Class ;
                                                             owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                  [ rdf:type owl:Restriction ;
@@ -10729,6 +10371,10 @@ dl:MolecularMassUnit rdf:type owl:Class ;
                                                                                  ]
                                                                                )
                                                           ]
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty dl:derivesFrom ;
+                                       owl:someValuesFrom dl:MassUnit
                                      ] ;
                      
                      rdfs:comment "A standard measure for molecular mass."^^xsd:string .
@@ -10815,11 +10461,11 @@ dl:MomentOfForce rdf:type owl:Class ;
                  rdfs:subClassOf dl:MeasuredProperty ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:MomentOfForceUnit
+                                   owl:allValuesFrom dl:MomentOfForceUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:MomentOfForceUnit
+                                   owl:someValuesFrom dl:MomentOfForceUnit
                                  ] ;
                  
                  rdfs:comment "A measure of the magnitude of force applied to a rotational system at a distance from the axis of rotation."^^xsd:string .
@@ -10835,11 +10481,11 @@ dl:MomentOfForceUnit rdf:type owl:Class ;
                      rdfs:subClassOf dl:Unit ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:derivesFrom ;
-                                       owl:someValuesFrom dl:LengthUnit
+                                       owl:someValuesFrom dl:ForceUnit
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:derivesFrom ;
-                                       owl:someValuesFrom dl:ForceUnit
+                                       owl:someValuesFrom dl:LengthUnit
                                      ] ;
                      
                      rdfs:comment "A standard measure for moment of force."^^xsd:string .
@@ -11665,10 +11311,6 @@ dl:PartsPerNotationUnit rdf:type owl:Class ;
                         rdfs:subClassOf dl:ConcentrationUnit ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty dl:derivesFrom ;
-                                          owl:someValuesFrom dl:Unit
-                                        ] ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty dl:derivesFrom ;
                                           owl:someValuesFrom [ rdf:type owl:Class ;
                                                                owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                     [ rdf:type owl:Restriction ;
@@ -11677,6 +11319,10 @@ dl:PartsPerNotationUnit rdf:type owl:Class ;
                                                                                     ]
                                                                                   )
                                                              ]
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty dl:derivesFrom ;
+                                          owl:someValuesFrom dl:Unit
                                         ] ;
                         
                         rdfs:comment "A standard measure of parts per notation."^^xsd:string .
@@ -12013,11 +11659,11 @@ dl:Permittivity rdf:type owl:Class ;
                 rdfs:subClassOf dl:MeasuredProperty ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:PermittivityUnit
+                                  owl:someValuesFrom dl:PermittivityUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:PermittivityUnit
+                                  owl:allValuesFrom dl:PermittivityUnit
                                 ] ;
                 
                 rdfs:comment "A measure of a material's ability to transmit an electric field."^^xsd:string .
@@ -12140,11 +11786,11 @@ dl:PlaneAngle rdf:type owl:Class ;
               rdfs:subClassOf dl:Angle ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:PlaneAngleUnit
+                                owl:allValuesFrom dl:PlaneAngleUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:PlaneAngleUnit
+                                owl:someValuesFrom dl:PlaneAngleUnit
                               ] ;
               
               rdfs:comment "The measure of the amount of rotation of a ray about a fixed ray."^^xsd:string .
@@ -12460,10 +12106,6 @@ dl:PotentialDifferenceUnit rdf:type owl:Class ;
                            rdfs:subClassOf dl:Unit ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty dl:derivesFrom ;
-                                             owl:someValuesFrom dl:PowerUnit
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty dl:derivesFrom ;
                                              owl:someValuesFrom [ rdf:type owl:Class ;
                                                                   owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                        [ rdf:type owl:Restriction ;
@@ -12472,6 +12114,10 @@ dl:PotentialDifferenceUnit rdf:type owl:Class ;
                                                                                        ]
                                                                                      )
                                                                 ]
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty dl:derivesFrom ;
+                                             owl:someValuesFrom dl:PowerUnit
                                            ] ;
                            
                            rdfs:comment "A standard measure for potential difference."^^xsd:string .
@@ -12594,11 +12240,11 @@ dl:Pressure rdf:type owl:Class ;
             rdfs:subClassOf dl:MeasuredProperty ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:allValuesFrom dl:PressureUnit
+                              owl:someValuesFrom dl:PressureUnit
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:someValuesFrom dl:PressureUnit
+                              owl:allValuesFrom dl:PressureUnit
                             ] ;
             
             rdfs:comment "A measure of the force per unit area applifed on a surface in a direction perpendicular to that surface."^^xsd:string .
@@ -12868,6 +12514,17 @@ dl:RadianceUnit rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:derivesFrom ;
                                   owl:someValuesFrom [ rdf:type owl:Class ;
+                                                       owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty dl:derivesFrom ;
+                                                                              owl:someValuesFrom dl:SolidAngleUnit
+                                                                            ]
+                                                                          )
+                                                     ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dl:derivesFrom ;
+                                  owl:someValuesFrom [ rdf:type owl:Class ;
                                                        owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty dl:derivesFrom ;
@@ -12879,17 +12536,6 @@ dl:RadianceUnit rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:derivesFrom ;
                                   owl:someValuesFrom dl:PowerUnit
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty dl:derivesFrom ;
-                                  owl:someValuesFrom [ rdf:type owl:Class ;
-                                                       owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty dl:derivesFrom ;
-                                                                              owl:someValuesFrom dl:SolidAngleUnit
-                                                                            ]
-                                                                          )
-                                                     ]
                                 ] ;
                 
                 rdfs:comment "A standard measure for radiance."^^xsd:string .
@@ -12925,6 +12571,10 @@ dl:RadiantIntensityUnit rdf:type owl:Class ;
                         rdfs:subClassOf dl:ElectromagneticRadiationUnit ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty dl:derivesFrom ;
+                                          owl:someValuesFrom dl:PowerUnit
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty dl:derivesFrom ;
                                           owl:someValuesFrom [ rdf:type owl:Class ;
                                                                owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                     [ rdf:type owl:Restriction ;
@@ -12933,10 +12583,6 @@ dl:RadiantIntensityUnit rdf:type owl:Class ;
                                                                                     ]
                                                                                   )
                                                              ]
-                                        ] ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty dl:derivesFrom ;
-                                          owl:someValuesFrom dl:PowerUnit
                                         ] ;
                         
                         rdfs:comment "A standard measure for radiant intensity."^^xsd:string .
@@ -13815,11 +13461,11 @@ dl:SolidAngle rdf:type owl:Class ;
               rdfs:subClassOf dl:Angle ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:SolidAngleUnit
+                                owl:someValuesFrom dl:SolidAngleUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:SolidAngleUnit
+                                owl:allValuesFrom dl:SolidAngleUnit
                               ] ;
               
               rdfs:comment "A measure of the angle formed by three or more planes intersecting at a comment point."^^xsd:string .
@@ -13835,6 +13481,10 @@ dl:SolidAngleUnit rdf:type owl:Class ;
                   rdfs:subClassOf dl:AngleUnit ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:derivesFrom ;
+                                    owl:someValuesFrom dl:AreaUnit
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty dl:derivesFrom ;
                                     owl:someValuesFrom [ rdf:type owl:Class ;
                                                          owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                               [ rdf:type owl:Restriction ;
@@ -13843,10 +13493,6 @@ dl:SolidAngleUnit rdf:type owl:Class ;
                                                                               ]
                                                                             )
                                                        ]
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty dl:derivesFrom ;
-                                    owl:someValuesFrom dl:AreaUnit
                                   ] ;
                   
                   rdfs:comment "A standard measure for solid angle."^^xsd:string .
@@ -13965,11 +13611,11 @@ dl:SpecificEntropy rdf:type owl:Class ;
                    rdfs:subClassOf dl:MeasuredProperty ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dl:hasUnit ;
-                                     owl:someValuesFrom dl:SpecificEntropyUnit
+                                     owl:allValuesFrom dl:SpecificEntropyUnit
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dl:hasUnit ;
-                                     owl:allValuesFrom dl:SpecificEntropyUnit
+                                     owl:someValuesFrom dl:SpecificEntropyUnit
                                    ] ;
                    
                    rdfs:comment "A measure of the entropy of the mass of the system."^^xsd:string .
@@ -13985,10 +13631,6 @@ dl:SpecificEntropyUnit rdf:type owl:Class ;
                        rdfs:subClassOf dl:Unit ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:derivesFrom ;
-                                         owl:someValuesFrom dl:EnergyUnit
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty dl:derivesFrom ;
                                          owl:someValuesFrom [ rdf:type owl:Class ;
                                                               owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                    [ rdf:type owl:Restriction ;
@@ -13997,6 +13639,10 @@ dl:SpecificEntropyUnit rdf:type owl:Class ;
                                                                                    ]
                                                                                  )
                                                             ]
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty dl:derivesFrom ;
+                                         owl:someValuesFrom dl:EnergyUnit
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:derivesFrom ;
@@ -14483,11 +14129,11 @@ dl:SurfaceTension rdf:type owl:Class ;
                   rdfs:subClassOf dl:MeasuredProperty ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:allValuesFrom dl:SurfaceTensionUnit
+                                    owl:someValuesFrom dl:SurfaceTensionUnit
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:someValuesFrom dl:SurfaceTensionUnit
+                                    owl:allValuesFrom dl:SurfaceTensionUnit
                                   ] ;
                   
                   rdfs:comment "A measure of the attraction between molecules at the surface of a liquid."^^xsd:string .
@@ -14503,6 +14149,10 @@ dl:SurfaceTensionUnit rdf:type owl:Class ;
                       rdfs:subClassOf dl:Unit ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty dl:derivesFrom ;
+                                        owl:someValuesFrom dl:ForceUnit
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty dl:derivesFrom ;
                                         owl:someValuesFrom [ rdf:type owl:Class ;
                                                              owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                   [ rdf:type owl:Restriction ;
@@ -14511,10 +14161,6 @@ dl:SurfaceTensionUnit rdf:type owl:Class ;
                                                                                   ]
                                                                                 )
                                                            ]
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty dl:derivesFrom ;
-                                        owl:someValuesFrom dl:ForceUnit
                                       ] ;
                       
                       rdfs:comment "A standard measure for surface tension."^^xsd:string .
@@ -14705,11 +14351,11 @@ dl:Temperature rdf:type owl:Class ;
                rdfs:subClassOf dl:MeasuredProperty ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:someValuesFrom dl:TemperatureUnit
+                                 owl:allValuesFrom dl:TemperatureUnit
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:allValuesFrom dl:TemperatureUnit
+                                 owl:someValuesFrom dl:TemperatureUnit
                                ] ;
                
                rdfs:comment "A measure of the average kinetic energy of particles in a sample of matter."^^xsd:string .
@@ -14881,17 +14527,6 @@ dl:ThermalConductionUnit rdf:type owl:Class ;
                          rdfs:subClassOf dl:ConductionUnit ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty dl:derivesFrom ;
-                                           owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
-                                                                                     [ rdf:type owl:Restriction ;
-                                                                                       owl:onProperty dl:derivesFrom ;
-                                                                                       owl:someValuesFrom dl:TemperatureUnit
-                                                                                     ]
-                                                                                   )
-                                                              ]
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty dl:derivesFrom ;
                                            owl:someValuesFrom dl:PowerUnit
                                          ] ,
                                          [ rdf:type owl:Restriction ;
@@ -14901,6 +14536,17 @@ dl:ThermalConductionUnit rdf:type owl:Class ;
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty dl:derivesFrom ;
                                                                                        owl:someValuesFrom dl:LengthUnit
+                                                                                     ]
+                                                                                   )
+                                                              ]
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty dl:derivesFrom ;
+                                           owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty dl:derivesFrom ;
+                                                                                       owl:someValuesFrom dl:TemperatureUnit
                                                                                      ]
                                                                                    )
                                                               ]
@@ -15926,6 +15572,10 @@ dl:VelocityUnit rdf:type owl:Class ;
                 rdfs:subClassOf dl:Unit ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:derivesFrom ;
+                                  owl:someValuesFrom dl:LengthUnit
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dl:derivesFrom ;
                                   owl:someValuesFrom [ rdf:type owl:Class ;
                                                        owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                             [ rdf:type owl:Restriction ;
@@ -15934,10 +15584,6 @@ dl:VelocityUnit rdf:type owl:Class ;
                                                                             ]
                                                                           )
                                                      ]
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty dl:derivesFrom ;
-                                  owl:someValuesFrom dl:LengthUnit
                                 ] ;
                 
                 rdfs:comment "A standard measure for velocity."^^xsd:string .
@@ -15993,11 +15639,11 @@ dl:VolumeDensity rdf:type owl:Class ;
                  rdfs:subClassOf dl:Density ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:VolumeDensityUnit
+                                   owl:allValuesFrom dl:VolumeDensityUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:VolumeDensityUnit
+                                   owl:someValuesFrom dl:VolumeDensityUnit
                                  ] ;
                  
                  rdfs:comment "A measure of mass per unit volume."^^xsd:string .
@@ -16063,11 +15709,11 @@ dl:Wavenumber rdf:type owl:Class ;
               rdfs:subClassOf dl:MeasuredProperty ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:WavenumberUnit
+                                owl:allValuesFrom dl:WavenumberUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:WavenumberUnit
+                                owl:someValuesFrom dl:WavenumberUnit
                               ] ;
               
               rdfs:comment "The measure of a frequency in space."^^xsd:string .
@@ -17041,253 +16687,253 @@ dl:pHUnit rdf:type owl:Class ;
 #################################################################
 
 
-###  http://matonto.org/ontology/matonto#BulkModulus
+###  http://matonto.org/ontologies/matonto#BulkModulus
 
-:BulkModulus rdf:type owl:NamedIndividual ;
-             
-             :hasCommonSymbol "K" .
-
-
-
-###  http://matonto.org/ontology/matonto#ElasticModulus
-
-:ElasticModulus rdf:type owl:NamedIndividual ;
+mat:BulkModulus rdf:type owl:NamedIndividual ;
                 
-                :hasCommonSymbol "E" .
+                mat:hasCommonSymbol "K" .
 
 
 
-###  http://matonto.org/ontology/matonto#FlexuralModulus
+###  http://matonto.org/ontologies/matonto#ElasticModulus
 
-:FlexuralModulus rdf:type owl:NamedIndividual ;
-                 
-                 :hasCommonSymbol "E" .
-
-
-
-###  http://matonto.org/ontology/matonto#FractureToughness
-
-:FractureToughness rdf:type owl:NamedIndividual ;
+mat:ElasticModulus rdf:type owl:NamedIndividual ;
                    
-                   :hasCommonSymbol "K" .
+                   mat:hasCommonSymbol "E" .
 
 
 
-###  http://matonto.org/ontology/matonto#HeatCapacity
+###  http://matonto.org/ontologies/matonto#FlexuralModulus
 
-:HeatCapacity rdf:type owl:NamedIndividual ;
-              
-              :hasCommonSymbol "C" .
-
-
-
-###  http://matonto.org/ontology/matonto#ShearModulus
-
-:ShearModulus rdf:type owl:NamedIndividual ;
-              
-              :hasCommonSymbol "G" .
+mat:FlexuralModulus rdf:type owl:NamedIndividual ;
+                    
+                    mat:hasCommonSymbol "E" .
 
 
 
-###  http://matonto.org/ontology/matonto#YoungsModulus
+###  http://matonto.org/ontologies/matonto#FractureToughness
 
-:YoungsModulus rdf:type owl:NamedIndividual ;
-               
-               :hasCommonSymbol "E" .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_angstrom
-
-:unit_angstrom rdf:type owl:NamedIndividual ;
-               
-               rdfs:label "angstrom" ;
-               
-               dl:isScaledBy "1.0E-10" ;
-               
-               dl:derivesFrom dl:unit_meter .
+mat:FractureToughness rdf:type owl:NamedIndividual ;
+                      
+                      mat:hasCommonSymbol "K" .
 
 
 
-###  http://matonto.org/ontology/matonto#unit_angstrom_3
+###  http://matonto.org/ontologies/matonto#HeatCapacity
 
-:unit_angstrom_3 rdf:type dl:VolumeUnit ,
-                          owl:NamedIndividual ;
+mat:HeatCapacity rdf:type owl:NamedIndividual ;
                  
-                 rdfs:label "cubic angstrom" ;
+                 mat:hasCommonSymbol "C" .
+
+
+
+###  http://matonto.org/ontologies/matonto#ShearModulus
+
+mat:ShearModulus rdf:type owl:NamedIndividual ;
                  
-                 dl:isRaisedToPowerOf "3.0" ;
-                 
-                 dl:derivesFrom :unit_angstrom .
+                 mat:hasCommonSymbol "G" .
 
 
 
-###  http://matonto.org/ontology/matonto#unit_bohr_magneton
+###  http://matonto.org/ontologies/matonto#YoungsModulus
 
-:unit_bohr_magneton rdf:type dl:Unit ,
+mat:YoungsModulus rdf:type owl:NamedIndividual ;
+                  
+                  mat:hasCommonSymbol "E" .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_angstrom
+
+mat:unit_angstrom rdf:type owl:NamedIndividual ;
+                  
+                  rdfs:label "angstrom" ;
+                  
+                  dl:isScaledBy "1.0E-10" ;
+                  
+                  dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_angstrom_3
+
+mat:unit_angstrom_3 rdf:type dl:VolumeUnit ,
                              owl:NamedIndividual ;
                     
-                    rdfs:label "Bohr magneton" .
+                    rdfs:label "cubic angstrom" ;
+                    
+                    dl:isRaisedToPowerOf "3.0" ;
+                    
+                    dl:derivesFrom mat:unit_angstrom .
 
 
 
-###  http://matonto.org/ontology/matonto#unit_centimeter
+###  http://matonto.org/ontologies/matonto#unit_bohr_magneton
 
-:unit_centimeter rdf:type dl:LengthUnit ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "cm" ,
-                            "centimeter" ;
-                 
-                 dl:isScaledBy "1.0E-2" ;
-                 
-                 dl:derivesFrom dl:unit_meter .
+mat:unit_bohr_magneton rdf:type dl:Unit ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "Bohr magneton" .
 
 
 
-###  http://matonto.org/ontology/matonto#unit_centimeter_-3
+###  http://matonto.org/ontologies/matonto#unit_centimeter
 
-:unit_centimeter_-3 rdf:type dl:Unit ,
+mat:unit_centimeter rdf:type dl:LengthUnit ,
                              owl:NamedIndividual ;
                     
-                    rdfs:label "per cubic centimeter" ;
+                    rdfs:label "centimeter" ,
+                               "cm" ;
                     
-                    dl:isRaisedToPowerOf "-3.0" ;
+                    dl:isScaledBy "1.0E-2" ;
                     
-                    dl:derivesFrom :unit_centimeter .
+                    dl:derivesFrom dl:unit_meter .
 
 
 
-###  http://matonto.org/ontology/matonto#unit_electron_volt
+###  http://matonto.org/ontologies/matonto#unit_centimeter_-3
 
-:unit_electron_volt rdf:type :BandGapUnit ,
+mat:unit_centimeter_-3 rdf:type dl:Unit ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "per cubic centimeter" ;
+                       
+                       dl:isRaisedToPowerOf "-3.0" ;
+                       
+                       dl:derivesFrom mat:unit_centimeter .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_electron_volt
+
+mat:unit_electron_volt rdf:type mat:BandGapUnit ,
+                                owl:NamedIndividual ;
+                       
+                       rdfs:label "eV" ,
+                                  "electron volt" ;
+                       
+                       mat:hasSISymbol "eV" .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_gigapascal
+
+mat:unit_gigapascal rdf:type dl:PressureUnit ,
                              owl:NamedIndividual ;
                     
-                    rdfs:label "eV" ,
-                               "electron volt" ;
+                    rdfs:label "GPa" ,
+                               "gigapascal" ;
                     
-                    :hasSISymbol "eV" .
+                    dl:isScaledBy "1.0E9"^^xsd:double ;
+                    
+                    mat:hasSISymbol "GPa" ;
+                    
+                    dl:derivesFrom dl:unit_pascal .
 
 
 
-###  http://matonto.org/ontology/matonto#unit_gigapascal
+###  http://matonto.org/ontologies/matonto#unit_gram_1_centimeter_-3
 
-:unit_gigapascal rdf:type dl:PressureUnit ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "gigapascal" ,
-                            "GPa" ;
-                 
-                 dl:isScaledBy "1.0E9"^^xsd:double ;
-                 
-                 :hasSISymbol "GPa" ;
-                 
-                 dl:derivesFrom dl:unit_pascal .
+mat:unit_gram_1_centimeter_-3 rdf:type dl:VolumeDensityUnit ,
+                                       owl:NamedIndividual ;
+                              
+                              rdfs:label "gram per cubic centimeter" ,
+                                         "g/cm3" ;
+                              
+                              dl:derivesFrom mat:unit_centimeter_-3 ,
+                                             dl:unit_gram .
 
 
 
-###  http://matonto.org/ontology/matonto#unit_gram_1_centimeter_-3
+###  http://matonto.org/ontologies/matonto#unit_hectopascal
 
-:unit_gram_1_centimeter_-3 rdf:type dl:VolumeDensityUnit ,
-                                    owl:NamedIndividual ;
-                           
-                           rdfs:label "g/cm3" ,
-                                      "gram per cubic centimeter" ;
-                           
-                           dl:derivesFrom :unit_centimeter_-3 ,
-                                          dl:unit_gram .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_hectopascal
-
-:unit_hectopascal rdf:type dl:PressureUnit ,
-                           owl:NamedIndividual ;
-                  
-                  rdfs:label "hectopascal" ;
-                  
-                  dl:isScaledBy "100.0"^^xsd:double ;
-                  
-                  :hasSISymbol "hPa" ;
-                  
-                  dl:derivesFrom dl:unit_pascal .
+mat:unit_hectopascal rdf:type dl:PressureUnit ,
+                              owl:NamedIndividual ;
+                     
+                     rdfs:label "hectopascal" ;
+                     
+                     dl:isScaledBy "100.0"^^xsd:double ;
+                     
+                     mat:hasSISymbol "hPa" ;
+                     
+                     dl:derivesFrom dl:unit_pascal .
 
 
 
-###  http://matonto.org/ontology/matonto#unit_kilopascal
+###  http://matonto.org/ontologies/matonto#unit_kilopascal
 
-:unit_kilopascal rdf:type dl:PressureUnit ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "kilopascal" ;
-                 
-                 dl:isScaledBy "1000.0"^^xsd:double ;
-                 
-                 :hasSISymbol "kPa" ;
-                 
-                 dl:derivesFrom dl:unit_pascal .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_megapascal
-
-:unit_megapascal rdf:type dl:PressureUnit ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "MPa" ,
-                            "megapascal" ;
-                 
-                 dl:isScaledBy "1000000.0"^^xsd:double ;
-                 
-                 :hasSISymbol "MPa" ;
-                 
-                 dl:derivesFrom dl:unit_pascal .
+mat:unit_kilopascal rdf:type dl:PressureUnit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "kilopascal" ;
+                    
+                    dl:isScaledBy "1000.0"^^xsd:double ;
+                    
+                    mat:hasSISymbol "kPa" ;
+                    
+                    dl:derivesFrom dl:unit_pascal .
 
 
 
-###  http://matonto.org/ontology/matonto#unit_meter_sqrt
+###  http://matonto.org/ontologies/matonto#unit_megapascal
 
-:unit_meter_sqrt rdf:type dl:Unit ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "root meter" ;
-                 
-                 dl:isRaisedToPowerOf "0.5"^^xsd:double ;
-                 
-                 dl:derivesFrom dl:unit_meter .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_micrometer
-
-:unit_micrometer rdf:type dl:LengthUnit ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "micrometer" ;
-                 
-                 dl:isScaledBy "1.0E-6"^^xsd:double ;
-                 
-                 :hasSISymbol "�m" ;
-                 
-                 <http://www.w3.org/2004/02/skos/core#altLabel> "micrometre" ;
-                 
-                 rdfs:comment "The micrometer is an SI derived unit of length equaling 1�10-6 of a meter; that is, one millionth of a meter (or one thousandth of a millimeter, 0.001 mm, or about 0.000039 inch)." ;
-                 
-                 dl:derivesFrom dl:unit_meter .
+mat:unit_megapascal rdf:type dl:PressureUnit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "MPa" ,
+                               "megapascal" ;
+                    
+                    dl:isScaledBy "1000000.0"^^xsd:double ;
+                    
+                    mat:hasSISymbol "MPa" ;
+                    
+                    dl:derivesFrom dl:unit_pascal .
 
 
 
-###  http://matonto.org/ontology/matonto#unit_pascal_1_meter_sqrt
+###  http://matonto.org/ontologies/matonto#unit_meter_sqrt
 
-:unit_pascal_1_meter_sqrt rdf:type dl:Unit ,
-                                   owl:NamedIndividual ;
-                          
-                          rdfs:label "pascal root meter" ;
-                          
-                          rdfs:comment "Pa*m1/2 are the units for fracture toughness" ;
-                          
-                          dl:derivesFrom :unit_meter_sqrt ,
-                                         dl:unit_pascal .
+mat:unit_meter_sqrt rdf:type dl:Unit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "root meter" ;
+                    
+                    dl:isRaisedToPowerOf "0.5"^^xsd:double ;
+                    
+                    dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_micrometer
+
+mat:unit_micrometer rdf:type dl:LengthUnit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "micrometer" ;
+                    
+                    dl:isScaledBy "1.0E-6"^^xsd:double ;
+                    
+                    mat:hasSISymbol "�m" ;
+                    
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "micrometre" ;
+                    
+                    rdfs:comment "The micrometer is an SI derived unit of length equaling 1�10-6 of a meter; that is, one millionth of a meter (or one thousandth of a millimeter, 0.001 mm, or about 0.000039 inch)." ;
+                    
+                    dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_pascal_1_meter_sqrt
+
+mat:unit_pascal_1_meter_sqrt rdf:type dl:Unit ,
+                                      owl:NamedIndividual ;
+                             
+                             rdfs:label "pascal root meter" ;
+                             
+                             rdfs:comment "Pa*m1/2 are the units for fracture toughness" ;
+                             
+                             dl:derivesFrom mat:unit_meter_sqrt ,
+                                            dl:unit_pascal .
 
 
 
@@ -17295,7 +16941,7 @@ dl:pHUnit rdf:type owl:Class ;
 
 dl:SpecificEnergyUnit rdf:type owl:NamedIndividual ;
                       
-                      :hasCommonSymbol "J/Kg" .
+                      mat:hasCommonSymbol "J/Kg" .
 
 
 
@@ -17592,7 +17238,7 @@ dl:unit_gram rdf:type dl:MassUnit ,
              
              rdfs:comment "The gram is a metric system unit of mass." ;
              
-             :hasSISymbol "g" ;
+             mat:hasSISymbol "g" ;
              
              dl:derivesInto dl:unit_kilogram .
 
@@ -18799,24 +18445,6 @@ dl:unit_weber rdf:type dl:MagneticFluxUnit ,
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( dl:IlluminanceUnit
-                dl:IrradianceUnit
-                dl:LuminanceUnit
-                dl:LuminousFluxUnit
-                dl:LuminousIntensityUnit
-                dl:RadianceUnit
-                dl:RadiantIntensityUnit
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( dl:AbsorbedDoseRateUnit
-                dl:AbsorbedDoseUnit
-                dl:DoseEquivalentUnit
-                dl:ExposureUnit
-                dl:RadioactivityUnit
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
   owl:members ( dl:AccelerationUnit
                 dl:AmountOfSubstanceUnit
                 dl:AngleUnit
@@ -18886,9 +18514,27 @@ dl:unit_weber rdf:type dl:MagneticFluxUnit ,
                 dl:pHUnit
               )
 ] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dl:IlluminanceUnit
+                dl:IrradianceUnit
+                dl:LuminanceUnit
+                dl:LuminousFluxUnit
+                dl:LuminousIntensityUnit
+                dl:RadianceUnit
+                dl:RadiantIntensityUnit
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dl:AbsorbedDoseRateUnit
+                dl:AbsorbedDoseUnit
+                dl:DoseEquivalentUnit
+                dl:ExposureUnit
+                dl:RadioactivityUnit
+              )
+] .
 
 
 
 
-###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
 
