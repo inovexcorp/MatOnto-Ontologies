@@ -933,7 +933,7 @@ snap:ThreeDimensionalRegion rdf:type owl:Class .
                                                        
                                                        rdfs:label "Chemical Family"^^xsd:string ;
                                                        
-                                                       rdfs:subClassOf :ChemicalQuality .
+                                                       rdfs:subClassOf dl:ChemicalQuality .
 
 
 
@@ -943,7 +943,7 @@ snap:ThreeDimensionalRegion rdf:type owl:Class .
                                                         
                                                         rdfs:label "Chemical Formula"^^xsd:string ;
                                                         
-                                                        rdfs:subClassOf :ChemicalQuality .
+                                                        rdfs:subClassOf dl:ChemicalQuality .
 
 
 

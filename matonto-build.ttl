@@ -10,9 +10,7 @@
 
 <http://matonto.org/ontologies/matonto-build> rdf:type owl:Ontology ;
                                          
-                                         owl:versionInfo "2.0"^^xsd:string ;
-                                         
-                                         dc:date "2007-10-01"^^xsd:date ;
+                                         dc:date "2014-07-21"^^xsd:date ;
                                          
                                          dc:publisher "iNovex Information Systems, MatOnto Group"^^xsd:string ;
                                          
