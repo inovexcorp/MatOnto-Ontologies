@@ -963,7 +963,7 @@ snap:ThreeDimensionalRegion rdf:type owl:Class .
                   
                   rdfs:label "Empirical Formula" ;
                   
-                  rdfs:subClassOf :chemicalFormula ;
+                  rdfs:subClassOf :ChemicalFormula ;
                   
                   rdfs:comment "In chemistry, the empirical formula of a chemical is a simple expression of the relative number of each type of atom or ratio of the elements in the compound. Empirical formulas are the standard for ionic compounds, such as CaCl2, and for macromolecules, such as SiO2." .
 
@@ -975,7 +975,7 @@ snap:ThreeDimensionalRegion rdf:type owl:Class .
                   
                   rdfs:label "Molecular Formula" ;
                   
-                  rdfs:subClassOf :chemicalFormula ;
+                  rdfs:subClassOf :ChemicalFormula ;
                   
                   rdfs:comment "A molecular formula enumerates the number of atoms to reflect those in the molecule, so that the molecular formula for glucose is C6H12O6 rather than the glucose empirical formula, which is CH2O" .
 

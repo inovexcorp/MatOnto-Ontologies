@@ -2177,11 +2177,11 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty ;
                 rdfs:subClassOf dl:MeasuredProperty ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:PressureUnit
+                                  owl:someValuesFrom dl:PressureUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:PressureUnit
+                                  owl:allValuesFrom dl:PressureUnit
                                 ] ;
                 
                 skos:altLabel "modulus of elasticity" ;
@@ -2208,7 +2208,7 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty ;
                   
                   rdfs:label "Empirical Formula" ;
                   
-                  rdfs:subClassOf :chemicalFormula ;
+                  rdfs:subClassOf :ChemicalFormula ;
                   
                   rdfs:comment "In chemistry, the empirical formula of a chemical is a simple expression of the relative number of each type of atom or ratio of the elements in the compound. Empirical formulas are the standard for ionic compounds, such as CaCl2, and for macromolecules, such as SiO2." .
 
@@ -2223,11 +2223,11 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty ;
           rdfs:subClassOf dl:MeasuredProperty ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:someValuesFrom :EnthalpyUnit
+                            owl:allValuesFrom :EnthalpyUnit
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:allValuesFrom :EnthalpyUnit
+                            owl:someValuesFrom :EnthalpyUnit
                           ] ;
           
           rdfs:comment "A measure of the total energy of a thermodynamic system." .
@@ -2295,11 +2295,11 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty ;
                   rdfs:subClassOf dl:MeasuredProperty ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:allValuesFrom dl:PressureUnit
+                                    owl:someValuesFrom dl:PressureUnit
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:someValuesFrom dl:PressureUnit
+                                    owl:allValuesFrom dl:PressureUnit
                                   ] ;
                   
                   skos:altLabel "modulus of rupture" ,
@@ -2358,11 +2358,11 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty ;
            rdfs:subClassOf dl:MeasuredProperty ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasUnit ;
-                             owl:someValuesFrom dl:LengthUnit
+                             owl:allValuesFrom dl:LengthUnit
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasUnit ;
-                             owl:allValuesFrom dl:LengthUnit
+                             owl:someValuesFrom dl:LengthUnit
                            ] ;
            
            skos:altLabel "particle size" ;
@@ -2503,7 +2503,7 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty ;
                   
                   rdfs:label "Molecular Formula" ;
                   
-                  rdfs:subClassOf :chemicalFormula ;
+                  rdfs:subClassOf :ChemicalFormula ;
                   
                   rdfs:comment "A molecular formula enumerates the number of atoms to reflect those in the molecule, so that the molecular formula for glucose is C6H12O6 rather than the glucose empirical formula, which is CH2O" .
 
@@ -2648,11 +2648,11 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty ;
               rdfs:subClassOf :IntensiveProperty ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:SpecificEntropyUnit
+                                owl:allValuesFrom dl:SpecificEntropyUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:SpecificEntropyUnit
+                                owl:someValuesFrom dl:SpecificEntropyUnit
                               ] ;
               
               rdfs:comment "Specific heat is the heat capacity per unit mass of a material." ;
@@ -2668,11 +2668,11 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty ;
         rdfs:subClassOf dl:MeasuredProperty ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty dl:hasUnit ;
-                          owl:allValuesFrom dl:PressureUnit
+                          owl:someValuesFrom dl:PressureUnit
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty dl:hasUnit ;
-                          owl:someValuesFrom dl:PressureUnit
+                          owl:allValuesFrom dl:PressureUnit
                         ] ;
         
         rdfs:comment "In continuum mechanics, stress is a physical quantity that expresses the internal forces that neighbouring particles of a continuous material exert on each other." .
@@ -2754,12 +2754,6 @@ dl:isShiftedBy rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://matonto.org/ontologies/matonto#chemicalFormula
-
-:chemicalFormula rdf:type owl:Class .
-
-
-
 ###  http://ontology.dumontierlab.com/AbsorbedDose
 
 dl:AbsorbedDose rdf:type owl:Class ;
@@ -2809,10 +2803,6 @@ dl:AbsorbedDoseRateUnit rdf:type owl:Class ;
                         rdfs:subClassOf dl:RadiationUnit ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty dl:derivesFrom ;
-                                          owl:someValuesFrom dl:AbsorbedDoseUnit
-                                        ] ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty dl:derivesFrom ;
                                           owl:someValuesFrom [ rdf:type owl:Class ;
                                                                owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                     [ rdf:type owl:Restriction ;
@@ -2821,6 +2811,10 @@ dl:AbsorbedDoseRateUnit rdf:type owl:Class ;
                                                                                     ]
                                                                                   )
                                                              ]
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty dl:derivesFrom ;
+                                          owl:someValuesFrom dl:AbsorbedDoseUnit
                                         ] ;
                         
                         rdfs:comment "A standard measure for the absorbed dose rate."^^xsd:string .
@@ -2836,10 +2830,6 @@ dl:AbsorbedDoseUnit rdf:type owl:Class ;
                     rdfs:subClassOf dl:RadiationUnit ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:derivesFrom ;
-                                      owl:someValuesFrom dl:EnergyUnit
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty dl:derivesFrom ;
                                       owl:someValuesFrom [ rdf:type owl:Class ;
                                                            owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                 [ rdf:type owl:Restriction ;
@@ -2848,6 +2838,10 @@ dl:AbsorbedDoseUnit rdf:type owl:Class ;
                                                                                 ]
                                                                               )
                                                          ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dl:derivesFrom ;
+                                      owl:someValuesFrom dl:EnergyUnit
                                     ] ;
                     
                     rdfs:comment "A standard measure for absorbed dose."^^xsd:string .
@@ -2883,6 +2877,10 @@ dl:AccelerationUnit rdf:type owl:Class ;
                     rdfs:subClassOf dl:Unit ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:derivesFrom ;
+                                      owl:someValuesFrom dl:LengthUnit
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dl:derivesFrom ;
                                       owl:someValuesFrom [ rdf:type owl:Class ;
                                                            owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                                 [ rdf:type owl:Restriction ;
@@ -2891,10 +2889,6 @@ dl:AccelerationUnit rdf:type owl:Class ;
                                                                                 ]
                                                                               )
                                                          ]
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty dl:derivesFrom ;
-                                      owl:someValuesFrom dl:LengthUnit
                                     ] ;
                     
                     rdfs:comment "A standard measure for acceleration."^^xsd:string .
@@ -2922,11 +2916,11 @@ dl:AcidBaseReaction rdf:type owl:Class ;
                     rdfs:subClassOf dl:ChemicalReaction ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasParticipant ;
-                                      owl:someValuesFrom dl:Base
+                                      owl:someValuesFrom dl:Acid
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:hasParticipant ;
-                                      owl:someValuesFrom dl:Acid
+                                      owl:someValuesFrom dl:Base
                                     ] ;
                     
                     rdfs:comment "A chemical reaction in which an acid reacts with a base."^^xsd:string .
@@ -3620,11 +3614,11 @@ dl:AmountOfSubstanceConcentration rdf:type owl:Class ;
                                   rdfs:subClassOf dl:Concentration ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty dl:hasUnit ;
-                                                    owl:someValuesFrom dl:AmountOfSubstanceConcentrationUnit
+                                                    owl:allValuesFrom dl:AmountOfSubstanceConcentrationUnit
                                                   ] ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty dl:hasUnit ;
-                                                    owl:allValuesFrom dl:AmountOfSubstanceConcentrationUnit
+                                                    owl:someValuesFrom dl:AmountOfSubstanceConcentrationUnit
                                                   ] ;
                                   
                                   rdfs:comment "A measure of the number of atoms per unit volume in a sample of a matter."^^xsd:string .
@@ -3715,11 +3709,11 @@ dl:AngularAcceleration rdf:type owl:Class ;
                        rdfs:subClassOf dl:MeasuredProperty ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:someValuesFrom dl:AngularAccelerationUnit
+                                         owl:allValuesFrom dl:AngularAccelerationUnit
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:allValuesFrom dl:AngularAccelerationUnit
+                                         owl:someValuesFrom dl:AngularAccelerationUnit
                                        ] ;
                        
                        rdfs:comment "The measure of the rate of change of angular velocity over time."^^xsd:string .
@@ -3931,11 +3925,11 @@ dl:AreaDensity rdf:type owl:Class ;
                rdfs:subClassOf dl:Density ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:someValuesFrom dl:AreaDensityUnit
+                                 owl:allValuesFrom dl:AreaDensityUnit
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:allValuesFrom dl:AreaDensityUnit
+                                 owl:someValuesFrom dl:AreaDensityUnit
                                ] ;
                
                rdfs:comment "A measure of mass per unit area."^^xsd:string .
@@ -3951,10 +3945,6 @@ dl:AreaDensityUnit rdf:type owl:Class ;
                    rdfs:subClassOf dl:DensityUnit ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dl:derivesFrom ;
-                                     owl:someValuesFrom dl:MassUnit
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty dl:derivesFrom ;
                                      owl:someValuesFrom [ rdf:type owl:Class ;
                                                           owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                [ rdf:type owl:Restriction ;
@@ -3963,6 +3953,10 @@ dl:AreaDensityUnit rdf:type owl:Class ;
                                                                                ]
                                                                              )
                                                         ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dl:derivesFrom ;
+                                     owl:someValuesFrom dl:MassUnit
                                    ] ;
                    
                    rdfs:comment "A standard measure of area density."^^xsd:string .
@@ -4885,11 +4879,11 @@ dl:Capacitance rdf:type owl:Class ;
                rdfs:subClassOf dl:MeasuredProperty ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:allValuesFrom dl:CapacitanceUnit
+                                 owl:someValuesFrom dl:CapacitanceUnit
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:hasUnit ;
-                                 owl:someValuesFrom dl:CapacitanceUnit
+                                 owl:allValuesFrom dl:CapacitanceUnit
                                ] ;
                
                rdfs:comment "The measure of the amount of electric charge stored for a given electric potential."^^xsd:string .
@@ -4905,10 +4899,6 @@ dl:CapacitanceUnit rdf:type owl:Class ;
                    rdfs:subClassOf dl:Unit ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dl:derivesFrom ;
-                                     owl:someValuesFrom dl:ElectricChargeUnit
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty dl:derivesFrom ;
                                      owl:someValuesFrom [ rdf:type owl:Class ;
                                                           owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                [ rdf:type owl:Restriction ;
@@ -4917,6 +4907,10 @@ dl:CapacitanceUnit rdf:type owl:Class ;
                                                                                ]
                                                                              )
                                                         ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dl:derivesFrom ;
+                                     owl:someValuesFrom dl:ElectricChargeUnit
                                    ] ;
                    
                    rdfs:comment "A standard measure for capacitance."^^xsd:string .
@@ -5185,11 +5179,11 @@ dl:CatalyticConcentration rdf:type owl:Class ;
                           rdfs:subClassOf dl:Concentration ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty dl:hasUnit ;
-                                            owl:allValuesFrom dl:CatalyticConcentrationUnit
+                                            owl:someValuesFrom dl:CatalyticConcentrationUnit
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty dl:hasUnit ;
-                                            owl:someValuesFrom dl:CatalyticConcentrationUnit
+                                            owl:allValuesFrom dl:CatalyticConcentrationUnit
                                           ] ;
                           
                           rdfs:comment "The measure of catalytic activity per unit volume."^^xsd:string .
@@ -5205,10 +5199,6 @@ dl:CatalyticConcentrationUnit rdf:type owl:Class ;
                               rdfs:subClassOf dl:ConcentrationUnit ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dl:derivesFrom ;
-                                                owl:someValuesFrom dl:CatalyticActivityUnit
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty dl:derivesFrom ;
                                                 owl:someValuesFrom [ rdf:type owl:Class ;
                                                                      owl:intersectionOf ( dl:UnitRaisedToPowerNegativeThree
                                                                                           [ rdf:type owl:Restriction ;
@@ -5217,6 +5207,10 @@ dl:CatalyticConcentrationUnit rdf:type owl:Class ;
                                                                                           ]
                                                                                         )
                                                                    ]
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dl:derivesFrom ;
+                                                owl:someValuesFrom dl:CatalyticActivityUnit
                                               ] ;
                               
                               rdfs:comment "A standard measure for catalytic concentration."^^xsd:string .
@@ -5378,12 +5372,12 @@ dl:ChemicalBond rdf:type owl:Class ;
                                 span:Process ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasParticipant ;
-                                  owl:someValuesFrom dl:Atom
+                                  owl:onClass dl:Atom ;
+                                  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasParticipant ;
-                                  owl:onClass dl:Atom ;
-                                  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                  owl:someValuesFrom dl:Atom
                                 ] ;
                 
                 owl:disjointWith dl:Ring ,
@@ -6179,11 +6173,11 @@ dl:Density rdf:type owl:Class ;
            rdfs:subClassOf dl:MeasuredProperty ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasUnit ;
-                             owl:someValuesFrom dl:DensityUnit
+                             owl:allValuesFrom dl:DensityUnit
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasUnit ;
-                             owl:allValuesFrom dl:DensityUnit
+                             owl:someValuesFrom dl:DensityUnit
                            ] ;
            
            rdfs:comment "A measure of mass per some dimension."^^xsd:string .
@@ -6199,6 +6193,10 @@ dl:DensityUnit rdf:type owl:Class ;
                rdfs:subClassOf dl:Unit ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty dl:derivesFrom ;
+                                 owl:someValuesFrom dl:MassUnit
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty dl:derivesFrom ;
                                  owl:someValuesFrom [ rdf:type owl:Class ;
                                                       owl:intersectionOf ( dl:UnitRaisedToPower
                                                                            [ rdf:type owl:Restriction ;
@@ -6207,10 +6205,6 @@ dl:DensityUnit rdf:type owl:Class ;
                                                                            ]
                                                                          )
                                                     ]
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty dl:derivesFrom ;
-                                 owl:someValuesFrom dl:MassUnit
                                ] ;
                
                rdfs:comment "A standard measure of density."^^xsd:string .
@@ -6298,12 +6292,12 @@ dl:DisulfideBond rdf:type owl:Class ;
                  rdfs:subClassOf dl:CovalentBond ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasParticipant ;
-                                   owl:onClass dl:SulfurAtom ;
-                                   owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                   owl:someValuesFrom dl:SulfurAtom
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasParticipant ;
-                                   owl:someValuesFrom dl:SulfurAtom
+                                   owl:onClass dl:SulfurAtom ;
+                                   owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                  ] ;
                  
                  rdfs:comment "A chemical bond between two sulfur atoms."^^xsd:string .
@@ -6319,10 +6313,6 @@ dl:DoseEquivalentUnit rdf:type owl:Class ;
                       rdfs:subClassOf dl:RadiationUnit ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty dl:derivesFrom ;
-                                        owl:someValuesFrom dl:EnergyUnit
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty dl:derivesFrom ;
                                         owl:someValuesFrom [ rdf:type owl:Class ;
                                                              owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                   [ rdf:type owl:Restriction ;
@@ -6331,6 +6321,10 @@ dl:DoseEquivalentUnit rdf:type owl:Class ;
                                                                                   ]
                                                                                 )
                                                            ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty dl:derivesFrom ;
+                                        owl:someValuesFrom dl:EnergyUnit
                                       ] ;
                       
                       rdfs:comment "A standard measure for dose equivalence."^^xsd:string .
@@ -6411,11 +6405,11 @@ dl:DynamicViscosityUnit rdf:type owl:Class ;
                         rdfs:subClassOf dl:Unit ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty dl:derivesFrom ;
-                                          owl:someValuesFrom dl:TimeUnit
+                                          owl:someValuesFrom dl:PressureUnit
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty dl:derivesFrom ;
-                                          owl:someValuesFrom dl:PressureUnit
+                                          owl:someValuesFrom dl:TimeUnit
                                         ] ;
                         
                         rdfs:comment "A standard measure for dynamic viscosity."^^xsd:string .
@@ -6529,11 +6523,11 @@ dl:ElectricCharge rdf:type owl:Class ;
                                   dl:MeasuredProperty ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:someValuesFrom dl:ElectricChargeUnit
+                                    owl:allValuesFrom dl:ElectricChargeUnit
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:allValuesFrom dl:ElectricChargeUnit
+                                    owl:someValuesFrom dl:ElectricChargeUnit
                                   ] ;
                   
                   rdfs:comment "A measure of a fundamental conserved property of some subatomic particles. The electric charge of a macroscopic object is the sum of the electric charges of its constituent particles."^^xsd:string ,
@@ -6570,6 +6564,10 @@ dl:ElectricChargeDensityUnit rdf:type owl:Class ;
                              rdfs:subClassOf dl:Unit ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty dl:derivesFrom ;
+                                               owl:someValuesFrom dl:ElectricChargeUnit
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty dl:derivesFrom ;
                                                owl:someValuesFrom [ rdf:type owl:Class ;
                                                                     owl:intersectionOf ( dl:UnitRaisedToPowerNegativeThree
                                                                                          [ rdf:type owl:Restriction ;
@@ -6578,10 +6576,6 @@ dl:ElectricChargeDensityUnit rdf:type owl:Class ;
                                                                                          ]
                                                                                        )
                                                                   ]
-                                             ] ,
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty dl:derivesFrom ;
-                                               owl:someValuesFrom dl:ElectricChargeUnit
                                              ] ;
                              
                              rdfs:comment "A standard measure for electric charge density."^^xsd:string .
@@ -6617,11 +6611,11 @@ dl:ElectricConductance rdf:type owl:Class ;
                        rdfs:subClassOf dl:Conduction ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:allValuesFrom dl:ElectricConductionUnit
+                                         owl:someValuesFrom dl:ElectricConductionUnit
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:someValuesFrom dl:ElectricConductionUnit
+                                         owl:allValuesFrom dl:ElectricConductionUnit
                                        ] ;
                        
                        rdfs:comment "A measure of the ease with which electricity flows along a certain path in an electrical element."^^xsd:string .
@@ -6706,6 +6700,10 @@ dl:ElectricCurrentDensityUnit rdf:type owl:Class ;
                               rdfs:subClassOf dl:Unit ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dl:derivesFrom ;
+                                                owl:someValuesFrom dl:ElectricCurrentUnit
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dl:derivesFrom ;
                                                 owl:someValuesFrom [ rdf:type owl:Class ;
                                                                      owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                                           [ rdf:type owl:Restriction ;
@@ -6714,10 +6712,6 @@ dl:ElectricCurrentDensityUnit rdf:type owl:Class ;
                                                                                           ]
                                                                                         )
                                                                    ]
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty dl:derivesFrom ;
-                                                owl:someValuesFrom dl:ElectricCurrentUnit
                                               ] ;
                               
                               rdfs:comment "A standard measure for electric current density."^^xsd:string .
@@ -6765,6 +6759,10 @@ dl:ElectricFieldStrengthUnit rdf:type owl:Class ;
                              rdfs:subClassOf dl:Unit ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty dl:derivesFrom ;
+                                               owl:someValuesFrom dl:PotentialDifferenceUnit
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty dl:derivesFrom ;
                                                owl:someValuesFrom [ rdf:type owl:Class ;
                                                                     owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                          [ rdf:type owl:Restriction ;
@@ -6773,10 +6771,6 @@ dl:ElectricFieldStrengthUnit rdf:type owl:Class ;
                                                                                          ]
                                                                                        )
                                                                   ]
-                                             ] ,
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty dl:derivesFrom ;
-                                               owl:someValuesFrom dl:PotentialDifferenceUnit
                                              ] ;
                              
                              rdfs:comment "A standard measure for electric field strength."^^xsd:string .
@@ -6812,10 +6806,6 @@ dl:ElectricFluxDensityUnit rdf:type owl:Class ;
                            rdfs:subClassOf dl:Unit ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty dl:derivesFrom ;
-                                             owl:someValuesFrom dl:ElectricChargeUnit
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty dl:derivesFrom ;
                                              owl:someValuesFrom [ rdf:type owl:Class ;
                                                                   owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                                        [ rdf:type owl:Restriction ;
@@ -6824,6 +6814,10 @@ dl:ElectricFluxDensityUnit rdf:type owl:Class ;
                                                                                        ]
                                                                                      )
                                                                 ]
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty dl:derivesFrom ;
+                                             owl:someValuesFrom dl:ElectricChargeUnit
                                            ] ;
                            
                            rdfs:comment "A standard measure for electric flux density."^^xsd:string .
@@ -6839,11 +6833,11 @@ dl:ElectricResistance rdf:type owl:Class ;
                       rdfs:subClassOf dl:MeasuredProperty ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty dl:hasUnit ;
-                                        owl:someValuesFrom dl:ElectricResistanceUnit
+                                        owl:allValuesFrom dl:ElectricResistanceUnit
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty dl:hasUnit ;
-                                        owl:allValuesFrom dl:ElectricResistanceUnit
+                                        owl:someValuesFrom dl:ElectricResistanceUnit
                                       ] ;
                       
                       rdfs:comment "A measure of the potential difference with respect the current."^^xsd:string .
@@ -6886,11 +6880,11 @@ dl:ElectromagneticRadiation rdf:type owl:Class ;
                             rdfs:subClassOf dl:MeasuredProperty ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty dl:hasUnit ;
-                                              owl:allValuesFrom dl:ElectromagneticRadiationUnit
+                                              owl:someValuesFrom dl:ElectromagneticRadiationUnit
                                             ] ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty dl:hasUnit ;
-                                              owl:someValuesFrom dl:ElectromagneticRadiationUnit
+                                              owl:allValuesFrom dl:ElectromagneticRadiationUnit
                                             ] ;
                             
                             rdfs:comment "A measure of quantities of electromagnetic radiation."^^xsd:string .
@@ -7087,11 +7081,11 @@ dl:Entropy rdf:type owl:Class ;
            rdfs:subClassOf dl:MeasuredProperty ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasUnit ;
-                             owl:someValuesFrom dl:EntropyUnit
+                             owl:allValuesFrom dl:EntropyUnit
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasUnit ;
-                             owl:allValuesFrom dl:EntropyUnit
+                             owl:someValuesFrom dl:EntropyUnit
                            ] ;
            
            rdfs:comment "A measure of the possible configurations of the system."^^xsd:string .
@@ -7134,11 +7128,11 @@ dl:EquivalentDose rdf:type owl:Class ;
                   rdfs:subClassOf dl:Radiation ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:someValuesFrom dl:DoseEquivalentUnit
+                                    owl:allValuesFrom dl:DoseEquivalentUnit
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:allValuesFrom dl:DoseEquivalentUnit
+                                    owl:someValuesFrom dl:DoseEquivalentUnit
                                   ] ;
                   
                   rdfs:comment "A measure of the radiation dose to tissue where an attempt has been made to allow for the different relative biological effect of different types of ionizing radiation. Equivalent dose is therefore a less fundamental quantity than radiation absorbed dose, but is more biologically significant."^^xsd:string .
@@ -7332,11 +7326,11 @@ dl:Exposure rdf:type owl:Class ;
             rdfs:subClassOf dl:Radiation ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:allValuesFrom dl:ExposureUnit
+                              owl:someValuesFrom dl:ExposureUnit
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:someValuesFrom dl:ExposureUnit
+                              owl:allValuesFrom dl:ExposureUnit
                             ] ;
             
             rdfs:comment "A measure of the amount of radiation detected."^^xsd:string .
@@ -7517,11 +7511,11 @@ dl:Force rdf:type owl:Class ;
          rdfs:subClassOf dl:MeasuredProperty ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:allValuesFrom dl:ForceUnit
+                           owl:someValuesFrom dl:ForceUnit
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:someValuesFrom dl:ForceUnit
+                           owl:allValuesFrom dl:ForceUnit
                          ] ;
          
          rdfs:comment "A measure of the rate of change of the momentum of a body."^^xsd:string .
@@ -7537,6 +7531,10 @@ dl:ForceUnit rdf:type owl:Class ;
              rdfs:subClassOf dl:Unit ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:derivesFrom ;
+                               owl:someValuesFrom dl:MassUnit
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dl:derivesFrom ;
                                owl:someValuesFrom dl:LengthUnit
                              ] ,
                              [ rdf:type owl:Restriction ;
@@ -7549,10 +7547,6 @@ dl:ForceUnit rdf:type owl:Class ;
                                                                          ]
                                                                        )
                                                   ]
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty dl:derivesFrom ;
-                               owl:someValuesFrom dl:MassUnit
                              ] ;
              
              rdfs:comment "A standard measure for force."^^xsd:string .
@@ -8888,10 +8882,6 @@ dl:IlluminanceUnit rdf:type owl:Class ;
                    rdfs:subClassOf dl:ElectromagneticRadiationUnit ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dl:derivesFrom ;
-                                     owl:someValuesFrom dl:LuminousFluxUnit
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty dl:derivesFrom ;
                                      owl:someValuesFrom [ rdf:type owl:Class ;
                                                           owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                                [ rdf:type owl:Restriction ;
@@ -8900,6 +8890,10 @@ dl:IlluminanceUnit rdf:type owl:Class ;
                                                                                ]
                                                                              )
                                                         ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dl:derivesFrom ;
+                                     owl:someValuesFrom dl:LuminousFluxUnit
                                    ] ;
                    
                    rdfs:comment "A standard measure for illuminance."^^xsd:string .
@@ -9028,6 +9022,10 @@ dl:InductanceUnit rdf:type owl:Class ;
                   rdfs:subClassOf dl:Unit ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:derivesFrom ;
+                                    owl:someValuesFrom dl:MagneticFluxUnit
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty dl:derivesFrom ;
                                     owl:someValuesFrom [ rdf:type owl:Class ;
                                                          owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                               [ rdf:type owl:Restriction ;
@@ -9036,10 +9034,6 @@ dl:InductanceUnit rdf:type owl:Class ;
                                                                               ]
                                                                             )
                                                        ]
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty dl:derivesFrom ;
-                                    owl:someValuesFrom dl:MagneticFluxUnit
                                   ] ;
                   
                   rdfs:comment "A standard measure for inductance."^^xsd:string .
@@ -9170,12 +9164,12 @@ dl:IonicBond rdf:type owl:Class ;
              rdfs:subClassOf dl:ChemicalBond ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasParticipant ;
-                               owl:someValuesFrom dl:Ion
+                               owl:onClass dl:Ion ;
+                               owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasParticipant ;
-                               owl:onClass dl:Ion ;
-                               owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                               owl:someValuesFrom dl:Ion
                              ] ;
              
              rdfs:comment "A strong electrostatic interaction between oppositely charged atoms which have an electronegativity difference of over 1.6 (by convention)."^^xsd:string .
@@ -9275,11 +9269,11 @@ dl:Irradiance rdf:type owl:Class ;
               rdfs:subClassOf dl:ElectromagneticRadiation ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:IrradianceUnit
+                                owl:someValuesFrom dl:IrradianceUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:IrradianceUnit
+                                owl:allValuesFrom dl:IrradianceUnit
                               ] ;
               
               rdfs:comment "A measure of the power of electromagnetic radiation at a surface."^^xsd:string .
@@ -9295,6 +9289,10 @@ dl:IrradianceUnit rdf:type owl:Class ;
                   rdfs:subClassOf dl:ElectromagneticRadiationUnit ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:derivesFrom ;
+                                    owl:someValuesFrom dl:PowerUnit
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty dl:derivesFrom ;
                                     owl:someValuesFrom [ rdf:type owl:Class ;
                                                          owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                               [ rdf:type owl:Restriction ;
@@ -9303,10 +9301,6 @@ dl:IrradianceUnit rdf:type owl:Class ;
                                                                               ]
                                                                             )
                                                        ]
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty dl:derivesFrom ;
-                                    owl:someValuesFrom dl:PowerUnit
                                   ] ;
                   
                   rdfs:comment "A standard measure for irradiance."^^xsd:string .
@@ -9620,11 +9614,11 @@ dl:Length rdf:type owl:Class ;
           rdfs:subClassOf dl:MeasuredProperty ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:allValuesFrom dl:LengthUnit
+                            owl:someValuesFrom dl:LengthUnit
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:someValuesFrom dl:LengthUnit
+                            owl:allValuesFrom dl:LengthUnit
                           ] ;
           
           rdfs:comment "A measure of one dimension."^^xsd:string .
@@ -9779,11 +9773,11 @@ dl:Luminance rdf:type owl:Class ;
              rdfs:subClassOf dl:ElectromagneticRadiation ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:allValuesFrom dl:LuminanceUnit
+                               owl:someValuesFrom dl:LuminanceUnit
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:someValuesFrom dl:LuminanceUnit
+                               owl:allValuesFrom dl:LuminanceUnit
                              ] ;
              
              rdfs:comment "A measure of the density of luminous intensity in a given direction."^^xsd:string .
@@ -9862,11 +9856,11 @@ dl:LuminousIntensity rdf:type owl:Class ;
                      rdfs:subClassOf dl:ElectromagneticRadiation ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:someValuesFrom dl:LuminousIntensityUnit
+                                       owl:allValuesFrom dl:LuminousIntensityUnit
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:hasUnit ;
-                                       owl:allValuesFrom dl:LuminousIntensityUnit
+                                       owl:someValuesFrom dl:LuminousIntensityUnit
                                      ] ;
                      
                      rdfs:comment "A measure of the power emitted by a light source in a particular direction."^^xsd:string .
@@ -9986,6 +9980,10 @@ dl:MagneticFieldStrengthUnit rdf:type owl:Class ;
                              rdfs:subClassOf dl:Unit ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty dl:derivesFrom ;
+                                               owl:someValuesFrom dl:ElectricCurrentUnit
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty dl:derivesFrom ;
                                                owl:someValuesFrom [ rdf:type owl:Class ;
                                                                     owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                          [ rdf:type owl:Restriction ;
@@ -9994,10 +9992,6 @@ dl:MagneticFieldStrengthUnit rdf:type owl:Class ;
                                                                                          ]
                                                                                        )
                                                                   ]
-                                             ] ,
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty dl:derivesFrom ;
-                                               owl:someValuesFrom dl:ElectricCurrentUnit
                                              ] ;
                              
                              rdfs:comment "A standard measure for magnetic field strength."^^xsd:string .
@@ -10013,11 +10007,11 @@ dl:MagneticFlux rdf:type owl:Class ;
                 rdfs:subClassOf dl:MeasuredProperty ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:MagneticFluxUnit
+                                  owl:someValuesFrom dl:MagneticFluxUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:MagneticFluxUnit
+                                  owl:allValuesFrom dl:MagneticFluxUnit
                                 ] ;
                 
                 rdfs:comment "A measure of the strength and extent of a magnetic field."^^xsd:string .
@@ -10402,12 +10396,12 @@ dl:Mixture rdf:type owl:Class ;
            rdfs:subClassOf snap:Object ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasProperPart ;
-                             owl:onClass dl:ChemicalSubstance ;
-                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                             owl:someValuesFrom dl:ChemicalSubstance
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty dl:hasProperPart ;
-                             owl:someValuesFrom dl:ChemicalSubstance
+                             owl:onClass dl:ChemicalSubstance ;
+                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                            ] ;
            
            rdfs:comment "A substance consisting of two or more substances mixed together."^^xsd:string .
@@ -10423,11 +10417,11 @@ dl:Molality rdf:type owl:Class ;
             rdfs:subClassOf dl:Concentration ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:allValuesFrom dl:MolalityUnit
+                              owl:someValuesFrom dl:MolalityUnit
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty dl:hasUnit ;
-                              owl:someValuesFrom dl:MolalityUnit
+                              owl:allValuesFrom dl:MolalityUnit
                             ] ;
             
             rdfs:comment "A measure of the number of atoms of a given substance per volume of solvent."^^xsd:string .
@@ -10517,11 +10511,11 @@ dl:MolarEntropy rdf:type owl:Class ;
                 rdfs:subClassOf dl:MeasuredProperty ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:MolarEntropyUnit
+                                  owl:allValuesFrom dl:MolarEntropyUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:MolarEntropyUnit
+                                  owl:someValuesFrom dl:MolarEntropyUnit
                                 ] ;
                 
                 rdfs:comment "A measure of the entropy content of one mole of substance."^^xsd:string .
@@ -10541,17 +10535,6 @@ dl:MolarEntropyUnit rdf:type owl:Class ;
                                                            owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty dl:derivesFrom ;
-                                                                                  owl:someValuesFrom dl:TemperatureUnit
-                                                                                ]
-                                                                              )
-                                                         ]
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty dl:derivesFrom ;
-                                      owl:someValuesFrom [ rdf:type owl:Class ;
-                                                           owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
-                                                                                [ rdf:type owl:Restriction ;
-                                                                                  owl:onProperty dl:derivesFrom ;
                                                                                   owl:someValuesFrom dl:AmountOfSubstanceUnit
                                                                                 ]
                                                                               )
@@ -10560,6 +10543,17 @@ dl:MolarEntropyUnit rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:derivesFrom ;
                                       owl:someValuesFrom dl:EnergyUnit
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dl:derivesFrom ;
+                                      owl:someValuesFrom [ rdf:type owl:Class ;
+                                                           owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty dl:derivesFrom ;
+                                                                                  owl:someValuesFrom dl:TemperatureUnit
+                                                                                ]
+                                                                              )
+                                                         ]
                                     ] ;
                     
                     rdfs:comment "A standard measure for molar entropy."^^xsd:string .
@@ -10595,10 +10589,6 @@ dl:MolarMassUnit rdf:type owl:Class ;
                  rdfs:subClassOf dl:Unit ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:derivesFrom ;
-                                   owl:someValuesFrom dl:MassUnit
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty dl:derivesFrom ;
                                    owl:someValuesFrom [ rdf:type owl:Class ;
                                                         owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                              [ rdf:type owl:Restriction ;
@@ -10607,6 +10597,10 @@ dl:MolarMassUnit rdf:type owl:Class ;
                                                                              ]
                                                                            )
                                                       ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dl:derivesFrom ;
+                                   owl:someValuesFrom dl:MassUnit
                                  ] ;
                  
                  rdfs:comment "A standard measure for molar mass."^^xsd:string .
@@ -10702,11 +10696,11 @@ dl:MolecularMass rdf:type owl:Class ;
                                  dl:MolecularQuality ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:MolecularMassUnit
+                                   owl:someValuesFrom dl:MolecularMassUnit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:MolecularMassUnit
+                                   owl:allValuesFrom dl:MolecularMassUnit
                                  ] ;
                  
                  rdfs:comment "A measure of the mass of one molecule of a substance."^^xsd:string .
@@ -10722,10 +10716,6 @@ dl:MolecularMassUnit rdf:type owl:Class ;
                      rdfs:subClassOf dl:Unit ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty dl:derivesFrom ;
-                                       owl:someValuesFrom dl:MassUnit
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty dl:derivesFrom ;
                                        owl:someValuesFrom [ rdf:type owl:Class ;
                                                             owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                  [ rdf:type owl:Restriction ;
@@ -10734,6 +10724,10 @@ dl:MolecularMassUnit rdf:type owl:Class ;
                                                                                  ]
                                                                                )
                                                           ]
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty dl:derivesFrom ;
+                                       owl:someValuesFrom dl:MassUnit
                                      ] ;
                      
                      rdfs:comment "A standard measure for molecular mass."^^xsd:string .
@@ -11991,10 +11985,6 @@ dl:PermeabilityUnit rdf:type owl:Class ;
                     rdfs:subClassOf dl:Unit ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:derivesFrom ;
-                                      owl:someValuesFrom dl:InductanceUnit
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty dl:derivesFrom ;
                                       owl:someValuesFrom [ rdf:type owl:Class ;
                                                            owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                 [ rdf:type owl:Restriction ;
@@ -12003,6 +11993,10 @@ dl:PermeabilityUnit rdf:type owl:Class ;
                                                                                 ]
                                                                               )
                                                          ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dl:derivesFrom ;
+                                      owl:someValuesFrom dl:InductanceUnit
                                     ] ;
                     
                     rdfs:comment "A standard measure for permeability."^^xsd:string .
@@ -12018,11 +12012,11 @@ dl:Permittivity rdf:type owl:Class ;
                 rdfs:subClassOf dl:MeasuredProperty ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:PermittivityUnit
+                                  owl:someValuesFrom dl:PermittivityUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:PermittivityUnit
+                                  owl:allValuesFrom dl:PermittivityUnit
                                 ] ;
                 
                 rdfs:comment "A measure of a material's ability to transmit an electric field."^^xsd:string .
@@ -12038,10 +12032,6 @@ dl:PermittivityUnit rdf:type owl:Class ;
                     rdfs:subClassOf dl:Unit ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dl:derivesFrom ;
-                                      owl:someValuesFrom dl:CapacitanceUnit
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty dl:derivesFrom ;
                                       owl:someValuesFrom [ rdf:type owl:Class ;
                                                            owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                 [ rdf:type owl:Restriction ;
@@ -12050,6 +12040,10 @@ dl:PermittivityUnit rdf:type owl:Class ;
                                                                                 ]
                                                                               )
                                                          ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dl:derivesFrom ;
+                                      owl:someValuesFrom dl:CapacitanceUnit
                                     ] ;
                     
                     rdfs:comment "A standard measure for permittivity."^^xsd:string .
@@ -12445,11 +12439,11 @@ dl:PotentialDifference rdf:type owl:Class ;
                        rdfs:subClassOf dl:MeasuredProperty ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:someValuesFrom dl:PotentialDifferenceUnit
+                                         owl:allValuesFrom dl:PotentialDifferenceUnit
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:allValuesFrom dl:PotentialDifferenceUnit
+                                         owl:someValuesFrom dl:PotentialDifferenceUnit
                                        ] ;
                        
                        rdfs:comment "A measure of the amount of energy required to move an electric charge against an electrostatic field."^^xsd:string .
@@ -12465,10 +12459,6 @@ dl:PotentialDifferenceUnit rdf:type owl:Class ;
                            rdfs:subClassOf dl:Unit ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty dl:derivesFrom ;
-                                             owl:someValuesFrom dl:PowerUnit
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty dl:derivesFrom ;
                                              owl:someValuesFrom [ rdf:type owl:Class ;
                                                                   owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                        [ rdf:type owl:Restriction ;
@@ -12477,6 +12467,10 @@ dl:PotentialDifferenceUnit rdf:type owl:Class ;
                                                                                        ]
                                                                                      )
                                                                 ]
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty dl:derivesFrom ;
+                                             owl:someValuesFrom dl:PowerUnit
                                            ] ;
                            
                            rdfs:comment "A standard measure for potential difference."^^xsd:string .
@@ -12492,11 +12486,11 @@ dl:Power rdf:type owl:Class ;
          rdfs:subClassOf dl:MeasuredProperty ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:allValuesFrom dl:PowerUnit
+                           owl:someValuesFrom dl:PowerUnit
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:someValuesFrom dl:PowerUnit
+                           owl:allValuesFrom dl:PowerUnit
                          ] ;
          
          rdfs:comment "A measure of the energy transferred per unit time."^^xsd:string .
@@ -12619,10 +12613,6 @@ dl:PressureUnit rdf:type owl:Class ;
                 rdfs:subClassOf dl:Unit ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:derivesFrom ;
-                                  owl:someValuesFrom dl:ForceUnit
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty dl:derivesFrom ;
                                   owl:someValuesFrom [ rdf:type owl:Class ;
                                                        owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                             [ rdf:type owl:Restriction ;
@@ -12631,6 +12621,10 @@ dl:PressureUnit rdf:type owl:Class ;
                                                                             ]
                                                                           )
                                                      ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dl:derivesFrom ;
+                                  owl:someValuesFrom dl:ForceUnit
                                 ] ;
                 
                 rdfs:comment "A standard measure for pressure."^^xsd:string .
@@ -12872,6 +12866,10 @@ dl:RadianceUnit rdf:type owl:Class ;
                 rdfs:subClassOf dl:ElectromagneticRadiationUnit ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:derivesFrom ;
+                                  owl:someValuesFrom dl:PowerUnit
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dl:derivesFrom ;
                                   owl:someValuesFrom [ rdf:type owl:Class ;
                                                        owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                             [ rdf:type owl:Restriction ;
@@ -12880,10 +12878,6 @@ dl:RadianceUnit rdf:type owl:Class ;
                                                                             ]
                                                                           )
                                                      ]
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty dl:derivesFrom ;
-                                  owl:someValuesFrom dl:PowerUnit
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty dl:derivesFrom ;
@@ -12957,11 +12951,11 @@ dl:Radiation rdf:type owl:Class ;
              rdfs:subClassOf dl:MeasuredProperty ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:someValuesFrom dl:RadiationUnit
+                               owl:allValuesFrom dl:RadiationUnit
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dl:hasUnit ;
-                               owl:allValuesFrom dl:RadiationUnit
+                               owl:someValuesFrom dl:RadiationUnit
                              ] ;
              
              rdfs:comment "A measure of the energy in the form of waves or moving subatomic particles."^^xsd:string .
@@ -13820,11 +13814,11 @@ dl:SolidAngle rdf:type owl:Class ;
               rdfs:subClassOf dl:Angle ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:SolidAngleUnit
+                                owl:allValuesFrom dl:SolidAngleUnit
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:SolidAngleUnit
+                                owl:someValuesFrom dl:SolidAngleUnit
                               ] ;
               
               rdfs:comment "A measure of the angle formed by three or more planes intersecting at a comment point."^^xsd:string .
@@ -13840,10 +13834,6 @@ dl:SolidAngleUnit rdf:type owl:Class ;
                   rdfs:subClassOf dl:AngleUnit ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:derivesFrom ;
-                                    owl:someValuesFrom dl:AreaUnit
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty dl:derivesFrom ;
                                     owl:someValuesFrom [ rdf:type owl:Class ;
                                                          owl:intersectionOf ( dl:UnitRaisedToPowerNegativeTwo
                                                                               [ rdf:type owl:Restriction ;
@@ -13852,6 +13842,10 @@ dl:SolidAngleUnit rdf:type owl:Class ;
                                                                               ]
                                                                             )
                                                        ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty dl:derivesFrom ;
+                                    owl:someValuesFrom dl:AreaUnit
                                   ] ;
                   
                   rdfs:comment "A standard measure for solid angle."^^xsd:string .
@@ -13943,6 +13937,10 @@ dl:SpecificEnergyUnit rdf:type owl:Class ;
                       rdfs:subClassOf dl:Unit ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty dl:derivesFrom ;
+                                        owl:someValuesFrom dl:EnergyUnit
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty dl:derivesFrom ;
                                         owl:someValuesFrom [ rdf:type owl:Class ;
                                                              owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                   [ rdf:type owl:Restriction ;
@@ -13951,10 +13949,6 @@ dl:SpecificEnergyUnit rdf:type owl:Class ;
                                                                                   ]
                                                                                 )
                                                            ]
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty dl:derivesFrom ;
-                                        owl:someValuesFrom dl:EnergyUnit
                                       ] ;
                       
                       rdfs:comment "A standard measure for specific energy."^^xsd:string .
@@ -13970,11 +13964,11 @@ dl:SpecificEntropy rdf:type owl:Class ;
                    rdfs:subClassOf dl:MeasuredProperty ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dl:hasUnit ;
-                                     owl:someValuesFrom dl:SpecificEntropyUnit
+                                     owl:allValuesFrom dl:SpecificEntropyUnit
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dl:hasUnit ;
-                                     owl:allValuesFrom dl:SpecificEntropyUnit
+                                     owl:someValuesFrom dl:SpecificEntropyUnit
                                    ] ;
                    
                    rdfs:comment "A measure of the entropy of the mass of the system."^^xsd:string .
@@ -13994,17 +13988,6 @@ dl:SpecificEntropyUnit rdf:type owl:Class ;
                                                               owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                    [ rdf:type owl:Restriction ;
                                                                                      owl:onProperty dl:derivesFrom ;
-                                                                                     owl:someValuesFrom dl:TemperatureUnit
-                                                                                   ]
-                                                                                 )
-                                                            ]
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty dl:derivesFrom ;
-                                         owl:someValuesFrom [ rdf:type owl:Class ;
-                                                              owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
-                                                                                   [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty dl:derivesFrom ;
                                                                                      owl:someValuesFrom dl:MassUnit
                                                                                    ]
                                                                                  )
@@ -14013,6 +13996,17 @@ dl:SpecificEntropyUnit rdf:type owl:Class ;
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:derivesFrom ;
                                          owl:someValuesFrom dl:EnergyUnit
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty dl:derivesFrom ;
+                                         owl:someValuesFrom [ rdf:type owl:Class ;
+                                                              owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty dl:derivesFrom ;
+                                                                                     owl:someValuesFrom dl:TemperatureUnit
+                                                                                   ]
+                                                                                 )
+                                                            ]
                                        ] ;
                        
                        rdfs:comment "A standard measure for specific entropy."^^xsd:string .
@@ -14048,10 +14042,6 @@ dl:SpecificVolumeUnit rdf:type owl:Class ;
                       rdfs:subClassOf dl:Unit ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty dl:derivesFrom ;
-                                        owl:someValuesFrom dl:VolumeUnit
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty dl:derivesFrom ;
                                         owl:someValuesFrom [ rdf:type owl:Class ;
                                                              owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                   [ rdf:type owl:Restriction ;
@@ -14060,6 +14050,10 @@ dl:SpecificVolumeUnit rdf:type owl:Class ;
                                                                                   ]
                                                                                 )
                                                            ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty dl:derivesFrom ;
+                                        owl:someValuesFrom dl:VolumeUnit
                                       ] ;
                       
                       rdfs:comment "A standard measure for specific volume."^^xsd:string .
@@ -14488,11 +14482,11 @@ dl:SurfaceTension rdf:type owl:Class ;
                   rdfs:subClassOf dl:MeasuredProperty ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:allValuesFrom dl:SurfaceTensionUnit
+                                    owl:someValuesFrom dl:SurfaceTensionUnit
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty dl:hasUnit ;
-                                    owl:someValuesFrom dl:SurfaceTensionUnit
+                                    owl:allValuesFrom dl:SurfaceTensionUnit
                                   ] ;
                   
                   rdfs:comment "A measure of the attraction between molecules at the surface of a liquid."^^xsd:string .
@@ -14508,6 +14502,10 @@ dl:SurfaceTensionUnit rdf:type owl:Class ;
                       rdfs:subClassOf dl:Unit ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty dl:derivesFrom ;
+                                        owl:someValuesFrom dl:ForceUnit
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty dl:derivesFrom ;
                                         owl:someValuesFrom [ rdf:type owl:Class ;
                                                              owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                   [ rdf:type owl:Restriction ;
@@ -14516,10 +14514,6 @@ dl:SurfaceTensionUnit rdf:type owl:Class ;
                                                                                   ]
                                                                                 )
                                                            ]
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty dl:derivesFrom ;
-                                        owl:someValuesFrom dl:ForceUnit
                                       ] ;
                       
                       rdfs:comment "A standard measure for surface tension."^^xsd:string .
@@ -14890,7 +14884,7 @@ dl:ThermalConductionUnit rdf:type owl:Class ;
                                                                 owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty dl:derivesFrom ;
-                                                                                       owl:someValuesFrom dl:TemperatureUnit
+                                                                                       owl:someValuesFrom dl:LengthUnit
                                                                                      ]
                                                                                    )
                                                               ]
@@ -14901,7 +14895,7 @@ dl:ThermalConductionUnit rdf:type owl:Class ;
                                                                 owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty dl:derivesFrom ;
-                                                                                       owl:someValuesFrom dl:LengthUnit
+                                                                                       owl:someValuesFrom dl:TemperatureUnit
                                                                                      ]
                                                                                    )
                                                               ]
@@ -14924,11 +14918,11 @@ dl:ThermalConductivity rdf:type owl:Class ;
                        rdfs:subClassOf dl:Conduction ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:allValuesFrom dl:ThermalConductionUnit
+                                         owl:someValuesFrom dl:ThermalConductionUnit
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty dl:hasUnit ;
-                                         owl:someValuesFrom dl:ThermalConductionUnit
+                                         owl:allValuesFrom dl:ThermalConductionUnit
                                        ] ;
                        
                        rdfs:comment "A measure of the ability of a substance to transfer heat."^^xsd:string .
@@ -15042,11 +15036,11 @@ dl:Time rdf:type owl:Class ;
         rdfs:subClassOf dl:MeasuredProperty ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty dl:hasUnit ;
-                          owl:allValuesFrom dl:TimeUnit
+                          owl:someValuesFrom dl:TimeUnit
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty dl:hasUnit ;
-                          owl:someValuesFrom dl:TimeUnit
+                          owl:allValuesFrom dl:TimeUnit
                         ] ;
         
         rdfs:comment "The measure of temporal regions."^^xsd:string .
@@ -15978,11 +15972,11 @@ dl:Volume rdf:type owl:Class ;
           rdfs:subClassOf dl:MeasuredProperty ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:someValuesFrom dl:VolumeUnit
+                            owl:allValuesFrom dl:VolumeUnit
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:allValuesFrom dl:VolumeUnit
+                            owl:someValuesFrom dl:VolumeUnit
                           ] ;
           
           rdfs:comment "The measure of how much space an occurant occupies in three-dimensional space."^^xsd:string .
@@ -16375,11 +16369,11 @@ dl:pH rdf:type owl:Class ;
       rdfs:subClassOf dl:Concentration ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty dl:hasUnit ;
-                        owl:allValuesFrom dl:pHUnit
+                        owl:someValuesFrom dl:pHUnit
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty dl:hasUnit ;
-                        owl:someValuesFrom dl:pHUnit
+                        owl:allValuesFrom dl:pHUnit
                       ] ;
       
       rdfs:comment "A measure of the activity (effective concentration) of hydrogen ions in a solution."^^xsd:string .
@@ -16395,6 +16389,10 @@ dl:pHUnit rdf:type owl:Class ;
           rdfs:subClassOf dl:ConcentrationUnit ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:derivesFrom ;
+                            owl:someValuesFrom dl:AmountOfSubstanceConcentrationUnit
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty dl:derivesFrom ;
                             owl:someValuesFrom [ rdf:type owl:Class ;
                                                  owl:intersectionOf ( dl:UnitRaisedToPowerNegativeOne
                                                                       [ rdf:type owl:Restriction ;
@@ -16403,10 +16401,6 @@ dl:pHUnit rdf:type owl:Class ;
                                                                       ]
                                                                     )
                                                ]
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty dl:derivesFrom ;
-                            owl:someValuesFrom dl:AmountOfSubstanceConcentrationUnit
                           ] ;
           
           rdfs:comment "A standard measure of pH."^^xsd:string .
@@ -18804,13 +18798,9 @@ dl:unit_weber rdf:type dl:MagneticFluxUnit ,
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( dl:IlluminanceUnit
-                dl:IrradianceUnit
-                dl:LuminanceUnit
-                dl:LuminousFluxUnit
-                dl:LuminousIntensityUnit
-                dl:RadianceUnit
-                dl:RadiantIntensityUnit
+  owl:members ( dl:AreaDensityUnit
+                dl:LinearDensityUnit
+                dl:VolumeDensityUnit
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
@@ -18870,25 +18860,29 @@ dl:unit_weber rdf:type dl:MagneticFluxUnit ,
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( dl:AbsorbedDoseRateUnit
-                dl:AbsorbedDoseUnit
-                dl:DoseEquivalentUnit
-                dl:ExposureUnit
-                dl:RadioactivityUnit
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( dl:AreaDensityUnit
-                dl:LinearDensityUnit
-                dl:VolumeDensityUnit
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
   owl:members ( dl:AmountOfSubstanceConcentrationUnit
                 dl:CatalyticConcentrationUnit
                 dl:MolalityUnit
                 dl:PartsPerNotationUnit
                 dl:pHUnit
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dl:IlluminanceUnit
+                dl:IrradianceUnit
+                dl:LuminanceUnit
+                dl:LuminousFluxUnit
+                dl:LuminousIntensityUnit
+                dl:RadianceUnit
+                dl:RadiantIntensityUnit
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dl:AbsorbedDoseRateUnit
+                dl:AbsorbedDoseUnit
+                dl:DoseEquivalentUnit
+                dl:ExposureUnit
+                dl:RadioactivityUnit
               )
 ] .
 
