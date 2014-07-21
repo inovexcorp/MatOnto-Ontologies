@@ -1,7 +1,7 @@
-@prefix : <http://matonto.org/ontologies/matonto#> .
+@prefix : <http://matonto.org/ontology/matonto#> .
 @prefix dl: <http://ontology.dumontierlab.com/> .
 @prefix bfo: <http://www.ifomis.org/bfo/1.0#> .
-@prefix mat: <http://matonto.org/ontologies/matonto#> .
+@prefix mat: <http://matonto.org/ontology/matonto#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -10,31 +10,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix snap: <http://www.ifomis.org/bfo/1.0/snap#> .
 @prefix span: <http://www.ifomis.org/bfo/1.0/span#> .
-@base <http://matonto.org/ontologies/matonto> .
+@base <http://matonto.org/ontology/matonto#> .
 
-<http://matonto.org/ontologies/matonto> rdf:type owl:Ontology ;
+<http://matonto.org/ontology/matonto> rdf:type owl:Ontology ;
                                         
                                         owl:versionInfo "2.1" ;
                                         
-                                        owl:versionIRI <http://matonto.org/ontologies/matonto/2.1> .
+                                        owl:versionIRI <http://matonto.org/ontology/matonto/2.1> .
 										
-
-
-
-#################################################################
-#
-#    Annotation properties
-#
-#################################################################
-
-
-###  http://www.w3.org/2004/02/skos/core#altLabel
-
-skos:altLabel rdf:type owl:AnnotationProperty .
-
-
-
-
 
 #################################################################
 #
@@ -928,53 +911,80 @@ snap:ThreeDimensionalRegion rdf:type owl:Class .
 
 ###  http://matonto.org/ontologies/ceramic#ceramic
 
-<http://matonto.org/ontologies/ceramic#ceramic> rdf:type owl:Class ;
+:CeramicMaterial rdf:type owl:Class ;
                                                 
-                                                rdfs:label "ceramic"^^xsd:string ;
+                                                rdfs:label "Ceramic Material"^^xsd:string ;
                                                 
-                                                rdfs:subClassOf <http://matonto.org/ontologies/matonto#Material> ;
+                                                rdfs:subClassOf :Material ;
                                                 
-                                                rdfs:comment "A ceramic that is studied in materials science"^^xsd:string .
+                                                rdfs:comment "A ceramic material that is studied in materials science."^^xsd:string .
 
 
 
 ###  http://matonto.org/ontologies/ceramic#chemicalClass
 
-<http://matonto.org/ontologies/ceramic#chemicalClass> rdf:type owl:Class ;
+:ChemicalClass rdf:type owl:Class ;
                                                       
                                                       rdfs:label "Chemical Class"^^xsd:string ;
                                                       
-                                                      rdfs:subClassOf <http://ontology.dumontierlab.com/ChemicalQuality> .
+                                                      rdfs:subClassOf dl:ChemicalQuality .
 
 
 
 ###  http://matonto.org/ontologies/ceramic#chemicalFamily
 
-<http://matonto.org/ontologies/ceramic#chemicalFamily> rdf:type owl:Class ;
+:ChemicalFamily rdf:type owl:Class ;
                                                        
                                                        rdfs:label "Chemical Family"^^xsd:string ;
                                                        
-                                                       rdfs:subClassOf <http://ontology.dumontierlab.com/ChemicalQuality> .
+                                                       rdfs:subClassOf :ChemicalQuality .
 
 
 
 ###  http://matonto.org/ontologies/ceramic#chemicalFormula
 
-<http://matonto.org/ontologies/ceramic#chemicalFormula> rdf:type owl:Class ;
+:ChemicalFormula rdf:type owl:Class ;
                                                         
                                                         rdfs:label "Chemical Formula"^^xsd:string ;
                                                         
-                                                        rdfs:subClassOf <http://ontology.dumontierlab.com/ChemicalQuality> .
+                                                        rdfs:subClassOf :ChemicalQuality .
 
 
 
 ###  http://matonto.org/ontologies/ceramic#structureType
 
-<http://matonto.org/ontologies/ceramic#structureType> rdf:type owl:Class ;
+:StructureType rdf:type owl:Class ;
                                                       
                                                       rdfs:label "Structure Type"^^xsd:string ;
                                                       
-                                                      rdfs:subClassOf <http://matonto.org/ontologies/matonto#MaterialQuality> .
+                                                      rdfs:subClassOf :MaterialQuality .
+													  
+													  
+													  
+###  http://matonto.org/ontologies/matonto#EmpiricalFormula
+
+:EmpiricalFormula rdf:type owl:Class ;
+                  
+                  rdfs:label "Empirical Formula" ;
+                  
+                  rdfs:subClassOf :chemicalFormula ;
+                  
+                  rdfs:comment "In chemistry, the empirical formula of a chemical is a simple expression of the relative number of each type of atom or ratio of the elements in the compound. Empirical formulas are the standard for ionic compounds, such as CaCl2, and for macromolecules, such as SiO2." .
+
+
+
+###  http://matonto.org/ontologies/matonto#MolecularFormula
+
+:MolecularFormula rdf:type owl:Class ;
+                  
+                  rdfs:label "Molecular Formula" ;
+                  
+                  rdfs:subClassOf :chemicalFormula ;
+                  
+                  rdfs:comment "A molecular formula enumerates the number of atoms to reflect those in the molecule, so that the molecular formula for glucose is C6H12O6 rather than the glucose empirical formula, which is CH2O" .
+
+
+				  
 
 
 
@@ -990,7 +1000,7 @@ snap:ThreeDimensionalRegion rdf:type owl:Class .
 :unit_electron_volt rdf:type :BandGapUnit ,
                              owl:NamedIndividual ;
                     
-                    rdfs:label "electron volt" ;
+                    rdfs:label "electron volt", "eV" ;
                     
                     :hasSISymbol "eV" .
 
@@ -1000,7 +1010,7 @@ snap:ThreeDimensionalRegion rdf:type owl:Class .
 
 dl:unit_gram rdf:type owl:NamedIndividual ;
              
-             rdfs:label "gram" ;
+             rdfs:label "gram", "g" ;
              
              rdfs:comment "The gram is a metric system unit of mass." ;
              
@@ -1022,7 +1032,7 @@ dl:unit_kilogram rdf:type owl:NamedIndividual .
 :unit_gigapascal rdf:type dl:PressureUnit ,
                           owl:NamedIndividual ;
                  
-                 rdfs:label "gigapascal" ;
+                 rdfs:label "gigapascal" , "GPa" ;
                  
                  dl:isScaledBy "1.0E9"^^xsd:double ;
                  
@@ -1067,7 +1077,7 @@ dl:unit_kilogram rdf:type owl:NamedIndividual .
 :unit_megapascal rdf:type dl:PressureUnit ,
                           owl:NamedIndividual ;
                  
-                 rdfs:label "megapascal" ;
+                 rdfs:label "megapascal", "MPa" ;
                  
                  dl:isScaledBy "1000000.0"^^xsd:double ;
                  
@@ -1126,6 +1136,82 @@ dl:unit_kilogram rdf:type owl:NamedIndividual .
 ###  http://ontology.dumontierlab.com/unit_meter
 
 dl:unit_meter <http://www.w3.org/2004/02/skos/core#altLabel> "metre" .
+
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_angstrom
+
+:unit_angstrom rdf:type owl:NamedIndividual ;
+               
+               rdfs:label "angstrom" ;
+               
+               dl:isScaledBy "1.0E-10" ;
+               
+               dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_angstrom_3
+
+:unit_angstrom_3 rdf:type dl:VolumeUnit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "cubic angstrom" ;
+                 
+                 dl:isRaisedToPowerOf "3.0" ;
+                 
+                 dl:derivesFrom :unit_angstrom .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_bohr_magneton
+
+:unit_bohr_magneton rdf:type dl:Unit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "Bohr magneton" .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_centimeter
+
+:unit_centimeter rdf:type dl:LengthUnit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "centimeter", "cm" ;
+                 
+                 dl:isScaledBy "1.0E-2" ;
+                 
+                 dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_centimeter_-3
+
+:unit_centimeter_-3 rdf:type dl:Unit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "per cubic centimeter" ;
+                    
+                    dl:isRaisedToPowerOf "-3.0" ;
+                    
+                    dl:derivesFrom :unit_centimeter .
+
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_gram_1_centimeter_-3
+
+:unit_gram_1_centimeter_-3 rdf:type dl:VolumeDensityUnit ,
+                                    owl:NamedIndividual ;
+                           
+                           rdfs:label "gram per cubic centimeter", "g/cm3" ;
+                           
+                           dl:derivesFrom :unit_centimeter_-3 ,
+                                          dl:unit_gram .
+
+
 
 
 #################################################################
