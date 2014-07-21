@@ -1,32 +1,32 @@
-@prefix : <http://ontology.dumontierlab.com/unit-individuals> .
+@prefix : <http://matonto.org/ontology/matonto#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dl: <http://ontology.dumontierlab.com/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://matonto.org/ontologies/matonto#> .
+@prefix mat: <http://matonto.org/ontology/matonto#> .
+@base <http://matonto.org/ontology/> .
 
-<http://matonto.org/ontologies/matonto#> rdf:type owl:Ontology ;
+<http://matonto.org/ontology/matonto-build> rdf:type owl:Ontology ;
                                          
                                          owl:versionInfo "2.0"^^xsd:string ;
                                          
                                          dc:date "2007-10-01"^^xsd:date ;
                                          
-                                         dc:publisher "Dumontier Lab"^^xsd:string ;
+                                         dc:publisher "iNovex Information Systems, MatOnto Group"^^xsd:string ;
                                          
-                                         dc:creator "Michel Dumontier"^^xsd:string ;
+                                         dc:creator "MatOnto Group"^^xsd:string ;
                                          
-                                         dc:description "This ontology is populated with SI unit instances."^^xsd:string ;
+                                         dc:description "A domain ontology for materials science."^^xsd:string ;
                                          
-                                         dc:title "Unit Ontology (individuals)"^^xsd:string ;
+                                         dc:title "Materials Ontology"^^xsd:string ;
                                          
-                                         dc:format "application/rdf+xml"^^xsd:string ;
+                                         dc:format "text/turtle"^^xsd:string ;
                                          
                                          dc:language "en"^^xsd:string ;
                                          
-                                         owl:imports <http://matonto.org/ontologies/matonto> ,
+                                         owl:imports <matonto-edit> ,
                                                      dl:annotation ,
                                                      dl:atom-complex-atomic-number ,
                                                      dl:atom-complex-disjoint ,
