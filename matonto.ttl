@@ -10,59 +10,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix snap: <http://www.ifomis.org/bfo/1.0/snap#> .
 @prefix span: <http://www.ifomis.org/bfo/1.0/span#> .
-@base <http://matonto.org/ontology/matonto-edit> .
+@base <http://matonto.org/ontology/matonto#> .
 
 <http://matonto.org/ontology/matonto-edit> rdf:type owl:Ontology ;
-                                           
-                                           owl:versionInfo "2.1" ;
-                                           
-                                           owl:versionIRI <http://matonto.org/ontology/matonto/2.1> .
-
-
-#################################################################
-#
-#    Annotation properties
-#
-#################################################################
-
-
-###  http://matonto.org/ontology/matonto#hasPhaseEquilibrium
-
-:hasPhaseEquilibrium rdf:type owl:AnnotationProperty ;
-                     
-                     rdfs:label "Has Phase Equilibrium"@en ;
-                     
-                     rdfs:comment "A system may have one or many phase equilibriums"@en ;
-                     
-                     rdfs:domain dl:Compound .
-
-
-
-###  http://ontology.dumontierlab.com/derivesFrom
-
-dl:derivesFrom rdf:type owl:AnnotationProperty .
-
-
-
-###  http://ontology.dumontierlab.com/isRaisedToPowerOf
-
-dl:isRaisedToPowerOf rdf:type owl:AnnotationProperty .
-
-
-
-###  http://ontology.dumontierlab.com/isScaledBy
-
-dl:isScaledBy rdf:type owl:AnnotationProperty .
-
-
-
-###  http://www.w3.org/2004/02/skos/core#altLabel
-
-skos:altLabel rdf:type owl:AnnotationProperty .
-
-
-
-
+                                        
+                                        owl:versionInfo "2.1" ;
+                                        
+                                        owl:versionIRI <http://matonto.org/ontology/matonto/2.1> .
+										
 
 #################################################################
 #
@@ -71,7 +26,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 #################################################################
 
 
-###  http://matonto.org/ontology/matonto#hasElement
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasElement
 
 :hasElement rdf:type owl:ObjectProperty ;
             
@@ -85,17 +40,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#hasMass
-
-:hasMass rdf:type owl:ObjectProperty ;
-         
-         rdfs:label "has mass"@en ;
-         
-         rdfs:range dl:Mass .
-
-
-
-###  http://matonto.org/ontology/matonto#hasPhase
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasPhase
 
 :hasPhase rdf:type owl:ObjectProperty ;
           
@@ -111,7 +56,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#hasPhaseEquilibrium
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasPhaseEquilibrium
 
 :hasPhaseEquilibrium rdf:type owl:ObjectProperty ;
                      
@@ -121,11 +66,13 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                      
                      rdfs:domain :Alloy ;
                      
-                     rdfs:range :PhaseEquilibrium .
+                     rdfs:range :PhaseEquilibrium ;
+                     
+                     rdfs:domain dl:Compound .
 
 
 
-###  http://matonto.org/ontology/matonto#hasPressure
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasPressure
 
 :hasPressure rdf:type owl:ObjectProperty ;
              
@@ -139,7 +86,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#hasTemperature
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasTemperature
 
 :hasTemperature rdf:type owl:FunctionalProperty ,
                          owl:ObjectProperty ;
@@ -154,9 +101,13 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 
-###  http://ontology.dumontierlab.com/derivesFrom
+###  http://matonto.org/ontologies/matonto#hasMass
 
-dl:derivesFrom rdf:type owl:ObjectProperty .
+:hasMass rdf:type owl:ObjectProperty ;
+         
+         rdfs:label "has mass"@en ;
+         
+         rdfs:range dl:Mass .
 
 
 
@@ -181,7 +132,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 #################################################################
 
 
-###  http://matonto.org/ontology/matonto#hasChemicalSymbol
+###  http://matonto.org/ontologies/matonto#hasChemicalSymbol
 
 :hasChemicalSymbol rdf:type owl:DatatypeProperty ;
                    
@@ -195,7 +146,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#hasCommonSymbol
+###  http://matonto.org/ontologies/matonto#hasCommonSymbol
 
 :hasCommonSymbol rdf:type owl:DatatypeProperty ;
                  
@@ -209,7 +160,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#hasName
+###  http://matonto.org/ontologies/matonto#hasName
 
 :hasName rdf:type owl:DatatypeProperty ;
          
@@ -219,7 +170,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#hasSISymbol
+###  http://matonto.org/ontologies/matonto#hasSISymbol
 
 :hasSISymbol rdf:type owl:DatatypeProperty ;
              
@@ -233,7 +184,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#hasSymbol
+###  http://matonto.org/ontologies/matonto#hasSymbol
 
 :hasSymbol rdf:type owl:DatatypeProperty ;
            
@@ -254,17 +205,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 #################################################################
 
 
-###  http://matonto.org/ontology/matonto#Alloy
-
-:Alloy rdf:type owl:Class ;
-       
-       rdfs:label "Alloy"@en ;
-       
-       rdfs:subClassOf dl:Solution .
-
-
-
-###  http://matonto.org/ontology/matonto#BandGap
+###  http://matonto.org/ontologies/matonto#BandGap
 
 :BandGap rdf:type owl:Class ;
          
@@ -273,18 +214,18 @@ dl:hasUnit rdf:type owl:ObjectProperty .
          rdfs:subClassOf dl:MeasuredProperty ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:someValuesFrom :BandGapUnit
+                           owl:allValuesFrom :BandGapUnit
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty dl:hasUnit ;
-                           owl:allValuesFrom :BandGapUnit
+                           owl:someValuesFrom :BandGapUnit
                          ] ;
          
          rdfs:comment "The energy difference between the top of the valence band and the botto of the conduction band in insulators and semiconductors" .
 
 
 
-###  http://matonto.org/ontology/matonto#BandGapUnit
+###  http://matonto.org/ontologies/matonto#BandGapUnit
 
 :BandGapUnit rdf:type owl:Class ;
              
@@ -296,31 +237,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#BulkModulus
-
-:BulkModulus rdf:type owl:Class ;
-             
-             rdfs:label "bulk modulus" ;
-             
-             rdfs:subClassOf :ElasticModulus ;
-             
-             rdfs:comment "The bulk modulus describes volumetric elasticity, or the tendency of an object to deform in all directions when uniformly loaded in all directions; it is defined as volumetric stress over volumetric strain, and is the inverse of compressibility. The bulk modulus is an extension of Young's modulus to three dimensions." .
-
-
-
-###  http://matonto.org/ontology/matonto#CeramicMaterial
-
-:CeramicMaterial rdf:type owl:Class ;
-                 
-                 rdfs:label "Ceramic Material"^^xsd:string ;
-                 
-                 rdfs:subClassOf :Material ;
-                 
-                 rdfs:comment "A ceramic material that is studied in materials science."^^xsd:string .
-
-
-
-###  http://matonto.org/ontology/matonto#Ceramics
+###  http://matonto.org/ontologies/matonto#Ceramics
 
 :Ceramics rdf:type owl:Class ;
           
@@ -330,55 +247,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#ChemicalClass
-
-:ChemicalClass rdf:type owl:Class ;
-               
-               rdfs:label "Chemical Class"^^xsd:string ;
-               
-               rdfs:subClassOf dl:ChemicalQuality .
-
-
-
-###  http://matonto.org/ontology/matonto#ChemicalFamily
-
-:ChemicalFamily rdf:type owl:Class ;
-                
-                rdfs:label "Chemical Family"^^xsd:string ;
-                
-                rdfs:subClassOf :ChemicalQuality .
-
-
-
-###  http://matonto.org/ontology/matonto#ChemicalFormula
-
-:ChemicalFormula rdf:type owl:Class ;
-                 
-                 rdfs:label "Chemical Formula"^^xsd:string ;
-                 
-                 rdfs:subClassOf :ChemicalQuality .
-
-
-
-###  http://matonto.org/ontology/matonto#ChemicalQuality
-
-:ChemicalQuality rdf:type owl:Class .
-
-
-
-###  http://matonto.org/ontology/matonto#ClosedThermodynamicSystem
-
-:ClosedThermodynamicSystem rdf:type owl:Class ;
-                           
-                           rdfs:label "closed thermodynamic system" ;
-                           
-                           rdfs:subClassOf :ThermodynamicSystem ;
-                           
-                           rdfs:comment "a thermodynamic system in which no mass can be transferred in or out of the system boundaries" .
-
-
-
-###  http://matonto.org/ontology/matonto#Composites
+###  http://matonto.org/ontologies/matonto#Composites
 
 :Composites rdf:type owl:Class ;
             
@@ -388,7 +257,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#CrystalSystem
+###  http://matonto.org/ontologies/matonto#CrystalSystem
 
 :CrystalSystem rdf:type owl:Class ;
                
@@ -398,29 +267,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#ElasticModulus
-
-:ElasticModulus rdf:type owl:Class ;
-                
-                rdfs:label "elastic modulus" ;
-                
-                rdfs:subClassOf dl:MeasuredProperty ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty dl:hasUnit ;
-                                  owl:someValuesFrom dl:PressureUnit
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty dl:hasUnit ;
-                                  owl:allValuesFrom dl:PressureUnit
-                                ] ;
-                
-                rdfs:comment "An elastic modulus, or modulus of elasticity, is the mathematical description of an object or substance's tendency to be deformed elastically (i.e., non-permanently) when a force is applied to it. The elastic modulus of an object is defined as the slope of its stressï¿½strain curve in the elastic deformation region." ;
-                
-                skos:altLabel "modulus of elasticity" .
-
-
-
-###  http://matonto.org/ontology/matonto#Elastomers
+###  http://matonto.org/ontologies/matonto#Elastomers
 
 :Elastomers rdf:type owl:Class ;
             
@@ -432,19 +279,238 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#EmpiricalFormula
+###  http://matonto.org/ontologies/matonto#ExtensiveProperty
 
-:EmpiricalFormula rdf:type owl:Class ;
+:ExtensiveProperty rdf:type owl:Class ;
+                   
+                   rdfs:label "extensive property" ;
+                   
+                   rdfs:subClassOf dl:MeasuredProperty ;
+                   
+                   owl:disjointWith :IntensiveProperty ;
+                   
+                   rdfs:comment "An extensive property is a physical quantity that is the sum of the properties of separate noninteracting subsystems that compose the entire system. The value of such an additive property is proportional to the size of the system it describes, or to the quantity of matter in the system" .
+
+
+
+###  http://matonto.org/ontologies/matonto#Glasses
+
+:Glasses rdf:type owl:Class ;
+         
+         rdfs:label "glasses" ;
+         
+         rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#IntensiveProperty
+
+:IntensiveProperty rdf:type owl:Class ;
+                   
+                   rdfs:label "intensive property" ;
+                   
+                   rdfs:subClassOf dl:MeasuredProperty ;
+                   
+                   skos:altLabel "bulk property" ;
+                   
+                   rdfs:comment "An intensive property is a physical property of a system that does not depend on the system size or the amount of material in the system." .
+
+
+
+###  http://matonto.org/ontologies/matonto#Material
+
+:Material rdf:type owl:Class ;
+          
+          rdfs:label "material" ;
+          
+          rdfs:subClassOf dl:ChemicalSubstance ;
+          
+          rdfs:comment "A chemical substance that is studied in materials science." .
+
+
+
+###  http://matonto.org/ontologies/matonto#MaterialCategory
+
+:MaterialCategory rdf:type owl:Class ;
                   
-                  rdfs:label "Empirical Formula" ;
+                  rdfs:label "material category" ;
                   
-                  rdfs:subClassOf :chemicalFormula ;
+                  rdfs:subClassOf :MaterialQuality ;
                   
-                  rdfs:comment "In chemistry, the empirical formula of a chemical is a simple expression of the relative number of each type of atom or ratio of the elements in the compound. Empirical formulas are the standard for ionic compounds, such as CaCl2, and for macromolecules, such as SiO2." .
+                  rdfs:comment "A category used to classify different materials." .
 
 
 
-###  http://matonto.org/ontology/matonto#Enthalpy
+###  http://matonto.org/ontologies/matonto#MaterialQuality
+
+:MaterialQuality rdf:type owl:Class ;
+                 
+                 rdfs:label "material quality" ;
+                 
+                 rdfs:subClassOf dl:ChemicalQuality ;
+                 
+                 rdfs:comment "Qualities of chemical substances that are studied in materials science." .
+
+
+
+###  http://matonto.org/ontologies/matonto#Metals
+
+:Metals rdf:type owl:Class ;
+        
+        rdfs:label "metals" ;
+        
+        rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Nanomaterials
+
+:Nanomaterials rdf:type owl:Class ;
+               
+               rdfs:label "nanomaterials" ;
+               
+               rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Plastics
+
+:Plastics rdf:type owl:Class ;
+          
+          rdfs:label "plastics" ;
+          
+          rdfs:subClassOf :Polymers .
+
+
+
+###  http://matonto.org/ontologies/matonto#Polymers
+
+:Polymers rdf:type owl:Class ;
+          
+          rdfs:label "polymers" ;
+          
+          rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#Refractory
+
+:Refractory rdf:type owl:Class ;
+            
+            rdfs:label "refactory" ;
+            
+            rdfs:subClassOf :MaterialCategory .
+
+
+
+###  http://matonto.org/ontologies/matonto#SaceGroupProperty
+
+:SaceGroupProperty rdf:type owl:Class ;
+                   
+                   rdfs:label "space group property" ;
+                   
+                   rdfs:subClassOf snap:Quality .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroup
+
+:SpaceGroup rdf:type owl:Class ;
+            
+            rdfs:label "space group" ;
+            
+            rdfs:subClassOf snap:ThreeDimensionalRegion ;
+            
+            rdfs:comment " the symmetry group of a configuration in space, usually in three dimensions" .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroupHall
+
+:SpaceGroupHall rdf:type owl:Class ;
+                
+                rdfs:label "hall" ;
+                
+                rdfs:subClassOf :SaceGroupProperty .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroupNumber
+
+:SpaceGroupNumber rdf:type owl:Class ;
+                  
+                  rdfs:label "space group number" ;
+                  
+                  rdfs:subClassOf :SaceGroupProperty .
+
+
+
+###  http://matonto.org/ontologies/matonto#SpaceGroupPointGroup
+
+:SpaceGroupPointGroup rdf:type owl:Class ;
+                      
+                      rdfs:label "point group" ;
+                      
+                      rdfs:subClassOf :SaceGroupProperty .
+
+
+
+###  http://ontology.dumontierlab.com/ChemicalQuality
+
+dl:ChemicalQuality rdf:type owl:Class .
+
+
+
+###  http://ontology.dumontierlab.com/ChemicalSubstance
+
+dl:ChemicalSubstance rdf:type owl:Class .
+
+
+
+###  http://ontology.dumontierlab.com/Mass
+
+dl:Mass rdf:type owl:Class .
+
+
+
+###  http://ontology.dumontierlab.com/MeasuredProperty
+
+dl:MeasuredProperty rdf:type owl:Class .
+
+
+
+###  http://ontology.dumontierlab.com/Unit
+
+dl:Unit rdf:type owl:Class .
+
+
+
+###  http://www.ifomis.org/bfo/1.0/snap#Quality
+
+snap:Quality rdf:type owl:Class .
+
+
+
+###  http://www.ifomis.org/bfo/1.0/snap#ThreeDimensionalRegion
+
+snap:ThreeDimensionalRegion rdf:type owl:Class .
+
+
+
+
+###  http://matonto.org/ontologies/thermodynamics#ClosedThermodynamicSystem
+
+:ClosedThermodynamicSystem rdf:type owl:Class ;
+                           
+                           rdfs:label "closed thermodynamic system" ;
+                           
+                           rdfs:subClassOf :ThermodynamicSystem ;
+                           
+                           rdfs:comment "a thermodynamic system in which no mass can be transferred in or out of the system boundaries" .
+
+
+
+###  http://matonto.org/ontologies/thermodynamics#Enthalpy
 
 :Enthalpy rdf:type owl:Class ;
           
@@ -453,18 +519,18 @@ dl:hasUnit rdf:type owl:ObjectProperty .
           rdfs:subClassOf dl:MeasuredProperty ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:allValuesFrom :EnthalpyUnit
+                            owl:someValuesFrom :EnthalpyUnit
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty dl:hasUnit ;
-                            owl:someValuesFrom :EnthalpyUnit
+                            owl:allValuesFrom :EnthalpyUnit
                           ] ;
           
           rdfs:comment "A measure of the total energy of a thermodynamic system." .
 
 
 
-###  http://matonto.org/ontology/matonto#EnthalpyUnit
+###  http://matonto.org/ontologies/thermodynamics#EnthalpyUnit
 
 :EnthalpyUnit rdf:type owl:Class ;
               
@@ -480,77 +546,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#ExtensiveProperty
-
-:ExtensiveProperty rdf:type owl:Class ;
-                   
-                   rdfs:label "extensive property" ;
-                   
-                   rdfs:subClassOf dl:MeasuredProperty ;
-                   
-                   owl:disjointWith :IntensiveProperty ;
-                   
-                   rdfs:comment "An extensive property is a physical quantity that is the sum of the properties of separate noninteracting subsystems that compose the entire system. The value of such an additive property is proportional to the size of the system it describes, or to the quantity of matter in the system" .
-
-
-
-###  http://matonto.org/ontology/matonto#FlexuralModulus
-
-:FlexuralModulus rdf:type owl:Class ;
-                 
-                 rdfs:label "flexural modulus" ;
-                 
-                 rdfs:subClassOf :IntensiveProperty ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty dl:hasUnit ;
-                                   owl:allValuesFrom dl:PressureUnit
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty dl:hasUnit ;
-                                   owl:someValuesFrom dl:PressureUnit
-                                 ] ;
-                 
-                 rdfs:comment "In mechanics, the flexural modulus or bending modulus is the ratio of stress to strain in flexural deformation, or the tendency for a material to bend. It is determined from the slope of a stress-strain curve produced by a flexural test, and uses units of force per area." ;
-                 
-                 skos:altLabel "bending modulus" .
-
-
-
-###  http://matonto.org/ontology/matonto#FlexuralStrength
-
-:FlexuralStrength rdf:type owl:Class ;
-                  
-                  rdfs:label "flexural strength" ;
-                  
-                  rdfs:subClassOf dl:MeasuredProperty ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty dl:hasUnit ;
-                                    owl:allValuesFrom dl:PressureUnit
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty dl:hasUnit ;
-                                    owl:someValuesFrom dl:PressureUnit
-                                  ] ;
-                  
-                  skos:altLabel "modulus of rupture" ;
-                  
-                  rdfs:comment "Flexural strength is a mechanical parameter for brittle material, is defined as a material's ability to resist deformation under load." ;
-                  
-                  skos:altLabel "bend strength" .
-
-
-
-###  http://matonto.org/ontology/matonto#FractureToughness
-
-:FractureToughness rdf:type owl:Class ;
-                   
-                   rdfs:label "fracture toughness" ;
-                   
-                   rdfs:subClassOf dl:MeasuredProperty .
-
-
-
-###  http://matonto.org/ontology/matonto#GibbsFreeEnergy
+###  http://matonto.org/ontologies/thermodynamics#GibbsFreeEnergy
 
 :GibbsFreeEnergy rdf:type owl:Class ;
                  
@@ -570,45 +566,13 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#Glasses
-
-:Glasses rdf:type owl:Class ;
-         
-         rdfs:label "glasses" ;
-         
-         rdfs:subClassOf :MaterialCategory .
-
-
-
-###  http://matonto.org/ontology/matonto#GrainSize
-
-:GrainSize rdf:type owl:Class ;
-           
-           rdfs:label "grain size" ;
-           
-           rdfs:subClassOf dl:MeasuredProperty ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty dl:hasUnit ;
-                             owl:someValuesFrom dl:LengthUnit
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty dl:hasUnit ;
-                             owl:allValuesFrom dl:LengthUnit
-                           ] ;
-           
-           skos:altLabel "particle size" ;
-           
-           rdfs:comment "Grain size refers to the diameter of individual grains of sediment, or the lithified particles in clastic rocks. The term may also be applied to other granular materials. This is different from the crystallite size, which is the size of a single crystal inside the particles or grains. A single grain can be composed of several crystals. Granular material can range from very small colloidal particles, through clay, silt, sand, and gravel, to boulders." .
-
-
-
-###  http://matonto.org/ontology/matonto#HeatCapacity
+###  http://matonto.org/ontologies/thermodynamics#HeatCapacity
 
 :HeatCapacity rdf:type owl:Class ;
               
               rdfs:label "heat capacity" ;
               
-              rdfs:subClassOf :ExtensiveProperty ,
+              rdfs:subClassOf mat:ExtensiveProperty ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dl:hasUnit ;
                                 owl:allValuesFrom dl:EntropyUnit
@@ -618,13 +582,15 @@ dl:hasUnit rdf:type owl:ObjectProperty .
                                 owl:someValuesFrom dl:EntropyUnit
                               ] ;
               
-              skos:altLabel "thermal capacity" ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "thermal capacity" ;
               
-              rdfs:comment "Heat capacity is the measurable physical quantity of heat energy required to change the temperature of an object by a given amount." .
+              rdfs:comment "Heat capacity is the measurable physical quantity of heat energy required to change the temperature of an object by a given amount." ;
+              
+              mat:hasCommonSymbol "C" .
 
 
 
-###  http://matonto.org/ontology/matonto#HelmholtzFreeEnergy
+###  http://matonto.org/ontologies/thermodynamics#HelmholtzFreeEnergy
 
 :HelmholtzFreeEnergy rdf:type owl:Class ;
                      
@@ -644,21 +610,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#IntensiveProperty
-
-:IntensiveProperty rdf:type owl:Class ;
-                   
-                   rdfs:label "intensive property" ;
-                   
-                   rdfs:subClassOf dl:MeasuredProperty ;
-                   
-                   rdfs:comment "An intensive property is a physical property of a system that does not depend on the system size or the amount of material in the system." ;
-                   
-                   skos:altLabel "bulk property" .
-
-
-
-###  http://matonto.org/ontology/matonto#InternalEnergy
+###  http://matonto.org/ontologies/thermodynamics#InternalEnergy
 
 :InternalEnergy rdf:type owl:Class ;
                 
@@ -670,7 +622,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#IsolatedThermodynamicSystem
+###  http://matonto.org/ontologies/thermodynamics#IsolatedThermodynamicSystem
 
 :IsolatedThermodynamicSystem rdf:type owl:Class ;
                              
@@ -682,75 +634,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#Material
-
-:Material rdf:type owl:Class ;
-          
-          rdfs:label "material" ;
-          
-          rdfs:subClassOf dl:ChemicalSubstance ;
-          
-          rdfs:comment "A chemical substance that is studied in materials science." .
-
-
-
-###  http://matonto.org/ontology/matonto#MaterialCategory
-
-:MaterialCategory rdf:type owl:Class ;
-                  
-                  rdfs:label "material category" ;
-                  
-                  rdfs:subClassOf :MaterialQuality ;
-                  
-                  rdfs:comment "A category used to classify different materials." .
-
-
-
-###  http://matonto.org/ontology/matonto#MaterialQuality
-
-:MaterialQuality rdf:type owl:Class ;
-                 
-                 rdfs:label "material quality" ;
-                 
-                 rdfs:subClassOf dl:ChemicalQuality ;
-                 
-                 rdfs:comment "Qualities of chemical substances that are studied in materials science." .
-
-
-
-###  http://matonto.org/ontology/matonto#Metals
-
-:Metals rdf:type owl:Class ;
-        
-        rdfs:label "metals" ;
-        
-        rdfs:subClassOf :MaterialCategory .
-
-
-
-###  http://matonto.org/ontology/matonto#MolecularFormula
-
-:MolecularFormula rdf:type owl:Class ;
-                  
-                  rdfs:label "Molecular Formula" ;
-                  
-                  rdfs:subClassOf :chemicalFormula ;
-                  
-                  rdfs:comment "A molecular formula enumerates the number of atoms to reflect those in the molecule, so that the molecular formula for glucose is C6H12O6 rather than the glucose empirical formula, which is CH2O" .
-
-
-
-###  http://matonto.org/ontology/matonto#Nanomaterials
-
-:Nanomaterials rdf:type owl:Class ;
-               
-               rdfs:label "nanomaterials" ;
-               
-               rdfs:subClassOf :MaterialCategory .
-
-
-
-###  http://matonto.org/ontology/matonto#OpenThermodynamicSystem
+###  http://matonto.org/ontologies/thermodynamics#OpenThermodynamicSystem
 
 :OpenThermodynamicSystem rdf:type owl:Class ;
                          
@@ -762,59 +646,160 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#PhaseEquilibrium
+###  http://matonto.org/ontologies/thermodynamics#SpecificHeat
 
-:PhaseEquilibrium rdf:type owl:Class ;
+:SpecificHeat rdf:type owl:Class ;
+              
+              rdfs:label "specific heat" ;
+              
+              rdfs:subClassOf mat:IntensiveProperty ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty dl:hasUnit ;
+                                owl:someValuesFrom dl:SpecificEntropyUnit
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty dl:hasUnit ;
+                                owl:allValuesFrom dl:SpecificEntropyUnit
+                              ] ;
+              
+              <http://www.w3.org/2004/02/skos/core#altLabel> "specific heat capacity" ;
+              
+              rdfs:comment "Specific heat is the heat capacity per unit mass of a material." .
+
+
+
+###  http://matonto.org/ontologies/thermodynamics#ThermodynamicSystem
+
+:ThermodynamicSystem rdf:type owl:Class ;
+                     
+                     rdfs:label "thermodynamic system" ;
+                     
+                     rdfs:subClassOf <http://www.ifomis.org/bfo/1.0/snap#ThreeDimensionalRegion> ;
+                     
+                     rdfs:comment "a macroscopic region defined by boundaries that determine processes which are allowed to affect the interior of the region" .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#BulkModulus
+
+:BulkModulus rdf:type owl:Class ;
+             
+             rdfs:label "bulk modulus" ;
+             
+             rdfs:subClassOf :ElasticModulus ;
+             
+             mat:hasCommonSymbol "K" ;
+             
+             rdfs:comment "The bulk modulus describes volumetric elasticity, or the tendency of an object to deform in all directions when uniformly loaded in all directions; it is defined as volumetric stress over volumetric strain, and is the inverse of compressibility. The bulk modulus is an extension of Young's modulus to three dimensions." .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#ElasticModulus
+
+:ElasticModulus rdf:type owl:Class ;
+                
+                rdfs:label "elastic modulus" ;
+                
+                rdfs:subClassOf dl:MeasuredProperty ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dl:hasUnit ;
+                                  owl:allValuesFrom dl:PressureUnit
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dl:hasUnit ;
+                                  owl:someValuesFrom dl:PressureUnit
+                                ] ;
+                
+                mat:hasCommonSymbol "E" ;
+                
+                <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of elasticity" ;
+                
+                rdfs:comment "An elastic modulus, or modulus of elasticity, is the mathematical description of an object or substance's tendency to be deformed elastically (i.e., non-permanently) when a force is applied to it. The elastic modulus of an object is defined as the slope of its stress–strain curve in the elastic deformation region." .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#FlexuralModulus
+
+:FlexuralModulus rdf:type owl:Class ;
+                 
+                 rdfs:label "flexural modulus" ;
+                 
+                 rdfs:subClassOf mat:IntensiveProperty ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dl:hasUnit ;
+                                   owl:someValuesFrom dl:PressureUnit
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dl:hasUnit ;
+                                   owl:allValuesFrom dl:PressureUnit
+                                 ] ;
+                 
+                 rdfs:comment "In mechanics, the flexural modulus or bending modulus is the ratio of stress to strain in flexural deformation, or the tendency for a material to bend. It is determined from the slope of a stress-strain curve produced by a flexural test, and uses units of force per area." ;
+                 
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "bending modulus" ;
+                 
+                 mat:hasCommonSymbol "E" .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#FlexuralStrength
+
+:FlexuralStrength rdf:type owl:Class ;
                   
-                  rdfs:label "Phase Equilibrium"@en ;
+                  rdfs:label "flexural strength" ;
                   
-                  rdfs:subClassOf dl:MeasuredProperty ;
+                  rdfs:subClassOf dl:MeasuredProperty ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty dl:hasUnit ;
+                                    owl:someValuesFrom dl:PressureUnit
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty dl:hasUnit ;
+                                    owl:allValuesFrom dl:PressureUnit
+                                  ] ;
                   
-                  rdfs:comment "The conditions at which two phases can be at equilibrium"@en .
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of rupture" ,
+                                                                 "bend strength" ;
+                  
+                  rdfs:comment "Flexural strength is a mechanical parameter for brittle material, is defined as a material's ability to resist deformation under load." .
 
 
 
-###  http://matonto.org/ontology/matonto#Plastics
+###  http://matonto.org/ontologies/thermomechanics#FractureToughness
 
-:Plastics rdf:type owl:Class ;
-          
-          rdfs:label "plastics" ;
-          
-          rdfs:subClassOf :Polymers .
-
-
-
-###  http://matonto.org/ontology/matonto#Polymers
-
-:Polymers rdf:type owl:Class ;
-          
-          rdfs:label "polymers" ;
-          
-          rdfs:subClassOf :MaterialCategory .
-
-
-
-###  http://matonto.org/ontology/matonto#Refractory
-
-:Refractory rdf:type owl:Class ;
-            
-            rdfs:label "refactory" ;
-            
-            rdfs:subClassOf :MaterialCategory .
-
-
-
-###  http://matonto.org/ontology/matonto#SaceGroupProperty
-
-:SaceGroupProperty rdf:type owl:Class ;
+:FractureToughness rdf:type owl:Class ;
                    
-                   rdfs:label "space group property" ;
+                   rdfs:label "fracture toughness" ;
                    
-                   rdfs:subClassOf snap:Quality .
+                   rdfs:subClassOf dl:MeasuredProperty ;
+                   
+                   mat:hasCommonSymbol "K" .
 
 
 
-###  http://matonto.org/ontology/matonto#ShearModulus
+###  http://matonto.org/ontologies/thermomechanics#GrainSize
+
+:GrainSize rdf:type owl:Class ;
+           
+           rdfs:label "grain size" ;
+           
+           rdfs:subClassOf dl:MeasuredProperty ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty dl:hasUnit ;
+                             owl:someValuesFrom dl:LengthUnit
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty dl:hasUnit ;
+                             owl:allValuesFrom dl:LengthUnit
+                           ] ;
+           
+           <http://www.w3.org/2004/02/skos/core#altLabel> "particle size" ;
+           
+           rdfs:comment "Grain size refers to the diameter of individual grains of sediment, or the lithified particles in clastic rocks. The term may also be applied to other granular materials. This is different from the crystallite size, which is the size of a single crystal inside the particles or grains. A single grain can be composed of several crystals. Granular material can range from very small colloidal particles, through clay, silt, sand, and gravel, to boulders." .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#ShearModulus
 
 :ShearModulus rdf:type owl:Class ;
               
@@ -824,75 +809,13 @@ dl:hasUnit rdf:type owl:ObjectProperty .
               
               rdfs:comment "The shear modulus describes an object's tendency to shear (the deformation of shape at constant volume) when acted upon by opposing forces; it is defined as shear stress over shear strain. The shear modulus is part of the derivation of viscosity." ;
               
-              skos:altLabel "modulus of rigidity" .
-
-
-
-###  http://matonto.org/ontology/matonto#SpaceGroup
-
-:SpaceGroup rdf:type owl:Class ;
-            
-            rdfs:label "space group" ;
-            
-            rdfs:subClassOf snap:ThreeDimensionalRegion ;
-            
-            rdfs:comment " the symmetry group of a configuration in space, usually in three dimensions" .
-
-
-
-###  http://matonto.org/ontology/matonto#SpaceGroupHall
-
-:SpaceGroupHall rdf:type owl:Class ;
-                
-                rdfs:label "hall" ;
-                
-                rdfs:subClassOf :SaceGroupProperty .
-
-
-
-###  http://matonto.org/ontology/matonto#SpaceGroupNumber
-
-:SpaceGroupNumber rdf:type owl:Class ;
-                  
-                  rdfs:label "space group number" ;
-                  
-                  rdfs:subClassOf :SaceGroupProperty .
-
-
-
-###  http://matonto.org/ontology/matonto#SpaceGroupPointGroup
-
-:SpaceGroupPointGroup rdf:type owl:Class ;
-                      
-                      rdfs:label "point group" ;
-                      
-                      rdfs:subClassOf :SaceGroupProperty .
-
-
-
-###  http://matonto.org/ontology/matonto#SpecificHeat
-
-:SpecificHeat rdf:type owl:Class ;
+              mat:hasCommonSymbol "G" ;
               
-              rdfs:label "specific heat" ;
-              
-              rdfs:subClassOf :IntensiveProperty ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty dl:hasUnit ;
-                                owl:allValuesFrom dl:SpecificEntropyUnit
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty dl:hasUnit ;
-                                owl:someValuesFrom dl:SpecificEntropyUnit
-                              ] ;
-              
-              skos:altLabel "specific heat capacity" ;
-              
-              rdfs:comment "Specific heat is the heat capacity per unit mass of a material." .
+              <http://www.w3.org/2004/02/skos/core#altLabel> "modulus of rigidity" .
 
 
 
-###  http://matonto.org/ontology/matonto#Stress
+###  http://matonto.org/ontologies/thermomechanics#Stress
 
 :Stress rdf:type owl:Class ;
         
@@ -910,29 +833,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#StructureType
-
-:StructureType rdf:type owl:Class ;
-               
-               rdfs:label "Structure Type"^^xsd:string ;
-               
-               rdfs:subClassOf :MaterialQuality .
-
-
-
-###  http://matonto.org/ontology/matonto#ThermodynamicSystem
-
-:ThermodynamicSystem rdf:type owl:Class ;
-                     
-                     rdfs:label "thermodynamic system" ;
-                     
-                     rdfs:subClassOf snap:ThreeDimensionalRegion ;
-                     
-                     rdfs:comment "a macroscopic region defined by boundaries that determine processes which are allowed to affect the interior of the region" .
-
-
-
-###  http://matonto.org/ontology/matonto#UltimateTensileStrength
+###  http://matonto.org/ontologies/thermomechanics#UltimateTensileStrength
 
 :UltimateTensileStrength rdf:type owl:Class ;
                          
@@ -948,17 +849,17 @@ dl:hasUnit rdf:type owl:ObjectProperty .
                                            owl:someValuesFrom dl:PressureUnit
                                          ] ;
                          
-                         skos:altLabel "UTS" ,
-                                       "ultimate strength" ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "TS" ,
+                                                                        "ultimate strength" ,
+                                                                        "UTS" ;
                          
                          rdfs:comment "Ultimate tensile strength is the maximum stress that a material can withstand while being stretched or pulled before failing or breaking." ;
                          
-                         skos:altLabel "TS" ,
-                                       "tensile strength" .
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "tensile strength" .
 
 
 
-###  http://matonto.org/ontology/matonto#WeibullModulus
+###  http://matonto.org/ontologies/thermomechanics#WeibullModulus
 
 :WeibullModulus rdf:type owl:Class ;
                 
@@ -970,7 +871,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontology/matonto#YoungsModulus
+###  http://matonto.org/ontologies/thermomechanics#YoungsModulus
 
 :YoungsModulus rdf:type owl:Class ;
                
@@ -978,150 +879,112 @@ dl:hasUnit rdf:type owl:ObjectProperty .
                
                rdfs:subClassOf :ElasticModulus ;
                
+               <http://www.w3.org/2004/02/skos/core#altLabel> "Young's modulus" ,
+                                                              "tensile modulus" ;
+               
                rdfs:comment "Young's modulus is a measure of the stiffness of an elastic isotropic material and is a quantity used to characterize materials. It is defined as the ratio of the stress along an axis over the strain along that axis in the range of stress in which Hooke's law holds." ;
                
-               skos:altLabel "Young's modulus" ,
-                             "tensile modulus" .
+               mat:hasCommonSymbol "E" .
 
 
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#Alloy
 
-###  http://matonto.org/ontology/matonto#chemicalFormula
+:Alloy rdf:type owl:Class ;
+       
+       rdfs:label "Alloy"@en ;
+       
+       rdfs:subClassOf dl:Solution .
 
-:chemicalFormula rdf:type owl:Class .
 
 
+###  http://matonto.org/ontologies/2014/03/phaseCharacterization#PhaseEquilibrium
 
-###  http://ontology.dumontierlab.com/ChemicalPhase
+:PhaseEquilibrium rdf:type owl:Class ;
+                  
+                  rdfs:label "Phase Equilibrium"@en ;
+                  
+                  rdfs:subClassOf dl:MeasuredProperty ;
+                  
+                  rdfs:comment "The conditions at which two phases can be at equilibrium"@en .
 
-dl:ChemicalPhase rdf:type owl:Class .
 
 
+###  http://matonto.org/ontologies/ceramic#ceramic
 
-###  http://ontology.dumontierlab.com/ChemicalQuality
+:CeramicMaterial rdf:type owl:Class ;
+                                                
+                                                rdfs:label "Ceramic Material"^^xsd:string ;
+                                                
+                                                rdfs:subClassOf :Material ;
+                                                
+                                                rdfs:comment "A ceramic material that is studied in materials science."^^xsd:string .
 
-dl:ChemicalQuality rdf:type owl:Class .
 
 
+###  http://matonto.org/ontologies/ceramic#chemicalClass
 
-###  http://ontology.dumontierlab.com/ChemicalSubstance
+:ChemicalClass rdf:type owl:Class ;
+                                                      
+                                                      rdfs:label "Chemical Class"^^xsd:string ;
+                                                      
+                                                      rdfs:subClassOf dl:ChemicalQuality .
 
-dl:ChemicalSubstance rdf:type owl:Class .
 
 
+###  http://matonto.org/ontologies/ceramic#chemicalFamily
 
-###  http://ontology.dumontierlab.com/Element
+:ChemicalFamily rdf:type owl:Class ;
+                                                       
+                                                       rdfs:label "Chemical Family"^^xsd:string ;
+                                                       
+                                                       rdfs:subClassOf :ChemicalQuality .
 
-dl:Element rdfs:label "element"^^xsd:string .
 
 
+###  http://matonto.org/ontologies/ceramic#chemicalFormula
 
-###  http://ontology.dumontierlab.com/Energy
+:ChemicalFormula rdf:type owl:Class ;
+                                                        
+                                                        rdfs:label "Chemical Formula"^^xsd:string ;
+                                                        
+                                                        rdfs:subClassOf :ChemicalQuality .
 
-dl:Energy rdf:type owl:Class .
 
 
+###  http://matonto.org/ontologies/ceramic#structureType
 
-###  http://ontology.dumontierlab.com/EnergyUnit
+:StructureType rdf:type owl:Class ;
+                                                      
+                                                      rdfs:label "Structure Type"^^xsd:string ;
+                                                      
+                                                      rdfs:subClassOf :MaterialQuality .
+													  
+													  
+													  
+###  http://matonto.org/ontologies/matonto#EmpiricalFormula
 
-dl:EnergyUnit rdf:type owl:Class .
+:EmpiricalFormula rdf:type owl:Class ;
+                  
+                  rdfs:label "Empirical Formula" ;
+                  
+                  rdfs:subClassOf :chemicalFormula ;
+                  
+                  rdfs:comment "In chemistry, the empirical formula of a chemical is a simple expression of the relative number of each type of atom or ratio of the elements in the compound. Empirical formulas are the standard for ionic compounds, such as CaCl2, and for macromolecules, such as SiO2." .
 
 
 
-###  http://ontology.dumontierlab.com/EntropyUnit
+###  http://matonto.org/ontologies/matonto#MolecularFormula
 
-dl:EntropyUnit rdf:type owl:Class .
+:MolecularFormula rdf:type owl:Class ;
+                  
+                  rdfs:label "Molecular Formula" ;
+                  
+                  rdfs:subClassOf :chemicalFormula ;
+                  
+                  rdfs:comment "A molecular formula enumerates the number of atoms to reflect those in the molecule, so that the molecular formula for glucose is C6H12O6 rather than the glucose empirical formula, which is CH2O" .
 
 
-
-###  http://ontology.dumontierlab.com/LengthUnit
-
-dl:LengthUnit rdf:type owl:Class .
-
-
-
-###  http://ontology.dumontierlab.com/Mass
-
-dl:Mass rdf:type owl:Class .
-
-
-
-###  http://ontology.dumontierlab.com/MeasuredProperty
-
-dl:MeasuredProperty rdf:type owl:Class .
-
-
-
-###  http://ontology.dumontierlab.com/MolarEnergy
-
-dl:MolarEnergy rdf:type owl:Class .
-
-
-
-###  http://ontology.dumontierlab.com/MolarEnergyUnit
-
-dl:MolarEnergyUnit rdf:type owl:Class .
-
-
-
-###  http://ontology.dumontierlab.com/Pressure
-
-dl:Pressure rdf:type owl:Class .
-
-
-
-###  http://ontology.dumontierlab.com/PressureUnit
-
-dl:PressureUnit rdf:type owl:Class .
-
-
-
-###  http://ontology.dumontierlab.com/Solution
-
-dl:Solution rdf:type owl:Class .
-
-
-
-###  http://ontology.dumontierlab.com/SpecificEntropyUnit
-
-dl:SpecificEntropyUnit rdf:type owl:Class .
-
-
-
-###  http://ontology.dumontierlab.com/Temperature
-
-dl:Temperature rdf:type owl:Class .
-
-
-
-###  http://ontology.dumontierlab.com/Unit
-
-dl:Unit rdf:type owl:Class .
-
-
-
-###  http://ontology.dumontierlab.com/VolumeDensityUnit
-
-dl:VolumeDensityUnit rdf:type owl:Class .
-
-
-
-###  http://ontology.dumontierlab.com/VolumeUnit
-
-dl:VolumeUnit rdf:type owl:Class .
-
-
-
-###  http://www.ifomis.org/bfo/1.0/snap#Quality
-
-snap:Quality rdf:type owl:Class .
-
-
-
-###  http://www.ifomis.org/bfo/1.0/snap#ThreeDimensionalRegion
-
-snap:ThreeDimensionalRegion rdf:type owl:Class .
-
-
+				  
 
 
 
@@ -1132,274 +995,14 @@ snap:ThreeDimensionalRegion rdf:type owl:Class .
 #################################################################
 
 
-###  http://matonto.org/ontology/matonto#BulkModulus
-
-:BulkModulus rdf:type owl:NamedIndividual ;
-             
-             :hasCommonSymbol "K" .
-
-
-
-###  http://matonto.org/ontology/matonto#ElasticModulus
-
-:ElasticModulus rdf:type owl:NamedIndividual ;
-                
-                :hasCommonSymbol "E" .
-
-
-
-###  http://matonto.org/ontology/matonto#FlexuralModulus
-
-:FlexuralModulus rdf:type owl:NamedIndividual ;
-                 
-                 :hasCommonSymbol "E" .
-
-
-
-###  http://matonto.org/ontology/matonto#FractureToughness
-
-:FractureToughness rdf:type owl:NamedIndividual ;
-                   
-                   :hasCommonSymbol "K" .
-
-
-
-###  http://matonto.org/ontology/matonto#HeatCapacity
-
-:HeatCapacity rdf:type owl:NamedIndividual ;
-              
-              :hasCommonSymbol "C" .
-
-
-
-###  http://matonto.org/ontology/matonto#ShearModulus
-
-:ShearModulus rdf:type owl:NamedIndividual ;
-              
-              :hasCommonSymbol "G" .
-
-
-
-###  http://matonto.org/ontology/matonto#YoungsModulus
-
-:YoungsModulus rdf:type owl:NamedIndividual ;
-               
-               :hasCommonSymbol "E" .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_angstrom
-
-:unit_angstrom rdf:type owl:NamedIndividual ;
-               
-               rdfs:label "angstrom" ;
-               
-               dl:isScaledBy "1.0E-10" ;
-               
-               dl:derivesFrom dl:unit_meter .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_angstrom_3
-
-:unit_angstrom_3 rdf:type dl:VolumeUnit ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "cubic angstrom" ;
-                 
-                 dl:isRaisedToPowerOf "3.0" ;
-                 
-                 dl:derivesFrom :unit_angstrom .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_bohr_magneton
-
-:unit_bohr_magneton rdf:type dl:Unit ,
-                             owl:NamedIndividual ;
-                    
-                    rdfs:label "Bohr magneton" .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_centimeter
-
-:unit_centimeter rdf:type dl:LengthUnit ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "cm" ,
-                            "centimeter" ;
-                 
-                 dl:isScaledBy "1.0E-2" ;
-                 
-                 dl:derivesFrom dl:unit_meter .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_centimeter_-3
-
-:unit_centimeter_-3 rdf:type dl:Unit ,
-                             owl:NamedIndividual ;
-                    
-                    rdfs:label "per cubic centimeter" ;
-                    
-                    dl:isRaisedToPowerOf "-3.0" ;
-                    
-                    dl:derivesFrom :unit_centimeter .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_electron_volt
+###  http://matonto.org/ontologies/matonto#unit_electron_volt
 
 :unit_electron_volt rdf:type :BandGapUnit ,
                              owl:NamedIndividual ;
                     
-                    rdfs:label "eV" ,
-                               "electron volt" ;
+                    rdfs:label "electron volt", "eV" ;
                     
                     :hasSISymbol "eV" .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_gigapascal
-
-:unit_gigapascal rdf:type dl:PressureUnit ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "gigapascal" ,
-                            "GPa" ;
-                 
-                 dl:isScaledBy "1.0E9"^^xsd:double ;
-                 
-                 :hasSISymbol "GPa" ;
-                 
-                 dl:derivesFrom dl:unit_pascal .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_gram_1_centimeter_-3
-
-:unit_gram_1_centimeter_-3 rdf:type dl:VolumeDensityUnit ,
-                                    owl:NamedIndividual ;
-                           
-                           rdfs:label "g/cm3" ,
-                                      "gram per cubic centimeter" ;
-                           
-                           dl:derivesFrom :unit_centimeter_-3 ,
-                                          dl:unit_gram .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_hectopascal
-
-:unit_hectopascal rdf:type dl:PressureUnit ,
-                           owl:NamedIndividual ;
-                  
-                  rdfs:label "hectopascal" ;
-                  
-                  dl:isScaledBy "100.0"^^xsd:double ;
-                  
-                  :hasSISymbol "hPa" ;
-                  
-                  dl:derivesFrom dl:unit_pascal .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_kilopascal
-
-:unit_kilopascal rdf:type dl:PressureUnit ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "kilopascal" ;
-                 
-                 dl:isScaledBy "1000.0"^^xsd:double ;
-                 
-                 :hasSISymbol "kPa" ;
-                 
-                 dl:derivesFrom dl:unit_pascal .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_megapascal
-
-:unit_megapascal rdf:type dl:PressureUnit ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "MPa" ,
-                            "megapascal" ;
-                 
-                 dl:isScaledBy "1000000.0"^^xsd:double ;
-                 
-                 :hasSISymbol "MPa" ;
-                 
-                 dl:derivesFrom dl:unit_pascal .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_meter_sqrt
-
-:unit_meter_sqrt rdf:type dl:Unit ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "root meter" ;
-                 
-                 dl:isRaisedToPowerOf "0.5"^^xsd:double ;
-                 
-                 dl:derivesFrom dl:unit_meter .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_micrometer
-
-:unit_micrometer rdf:type dl:LengthUnit ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "micrometer" ;
-                 
-                 dl:isScaledBy "1.0E-6"^^xsd:double ;
-                 
-                 :hasSISymbol "ï¿½m" ;
-                 
-                 skos:altLabel "micrometre" ;
-                 
-                 rdfs:comment "The micrometer is an SI derived unit of length equaling 1ï¿½10-6 of a meter; that is, one millionth of a meter (or one thousandth of a millimeter, 0.001 mm, or about 0.000039 inch)." ;
-                 
-                 dl:derivesFrom dl:unit_meter .
-
-
-
-###  http://matonto.org/ontology/matonto#unit_pascal_1_meter_sqrt
-
-:unit_pascal_1_meter_sqrt rdf:type dl:Unit ,
-                                   owl:NamedIndividual ;
-                          
-                          rdfs:label "pascal root meter" ;
-                          
-                          rdfs:comment "Pa*m1/2 are the units for fracture toughness" ;
-                          
-                          dl:derivesFrom :unit_meter_sqrt ,
-                                         dl:unit_pascal .
-
-
-
-###  http://matonto.org/ontology/matonto-edit#unit_kilojoule_1_mole_-1
-
-<http://matonto.org/ontology/matonto-edit#unit_kilojoule_1_mole_-1> rdf:type dl:MolarEnergyUnit ,
-                                                                             owl:NamedIndividual ;
-                                                                    
-                                                                    rdfs:label "kilojoule per mole" ;
-                                                                    
-                                                                    :hasSISymbol "kJ/mol" ;
-                                                                    
-                                                                    rdfs:comment "kJ/mol is based on the SI derived unit of measuring molar energy, the J/mol." .
-
-
-
-###  http://ontology.dumontierlab.com/SpecificEnergyUnit
-
-dl:SpecificEnergyUnit rdf:type owl:NamedIndividual ;
-                      
-                      :hasCommonSymbol "J/Kg" .
 
 
 
@@ -1407,8 +1010,7 @@ dl:SpecificEnergyUnit rdf:type owl:NamedIndividual ;
 
 dl:unit_gram rdf:type owl:NamedIndividual ;
              
-             rdfs:label "gram" ,
-                        "g" ;
+             rdfs:label "gram", "g" ;
              
              rdfs:comment "The gram is a metric system unit of mass." ;
              
@@ -1425,6 +1027,192 @@ dl:unit_kilogram rdf:type owl:NamedIndividual .
 
 
 
+###  http://matonto.org/ontologies/thermomechanics#unit_gigapascal
+
+:unit_gigapascal rdf:type dl:PressureUnit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "gigapascal" , "GPa" ;
+                 
+                 dl:isScaledBy "1.0E9"^^xsd:double ;
+                 
+                 mat:hasSISymbol "GPa" ;
+                 
+                 dl:derivesFrom dl:unit_pascal .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#unit_hectopascal
+
+:unit_hectopascal rdf:type dl:PressureUnit ,
+                           owl:NamedIndividual ;
+                  
+                  rdfs:label "hectopascal" ;
+                  
+                  dl:isScaledBy "100.0"^^xsd:double ;
+                  
+                  mat:hasSISymbol "hPa" ;
+                  
+                  dl:derivesFrom dl:unit_pascal .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#unit_kilopascal
+
+:unit_kilopascal rdf:type dl:PressureUnit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "kilopascal" ;
+                 
+                 dl:isScaledBy "1000.0"^^xsd:double ;
+                 
+                 mat:hasSISymbol "kPa" ;
+                 
+                 dl:derivesFrom dl:unit_pascal .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#unit_megapascal
+
+:unit_megapascal rdf:type dl:PressureUnit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "megapascal", "MPa" ;
+                 
+                 dl:isScaledBy "1000000.0"^^xsd:double ;
+                 
+                 mat:hasSISymbol "MPa" ;
+                 
+                 dl:derivesFrom dl:unit_pascal .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#unit_meter_sqrt
+
+:unit_meter_sqrt rdf:type dl:Unit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "root meter" ;
+                 
+                 dl:isRaisedToPowerOf "0.5"^^xsd:double ;
+                 
+                 dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#unit_micrometer
+
+:unit_micrometer rdf:type dl:LengthUnit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "micrometer" ;
+                 
+                 dl:isScaledBy "1.0E-6"^^xsd:double ;
+                 
+                 rdfs:comment "The micrometer is an SI derived unit of length equaling 1×10-6 of a meter; that is, one millionth of a meter (or one thousandth of a millimeter, 0.001 mm, or about 0.000039 inch)." ;
+                 
+                 mat:hasSISymbol "µm" ;
+                 
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "micrometre" ;
+                 
+                 dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://matonto.org/ontologies/thermomechanics#unit_pascal_1_meter_sqrt
+
+:unit_pascal_1_meter_sqrt rdf:type dl:Unit ,
+                                   owl:NamedIndividual ;
+                          
+                          rdfs:label "pascal root meter" ;
+                          
+                          rdfs:comment "Pa*m1/2 are the units for fracture toughness" ;
+                          
+                          dl:derivesFrom :unit_meter_sqrt ,
+                                         dl:unit_pascal .
+
+
+
+###  http://ontology.dumontierlab.com/unit_meter
+
+dl:unit_meter <http://www.w3.org/2004/02/skos/core#altLabel> "metre" .
+
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_angstrom
+
+:unit_angstrom rdf:type owl:NamedIndividual ;
+               
+               rdfs:label "angstrom" ;
+               
+               dl:isScaledBy "1.0E-10" ;
+               
+               dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_angstrom_3
+
+:unit_angstrom_3 rdf:type dl:VolumeUnit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "cubic angstrom" ;
+                 
+                 dl:isRaisedToPowerOf "3.0" ;
+                 
+                 dl:derivesFrom :unit_angstrom .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_bohr_magneton
+
+:unit_bohr_magneton rdf:type dl:Unit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "Bohr magneton" .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_centimeter
+
+:unit_centimeter rdf:type dl:LengthUnit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "centimeter", "cm" ;
+                 
+                 dl:isScaledBy "1.0E-2" ;
+                 
+                 dl:derivesFrom dl:unit_meter .
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_centimeter_-3
+
+:unit_centimeter_-3 rdf:type dl:Unit ,
+                             owl:NamedIndividual ;
+                    
+                    rdfs:label "per cubic centimeter" ;
+                    
+                    dl:isRaisedToPowerOf "-3.0" ;
+                    
+                    dl:derivesFrom :unit_centimeter .
+
+
+
+
+###  http://matonto.org/ontologies/matonto#unit_gram_1_centimeter_-3
+
+:unit_gram_1_centimeter_-3 rdf:type dl:VolumeDensityUnit ,
+                                    owl:NamedIndividual ;
+                           
+                           rdfs:label "gram per cubic centimeter", "g/cm3" ;
+                           
+                           dl:derivesFrom :unit_centimeter_-3 ,
+                                          dl:unit_gram .
+
+
+
 
 #################################################################
 #
@@ -1433,7 +1221,10 @@ dl:unit_kilogram rdf:type owl:NamedIndividual .
 #################################################################
 
 
-dl:unit_meter skos:altLabel "metre" .
+dl:Element rdfs:label "element"^^xsd:string .
+
+
+dl:SpecificEnergyUnit mat:hasCommonSymbol "J/Kg" .
 
 
 
