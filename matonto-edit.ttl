@@ -22,6 +22,19 @@
 #################################################################
 
 
+###  http://matonto.org/ontologies/matonto#hasComponentProperty
+
+<http://matonto.org/ontologies/matonto#hasComponentProperty> rdf:type owl:ObjectProperty ;
+                                                              
+                                                              rdfs:label "has component property" ;
+                                                              
+                                                              rdfs:comment "indicates a ComponentProperty (i.e. attribute/dimension) expected on an Observation" ;
+                                                              
+                                                              rdfs:range <http://purl.org/linked-data/cube#ComponentProperty> ;
+                                                              
+                                                              rdfs:domain <http://purl.org/linked-data/cube#Observation> .
+
+
 ###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasElement
 
 :hasElement rdf:type owl:ObjectProperty ;
@@ -1207,6 +1220,19 @@ dl:unit_meter <http://www.w3.org/2004/02/skos/core#altLabel> "metre" .
                            dl:derivesFrom :unit_centimeter_-3 ,
                                           dl:unit_gram .
 
+
+
+										  
+###  http://matonto.org/ontologies/matonto#unit_kilojoule_1_mole_-1
+
+:unit_kilojoule_1_mole_-1 rdf:type dl:MolarEnergyUnit ,
+                                    owl:NamedIndividual ;
+                           
+                           rdfs:label "kilojoule per mole", "kJ/mol" ;
+						   
+						   dl:derivesFrom dl:unit_joule_1_mole_-1 ;
+						   
+						   dl:isScaledBy "1000.0"^^xsd:double .
 
 
 
