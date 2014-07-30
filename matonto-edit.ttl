@@ -272,7 +272,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
                
                rdfs:label "crystal system" ;
                
-               rdfs:subClassOf :SaceGroupProperty .
+               rdfs:subClassOf :SpaceGroupProperty .
 
 
 
@@ -412,9 +412,9 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 
 
-###  http://matonto.org/ontologies/matonto#SaceGroupProperty
+###  http://matonto.org/ontologies/matonto#SpaceGroupProperty
 
-:SaceGroupProperty rdf:type owl:Class ;
+:SpaceGroupProperty rdf:type owl:Class ;
                    
                    rdfs:label "space group property" ;
                    
@@ -440,7 +440,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
                 
                 rdfs:label "hall" ;
                 
-                rdfs:subClassOf :SaceGroupProperty .
+                rdfs:subClassOf :SpaceGroupProperty .
 
 
 
@@ -450,7 +450,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
                   
                   rdfs:label "space group number" ;
                   
-                  rdfs:subClassOf :SaceGroupProperty .
+                  rdfs:subClassOf :SpaceGroupProperty .
 
 
 
@@ -460,7 +460,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
                       
                       rdfs:label "point group" ;
                       
-                      rdfs:subClassOf :SaceGroupProperty .
+                      rdfs:subClassOf :SpaceGroupProperty .
 
 
 
