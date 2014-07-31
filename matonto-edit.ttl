@@ -22,6 +22,19 @@
 #################################################################
 
 
+###  http://matonto.org/ontologies/matonto#hasObservation
+
+<http://matonto.org/ontologies/matonto#hasObservation> rdf:type owl:ObjectProperty ;
+                                                              
+                                                              rdfs:label "has observation" ;
+                                                              
+                                                              rdfs:comment "indicates an Observation of an Object" ;
+                                                              
+                                                              rdfs:range <http://purl.org/linked-data/cube#Observation> .
+
+															  
+															  
+
 ###  http://matonto.org/ontologies/matonto#hasComponentProperty
 
 <http://matonto.org/ontologies/matonto#hasComponentProperty> rdf:type owl:ObjectProperty ;
@@ -34,6 +47,8 @@
                                                               
                                                               rdfs:domain <http://purl.org/linked-data/cube#Observation> .
 
+															  
+															  
 
 ###  http://matonto.org/ontologies/2014/03/phaseCharacterization#hasElement
 
@@ -214,13 +229,76 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 #################################################################
 
 
+### http://matonto.org/ontologies/matonto#HardnessRange
+
+:HardnessRange rdf:type owl:Class ;
+
+		rdfs:label "Hardness Range" ;
+		
+		rdfs:subClassOf dl:MeasuredProperty 
+		
+		rdfs:comment "A range of hardness with an upper and lower bound" .
+		
+
+
+		
+### http://matonto.org/ontologies/matonto#HardnessRangeLowerBound
+			
+:HardnessRangeLowerBound rdf:type owl:Class ;
+
+		rdfs:label "Hardness Range Lower Bound" ;
+		
+		rdfs:subClassOf :HardnessRange ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:allValuesFrom dl:PressureUnit
+			] ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:someValuesFrom dl:PressureUnit
+			] ;
+		
+		rdfs:comment "A lower bound of a hardness range" .
+		
+		
+		
+		
+### http://matonto.org/ontologies/matonto#HardnessRangeUpperBound
+			
+:HardnessRangeUpperBound rdf:type owl:Class ;
+
+		rdfs:label "Hardness Range Upper Bound" ;
+		
+		rdfs:subClassOf :HardnessRange ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:allValuesFrom dl:PressureUnit
+			] ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:someValuesFrom dl:PressureUnit
+			] ;
+		
+		rdfs:comment "An upper bound of a hardness range" .
+
+		
+		
+
 ### http://matonto.org/ontologies/matonto#Hardness
 
 :Hardness rdf:type owl:Class ;
 
 		rdfs:label "Hardness" ;
 		
-		rdfs:subClassOf dl:MeasuredProperty ;
+		rdfs:subClassOf dl:MeasuredProperty ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:allValuesFrom dl:PressureUnit
+			] ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:someValuesFrom dl:PressureUnit
+			] ;
 		
 		rdfs:comment "Hardness is a measure of how resistant solid matter is to various kindos of permanent shape change when force is applied" .
 
