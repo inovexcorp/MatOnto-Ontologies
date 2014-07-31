@@ -214,6 +214,87 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 #################################################################
 
 
+### http://matonto.org/ontologies/matonto#Hardness
+
+:Hardness rdf:type owl:Class ;
+
+		rdfs:label "Hardness" ;
+		
+		rdfs:subClassOf dl:MeasuredProperty ;
+		
+		rdfs:comment "Hardness is a measure of how resistant solid matter is to various kindos of permanent shape change when force is applied" .
+
+
+		
+		
+### http://matonto.org/ontologies/matonto#ThermalExpansion
+
+:ThermalExpansion rdf:type owl:Class ;
+
+		rdfs:label "Thermal Expansion" ;
+		
+		rdfs:subClassOf dl:MeasuredProperty ;
+		
+		rdfs:comment "The tendency of matter to change in volume in response to a change in temperature" .
+
+
+		
+		
+### http://matonto.org/ontologies/matonto#TemperatureRange
+
+:TemperatureRange rdf:type owl:Class ;
+
+		rdfs:label "Temperature Range" ;
+		
+		rdfs:subClassOf dl:MeasuredProperty ;
+		
+		rdfs:comment "A range of temperature with an upper and lower bound" .
+
+
+
+		
+### http://matonto.org/ontologies/matonto#TemperatureRangeLowerBound
+
+:TemperatureRangeLowerBound rdf:type owl:Class ;
+
+		rdfs:label "Temperature Range Lower Bound" ;
+		
+		rdfs:subClassOf :TemperatureRange ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:allValuesFrom dl:TemperatureUnit
+			] ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:someValuesFrom dl:TemperatureUnit
+			] ;
+		
+		rdfs:comment "A lower bound of a temperature range" .
+
+
+
+		
+### http://matonto.org/ontologies/matonto#TemperatureRangeUpperBound
+
+:TemperatureRangeUpperBound rdf:type owl:Class ;
+
+		rdfs:label "Temperature Range Upper Bound" ;
+		
+		rdfs:subClassOf :TemperatureRange ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:allValuesFrom dl:TemperatureUnit
+			] ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:someValuesFrom dl:TemperatureUnit
+			] ;
+		
+		rdfs:comment "An upper bound of a temperature range" .
+
+		
+		
+
 ### http://matonto.org/ontologies/matonto#MeltingPoint
 
 :MeltingPoint rdf:type owl:Class ;
@@ -1127,9 +1208,26 @@ dl:unit_kilogram rdf:type owl:NamedIndividual .
                  mat:hasSISymbol "GPa" ;
                  
                  dl:derivesFrom dl:unit_pascal .
+				 
+				 
+
+				 
+##  http://matonto.org/ontologies/thermomechanics#unit_megapascal
+
+:unit_megapascal rdf:type dl:PressureUnit ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:label "megapascal" , "MPa" ;
+                 
+                 dl:isScaledBy "1.0E6"^^xsd:double ;
+                 
+                 mat:hasSISymbol "MPa" ;
+                 
+                 dl:derivesFrom dl:unit_pascal .
 
 
 
+				 
 ###  http://matonto.org/ontologies/thermomechanics#unit_hectopascal
 
 :unit_hectopascal rdf:type dl:PressureUnit ,
@@ -1298,9 +1396,41 @@ dl:unit_meter <http://www.w3.org/2004/02/skos/core#altLabel> "metre" .
                            
                            dl:derivesFrom :unit_centimeter_-3 ,
                                           dl:unit_gram .
+										  
+										  
+				
+				
+### http ###  http://matonto.org/ontologies/matonto#unit_gram_1_milliliter_-1
 
+:unit_gram_1_milliliter_-1 rdf:type dl:VolumeDensityUnit,
+                                    owl:NamedIndividual ;
+                           
+                           rdfs:label "gram per milliliter", "g/mL" ;
+						   
+						   skos:altLabel "gram per millilitre" ;
+                           
+                           dl:derivesFrom :unit_milliliter ,
+                                          dl:unit_gram .
+										  
+										  
+								
+								
+###  http://matonto.org/ontologies/matonto#unit_milliliter
 
+:unit_milliliter rdf:type dl:VolumeUnit , owl:NamedIndividual ;
+                           
+                           rdfs:label "milliliter", "mL" ;
+						   
+						   skos:altLabel "millilitre" ;
+                           
+                           rdfs:comment "A non-SI metric system unit of volume that is equal to 0.000001 cubic meters" ;
 
+							dl:derivesFrom dl:unit_meter_3 ;
+							
+							dl:isScaledBy "0.000001"^^xsd:double .
+										  
+										  
+										  
 										  
 ###  http://matonto.org/ontologies/matonto#unit_kilojoule_1_mole_-1
 
