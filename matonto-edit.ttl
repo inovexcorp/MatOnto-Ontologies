@@ -214,6 +214,85 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 #################################################################
 
 
+### http://matonto.org/ontologies/matonto#MeltingPoint
+
+:MeltingPoint rdf:type owl:Class ;
+
+		rdfs:label "Melting Point" ;
+		
+		rdfs:subClassOf dl:MeasuredProperty ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:allValuesFrom dl:TemperatureUnit
+			] ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:someValuesFrom dl:TemperatureUnit
+			] ;
+		
+		rdfs:comment "The temperature at which a solid changes state to a liquid at atmospheric pressure" .
+
+
+### http://matonto.org/ontologies/matonto#LatticeParameter
+
+:LatticeParameter rdf:type owl:Class ;
+
+		rdfs:label "Lattice Parameter" ;
+		
+		skos:altLabel "Lattice Constant" ;
+		
+		rdfs:subClassOf dl:MeasuredProperty ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:allValuesFrom dl:LengthUnit
+			] ,
+			[ rdf:type owl:Restriction ;
+			  owl:onProperty dl:hasUnit ;
+			  owl:someValuesFrom dl:LengthUnit
+			] ;
+			
+		rdfs:comment "Physical dimension of unit cells in a crystal lattice" .
+		
+		
+### http://matonto.org/ontologies/matonto#LatticeParameterA
+
+:LatticeParameterA rdf:type owl:Class ;
+
+	rdfs:label "Lattice Parameter A" ;
+	
+	skos:altLabel "Lattice Constant A" ;
+	
+	rdfs:subClassOf :LatticeParameter ;
+	
+	rdfs:comment "One of the three lattice constants, used for measuring lattices in three dimensions.  Only A is used in cubic crystal structures because all parameters are equal.  Only A and C are used in hexagonal crystal system".
+	
+	
+### http://matonto.org/ontologies/matonto#LatticeParameterB
+
+:LatticeParameterB rdf:type owl:Class ;
+
+	rdfs:label "Lattice Parameter B" ;
+	
+	skos:altLabel "Lattice Constant B" ;
+	
+	rdfs:subClassOf :LatticeParameter ;
+	
+	rdfs:comment "One of the three lattice constants, used for measuring lattices in three dimensions.  Only A is used in cubic crystal structures because all parameters are equal.  Only A and C are used in hexagonal crystal system".
+	
+	
+### http://matonto.org/ontologies/matonto#LatticeParameterC
+
+:LatticeParameterC rdf:type owl:Class ;
+
+	rdfs:label "Lattice Parameter C" ;
+	
+	skos:altLabel "Lattice Constant C" ;
+	
+	rdfs:subClassOf :LatticeParameter ;
+	
+	rdfs:comment "One of the three lattice constants, used for measuring lattices in three dimensions.  Only A is used in cubic crystal structures because all parameters are equal.  Only A and C are used in hexagonal crystal system".
+	
+
 ###  http://matonto.org/ontologies/matonto#BandGap
 
 :BandGap rdf:type owl:Class ;
