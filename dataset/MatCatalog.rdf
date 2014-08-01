@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<versionInfo xmlns="http://www.w3.org/2002/07/owl#">1.1</versionInfo>
+	<versionIRI xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="http://matonto.org/ontologies/mat-catalog/1.1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#MATONTO_1">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Classification scheme for MatOnto Dataset Catalog.</label>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#">Classification scheme for MatOnto Dataset Catalog.</prefLabel>
+	<title xmlns="http://purl.org/dc/terms/">Classification scheme for MatOnto Dataset Catalog.</title>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#iNovex">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">iNovex Information Systems</label>
+	<homepage xmlns="http://xmlns.com/foaf/0.1/" rdf:resource="http://www.inovexcorp.com/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#MATONTO_101">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Classification for a MatOnto Dataset that indicates it is a set of domain (materials science) data.</label>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">data</label>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#">Classification for a MatOnto Dataset that indicates it is a set of domain (materials science) data.</prefLabel>
+	<title xmlns="http://purl.org/dc/terms/">Classification for a MatOnto Dataset that indicates it is a set of domain (materials science) data.</title>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#MATONTO_102">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Classification for a MatOnto Dataset that indicates it is an analytic module.</label>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">analytic</label>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#">Classification for a MatOnto Dataset that indicates it is an analytic module.</prefLabel>
+	<title xmlns="http://purl.org/dc/terms/">Classification for a MatOnto Dataset that indicates it is an analytic module.</title>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#MATONTO_103">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Classification for a MatOnto Dataset that indicates it is a service module.</label>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">service</label>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#">Classification for a MatOnto Dataset that indicates it is a service module.</prefLabel>
+	<title xmlns="http://purl.org/dc/terms/">Classification for a MatOnto Dataset that indicates it is a service module.</title>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#MATONTO_104">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Classification for a MatOnto Dataset that indicates it is a SPARQL query.</label>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">query</label>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#">Classification for a MatOnto Dataset that indicates it is a SPARQL query.</prefLabel>
+	<title xmlns="http://purl.org/dc/terms/">Classification for a MatOnto Dataset that indicates it is a SPARQL query.</title>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#MATONTO_105">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Classification for a MatOnto Dataset that indicates it is a concept OWL ontology.</label>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">ontology</label>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#">Classification for a MatOnto Dataset that indicates it is a concept OWL ontology.</prefLabel>
+	<title xmlns="http://purl.org/dc/terms/">Classification for a MatOnto Dataset that indicates it is a concept OWL ontology.</title>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#MATONTO_106">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Classification for a MatOnto Dataset that indicates it is a DCAT dataset catalog.</label>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">catalog</label>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#">Classification for a MatOnto Dataset that indicates it is a DCAT dataset catalog.</prefLabel>
+	<title xmlns="http://purl.org/dc/terms/">Classification for a MatOnto Dataset that indicates it is a DCAT dataset catalog.</title>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#catalog">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset Catalog</label>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#">MatOnto Dataset Catalog.  Includes sets of data, analytic modules, SPARQL queries, service modules, OWL concept ontologies, and other DCAT catalogs.</prefLabel>
+	<title xmlns="http://purl.org/dc/terms/">MatOnto Dataset Catalog</title>
+	<homepage xmlns="http://xmlns.com/foaf/0.1/" rdf:resource="http://matonto.org/matwiki/index.php/Catalog"/>
+	<language xmlns="http://purl.org/dc/terms/" rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en"/>
+	<dataset xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#dataset-000"/>
+	<dataset xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#dataset-001"/>
+	<dataset xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#dataset-002"/>
+	<dataset xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#dataset-003"/>
+	<dataset xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#dataset-004"/>
+	<dataset xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#dataset-005"/>
+	<publisher xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<themeTaxonomy xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-000">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset - Stardog:MatCatalog</label>
+	<title xmlns="http://purl.org/dc/terms/">Stardog:MatCatalog</title>
+	<language xmlns="http://purl.org/dc/terms/" rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en"/>
+	<publisher xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<modified xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-06-04</modified>
+	<issued xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-06-04</issued>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">catalog</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">MatOnto</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">materials</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">science</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">DCAT</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">dataset</keyword>
+	<theme xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_106"/>
+	<subject xmlns="http://purl.org/dc/terms/" rdf:resource="http://dbpedia.org/resource/Materials_Science"/>
+	<distribution xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#dataset-000-ttl-001"/>
+	<contactPoint xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/matwiki/index.php/Contact"/>
+	<accrualPeriodicity xmlns="http://purl.org/dc/terms/" rdf:resource="http://purl.org/linked-data/sdmx/2009/code#freq-Q"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-001">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset - Stardog:MatProjRec</label>
+	<title xmlns="http://purl.org/dc/terms/">Stardog:MatProjRec</title>
+	<language xmlns="http://purl.org/dc/terms/" rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en"/>
+	<publisher xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<modified xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-05-28</modified>
+	<issued xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-05-20</issued>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">MatOnto</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">materials</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">science</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">MaterialsProject</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">project</keyword>
+	<theme xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_101"/>
+	<subject xmlns="http://purl.org/dc/terms/" rdf:resource="http://dbpedia.org/resource/Materials_Science"/>
+	<distribution xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#dataset-001-ttl-001"/>
+	<contactPoint xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/matwiki/index.php/Contact"/>
+	<accrualPeriodicity xmlns="http://purl.org/dc/terms/" rdf:resource="http://purl.org/linked-data/sdmx/2009/code#freq-Q"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-002">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset - Stardog:MatOnto</label>
+	<title xmlns="http://purl.org/dc/terms/">Stardog:MatOnto</title>
+	<language xmlns="http://purl.org/dc/terms/" rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en"/>
+	<publisher xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<modified xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-05-20</modified>
+	<issued xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-05-20</issued>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">MatOnto</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">materials</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">science</keyword>
+	<theme xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_105"/>
+	<subject xmlns="http://purl.org/dc/terms/" rdf:resource="http://dbpedia.org/resource/Materials_Science"/>
+	<subject xmlns="http://purl.org/dc/terms/" rdf:resource="http://dbpedia.org/resource/Category:Ontology"/>
+	<distribution xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#dataset-002-ttl-001"/>
+	<contactPoint xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/matwiki/index.php/Contact"/>
+	<accrualPeriodicity xmlns="http://purl.org/dc/terms/" rdf:resource="http://purl.org/linked-data/sdmx/2009/code#freq-Q"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-003">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset - Rya:PTable</label>
+	<title xmlns="http://purl.org/dc/terms/">Rya:PTable</title>
+	<language xmlns="http://purl.org/dc/terms/" rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en"/>
+	<publisher xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<modified xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-05-20</modified>
+	<issued xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-05-20</issued>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">Rya</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">periodic</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">table</keyword>
+	<theme xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_101"/>
+	<subject xmlns="http://purl.org/dc/terms/" rdf:resource="http://dbpedia.org/resource/Periodic_table"/>
+	<distribution xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#dataset-003-ttl-001"/>
+	<contactPoint xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/matwiki/index.php/Contact"/>
+	<accrualPeriodicity xmlns="http://purl.org/dc/terms/" rdf:resource="http://purl.org/linked-data/sdmx/2009/code#freq-Q"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-004">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset - D2R:SpaceGroup</label>
+	<title xmlns="http://purl.org/dc/terms/">D2R:SpaceGroup</title>
+	<language xmlns="http://purl.org/dc/terms/" rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en"/>
+	<publisher xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<modified xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-05-20</modified>
+	<issued xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-05-20</issued>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">D2RQ</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">space</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">group</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">groups</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">3D</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">crystalline</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">D2R</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">structure</keyword>
+	<theme xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_101"/>
+	<subject xmlns="http://purl.org/dc/terms/" rdf:resource="http://dbpedia.org/resource/Space_groups"/>
+	<distribution xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#dataset-004-ttl-001"/>
+	<contactPoint xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/matwiki/index.php/Contact"/>
+	<accrualPeriodicity xmlns="http://purl.org/dc/terms/" rdf:resource="http://purl.org/linked-data/sdmx/2009/code#freq-Q"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-005">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset - Widget:Sgvizler</label>
+	<title xmlns="http://purl.org/dc/terms/">Widget:Sgvizler</title>
+	<publisher xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<modified xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-06-04</modified>
+	<issued xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-06-04</issued>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">analytic</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">vizualization</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">ozone</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">widget</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">application</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">web</keyword>
+	<theme xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_102"/>
+	<subject xmlns="http://purl.org/dc/terms/" rdf:resource="http://dbpedia.org/resource/Visualisation"/>
+	<distribution xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#dataset-005-ttl-001"/>
+	<contactPoint xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/matwiki/index.php/Contact"/>
+	<accrualPeriodicity xmlns="http://purl.org/dc/terms/" rdf:resource="http://purl.org/linked-data/sdmx/2009/code#freq-Q"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-000-ttl-001">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset Distribution - Stardog:MatCatalog</label>
+	<title xmlns="http://purl.org/dc/terms/">RDF/Turtle distribution of Stardog:MatCatalog</title>
+	<byteSize xmlns="http://www.w3.org/ns/dcat#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14816</byteSize>
+	<mediaType xmlns="http://www.w3.org/ns/dcat#">application/x-turtle</mediaType>
+	<downloadURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/sd-matcatalog-catalog.ttl"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-001-ttl-001">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset Distribution - Stardog:MatProjRec</label>
+	<title xmlns="http://purl.org/dc/terms/">RDF/Turtle distribution of Stardog:MatProjRec</title>
+	<byteSize xmlns="http://www.w3.org/ns/dcat#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1351467</byteSize>
+	<mediaType xmlns="http://www.w3.org/ns/dcat#">application/x-turtle</mediaType>
+	<downloadURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/sd-matprojrec-data.ttl"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-002-ttl-001">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset Distribution - Stardog:MatOnto</label>
+	<title xmlns="http://purl.org/dc/terms/">RDF/Turtle distribution of Stardog:MatOnto</title>
+	<byteSize xmlns="http://www.w3.org/ns/dcat#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1189480</byteSize>
+	<mediaType xmlns="http://www.w3.org/ns/dcat#">application/x-turtle</mediaType>
+	<downloadURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/sd-matonto-data.ttl"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-003-ttl-001">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset Distribution - Rya:PTable</label>
+	<title xmlns="http://purl.org/dc/terms/">RDF/Turtle distribution of Rya:PTable</title>
+	<byteSize xmlns="http://www.w3.org/ns/dcat#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38871</byteSize>
+	<mediaType xmlns="http://www.w3.org/ns/dcat#">application/x-turtle</mediaType>
+	<downloadURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/rya-ptable-data.ttl"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-004-ttl-001">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset Distribution - D2R:SpaceGroup</label>
+	<title xmlns="http://purl.org/dc/terms/">RDF/Turtle distribution of D2R:SpaceGroup</title>
+	<byteSize xmlns="http://www.w3.org/ns/dcat#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</byteSize>
+	<mediaType xmlns="http://www.w3.org/ns/dcat#">application/x-turtle</mediaType>
+	<downloadURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/d2r-spacegroup-data.ttl"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-005-ttl-001">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset Distribution - Widget:Sgvizler</label>
+	<title xmlns="http://purl.org/dc/terms/">Web Application Archive distribution of Sgvizler analytic</title>
+	<byteSize xmlns="http://www.w3.org/ns/dcat#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46486</byteSize>
+	<mediaType xmlns="http://www.w3.org/ns/dcat#">application/java-archive</mediaType>
+	<downloadURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/analytic-widget-sgvizler.war"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-006">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset - Instance Count Union Query</label>
+	<title xmlns="http://purl.org/dc/terms/">Instance Counte Union Query</title>
+	<publisher xmlns="http://purl.org/dc/terms/" rdf:resource="http://matonto.org/ontologies/matonto-catalog#iNovex"/>
+	<modified xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-06-12</modified>
+	<issued xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#data">2014-06-12</issued>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">query</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">instance</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">count</keyword>
+	<keyword xmlns="http://www.w3.org/ns/dcat#">union</keyword>
+	<theme xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#MATONTO_104"/>
+	<subject xmlns="http://purl.org/dc/terms/" rdf:resource="http://dbpedia.org/page/Query_string"/>
+	<distribution xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/ontologies/matonto-catalog#dataset-006-rq-001"/>
+	<contactPoint xmlns="http://www.w3.org/ns/dcat#" rdf:resource="http://matonto.org/matwiki/index.php/Contact"/>
+	<accrualPeriodicity xmlns="http://purl.org/dc/terms/" rdf:resource="http://purl.org/linked-data/sdmx/2009/code#freq-Q"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://matonto.org/ontologies/matonto-catalog#dataset-006-rq-001">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">MatOnto Dataset Distribution - Instance Count Union Query</label>
+	<title xmlns="http://purl.org/dc/terms/">SPARQL distribution of Instance Count Union Query</title>
+	<byteSize xmlns="http://www.w3.org/ns/dcat#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">278</byteSize>
+	<mediaType xmlns="http://www.w3.org/ns/dcat#">application/sparql-query</mediaType>
+	<downloadURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://github.com/iNovexIrad/MatOnto-Ontologies/blob/master/dataset/query-instanceCount.rq"/>
+</rdf:Description>
+
+</rdf:RDF>
