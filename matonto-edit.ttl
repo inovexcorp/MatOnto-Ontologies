@@ -235,7 +235,7 @@ dl:hasUnit rdf:type owl:ObjectProperty .
 
 		rdfs:label "Hardness Range" ;
 		
-		rdfs:subClassOf dl:MeasuredProperty 
+		rdfs:subClassOf dl:MeasuredProperty ;
 		
 		rdfs:comment "A range of hardness with an upper and lower bound" .
 		
