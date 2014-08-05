@@ -21,7 +21,7 @@
 #
 #################################################################
 
-
+###  CAREFUL!  Reasoning could infer the subject is a qb:Dataset!
 ###  http://matonto.org/ontologies/matonto#hasObservation
 
 <http://matonto.org/ontologies/matonto#hasObservation> rdf:type owl:ObjectProperty ;
