@@ -1274,7 +1274,7 @@ dl:unit_kilogram rdf:type owl:NamedIndividual .
 
 
 
-###  http://matonto.org/ontologies/thermomechanics#unit_gigapascal
+###  http://matonto.org/ontologies/matonto#unit_gigapascal
 
 :unit_gigapascal rdf:type dl:PressureUnit ,
                           owl:NamedIndividual ;
@@ -1290,7 +1290,7 @@ dl:unit_kilogram rdf:type owl:NamedIndividual .
 				 
 
 				 
-##  http://matonto.org/ontologies/thermomechanics#unit_megapascal
+###  http://matonto.org/ontologies/matonto#unit_megapascal
 
 :unit_megapascal rdf:type dl:PressureUnit ,
                           owl:NamedIndividual ;
